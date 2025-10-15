@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_on_demand_backup_for_unified_manger.html 
+sidebar: sidebar 
+keywords: backup, on-demand, unified manager 
+summary: 您可以使用Active IQ Unified Manager使用者介面在需要時產生按需備份。按需備份可讓您使用現有的備份方法立即建立備份。按需備份不區分基於 MySQL 或NetApp Snapshot 的備份。 
+---
+= Unified Manager 的按需備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Active IQ Unified Manager使用者介面在需要時產生按需備份。按需備份可讓您使用現有的備份方法立即建立備份。按需備份不區分基於 MySQL 或NetApp Snapshot 的備份。
+
+您可以使用資料庫備份頁面上的*立即備份*按鈕執行按需備份。按需備份不依賴您為Active IQ Unified Manager配置的計畫。

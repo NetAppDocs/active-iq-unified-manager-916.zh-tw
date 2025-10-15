@@ -1,0 +1,82 @@
+---
+permalink: install-windows/concept_virtual_infrastructure_or_hardware_system_requirements.html 
+sidebar: sidebar 
+keywords: virtual infrastructure, hardware, system, requirements, host, connectivity, backups 
+summary: 在虛擬基礎架構或實體系統上安裝 Unified Manager 應滿足記憶體、CPU 和磁碟空間的最低要求。 
+---
+= 虛擬基礎架構和硬體系統需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在虛擬基礎架構或實體系統上安裝 Unified Manager 應滿足記憶體、CPU 和磁碟空間的最低要求。
+
+下表顯示了記憶體、CPU 和磁碟空間資源的建議值。這些值已經過限定，因此 Unified Manager 滿足可接受的效能水準。
+
+[cols="2*"]
+|===
+| 硬體配置 | 推薦設定 
+
+
+ a| 
+記憶體
+ a| 
+12 GB（最低要求 8 GB）
+
+
+
+ a| 
+處理器
+ a| 
+4 個 CPU
+
+
+
+ a| 
+CPU 週期容量
+ a| 
+總計 9572 MHz（最低需求 9572 MHz）
+
+
+
+ a| 
+可用磁碟空間
+ a| 
+150GB，容量分配如下：
+
+* 100 GB 磁碟空間用於安裝目錄
+* 50 GB 磁碟空間用於 MySQL 資料目錄
+
+
+|===
+Unified Manager 可以安裝在具有少量記憶體的系統上，但建議使用 12 GB RAM，以確保有足夠的記憶體來實現最佳效能，並且隨著配置的增長，系統可以容納額外的叢集和儲存物件。您不應在部署 Unified Manager 的虛擬機器上設定任何記憶體限制，也不應啟用任何阻礙軟體利用系統上分配的記憶體的功能（例如，膨脹）。
+
+此外，在安裝第二個 Unified Manager 實例之前，單一 Unified Manager 實例可以監控的節點數量是有限制的。有關更多信息，請參閱《最佳實踐指南》。
+
+https://www.netapp.com/pdf.html?item=/media/13504-tr4621pdf.pdf["技術報告 4621：Unified Manager 最佳實務指南"^]
+
+記憶體頁面交換會對系統和管理應用程式的效能產生負面影響。由於整體主機利用率而競爭不可用的 CPU 資源可能會降低效能。
+
+
+
+== 專用要求
+
+安裝 Unified Manager 的實體或虛擬系統應專門用於 Unified Manager，不應與其他應用程式共用。其他應用程式可能會消耗系統資源並大幅降低 Unified Manager 的效能。
+
+
+
+== 備份的空間需求
+
+如果您打算使用 Unified Manager 備份和復原功能，請指派額外的容量，以便「資料」目錄或磁碟有 150 GB 的空間。備份可以寫入本機目標或遠端目標。最佳做法是確定 Unified Manager 主機系統外部至少具有 150 GB 空間的遠端位置。
+
+
+
+== 主機連線需求
+
+安裝 Unified Manager 的實體系統或虛擬系統應以成功的方式進行配置 `ping`主機本身的主機名稱。如果是 IPv6 配置，您應該驗證 `ping6`主機名稱是否成功，以確保 Unified Manager 安裝成功。
+
+您可以使用主機名稱（或主機 IP 位址）存取產品 Web UI。如果您在部署期間為網路設定了靜態 IP 位址，那麼您就為網路主機指定了名稱。如果您使用 DHCP 配置網絡，則應該從 DNS 取得主機名稱。
+
+如果您打算允許使用者使用短名稱而不是使用完全限定網域名稱 (FQDN) 或 IP 位址存取 Unified Manager，則您的網路設定必須將此短名稱解析為有效的 FQDN。

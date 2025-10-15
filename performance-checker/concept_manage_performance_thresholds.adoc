@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_manage_performance_thresholds.html 
+sidebar: sidebar 
+keywords: manage, performance, thresholds 
+summary: 效能閾值策略可讓您確定 Unified Manager 產生事件的時間點，以便通知系統管理員可能影響工作負載效能的問題。這些閾值策略被稱為使用者定義的效能閾值。 
+---
+= 管理績效閾值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+效能閾值策略可讓您確定 Unified Manager 產生事件的時間點，以便通知系統管理員可能影響工作負載效能的問題。這些閾值策略被稱為_使用者定義_效能閾值。
+
+此版本支援使用者定義、系統定義和動態效能閾值。透過動態和系統定義的效能閾值，Unified Manager 可以分析工作負載活動以確定適當的閾值。使用使用者定義的閾值，您可以為許多效能計數器和許多儲存物件定義效能上限。
+
+[NOTE]
+====
+系統定義的效能閾值和動態效能閾值由 Unified Manager 設定，無法設定。如果您從任何系統定義的效能閾值策略收到不必要的事件，您可以從事件設定頁面停用單一策略。
+
+====

@@ -1,0 +1,22 @@
+---
+permalink: reporting/concept_sample_custom_reports.html 
+sidebar: sidebar 
+keywords: sample, custom, reports 
+summary: 這些範例自訂報告通常用於幫助您識別潛在問題並在問題發生之前對潛在問題做出回應。 
+---
+= 自訂報告範例
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+這些範例自訂報告通常用於幫助您識別潛在問題並在問題發生之前對潛在問題做出回應。
+
+本節的報告清單並不詳盡，並且會隨著時間的推移而增加。您可以透過提供文件回饋來建議將自訂報告新增至此部分。
+
+[NOTE]
+====
+您必須具有應用程式管理員或儲存管理員角色才能管理報告。
+
+====

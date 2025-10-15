@@ -1,0 +1,97 @@
+---
+permalink: performance-checker/reference_what_objects_can_be_used_in_threshold_policies.html 
+sidebar: sidebar 
+keywords: objects, counters, combination, threshold, policies 
+summary: 組合策略中只能使用部分效能指標。當指定主性能計數器和輔助性能計數器時，兩個性能計數器都必須超過其最大限制才會產生事件。 
+---
+= 哪些物件和計數器可以組合使用閾值策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+組合策略中只能使用部分效能指標。當指定主性能計數器和輔助性能計數器時，兩個性能計數器都必須超過其最大限制才會產生事件。
+
+|===
+| 主存儲物件和計數器 | 二級儲存物件和計數器 
+
+
+ a| 
+卷延遲
+ a| 
+卷 IOPS
+
+
+
+ a| 
+體積 MB/s
+
+
+
+ a| 
+總利用率
+
+
+
+ a| 
+已使用的總性能容量
+
+
+
+ a| 
+節點利用率
+
+
+
+ a| 
+節點效能容量使用情況
+
+
+
+ a| 
+節點效能容量使用 - 接管
+
+
+
+ a| 
+LUN延遲
+ a| 
+LUN IOPS
+
+
+
+ a| 
+LUN MB/秒
+
+
+
+ a| 
+總利用率
+
+
+
+ a| 
+已使用的總性能容量
+
+
+
+ a| 
+節點利用率
+
+
+
+ a| 
+節點效能容量使用情況
+
+
+
+ a| 
+節點效能容量使用 - 接管
+
+|===
+[NOTE]
+====
+當磁碟區組合策略應用於FlexGroup磁碟區而非FlexVol volume時，只能選擇「Volume IOPS」和「Volume MB/s」屬性作為輔助計數器。如果閾值策略包含節點或聚合屬性之一，則該策略將不會應用於FlexGroup卷，並且您將收到描述這種情況的錯誤訊息。這是因為FlexGroup磁碟區可以存在於多個節點或聚合上。
+
+====

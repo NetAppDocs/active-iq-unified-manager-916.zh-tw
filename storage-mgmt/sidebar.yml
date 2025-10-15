@@ -1,0 +1,169 @@
+---
+section: storage-mgmt
+title: 監視和管理存儲
+entries:
+- title: Active IQ Unified Manager簡介
+  url: "/storage-mgmt/concept_introduction_to_unified_manager.html"
+  entries:
+  - title: Active IQ Unified Manager健康監控簡介
+    url: "/storage-mgmt/concept_introduction_to_unified_manager_health_monitoring.html"
+  - title: Active IQ Unified Manager效能監控簡介
+    url: "/storage-mgmt/concept_introduction_to_unified_manager_performance_monitoring.html"
+  - title: 使用 Unified Manager REST API
+    url: "/storage-mgmt/concept_use_unified_manager_rest_apis_ocum.html"
+  - title: Unified Manager 伺服器的功能
+    url: "/storage-mgmt/concept_what_unified_manager_server_does.html"
+    entries:
+    - title: 發現過程如何​​運作
+      url: "/storage-mgmt/concept_how_discovery_process_works_tobe_rmvd.html"
+- title: 了解使用者介面
+  url: "/storage-mgmt/concept_understand_user_interface.html"
+  entries:
+  - title: 典型的視窗佈局
+    url: "/storage-mgmt/concept_typical_window_layouts_um_6_x.html"
+  - title: 視窗佈局自訂
+    url: "/storage-mgmt/reference_window_layout_customization.html"
+  - title: 使用 Unified Manager 協助
+    url: "/storage-mgmt/task_use_unified_manager_help.html"
+  - title: 為您最喜歡的幫助主題添加書籤
+    url: "/storage-mgmt/task_bookmark_your_favorite_help_topics_onc.html"
+  - title: 搜尋儲存對象
+    url: "/storage-mgmt/task_search_for_storage_objects.html"
+  - title: 將儲存資料匯出為報告
+    url: "/storage-mgmt/task_export_storage_data_as_reports.html"
+  - title: 過濾庫存頁面內容
+    url: "/storage-mgmt/task_filter_inventory_page_content.html"
+  - title: 從通知鈴查看活動事件
+    url: "/storage-mgmt/task_view_active_events_from_notification_bell.html"
+- title: 從儀表板監控和管理集群
+  url: "/storage-mgmt/concept_monitor_and_manage_clusters_from_dashboard.html"
+  entries:
+  - title: 儀表板頁面
+    url: "/storage-mgmt/reference_dashboard_page.html"
+  - title: 直接從 Unified Manager 修復或管理ONTAP問題
+    url: "/storage-mgmt/concept_fix_ontap_issues_directly_from_unified_manager.html"
+    entries:
+    - title: 當我看到“修復”或“修復全部”按鈕時，我有哪些選項
+      url: "/storage-mgmt/concept_what_options_do_i_have_in_fix_it_button.html"
+    - title: 查看您選擇修復的管理操作的狀態
+      url: "/storage-mgmt/task_view_status_of_management_actions_to_fix.html"
+    - title: Unified Manager 可以修復哪些問題
+      url: "/storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html"
+    - title: 透過腳本覆蓋管理操作
+      url: "/storage-mgmt/concept_override_management_actions_through_scripts.html"
+- title: 管理集群
+  url: "/storage-mgmt/concept_manage_clusters.html"
+  entries:
+  - title: 集群發現過程的工作原理
+    url: "/storage-mgmt/concept_how_discovery_process_works.html"
+  - title: 查看受監控叢集列表
+    url: "/storage-mgmt/task_view_list_of_monitored_clusters.html"
+  - title: 新增集群
+    url: "/storage-mgmt/task_add_clusters.html"
+  - title: 編輯集群
+    url: "/storage-mgmt/task_edit_clusters.html"
+  - title: 刪除叢集
+    url: "/storage-mgmt/task_remove_clusters.html"
+  - title: 重新發現集群
+    url: "/storage-mgmt/task_rediscover_clusters.html"
+- title: 監控 VMware 虛擬基礎架構
+  url: "/storage-mgmt/concept_monitor_vmware_virtual_infrastructure.html"
+  entries:
+  - title: 檢視並新增 vCenter Server
+    url: "/storage-mgmt/task_view_and_add_vcenter_servers.html"
+  - title: 移除 vCenter Server
+    url: "/storage-mgmt/task_remove_vcenter_server.html"
+  - title: 監控虛擬機
+    url: "/storage-mgmt/concept_monitor_vms.html"
+  - title: 查看災難復原設定中的虛擬基礎架構
+    url: "/storage-mgmt/concept_mcc_svmdr_vmawareness.html"
+- title: 預配和管理工作負載
+  url: "/storage-mgmt/concept_provision_and_manage_workloads.html"
+  entries:
+  - title: 工作負載概述
+    url: "/storage-mgmt/concept_workloads_dashboard.html"
+    entries:
+    - title: 查看工作負載
+      url: "/storage-mgmt/concept_all_workloads.html"
+    - title: 為工作負載分配策略
+      url: "/storage-mgmt/concept_assign_policies_on_workloads.html"
+    - title: 設定檔共享卷
+      url: "/storage-mgmt/task_provision_fileshares.html"
+    - title: 配置 LUN
+      url: "/storage-mgmt/task_provision_luns.html"
+  - title: 管理績效服務水平
+    url: "/storage-mgmt/concept_manage_performance_service_levels.html"
+    entries:
+    - title: 建立和編輯效能服務級別
+      url: "/storage-mgmt/task_create_and_edit_psls.html"
+  - title: 管理儲存效率策略
+    url: "/storage-mgmt/concept_manage_storage_efficiency_policies.html"
+    entries:
+    - title: 建立和編輯儲存效率策略
+      url: "/storage-mgmt/task_create_and_edit_seps.html"
+- title: 管理和監控MetroCluster配置
+  url: "/storage-mgmt/concept_manage_and_monitor_metrocluster_configurations.html"
+  entries:
+  - title: 切換和切回期間的捲行為
+    url: "/storage-mgmt/concept_volume_behavior_during_switchover_and_switchback.html"
+  - title: 集群連線狀態定義
+    url: "/storage-mgmt/reference_cluster_connectivity_status_definitions.html"
+  - title: 資料鏡像狀態定義
+    url: "/storage-mgmt/reference_data_mirroring_status_definitions.html"
+  - title: 監控MetroCluster配置
+    url: "/storage-mgmt/task_monitor_metrocluster_configurations.html"
+  - title: 監控MetroCluster複製
+    url: "/storage-mgmt/task_monitor_metrocluster_replication.html"
+- title: 管理配額
+  url: "/storage-mgmt/concept_manage_quotas.html"
+  entries:
+  - title: 什麼是配額限制
+    url: "/storage-mgmt/concept_what_quota_limits_are.html"
+  - title: 查看使用者和使用者群組配額
+    url: "/storage-mgmt/task_view_user_and_user_group_quotas.html"
+  - title: 建立規則以產生電子郵件地址
+    url: "/storage-mgmt/task_create_rules_to_generate_email_addresses.html"
+  - title: 為使用者和使用者群組配額建立電子郵件通知格式
+    url: "/storage-mgmt/task_create_an_email_notification_format.html"
+  - title: 編輯使用者和群組配額電子郵件地址
+    url: "/storage-mgmt/task_edit_user_and_group_quota_email_addresses.html"
+  - title: 詳細了解配額
+    url: "/storage-mgmt/concept_understand_more_about_quotas.html"
+    entries:
+    - title: 配額流程概述
+      url: "/storage-mgmt/concept_overview_of_quota_process_um_6_1.html"
+    - title: 關於配額
+      url: "/storage-mgmt/concept_about_quotas.html"
+    - title: 為什麼要使用配額
+      url: "/storage-mgmt/concept_why_you_use_quotas.html"
+  - title: 配額對話框的說明
+    url: "/storage-mgmt/reference_description_of_quotas_dialog_boxes.html"
+    entries:
+    - title: 電子郵件通知格式頁面
+      url: "/storage-mgmt/reference_email_notification_format_page.html"
+    - title: 產生使用者和群組配額電子郵件地址的規則頁面
+      url: "/storage-mgmt/reference_rules_to_generate_user_and_group_quota.html"
+- title: 故障排除
+  url: "/storage-mgmt/concept_troubleshooting.html"
+  entries:
+  - title: 向 Unified Manager 資料庫目錄新增磁碟空間
+    url: "/storage-mgmt/concept_add_disk_space_to_um_database_directory.html"
+    entries:
+    - title: 為VMware虛擬機器資料盤新增空間
+      url: "/storage-mgmt/task_add_space_to_data_disk_of_vmware.html"
+    - title: 為Linux主機的資料目錄新增空間
+      url: "/storage-mgmt/task_add_space_to_data_directory_of_um_linux_host.html"
+    - title: 為 Microsoft Windows 伺服器的邏輯磁碟機新增空間
+      url: "/storage-mgmt/task_add_space_to_data_disk_of_microsoft_windows.html"
+  - title: 修改效能統計收集間隔
+    url: "/storage-mgmt/task_change_performance_statistics_collection_interval.html"
+  - title: 更改 Unified Manager 保留事件和效能資料的時間長度
+    url: "/storage-mgmt/task_change_time_um_retains_event_performance_data.html"
+  - title: 未知的身份驗證錯誤
+    url: "/storage-mgmt/reference_unknown_authentication_error.html"
+  - title: 未找到用戶
+    url: "/storage-mgmt/reference_user_not_found.html"
+  - title: 使用其他驗證服務新增 LDAP 的問題
+    url: "/storage-mgmt/reference_issue_with_ldap_using_other_authentication_services.html"
+  - title: Windows 系統上的NetApp可管理性 SDK 日誌輪替問題
+    url: "/storage-mgmt/task_resolve_windows_log_rotation_issue.html"

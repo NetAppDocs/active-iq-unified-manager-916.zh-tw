@@ -1,0 +1,24 @@
+---
+permalink: config/task_configure_audit_logs.html 
+sidebar: sidebar 
+keywords: configure, audit logs 
+summary: 您可以使用稽核日誌部分中的設定按鈕來設定稽核日誌檔案的捲動策略，並為稽核日誌啟用遠端日誌記錄。 
+---
+= 配置審計日誌
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用稽核日誌部分中的「*設定*」按鈕來設定稽核日誌檔案的捲動策略，並為稽核日誌啟用遠端日誌記錄。
+
+您可以根據要在系統中儲存的資料量和頻率設定*MAX FILE SIZE*和*AUDIT LOG RETENTION DAYS*中的值。欄位 *TOTAL AUDIT LOG SIZE* 中的值是系統中存在的稽核日誌資料的總大小。捲動原則由欄位 *AUDIT LOG RETENTION DAYS*、*MAX FILE SIZE* 和 *TOTAL AUDIT LOG SIZE* 中的值決定。當稽核日誌備份的大小達到*TOTAL AUDIT LOG SIZE*中配置的值時，將刪除第一個已存檔的檔案。這意味著最舊的檔案被刪除。但文件條目仍然在資料庫中可用，並被標記為“`Rollover Delete`”。 *AUDIT LOG RETENTION DAYS* 值表示稽核日誌檔案保留的天數。任何比此欄位中設定的值更舊的檔案都會被翻轉。
+
+.步驟
+. 點選*審計日誌*>>*配置*。
+. 在 *MAX FILE SIZE*、*TOTAL AUDIT LOG SIZE* 和 *AUDIT LOG RETENTION DAYS* 中輸入數值。
++
+如果您想啟用遠端日誌記錄，那麼您應該選擇*啟用遠端日誌記錄*。  /// 2025-6-11，OTHERDOC-133
+
+

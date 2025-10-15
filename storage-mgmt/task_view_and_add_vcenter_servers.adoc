@@ -1,0 +1,87 @@
+---
+permalink: storage-mgmt/task_view_and_add_vcenter_servers.html 
+sidebar: sidebar 
+keywords: view, add, vcenter, server 
+summary: '若要檢視並排除虛擬機器 (VM) 效能故障，必須在Active IQ Unified Manager個體上新增關聯的 vCenter Server。' 
+---
+= 檢視並新增 vCenter Server
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要檢視並排除虛擬機器 (VM) 效能故障，必須在Active IQ Unified Manager個體上新增關聯的 vCenter Server。
+
+.開始之前
+在新增或檢視 vCenter Server 之前，請確保以下事項：
+
+* 您知道 vCenter Server 名稱。
+* 您知道 vCenter Server 的 IP 位址並擁有所需的憑證。憑證必須屬於 vCenter Server 管理員或具有 vCenter Server 唯讀存取權限的 root 使用者。
+* 您要新增的 vCenter Server 執行 vSphere 6.5 或更高版本。
++
+
+NOTE: Unified Manager 對 VMware ESXi 和 vCenter Server 的支援提供英文和日文版本。
+
+* vCenter Server 中的資料收集設定被設定為 `_Level 3_`，確保所有監控對像都達到所需的指標收集水準。間隔時間應為 `_5 minutes_`，保存期限應為 `_1 day_`。
++
+有關詳細信息，請參閱 VMware 文件中的《vSphere 監控和效能指南》的「資料收集等級」部分。
+
+* 為了成功計算延遲值，vCenter Server 中的延遲值以毫秒為單位進行配置，而不是以微秒為單位。
+* 將資料儲存區新增至 vCenter Server 時，您可以同時使用主機的 IP 位址或完全限定網域名稱 (FQDN)。如果您要新增 FQDN，請確保 Unified Manager 伺服器可以解析該網域名稱。例如，對於 Linux 安裝，請確保在 `/etc/resolv.conf`文件。
+* vCenter Server 的目前時間與 vCenter Server 時區同步。
+* vCenter Server 可成功存取並發現。
+* 將 vCenter Server 新增至 Unified Manager 時，您具有對 VMware SDK 的讀取權限。這是配置輪詢所必需的。
+
+
+對於新增和發現的每個 vCenter Server，Unified Manager 都會收集配置數據，例如 vCenter Server 和 ESXi 伺服器詳細資訊、 ONTAP映射、資料儲存詳細資訊以及託管的虛擬機器數量。它進一步收集組件的性能指標。
+
+.步驟
+. 前往 *VMWARE* > *vCenter*，並檢查您的 vCenter Server 是否在清單中。
++
+[NOTE]
+====
+如果您的 vCenter Server 不可用，則必須新增 vCenter Server。
+
+====
++
+.. 按一下“*新增*”。
+.. 為 vCenter Server 新增正確的 IP 位址並確保該裝置可存取。
+.. 新增具有 vCenter Server 唯讀存取權限的管理員或 root 使用者的使用者名稱和密碼。
+.. 如果您使用除預設 443 之外的任何端口，請新增自訂端口號。
+.. 點選“儲存”。
++
+成功發現後，將顯示伺服器憑證供您接受。
+
++
+當您接受憑證時，vCenter Server 將會被加入到可用 vCenter Server 清單中。新增設備不會導致相關虛擬機器的資料收集，並且收集會按照計劃的時間間隔進行。
+
+
+
+. 如果您的 vCenter Server 在 *vCenters* 頁面上可用，請將滑鼠懸停在 *Status* 欄位上檢查其狀態，以顯示您的 vCenter Server 是否按預期運行，或者是否有警告或錯誤。
++
+[NOTE]
+====
+新增 vCenter Server 可讓您查看以下狀態。但是，在新增 vCenter Server 後，對應虛擬機器的效能和延遲資料可能需要長達一小時才能準確反映。
+
+====
++
+** 綠色：“正常”，表示已發現 vCenter Server，並且已成功收集效能指標
+** 黃色：「警告」（例如，當 vCenter Server 的統計等級未設定為 3 或更高以取得每個物件的統計資料時）
+** 橘色：「錯誤」（表示任何內部錯誤，例如異常、設定資料收集失敗或 vCenter Server 無法存取）您可以按一下列顯示圖示（*顯示/隱藏*）來查看 vCenter Server 狀態的狀態訊息並解決問題。
+
+
+. 如果 vCenter Server 無法存取或憑證已更改，請選擇 *vCenter* > *編輯* 來編輯 vCenter Server 詳細資訊。
+. 在*編輯 VMware vCenter Server* 頁面上進行必要的變更。
+. 點選“儲存”。
+
+
+*vCenter Server 資料收集開始*
+
+vCenter Server 收集即時 20 秒效能資料樣本，並將其匯總為 5 分鐘樣本。  Unified Manager 效能資料收集計畫是基於 vCenter Server 的預設值。 Unified Manager 處理從 vCenter Server 取得的 5 分鐘樣本，並計算虛擬磁碟、虛擬機器和主機的 IOPS 和延遲的每小時平均值。對於資料儲存庫，Unified Manager 根據從ONTAP取得的樣本計算每小時的 IOPS 和延遲平均值。這些值在整點時可用。新增 vCenter Server 後，效能指標不會立即可用，只有下一小時開始時才可用。效能資料輪詢在完成配置資料收集週期後開始。
+
+對於輪詢 vCenter Server 設定數據，Unified Manager 遵循與收集叢集配置資料相同的計劃。有關 vCenter Server 配置和效能資料收集計劃的信息，請參閱「叢集配置和效能資料收集活動」。
+
+*相關資訊*
+
+link:../performance-checker/concept_cluster_configuration_and_performance_data_collection_activity.html["叢集配置和效能資料收集活動"]

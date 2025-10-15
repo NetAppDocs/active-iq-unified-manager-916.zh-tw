@@ -1,0 +1,26 @@
+---
+permalink: events/task_fix_issues_using_um_automatic_remediations.html 
+sidebar: sidebar 
+keywords: fix, issues, use, unified manager, automatic, remediations 
+summary: Unified Manager 可以徹底診斷某些事件並使用「修復」按鈕提供單一解決方案。如果可用，這些解決方案將顯示在儀表板、事件詳細資訊頁面以及左側導覽功能表上的工作負載分析選擇中。 
+---
+= 使用 Unified Manager 自動修復功能解決問題
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+對於某些事件，Unified Manager 可以徹底診斷並使用 *Fix It* 按鈕提供單一解決方案。當可用時，這些解決方案將顯示在儀表板、事件詳細資訊頁面以及左側導覽功能表上的工作負載分析選擇中。
+
+大多數事件都有多種可能的解決方案，這些解決方案顯示在事件詳細資訊頁面中，以便您可以使用ONTAP系統管理器或ONTAP CLI 實施最佳解決方案。當 Unified Manager 確定存在一個解決方案來修復該問題、並且可以使用ONTAP CLI 命令解決該問題時，可以執行 *修復* 操作。
+
+.步驟
+. 若要從*儀表板*查看可修復的事件，請按一下*儀表板*。
++
+image::../media/management_actions.png[一個 UI 螢幕截圖，顯示如何從儀表板查看和修復事件。]
+
+. 若要解決 Unified Manager 可以修復的任何問題，請按一下「修復」按鈕。若要修復多個物件上存在的問題，請按一下「修復全部」按鈕。
+
+
+有關可透過自動修復修復的問題的信息，請參閱link:..//storage-mgmt/reference_what_ontap_issues_can_unified_manager_fix.html["Unified Manager 可以修復哪些問題"]。

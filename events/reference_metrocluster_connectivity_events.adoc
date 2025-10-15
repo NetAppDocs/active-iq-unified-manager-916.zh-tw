@@ -1,0 +1,252 @@
+---
+permalink: events/reference_metrocluster_connectivity_events.html 
+sidebar: sidebar 
+keywords: metrocluster, connectivity, events, impact area, availability 
+summary: 連接事件為您提供有關叢集元件之間以及MetroCluster配置中叢集之間的連接的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= MetroCluster連線事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+連接事件為您提供有關叢集元件之間以及MetroCluster over FC 和MetroCluster over IP 配置中的叢集之間的連接的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 兩種配置中常見的事件
+
+這些連線事件對於MetroCluster over FC 和MetroCluster over IP 配置都很常見。
+
+
+
+=== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+MetroCluster合作夥伴之間的所有連結均已關閉 (ocumEvtMetroClusterAllLinksBetweenPartnersDown)
+ a| 
+事件
+ a| 
+MetroCluster關係
+ a| 
+批判的
+
+
+
+ a| 
+MetroCluster合作夥伴無法透過對等網路存取 ( MetroCluster )
+ a| 
+事件
+ a| 
+MetroCluster關係
+ a| 
+批判的
+
+
+
+ a| 
+MetroCluster災難復原能力受到影響（ocumEvtMetroClusterDRStatusImpacted）
+ a| 
+風險
+ a| 
+MetroCluster關係
+ a| 
+批判的
+
+
+
+ a| 
+MetroCluster配置已切換（ocumEvtMetroClusterDRStatusImpacted）
+ a| 
+風險
+ a| 
+MetroCluster關係
+ a| 
+警告
+
+|===
+
+
+== 基於 FC 的MetroCluster配置
+
+這些事件與 FC 配置上的MetroCluster有關。
+
+
+
+=== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+所有交換器間連結均斷開（ocumEvtMetroClusterAllISLBetweenSwitchesDown）
+ a| 
+事件
+ a| 
+MetroCluster交換器間連接
+ a| 
+批判的
+
+
+
+ a| 
+FC-SAS 橋接至儲存堆疊連結關閉 (ocumEvtBridgeSasPortDown)
+ a| 
+事件
+ a| 
+MetroCluster橋接堆疊連接
+ a| 
+批判的
+
+
+
+ a| 
+MetroCluster配置部分切換 (ocumEvtMetroClusterDRStatusPartiallyImpacted)
+ a| 
+風險
+ a| 
+MetroCluster關係
+ a| 
+錯誤
+
+
+
+ a| 
+節點到 FC 交換器所有 FC-VI 互連鏈路關閉 (ocumEvtMccNodeSwitchFcviLinksDown)
+ a| 
+事件
+ a| 
+MetroCluster節點交換器連接
+ a| 
+批判的
+
+
+
+ a| 
+節點到 FC 交換器一個或多個 FC 發起方鏈路斷開 (ocumEvtMccNodeSwitchFcLinksOneOrMoreDown)
+ a| 
+風險
+ a| 
+MetroCluster節點交換器連接
+ a| 
+警告
+
+
+
+ a| 
+節點到 FC 切換所有 FC 發起方鏈路關閉 (ocumEvtMccNodeSwitchFcLinksDown)
+ a| 
+事件
+ a| 
+MetroCluster節點交換器連接
+ a| 
+批判的
+
+
+
+ a| 
+切換到 FC-SAS 橋接器 FC 連結關閉（ocumEvtMccSwitchBridgeFcLinksDown）
+ a| 
+事件
+ a| 
+MetroCluster交換器橋接連接
+ a| 
+批判的
+
+
+
+ a| 
+節點間所有 FC VI 互連連結均已關閉 (ocumEvtMccInterNodeLinksDown)
+ a| 
+事件
+ a| 
+節點間連接
+ a| 
+批判的
+
+
+
+ a| 
+節點間一個或多個 FC VI 互連連結斷開 (ocumEvtMccInterNodeLinksOneOrMoreDown)
+ a| 
+風險
+ a| 
+節點間連接
+ a| 
+警告
+
+
+
+ a| 
+節點到橋接連結斷開（ocumEvtMccNodeBridgeLinksDown）
+ a| 
+事件
+ a| 
+節點橋接
+ a| 
+批判的
+
+
+
+ a| 
+節點到儲存堆疊所有 SAS 連結均關閉 ( ocumEvtMccNodeStackLinksDown)
+ a| 
+事件
+ a| 
+節點堆疊連接
+ a| 
+批判的
+
+
+
+ a| 
+節點到儲存堆疊一個或多個 SAS 連結斷開 ( ocumEvtMccNodeStackLinksOneOrMoreDown)
+ a| 
+風險
+ a| 
+節點堆疊連接
+ a| 
+警告
+
+|===
+
+
+== MetroCluster over IP 配置
+
+這些事件與MetroCluster over IP 配置有關。
+
+
+
+=== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+MetroCluster IP 站點間連線狀態已關閉 (mccIntersiteconnectivityStatusDown)
+ a| 
+風險
+ a| 
+MetroCluster關係
+ a| 
+批判的
+
+
+
+ a| 
+MetroCluster-IP 節點到交換器的連線離線 (mccIpPortStatusOffline)
+ a| 
+風險
+ a| 
+節點
+ a| 
+錯誤
+
+|===

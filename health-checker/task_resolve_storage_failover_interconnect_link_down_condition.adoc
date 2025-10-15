@@ -1,0 +1,55 @@
+---
+permalink: health-checker/task_resolve_storage_failover_interconnect_link_down_condition.html 
+sidebar: sidebar 
+keywords: scan, resolve, storage, failover, interconnect link, conditions 
+summary: 此工作流程提供了一個範例，說明如何掃描、評估和解決故障儲存故障轉移互連連結狀況。在這種情況下，您是管理員，使用 Unified Manager 在節點上啟動ONTAP版本升級之前掃描儲存故障轉移風險。 
+---
+= 掃描並解決儲存故障轉移互連鏈路故障情況
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此工作流程提供了一個範例，說明如何掃描、評估和解決故障儲存故障轉移互連連結狀況。在這種情況下，您是管理員，使用 Unified Manager 在節點上啟動ONTAP版本升級之前掃描儲存故障轉移風險。
+
+.開始之前
+您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+如果在無中斷升級嘗試期間 HA 對節點之間的儲存故障轉移互連失敗，則升級失敗。因此，通常的做法是管理員在升級開始之前監視並確認要升級的叢集節點上的儲存故障轉移可靠性。
+
+.步驟
+. 在左側導覽窗格中，按一下「事件管理」。
+. 在*活動管理*庫存頁面中，選擇*活動可用性事件*。
+. 在「活動管理」庫存頁面「名稱」欄位頂部，點選image:../media/filtericon_um60.png["列過濾器的圖標"]並輸入 `*failover`在文字方塊中限制要顯示的事件為與儲存故障轉移相關的事件。
++
+顯示與儲存故障轉移條件相關的所有過去事件。
+
++
+在這種情況下，Unified Manager 在其可用性事件部分顯示事件「儲存故障轉移互連一個或多個連結關閉」。
+
+. 如果「事件管理」清單頁面上顯示與儲存故障轉移相關的一個或多個事件，請執行下列步驟：
++
+.. 按一下事件標題連結以顯示該事件的事件詳細資訊。
++
+在此範例中，您按一下事件標題「儲存故障轉移互連一個或多個連結關閉」。
+
++
+將顯示該事件的事件詳細資訊頁面。
+
+.. 在活動詳細資訊頁面上，您可以執行以下一項或多項任務：
++
+*** 查看原因欄位中的錯誤訊息並評估問題。
+*** 將事件分配給管理員。
+*** 確認該事件。
+
+
+
+
+
+
+*相關資訊*
+
+link:../events/reference_event_details_page.html["活動詳情頁面"]
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Unified Manager 使用者角色和功能"]

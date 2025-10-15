@@ -1,0 +1,26 @@
+---
+permalink: storage-mgmt/task_create_an_email_notification_format.html 
+sidebar: sidebar 
+keywords: create, email, notification, format, user, group, quotas 
+summary: 您可以建立通知格式，當出現與配額相關的問題（超出軟限製或達到硬限制）時，向使用者或使用者群組發送電子郵件。 
+---
+= 為使用者和使用者群組配額建立電子郵件通知格式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立通知格式，當出現與配額相關的問題（超出軟限製或達到硬限制）時，向使用者或使用者群組發送電子郵件。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+.步驟
+. 在左側導覽窗格中，按一下「*常規*」>「*配額電子郵件格式*」。
+. 輸入或修改「寄件者」、「主題」和「電子郵件詳細資料」欄位中的詳細資料。
+. 按一下「預覽」即可預覽電子郵件通知。
+. 按一下「*關閉*」關閉預覽視窗。
+. 如有需要，修改電子郵件通知的內容。
+. 點選“儲存”。
+

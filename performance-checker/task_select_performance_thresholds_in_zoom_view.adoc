@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_select_performance_thresholds_in_zoom_view.html 
+sidebar: sidebar 
+keywords: select, performance, thresholds, counter, charts, zoom, view 
+summary: 在計數器圖表縮放視圖中套用閾值可提供效能閾值事件發生的詳細視圖。這使您能夠應用或刪除閾值，並立即查看結果，這在決定下一步是否進行故障排除時很有幫助。 
+---
+= 在計數器圖表縮放視圖中選擇效能閾值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在計數器圖表縮放視圖中套用閾值可提供效能閾值事件發生的詳細視圖。這使您能夠應用或刪除閾值，並立即查看結果，這在決定下一步是否進行故障排除時很有幫助。
+
+在計數器圖表縮放視圖中選擇閾值可讓您查看有關效能閾值事件的精確資料。您可以套用計數器圖表縮放視圖的*策略*區域下出現的任何閾值。
+
+每次只能將一個策略套用到計數器圖表縮放檢視中的物件。
+
+.步
+. 選擇或取消選擇image:../media/eye_icon.gif["眼睛圖示"]與政策相關的。
++
+所選閾值將應用於計數器圖表縮放視圖。臨界閾值顯示為紅線；警告閾值顯示為黃線。
+
+

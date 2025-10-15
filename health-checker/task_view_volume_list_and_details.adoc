@@ -1,0 +1,43 @@
+---
+permalink: health-checker/task_view_volume_list_and_details.html 
+sidebar: sidebar 
+keywords: view, volume list, details 
+summary: 從「健康狀況：所有捲」視圖中，您可以監控磁碟區的庫存。容量：所有磁碟區視圖使您能夠查看有關叢集中磁碟區的容量和使用率的資訊。 
+---
+= 查看卷冊列表和詳細信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從「健康狀況：所有捲」視圖中，您可以監控磁碟區的庫存。容量：所有磁碟區視圖使您能夠查看有關叢集中磁碟區的容量和使用率的資訊。
+
+.開始之前
+您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+您還可以使用磁碟區/運行狀況詳細資訊頁面查看有關受監控磁碟區的詳細信息，包括磁碟區的容量、效率、配置和保護。您也可以查看有關特定磁碟區的相關設備和相關警報的資訊。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*磁碟區*」。
+. 選擇以下方式之一查看卷宗詳細資料：
++
+** 要查看有關集群中卷的健康狀況的詳細信息，請在“查看”菜單中選擇“健康狀況：所有捲視圖”。
+** 要查看有關叢集中磁碟區的容量和使用率的詳細信息，請在「檢視」功能表中選擇「容量：所有磁碟區」視圖。
+** 要查看完整詳細信息，請單擊卷名稱。
++
+您也可以透過點擊最小詳細資料對話方塊中的「查看詳細資料」來查看完整的詳細資訊。
+
+
+
+. *可選：*透過點擊最小詳細資料對話方塊中的「檢視相關」來查看與磁碟區相關的物件。
+
+
+*相關資訊*
+
+* link:../health-checker/reference_health_volume_details_page.html["卷：健康詳情頁面"]
+* link:../performance-checker/performance-view-all.html#performance-all-volumes-view["效能：所有磁碟區視圖"]
+* link:../health-checker/task_view_antiransomware_status_of_all_volumes_storage_vms.html#view-security-details-of-all-volumes-with-anti-ransomware-detection["安全：反勒索軟體視圖"]
+* link:../data-protection/task_view_volume_protection_relationships.html["查看卷宗保護關係"]
+* link:../reporting/task_create_report_to_view_available_volume_capacity_charts.html["建立報表以查看可用磁碟區容量圖表"]
+

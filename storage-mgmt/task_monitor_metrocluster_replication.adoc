@@ -1,0 +1,54 @@
+---
+permalink: storage-mgmt/task_monitor_metrocluster_replication.html 
+sidebar: sidebar 
+keywords: monitor, metrocluster, replication 
+summary: 您可以在鏡像資料的同時監控和診斷邏輯連接的整體健康狀況。您可以識別中斷叢集元件（例如聚合、節點和儲存虛擬機器）鏡像的問題或任何風險。 
+---
+= 監控MetroCluster複製
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在鏡像資料的同時監控和診斷邏輯連接的整體健康狀況。您可以識別中斷叢集元件（例如聚合、節點和儲存虛擬機器）鏡像的問題或任何風險。
+
+Unified Manager 使用系統運作狀況警報來監控MetroCluster配置中的元件和連線的狀態。
+
+.開始之前
+MetroCluster配置中的本機和遠端叢集都必須新增至 Unified Manager
+
+
+
+== 查看MetroCluster over IP 配置的複製
+
+對於MetroCluster over IP 配置，資料複製狀態顯示在受MetroCluster over IP 保護的叢集的拓撲預覽視圖中，該視圖來自 Unified Manager 左側導覽窗格中的下列視圖：
+
+* *儲存* > *叢集* > *保護： MetroCluster* 視圖
+* *保護* > *關係* > *關係： MetroCluster*視圖
+
+
+有關信息，請參閱link:../storage-mgmt/task_monitor_metrocluster_configurations.html#monitor-connectivity-issues-in-metrocluster-over-ip-configuration["監控MetroCluster over IP 中的連線問題"]。
+
+
+
+== 查看MetroCluster透過 FC 配置的複製
+
+請依照下列步驟確定MetroCluster透過 FC 配置的資料複製中的任何問題。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*叢集*」。
++
+顯示受監控集群的清單。
+
+. 從「*Health: All Clusters*」檢視中，按一下要查看MetroCluster複製詳細資料的叢集的名稱。在「叢集/運作狀況詳細資料」頁面上，按一下「MetroCluster複製」標籤。
++
+要複製的MetroCluster配置的拓撲顯示在本地站點的相應叢集物件區域中，以及有關正在鏡像資料的遠端站點的資訊。如果將指標移到圖示上，您可以查看有關所產生事件的詳細資訊。
+
+
+
+您可以使用集群/健康詳情頁面中顯示的資訊來修正任何複製問題。如果您發現MetroCluster配置中存在鏡像問題，則必須登入系統管理員或存取ONTAP CLI 來解決這些問題。
+
+*相關資訊*
+
+link:../health-checker/reference_health_cluster_details_page.html["集群/健康詳情頁面"]

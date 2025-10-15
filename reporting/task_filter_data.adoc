@@ -1,0 +1,22 @@
+---
+permalink: reporting/task_filter_data.html 
+sidebar: sidebar 
+keywords: filtering, data 
+summary: 過濾數據以確保結果符合您的報告要求。透過過濾，您可以僅顯示您感興趣的數據。 
+---
+= 過濾數據
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+過濾數據以確保結果符合您的報告要求。透過過濾，您可以僅顯示您感興趣的數據。
+
+.步驟
+. 點擊過濾器圖示新增過濾器以聚焦您想要查看的結果，然後點擊*套用過濾器*。
++
+image::../media/filter_cold_data_2.png[一個 UI 螢幕截圖，顯示如何新增和套用篩選器。]
+
+. 命名未儲存的視圖以儲存您的變更。
+

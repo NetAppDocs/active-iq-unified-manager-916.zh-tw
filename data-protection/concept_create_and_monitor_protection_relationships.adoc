@@ -1,0 +1,14 @@
+---
+permalink: data-protection/concept_create_and_monitor_protection_relationships.html 
+sidebar: sidebar 
+keywords: create, monitor, troubleshoot, protection, relationships 
+summary: Unified Manager 讓您能夠建立保護關係、監控和排除託管叢集上儲存的資料的鏡像保護和備份庫保護故障，並在資料被覆蓋或遺失時還原資料。 
+---
+= 建立、監控和排除保護關係故障
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager 讓您能夠建立保護關係、監控和排除託管叢集上儲存的資料的鏡像保護和備份庫保護故障，並在資料被覆蓋或遺失時還原資料。

@@ -1,0 +1,23 @@
+---
+permalink: storage-mgmt/task_view_active_events_from_notification_bell.html 
+sidebar: sidebar 
+keywords: view, active, events, notification, bell 
+summary: 功能表列中的通知鈴提供了一種快速查看 Unified Manager 正在追蹤的最重要的活動事件的方法。 
+---
+= 從通知鈴查看活動事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+通知鈴聲（image:../media/notification_bell.png[""] ) 提供了一種快速查看 Unified Manager 正在追蹤的最重要的活動事件的方法。
+
+活動事件清單提供了一種查看所有叢集上嚴重、錯誤、警告和升級事件總數的方法。此清單包括前 7 天的事件，但不包括資訊事件。您可以點擊連結來顯示您最感興趣的事件清單。
+
+請注意，當叢集不可存取時，Unified Manager 會在此頁面中顯示此資訊。您可以透過點擊「詳細資料」按鈕查看有關無法存取的叢集的詳細資訊。此操作將開啟事件詳細資訊頁面。規模監控問題（例如管理站空間或 RAM 不足）也會顯示在此頁面上。
+
+.步驟
+. 在功能表列中，按一下image:../media/notification_bell.png[""]。
+. 要查看任何活動事件的詳細信息，請單擊事件文字鏈接，例如“2 容量”或“4 性能”。
+

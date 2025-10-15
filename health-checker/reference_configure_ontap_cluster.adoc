@@ -1,0 +1,37 @@
+---
+permalink: health-checker/reference_configure_ontap_cluster.html 
+sidebar: sidebar 
+keywords: netapp, snapshot copy, copies, backup, windows, configure, ontap, cluster 
+summary: 在 Windows 系統上使用 Snapshot 副本備份和還原Active IQ Unified Manager之前，您需要在ONTAP叢集上執行一些預先設定步驟。 
+---
+= 配置ONTAP集群
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 Windows 系統上使用 Snapshot 副本備份和還原Active IQ Unified Manager之前，您需要在ONTAP叢集上執行一些預先設定步驟。
+
+您可以使用命令提示字元或系統管理員使用者介面設定ONTAP叢集。 ONTAP叢集的配置涉及設定資料 LIF，以便可作為 iSCSI LIF 指派給儲存虛擬機器。下一步是使用系統管理器使用者介面配置啟用 iSCSI 的儲存虛擬機器。您需要為此儲存虛擬機器設定靜態網路路由，以控制 LIF 如何使用網路進行出站流量。
+
+[NOTE]
+====
+您應該有一個專用捲和一個 LUN 用於備份配置。選定的磁碟區應該只包括一個 LUN。  LUN 的大小應至少為Active IQ Unified Manager預計處理的資料大小的兩倍。
+
+====
+您需要執行以下配置：
+
+.步驟
+. 配置啟用 iSCSI 的儲存虛擬機器或使用具有相同配置的現有儲存虛擬機器。
+. 為已設定的儲存虛擬機器設定網路路由。
+. 配置適當容量的磁碟區和其中的單一 LUN，確保該磁碟區僅專用於此 LUN。
++
+
+NOTE: 在系統管理員上建立 LUN 的情況下，取消對映 LUN 可能會刪除 igroup，且還原可能會失敗。為避免這種情況，請確保在建立 LUN 時明確建立 LUN，並且在取消對映 LUN 時不會刪除該 LUN。
+
+. 在儲存虛擬機器中設定啟動器群組。
+. 配置連接埠集。
+. 將 igroup 與連接埠集整合。
+. 將 LUN 對應到 igroup。
+

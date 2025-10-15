@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/reference_resolve_performance_events.html 
+sidebar: sidebar 
+keywords: resolving, performance, events 
+summary: 您可以使用建議的操作來嘗試自行解決效能事件。前三個建議始終顯示，第四個建議下的操作特定於所顯示的事件類型。 
+---
+= 解決效能事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用建議的操作來嘗試自行解決效能事件。前三個建議始終顯示，第四個建議下的操作特定於所顯示的事件類型。
+
+*幫助我執行此操作*連結為每個建議的操作提供了附加信息，包括執行特定操作的說明。某些操作可能涉及使用 Unified Manager、 ONTAP System Manager、 OnCommand Workflow Automation、 ONTAP CLI 指令或這些工具的組合。

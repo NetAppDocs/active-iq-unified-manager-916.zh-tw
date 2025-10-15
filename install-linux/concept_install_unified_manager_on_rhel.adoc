@@ -1,0 +1,14 @@
+---
+permalink: install-linux/concept_install_unified_manager_on_rhel.html 
+sidebar: sidebar 
+keywords: install, unified manager, linux systems 
+summary: 重要的是，您要了解下載和安裝 Unified Manager 的步驟順序會根據您的安裝場景而有所不同。 
+---
+= 在 Linux 系統上安裝 Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+重要的是，您要了解下載和安裝 Unified Manager 的步驟順序會根據您的安裝場景而有所不同。

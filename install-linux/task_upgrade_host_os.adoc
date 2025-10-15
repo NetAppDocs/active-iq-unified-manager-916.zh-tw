@@ -1,0 +1,70 @@
+---
+permalink: install-linux/task_upgrade_host_os.html 
+sidebar: sidebar 
+keywords: upgrade, host OS, red hat enterprise, linux 7.x, 8.x 
+summary: 如果您先前在 Red Hat Enterprise Linux 7.x 系統上安裝了 Unified Manager，並且需要升級至 Red Hat Enterprise Linux 8.x，則必須遵循本主題中所列的步驟之一。在這兩種情況下，您都必須在 Red Hat Enterprise Linux 7.x 系統上建立 Unified Manager 的備份，然後將備份還原到 Red Hat Enterprise Linux 8.x 系統上。 
+---
+= 將主機作業系統從 Red Hat Enterprise Linux 7.x 升級到 8.x
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您先前在 Red Hat Enterprise Linux 7.x 系統上安裝了 Unified Manager，並且需要升級至 Red Hat Enterprise Linux 8.x，則必須遵循本主題中所列的步驟之一。在這兩種情況下，您都必須在 Red Hat Enterprise Linux 7.x 系統上建立 Unified Manager 的備份，然後將備份還原到 Red Hat Enterprise Linux 8.x 系統上。請注意，Red Hat Enterprise Linux 支援的版本是從 8.0 到 8.10。
+
+下面列出的兩個選項之間的差異在於，在一種情況下，您正在將 Unified Manager 還原到新的 8.x 伺服器上，而在另一種情況下，您正在在同一台伺服器上執行還原操作。
+
+由於此任務要求您在 Red Hat Enterprise Linux 7.x 系統上建立 Unified Manager 的備份，因此您應該只在準備完成整個升級程序時才建立備份，以便 Unified Manager 在最短的時間內處於離線狀態。在 Red Hat Enterprise Linux 7.x 系統關閉期間和新 Red Hat Enterprise Linux 8.x 啟動之前的一段時間內，Unified Manager UI 中收集的資料會出現缺口。
+
+看link:../health-checker/concept_manage_backup_and_restore_operations.html["管理備份和復原作業"]如果您需要查看備份和復原過程的詳細說明。
+
+如果您有一個備用系統，可以在其中安裝 Red Hat Enterprise Linux 8.x 軟體，請按照下列步驟操作，以便在 Red Hat Enterprise Linux 7.x 系統仍然可用時可以在該系統上執行 Unified Manager 還原。
+
+. 使用 Red Hat Enterprise Linux 8.x 軟體安裝和設定新伺服器。
++
+看link:reference_red_hat_software_and_installation_requirements.html["Linux 軟體和安裝需求"]。
+
+. 在 Red Hat Enterprise Linux 8.x 系統上，安裝與現有 ​​Red Hat Enterprise Linux 7.x 系統上相同版本的 Unified Manager 軟體。
++
+看link:concept_install_unified_manager_on_rhel.html["在 Linux 上安裝 Unified Manager"]。
+
++
+安裝完成後，請勿啟動 UI 或設定任何叢集、使用者或身份驗證設定。備份檔案在復原過程中填入此資訊。
+
+. 在 Red Hat Enterprise Linux 7.x 系統上，從 Web UI 中的管理選單建立 Unified Manager 備份，然後複製備份文件(`.7z`文件）和資料庫儲存庫目錄的內容(`/database-dumps-repo`子目錄）複製到外部位置。
+. 在 Red Hat Enterprise Linux 7.x 系統上，關閉 Unified Manager。
+. 在 Red Hat Enterprise Linux 8.x 系統上，複製備份文件(`.7z`文件）從外部位置到 `/opt/netapp/data/ocum-backup/`以及資料庫儲存庫文件 `/database-dumps-repo`下的子目錄 `/ocum-backup`目錄。
+. 輸入以下指令從備份檔案還原 Unified Manager 資料庫：
++
+`um backup restore -f /opt/netapp/data/ocum-backup/<backup_file_name>`
+
+. 在您的 Web 瀏覽器中輸入 IP 位址或 URL 以啟動 Unified Manager Web UI，然後登入系統。
+
+
+一旦您驗證系統正常運作，您就可以從 Red Hat Enterprise Linux 7.x 系統中刪除 Unified Manager。
+
+*在同一台伺服器上升級主機作業系統*
+
+如果您沒有可以安裝 Red Hat Enterprise Linux 8.x 軟體的備用系統，請依照下列步驟操作。
+
+. 從 Web UI 中的管理選單，建立 Unified Manager 備份，然後複製備份文件(`.7z`文件）和資料庫儲存庫目錄的內容(`/database-dumps-repo`子目錄）複製到外部位置。
+. 從系統中刪除 Red Hat Enterprise Linux 7.x 映像並徹底清除系統。
+. 在同一系統上安裝並設定 Red Hat Enterprise Linux 8.x 軟體。
++
+看link:reference_red_hat_software_and_installation_requirements.html["Linux 軟體和安裝需求"]。
+
+. 在 Red Hat Enterprise Linux 8.x 系統上，安裝與 Red Hat Enterprise Linux 7.x 系統上相同版本的 Unified Manager 軟體。
++
+看link:concept_install_unified_manager_on_rhel.html["在 Linux 上安裝 Unified Manager"]。
+
++
+安裝完成後，請勿啟動 UI 或設定任何叢集、使用者或身份驗證設定。備份檔案在復原過程中填入此資訊。
+
+. 複製備份文件(`.7z`文件）從外部位置到 `/opt/netapp/data/ocum-backup/`以及資料庫儲存庫文件 `/database-dumps-repo`下的子目錄 `/ocum-backup`目錄。
+. 輸入以下指令從備份檔案還原 Unified Manager 資料庫：
++
+`um backup restore -f /opt/netapp/data/ocum-backup/<backup_file_name>`
+
+. 在您的 Web 瀏覽器中輸入 IP 位址或 URL 以啟動 Unified Manager Web UI，然後登入系統。
+

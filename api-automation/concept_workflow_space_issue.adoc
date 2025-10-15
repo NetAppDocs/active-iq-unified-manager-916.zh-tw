@@ -1,0 +1,74 @@
+---
+permalink: api-automation/concept_workflow_space_issue.html 
+sidebar: sidebar 
+keywords: determine, space, issue, aggregate 
+summary: 您可以使用Active IQ Unified Manager中的資料中心 API 來監控磁碟區中空間的可用性和使用率。您可以確定磁碟區中的空間問題並識別過度利用或利用不足的儲存資源。 
+---
+= 使用 API 確定聚合中的空間問題
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Active IQ Unified Manager中的資料中心 API 來監控磁碟區中空間的可用性和使用率。您可以確定磁碟區中的空間問題並識別過度利用或利用不足的儲存資源。
+
+聚合的資料中心 API 會擷取有關可用空間和已使用空間以及節省空間效率設定的相關資訊。您也可以根據指定的屬性篩選檢索到的資訊。
+
+確定聚合中是否缺少空間的一種方法是驗證您的環境中是否存在啟用了自動調整大小模式的磁碟區。然後，您應該確定哪些磁碟區被過度利用並執行任何糾正措施。
+
+以下流程圖說明了檢索啟用自動調整大小模式的磁碟區資訊的過程：
+
+image::../media/space_utilization.gif[空間利用率]
+
+此流程假定叢集已在ONTAP中建立並新增至 Unified Manager。
+
+. 取得叢集金鑰，除非您知道其值：
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+資料中心
+ a| 
+得到
+ a| 
+`/datacenter/cluster/clusters`
+
+|===
+. 使用叢集鍵作為過濾參數，查詢該叢集上的聚合。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+資料中心
+ a| 
+得到
+ a| 
+`/datacenter/storage/aggregates`
+
+|===
+. 根據響應，分析聚合的空間使用情況並確定哪些聚合存在空間問題。對於每個存在空間問題的聚合，從相同的 JSON 輸出中取得聚合鍵。
+. 使用每個聚合鍵，過濾所有具有 autosize.mode 參數值的捲 `grow.`
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+資料中心
+ a| 
+得到
+ a| 
+`/datacenter/storage/volumes`
+
+|===
+. 分析哪些卷宗被過度利用。
+. 執行任何必要的糾正措施（例如跨聚合移動卷）以解決磁碟區中的空間問題。您可以從ONTAP或 Unified Manager Web UI 執行這些操作。
+

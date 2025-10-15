@@ -1,0 +1,27 @@
+---
+permalink: health-checker/task_send_support_bundle_to_technical_support.html 
+sidebar: sidebar 
+keywords: support bundle, technical support 
+summary: 當問題需要比AutoSupport訊息提供的更詳細的診斷和故障排除資訊時，您可以向技術支援發送支援包。 
+---
+= 向技術支援發送支援包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當問題需要比AutoSupport訊息提供的更詳細的診斷和故障排除資訊時，您可以向技術支援發送支援包。
+
+.開始之前
+您必須具有支援包的存取權限才能將其傳送給技術支援。
+
+您必須擁有透過技術支援網站產生的案例編號。
+
+.步驟
+. 登入NetApp支援站點。
+. 上傳文件。
++
+https://kb.netapp.com/Advice_and_Troubleshooting/Miscellaneous/How_to_upload_a_file_to_NetApp["如何將檔案上傳到NetApp"]
+
+

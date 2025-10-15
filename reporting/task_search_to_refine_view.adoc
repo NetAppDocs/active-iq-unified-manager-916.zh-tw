@@ -1,0 +1,23 @@
+---
+permalink: reporting/task_search_to_refine_view.html 
+sidebar: sidebar 
+keywords: search, refine, view 
+summary: 獲得所需的視圖後，您可以使用搜尋欄位進一步最佳化結果，以專注於要包含在報告中的結果。 
+---
+= 使用搜尋來優化您的視圖
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+獲得所需的視圖後，您可以使用搜尋欄位進一步最佳化結果，以專注於要包含在報告中的結果。
+
+.步驟
+. 開啟您想要用作報表基礎的自訂或預設檢視。
+. 在搜尋欄位中輸入內容以優化視圖中列出的資料。您可以在任何顯示的欄位中輸入部分資料。例如，如果您想要搜尋名稱中包含「US_East」的節點，您可以最佳化完整的節點清單。
++
+搜尋結果將保存在自訂檢視中並用於產生的計畫報告中。
+
+. 命名未儲存的視圖以儲存您的變更。
+

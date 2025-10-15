@@ -1,0 +1,45 @@
+---
+permalink: reporting/task_create_report_for_volumes_with_high_amount_of_cold_data.html 
+sidebar: sidebar 
+keywords: display, volumes, cold, data, non-fabricpool, aggregate, identify 
+summary: 您可以建立報表來顯示非FabricPool聚合上具有大量冷資料的磁碟區。這可以幫助您識別應移動到FabricPool聚合的磁碟區。 
+---
+= 建立報表以查看未啟用FabricPool 的聚合上具有大量冷資料的捲
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立報表來顯示非FabricPool聚合上具有大量冷資料的磁碟區。這可以幫助您識別應移動到FabricPool聚合的磁碟區。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+
+
+使用下列步驟為未啟用FabricPool的聚合上具有大量冷資料的磁碟區建立自訂視圖，然後計劃為該視圖產生報表。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*磁碟區*」。
+. 在「檢視」功能表中，選擇「*效能*」>「*所有磁碟區*」。
+. 選擇“顯示/隱藏”以確保“磁碟類型”列出現在視圖中。
++
+新增或刪除其他欄位以建立對您的報表很重要的視圖。
+
+. 將“磁碟類型”列拖曳到“冷資料”列附近。
+. 點擊過濾器圖標，添加以下過濾器，然後點擊*應用過濾器*：
++
+** 冷數據大於 100 GB
+** 磁碟類型包含 SSD
+
+
+. 按一下「磁碟類型」列的頂部，按磁碟類型對磁碟區進行排序，以便磁碟類型 SSD（FabricPool）位於底部。
+. 使用反映視圖所顯示內容的特定名稱儲存視圖，例如「`Cold data vols not FabricPool」。
+. 點擊庫存頁面上的“*計劃報告*”按鈕。
+. 輸入報告計劃的名稱並填寫其他報告字段，然後按一下複選標記 (image:../media/blue_check.gif[""] ) 位於行尾。
++
+該報告將立即發送以進行測試。此後，將產生報告並透過電子郵件發送給使用指定頻率列出的收件者。
+
+
+
+根據報表中顯示的結果，您可以找到適合移動到FabricPool聚合的磁碟區。

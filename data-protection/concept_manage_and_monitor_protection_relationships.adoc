@@ -1,0 +1,28 @@
+---
+permalink: data-protection/concept_manage_and_monitor_protection_relationships.html 
+sidebar: sidebar 
+keywords: manage, monitor, protection, relationships 
+summary: Active IQ Unified Manager可讓您建立保護關係、監控和排除託管叢集上的SnapMirror和SnapVault關係故障，以及在資料被覆寫或遺失時復原資料。 
+---
+= 管理和監控保護關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager可讓您建立保護關係、監控和排除託管叢集上的SnapMirror和SnapVault關係故障，以及在資料被覆寫或遺失時復原資料。
+
+對於SnapMirror操作，有兩種複製類型：
+
+* 非同步
++
+從主捲到輔助卷的複製由計劃決定。
+
+* 同步
++
+複製在主磁碟區和輔助磁碟區上同時執行。
+
+
+
+您可以同時執行最多 10 項保護作業，而不會對效能產生任何影響。當您同時執行 11 到 30 個作業時，可能會遇到一些效能影響。不建議同時執行超過 30 個作業。

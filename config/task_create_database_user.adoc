@@ -1,0 +1,47 @@
+---
+permalink: config/task_create_database_user.html 
+sidebar: sidebar 
+keywords: create, database, user 
+summary: 若要支援工作流程自動化和 Unified Manager 之間的連接，或存取資料庫視圖，您必須先在 Unified Manager Web UI 中建立具有整合模式或報表模式角色的資料庫使用者。 
+---
+= 建立資料庫用戶
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要支援工作流程自動化和 Unified Manager 之間的連接，或存取資料庫視圖，您必須先在 Unified Manager Web UI 中建立具有整合模式或報表模式角色的資料庫使用者。
+
+.開始之前
+您必須具有應用程式管理員角色。
+
+資料庫使用者提供與工作流程自動化的整合以及對特定於報告的資料庫視圖的存取。資料庫使用者無權存取 Unified Manager Web UI 或維護控制台，也無法執行 API 呼叫。
+
+.步驟
+. 在左側導覽窗格中，按一下「*常規*」>「*使用者*」。
+. 在「使用者」頁面中，按一下「*新增*」。
+. 在新增使用者對話方塊中，在*類型*下拉清單中選擇*資料庫使用者*。
+. 輸入資料庫使用者的名稱和密碼。
+. 在*角色*下拉清單中，選擇適當的角色。
++
+[cols="2*"]
+|===
+| 如果您是... | 選擇此角色 
+
+
+ a| 
+將 Union Manager 與工作流程自動化連接起來
+ a| 
+整合模式
+
+
+
+ a| 
+存取報告和其他資料庫視圖
+ a| 
+報告架構
+
+|===
+. 按一下“*新增*”。
+

@@ -1,0 +1,14 @@
+---
+permalink: install-windows/concept_install_unified_manager_windows.html 
+sidebar: sidebar 
+keywords: install, unified manager, windows 
+summary: 了解在 Windows 上下載和安裝 Unified Manager 的步驟順序非常重要。 
+---
+= 在 Windows 上安裝 Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解在 Windows 上下載和安裝 Unified Manager 的步驟順序非常重要。

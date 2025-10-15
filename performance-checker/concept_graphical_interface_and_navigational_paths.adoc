@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_graphical_interface_and_navigational_paths.html 
+sidebar: sidebar 
+keywords: graphical, interface, navigational, paths 
+summary: Unified Manager 具有極大的靈活性，可讓您以多種方式完成多項任務。在 Unified Manager 中工作時，您會發現許多導覽路徑。雖然無法顯示所有可能的導航組合，但您應該熟悉一些更常見的場景。 
+---
+= 圖形介面和導航路徑
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager 具有極大的靈活性，可讓您以多種方式完成多項任務。在 Unified Manager 中工作時，您會發現許多導覽路徑。雖然無法顯示所有可能的導航組合，但您應該熟悉一些更常見的場景。

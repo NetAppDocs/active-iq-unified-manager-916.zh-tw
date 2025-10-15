@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_retrieve_support_bundle_using_windows_client.html 
+sidebar: sidebar 
+keywords: retrieve, support bundle, windows client 
+summary: 如果您是 Windows 用戶，您可以下載並安裝一個工具來從 Unified Manager 伺服器檢索支援包。您可以將支援包發送給技術支持，以便對問題進行更詳細的診斷。  Filezilla 或 WinSCP 是您可以使用的工具的範例。 
+---
+= 使用 Windows 用戶端檢索支援包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您是 Windows 用戶，您可以下載並安裝一個工具來從 Unified Manager 伺服器檢索支援包。您可以將支援包發送給技術支持，以便對問題進行更詳細的診斷。  Filezilla 或 WinSCP 是您可以使用的工具的範例。
+
+.開始之前
+您必須是維護使用者才能執行此任務。
+
+您必須使用支援 SCP 或 SFTP 的工具。
+
+.步驟
+. 下載並安裝工具來檢索支援包。
+. 打開工具。
+. 透過 SFTP 連線到您的 Unified Manager 管理伺服器。
++
+該工具顯示 /support 目錄的內容，您可以查看所有現有的支援包。
+
+. 選擇要複製的支援包的目標目錄。
+. 選擇要複製的支援包，然後使用該工具將檔案從 Unified Manager 伺服器複製到本機系統。
+

@@ -1,0 +1,26 @@
+---
+permalink: storage-mgmt/task_view_user_and_user_group_quotas.html 
+sidebar: sidebar 
+keywords: view, user, user, group, quotas 
+summary: 儲存虛擬機器/運作狀況詳細資訊頁面顯示有關在 SVM 上配置的使用者和使用者群組配額的資訊。您可以查看使用者或使用者群組的名稱、磁碟和檔案的限制設定、已使用的磁碟和檔案空間以及用於通知的電子郵件地址。 
+---
+= 查看使用者和使用者群組配額
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+儲存虛擬機器/運作狀況詳細資訊頁面顯示有關在 SVM 上配置的使用者和使用者群組配額的資訊。您可以查看使用者或使用者群組的名稱、磁碟和檔案的限制設定、已使用的磁碟和檔案空間以及用於通知的電子郵件地址。
+
+.開始之前
+您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*儲存虛擬機器*」。
+. 在*Health: All Storage VMs*視圖中，選擇儲存虛擬機，然後按一下*User and Group Quotas*選項卡。
+
+
+*相關資訊*
+
+link:../config/task_add_users.html["新增用戶"]

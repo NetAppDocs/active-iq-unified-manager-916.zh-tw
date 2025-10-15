@@ -1,0 +1,14 @@
+---
+permalink: events/concept_manage_alerts.html 
+sidebar: sidebar 
+keywords: manage, alerts 
+summary: 您可以設定警報，以便在發生特定事件或特定嚴重性類型的事件時自動發送通知。您也可以將警報與觸發警報時執行的腳本關聯。 
+---
+= 管理警報
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以設定警報，以便在發生特定事件或特定嚴重性類型的事件時自動發送通知。您也可以將警報與觸發警報時執行的腳本關聯。

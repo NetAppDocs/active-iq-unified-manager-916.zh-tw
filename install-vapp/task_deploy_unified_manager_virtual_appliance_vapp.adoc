@@ -1,0 +1,118 @@
+---
+permalink: install-vapp/task_deploy_unified_manager_virtual_appliance_vapp.html 
+sidebar: sidebar 
+keywords: deploy, unified manager, virtual appliance 
+summary: 下載安裝檔案後，您可以將 Unified Manager 部署為虛擬裝置。使用 vSphere Web Client 在 ESXi 伺服器上部署虛擬設備。部署虛擬設備時，會建立一個虛擬機器。 
+---
+= 部署 Unified Manager 虛擬設備
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+下載安裝檔案後，您可以將 Unified Manager 部署為虛擬裝置。使用 vSphere Web Client 在 ESXi 伺服器上部署虛擬設備。部署虛擬設備時，會建立一個虛擬機器。
+
+.開始之前
+您應該查看系統要求。在部署 Unified Manager 虛擬設備之前進行必要的變更。
+
+看link:concept_virtual_infrastructure_or_hardware_system_requirements.html["虛擬基礎架構要求"]。
+
+看link:reference_vmware_software_and_installation_requirements.html["VMware 軟體和安裝要求"]。
+
+如果使用動態主機設定協定 (DHCP)，請確保 DHCP 伺服器可用，且 DHCP 和虛擬機器 (VM) 網路介面卡配置正確。  DHCP 是預設配置的。
+
+如果使用靜態網路配置，請確保 IP 位址在相同子網路中不會重複，並且已配置適當的 DNS 伺服器項目。
+
+部署虛擬設備之前取得以下資訊：
+
+* 用於存取 VMware vCenter Server 和 vSphere Web Client 的憑證
+* 您要部署 Unified Manager 虛擬設備的 ESXi 伺服器的 IP 位址
+* 有關資料中心的詳細信息，例如儲存空間的可用性
+* 如果您不使用 DHCP，請取得您計劃連接的網路設備的 IPv4 或 IPv6 位址：
++
+** 主機的完全限定網域名稱 (FQDN)
+** 主機的IP位址
+** 網路遮罩
+** 預設網關的 IP 位址
+** 主 DNS 位址和輔助 DNS 位址
+** 搜尋域名
+
+
+
+
+從 Unified Manager 9.8 開始，VMware Tools 已被 Open VM Tools 取代 `_open-vm-tools_`）。您無需在安裝過程中安裝 VMware Tools，因為 `_open-vm-tools_`包含在 Unified Manager 安裝套件中。
+
+部署虛擬裝置時，會產生用於 HTTPS 存取的唯一自簽章憑證。造訪 Unified Manager Web UI 時，您可能會看到有關不受信任的憑證的瀏覽器警告。
+
+支援 Unified Manager 虛擬設備的 VMware High Availability。
+
+.步驟
+. 在 vSphere Client 中，按一下 *檔案* > *部署 OVF 範本*。
+. 完成部署 OVF 範本精靈以部署 Unified Manager 虛擬設備。
++
+在「審核詳情」頁面：
+
++
+** 驗證發布者部分的詳細資訊。訊息 *Entrust Code Signing - OVCS2 (Trusted certificate)* 確認下載的完整性 `OVA`文件。  + 如果您看到訊息 *Entrust Code Signing - OVCS2（無效憑證）*，請將 VMware vCenter Server 升級至 7.0U3E 或更高版本。
++
+在「自訂模板」頁面上：
+
+** 使用 DHCP 和 IPv4 尋址時，將所有欄位留空。
+** 選取「啟用自動 IPv6 位址」框，並在使用 DHCP 和 IPv6 位址時將所有其他欄位留空。
+** 如果您想使用靜態網路配置，您可以填寫此頁面上的字段，這些設定在部署期間會套用。確保 IP 位址對於部署它的主機是唯一的、尚未使用且具有有效的 DNS 項目。
+
+
+. 將 Unified Manager 虛擬設備部署到 ESXi 伺服器後，以滑鼠右鍵按一下虛擬機，然後選擇 *啟動* 來啟動虛擬機。
++
+[NOTE]
+====
+如果因資源不足導致開機操作失敗，請新增資源，然後重試安裝。
+
+====
+. 按一下「*控制台*」標籤。
++
+初始啟動過程需要幾分鐘才能完成。
+
+. 若要設定您的時區，請依照 VM 控制台視窗中的指示輸入您的地理區域和城市或地區。
++
+所有顯示的日期資訊均使用為 Unified Manager 設定的時區，而不管託管裝置上的時區設定為何。如果您的儲存系統和管理伺服器配置了相同的 NTP 伺服器，則它們指的是相同的時間點，即使它們看起來不同。例如，如果您使用與管理伺服器配置不同時區的裝置建立 Snapshot 副本，時間戳記就是管理伺服器時間。
+
+. 如果沒有可用的 DHCP 服務，或靜態網路設定的詳細資訊有錯誤，請選擇下列選項之一：
++
+[cols="2*"]
+|===
+| 如果您使用... | 然後這樣做... 
+
+
+ a| 
+DHCP
+ a| 
+選擇*重試 DHCP*。如果您打算使用 DHCP，則應確保其配置正確。
+
+如果您使用啟用 DHCP 的網絡，FQDN 和 DNS 伺服器項目將自動提供給虛擬設備。如果 DHCP 未正確配置 DNS，則會自動指派主機名稱「UnifiedManager」並將其與安全性憑證關聯。如果您尚未設定啟用 DHCP 的網絡，則應手動輸入網路設定資訊。
+
+
+
+ a| 
+靜態網路配置
+ a| 
+.. 選擇*輸入靜態網路配置的詳細資訊*。
++
+配置過程需要幾分鐘才能完成。
+
+.. 確認您輸入的值，然後選擇 *Y*。
+
+
+|===
+. 在提示符號下，輸入維護用戶名，然後按一下 *Enter*。
++
+維護使用者名稱應以 az 的字母開頭，後面跟著 -、az 或 0-9 的任意組合。
+
+. 在提示符號下，輸入密碼，然後按一下「*Enter*」。
++
+VM 控制台顯示 Unified Manager Web UI 的 URL。
+
+
+
+您可以存取 Web UI 來執行 Unified Manager 的初始設置，例如link:../config/concept_configure_unified_manager.html["配置Active IQ Unified Manager"]。

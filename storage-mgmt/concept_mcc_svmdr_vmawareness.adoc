@@ -1,0 +1,91 @@
+---
+permalink: storage-mgmt/concept_mcc_svmdr_vmawareness.html 
+sidebar: sidebar 
+keywords: view, virtual, infrastructure, disaster, recovery, setup, datastores, metrocluster configuration 
+summary: '您可以查看MetroCluster配置或儲存虛擬機器 (儲存 VM) 災難復原 (SVM DR) 設定中託管的資料儲存庫的配置和效能指標。' 
+---
+= 查看災難復原設定中的虛擬基礎架構
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看MetroCluster配置或儲存虛擬機器 (儲存 VM) 災難復原 (SVM DR) 設定中託管的資料儲存庫的配置和效能指標。
+
+在 Unified Manager 上，您可以查看MetroCluster配置中作為 vCenter Server 中的資料儲存附加的 NAS 磁碟區或 LUN。  MetroCluster配置中託管的資料儲存庫與標準環境中的資料儲存庫在相同的拓撲視圖中表示。
+
+您也可以查看儲存虛擬機器災難復原配置中對應到 vCenter Server 中的資料儲存區的 NAS 磁碟區或 LUN。
+
+
+
+== 查看MetroCluster配置中的資料存儲
+
+在查看MetroCluster配置中的資料儲存之前，請注意以下先決條件：
+
+* 在發生切換和切換回時，HA 對的主集群和輔助集群以及 vCenter Server 的發現應該是完整的。
+* HA 對的主叢集和輔助叢集以及 vCenter Server 必須由 Unified Manager 管理。
+* 必須在ONTAP和 vCenter Server 上完成所需的設定。有關信息，請參閱ONTAP和 vCenter 文件。
++
+https://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 文檔中心"]
+
+
+
+請依照以下步驟查看資料儲存：
+
+. 在 *VMWARE* > *虛擬機器* 頁面上，按一下託管資料儲存區的 VM。按一下“*工作負載分析器*”或資料儲存物件連結。在標準場景中，當託管磁碟區或 LUN 的主網站按預期執行時，您可以看到主網站的 vServer 叢集詳細資訊。
+. 當災難發生並連續切換到輔助站點時，資料儲存連結指向輔助叢集中磁碟區或 LUN 的效能指標。這在下一個叢集和 vServer 發現（獲取）週期完成後反映出來。
+. 成功切換後，資料儲存連結再次反映主集群中捲或 LUN 的效能指標。這在下一個叢集和 vServer 發現週期完成後反映出來。
+
+
+
+
+== 查看儲存虛擬機器災難復原配置中的資料存儲
+
+在查看儲存虛擬機器災難復原配置中的資料儲存之前，請注意以下先決條件：
+
+* 在發生切換和切換回時，HA 對的主集群和輔助集群以及 vCenter Server 的發現應該是完整的。
+* 來源叢集和目標叢集以及儲存虛擬機器對等體都應由 Unified Manager 管理。
+* 必須在ONTAP和 vCenter Server 上完成所需的設定。
++
+** 對於 NAS（NFS 和 VMFS）資料儲存區，如果發生災難，步驟包括啟動輔助儲存虛擬機器、驗證資料 LIF 和路由、在 vCenter Server 上建立遺失的連線以及啟動虛擬機器。
++
+為了切換回主站點，應在主站點開始提供資料之前同步磁碟區之間的資料。
+
+** 對於 SAN（iSCSI 和 VMFS 的 FC）資料存儲，vCenter Server 將掛載的 LUN 格式化為 VMFS 格式。如果發生災難，步驟包括啟動輔助儲存虛擬機器、驗證資料 LIF 和路由。如果 iSCSI 目標 IP 與主 LIF 不同，則需要手動新增。新的 LUN 應該作為主機儲存適配器的 iSCSI 適配器下的裝置可用。此後，應建立具有新 LUN 的新 VMFS 資料存儲，並使用新名稱註冊舊 VM。虛擬機器必須啟動並運作。
++
+如果發生恢復，則磁碟區之間的資料應該同步。應使用 LUN 和以新名稱註冊的舊 VM 再次建立新的 VMFS 資料儲存。
+
++
+有關設定的信息，請參閱ONTAP和 vCenter Server 文件。
+
++
+https://docs.netapp.com/ontap-9/index.jsp["ONTAP 9 文檔中心"]
+
+
+
+
+
+請依照以下步驟查看資料儲存：
+
+. 在 *VMWARE* > *虛擬機器* 頁面上，按一下託管資料儲存區的 VM 清單。按一下資料儲存物件連結。在標準場景中，您可以看到主儲存VM中磁碟區和LUN的效能資料。
+. 當災難發生並連續切換到輔助儲存虛擬機器時，資料儲存連結指向輔助儲存虛擬機器中的磁碟區或 LUN 的效能指標。這在下一個叢集和 vServer 發現（獲取）週期完成後反映出來。
+. 成功切換後，資料儲存連結再次反映主儲存虛擬機器中磁碟區或 LUN 的效能指標。這在下一個叢集和 vServer 發現週期完成後反映出來。
+
+
+
+
+== 不支援的場景
+
+* 對於MetroCluster配置，請注意以下限制：
++
+** 僅在 `NORMAL`和 `SWITCHOVER`各州都已開始採取行動。其他州，例如 `PARTIAL_SWITCHOVER, PARTIAL_SWITCHBACK`， 和 `NOT_REACHABLE`不受支援。
+** 除非啟用自動切換 (ASO)，否則如果主集群發生故障，則無法發現輔助集群，並且拓撲將繼續指向主集群中的磁碟區或 LUN。
+
+
+* 對於儲存虛擬機器災難復原配置，請注意以下限制：
++
+** 不支援為 SAN 儲存環境啟用網站復原管理器 (SRM) 或儲存複製適配器 (SRA) 的配置。
+
+
+

@@ -1,0 +1,74 @@
+---
+permalink: config/task_set_up_authentication_services.html 
+sidebar: sidebar 
+keywords: set up, authentication, services 
+summary: 身份驗證服務可在身份驗證伺服器中對遠端使用者或遠端群組進行身份驗證，然後才允許他們存取 Unified Manager。您可以使用預先定義的驗證服務（例如 Active Directory 或 OpenLDAP）或透過設定您自己的驗證機制來對使用者進行身份驗證。 
+---
+= 設定身份驗證服務
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+身份驗證服務可在身份驗證伺服器中對遠端使用者或遠端群組進行身份驗證，然後才允許他們存取 Unified Manager。您可以使用預先定義的驗證服務（例如 Active Directory 或 OpenLDAP）或透過設定您自己的驗證機制來對使用者進行身份驗證。
+
+.開始之前
+* 您必須啟用遠端身份驗證。
+* 您必須具有應用程式管理員角色。
+
+
+.步驟
+. 在左側導覽窗格中，按一下「*常規*」>「*遠端驗證*」。
+. 選擇以下身份驗證服務之一：
++
+[cols="2*"]
+|===
+| 如果您選擇... | 然後這樣做... 
+
+
+ a| 
+活動目錄
+ a| 
+.. 輸入管理員名稱和密碼。
+.. 指定身份驗證伺服器的基本可分辨名稱。
++
+例如，如果認證伺服器的網域是+ou@domain.com+，那麼基本可分辨名稱就是*cn=ou,dc=domain,dc=com*。
+
+
+
+
+
+ a| 
+OpenLDAP
+ a| 
+.. 輸入綁定可分辨名稱和綁定密碼。
+.. 指定身份驗證伺服器的基本可分辨名稱。
++
+例如，如果認證伺服器的網域是+ou@domain.com+，那麼基本可分辨名稱就是*cn=ou,dc=domain,dc=com*。
+
+
+
+
+
+ a| 
+其他的
+ a| 
+.. 輸入綁定可分辨名稱和綁定密碼。
+.. 指定身份驗證伺服器的基本可分辨名稱。
++
+例如，如果認證伺服器的網域是+ou@domain.com+，那麼基本可分辨名稱就是*cn=ou,dc=domain,dc=com*。
+
+.. 指定認證伺服器支援的LDAP協定版本。
+.. 輸入使用者名稱、群組成員身分、使用者群組和成員屬性。
+
+
+|===
++
+[NOTE]
+====
+如果要修改身份驗證服務，則必須刪除任何現有的身份驗證伺服器，然後新增的身份驗證伺服器。
+
+====
+. 點選“儲存”。
+

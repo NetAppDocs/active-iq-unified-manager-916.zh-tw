@@ -1,0 +1,38 @@
+---
+permalink: storage-mgmt/task_change_time_um_retains_event_performance_data.html 
+sidebar: sidebar 
+keywords: change, length, time, unified manager, retains, event, performance, data 
+summary: 預設情況下，Unified Manager 會為所有受監控的叢集儲存 6 個月的事件資料和效能資料。此後，舊資料將自動刪除，為新資料騰出空間。此預設時間範圍適用於大多數配置，但具有許多叢集和節點的超大型配置可能需要減少保留期，以便 Unified Manager 以最佳方式運作。 
+---
+= 更改 Unified Manager 保留事件和效能資料的時間長度
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+預設情況下，Unified Manager 會為所有受監控的叢集儲存 6 個月的事件資料和效能資料。此後，舊資料將自動刪除，為新資料騰出空間。此預設時間範圍適用於大多數配置，但具有許多叢集和節點的超大型配置可能需要減少保留期，以便 Unified Manager 以最佳方式運作。
+
+.開始之前
+您必須具有應用程式管理員角色。
+
+您可以在資料保留頁面中變更這兩類資料的保留期限。這些設定會影響此 Unified Manager 實例所監控的所有叢集的資料保留。
+
+[NOTE]
+====
+Unified Manager 每 5 分鐘收集一次效能統計資料。每天將5分鐘的統計資料匯總為每小時的效能統計資料。它保留 30 天的 5 分鐘歷史性能數據和 6 個月的每小時匯總性能數據（預設）。
+
+====
+只有當空間不足或備份和其他作業需要很長時間才能完成時，才應減少保留期。縮短保留期有以下影響：
+
+* 午夜後，舊的效能資料將從 Unified Manager 資料庫中刪除。
+* 舊事件資料將立即從 Unified Manager 資料庫中刪除。
+* 保留期之前的事件將無法再在使用者介面中查看。
+* 在保留期之前，UI 中顯示每小時效能統計資料的位置將為空白。
+* 如果事件保留期超過效能資料保留期，效能滑桿下方將顯示一則訊息，警告較舊的效能事件可能在其關聯圖表中沒有支援資料。
+
+
+.步驟
+. 在左側導覽窗格中，按一下「*策略*」>「*資料保留*」。
+. 在*資料保留*頁面中，選擇事件保留或效能資料保留區域中的滑桿工具並將其移至應保留資料的月份數，然後按一下*儲存*。
+

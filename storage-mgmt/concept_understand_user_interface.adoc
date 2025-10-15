@@ -1,0 +1,16 @@
+---
+permalink: storage-mgmt/concept_understand_user_interface.html 
+sidebar: sidebar 
+keywords: understand, user, interface 
+summary: Unified Manager 使用者介面主要由一個儀表板組成，該儀表板提供所監控物件的概覽視圖。使用者介面還提供查看所有集群物件的權限。 
+---
+= 了解使用者介面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager 使用者介面主要由一個儀表板組成，該儀表板提供所監控物件的概覽視圖。使用者介面還提供查看所有集群物件的權限。
+
+您可以選擇首選視圖並根據需要使用操作按鈕。您的螢幕設定會儲存在工作區中，以便在啟動 Unified Manager 時可以使用您需要的所有功能。但是，當您從一個視圖導航到另一個視圖，然後導航回來時，視圖可能會不一樣。

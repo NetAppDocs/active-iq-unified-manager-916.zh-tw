@@ -1,0 +1,75 @@
+---
+permalink: events/task_add_scripts.html 
+sidebar: sidebar 
+keywords: add, scripts 
+summary: 您可以在 Unified Manager 中新增腳本，並將腳本與警報關聯。這些腳本在產生警報時會自動執行，並使您能夠取得有關產生事件的儲存物件的資訊。 
+---
+= 新增腳本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 Unified Manager 中新增腳本，並將腳本與警報關聯。這些腳本在產生警報時會自動執行，並使您能夠取得有關產生事件的儲存物件的資訊。
+
+.開始之前
+* 您必須已建立並儲存要新增至 Unified Manager 伺服器的腳本。
+* 腳本支援的檔案格式包括 Perl、Shell、PowerShell、Python 和 `.bat`文件。
++
+|===
+| 安裝 Unified Manager 的平台 | 支援的語言 
+
+
+ a| 
+VMware
+ a| 
+Perl 和 Shell 腳本
+
+
+
+ a| 
+Linux
+ a| 
+Perl、Python 和 Shell 腳本
+
+
+
+ a| 
+視窗
+ a| 
+PowerShell、Perl、Python 和 .bat 腳本
+
+|===
++
+** 對於 Perl 腳本，必須在 Unified Manager 伺服器上安裝 Perl。對於 VMware 安裝，預設安裝 Perl 5，且腳本僅支援 Perl 5 支援的內容。如果在 Unified Manager 之後安裝了 Perl，則必須重新啟動 Unified Manager 伺服器。
+** 對於 PowerShell 腳本，必須在 Windows 伺服器上設定適當的 PowerShell 執行策略，以便執行腳本。
+
+
++
+[NOTE]
+====
+如果您的腳本建立日誌檔案來追蹤警報腳本進度，則必須確保日誌檔案不會在 Unified Manager 安裝資料夾內的任何位置建立。
+
+====
+* 您必須具有應用程式管理員或儲存管理員角色。
+
+
+您可以上傳自訂腳本並收集有關警報的事件詳細資訊。
+
+[NOTE]
+====
+如果您在使用者介面中沒有看到此功能，那是因為您的管理員已停用該功能。如果需要，您可以從*儲存管理* > *功能設定*啟用此功能。
+
+====
+.步驟
+. 在左側導覽窗格中，按一下「儲存管理」>「腳本」。
+. 在*腳本*頁面中，按一下*新增*。
+. 在「新增腳本」對話方塊中，按一下「瀏覽」以選擇您的腳本檔案。
+. 輸入您選擇的腳本的描述。
+. 按一下“*新增*”。
+
+
+*相關資訊*
+
+link:../config/task_enable_and_disable_ability_to_upload_scripts.html["啟用和停用上傳腳本的功能"]

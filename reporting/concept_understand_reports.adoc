@@ -1,0 +1,25 @@
+---
+permalink: reporting/concept_understand_reports.html 
+sidebar: sidebar 
+keywords: understanding, reports 
+summary: 報告顯示有關儲存、網路、服務品質和保護關係的詳細信息，可幫助您在問題發生之前識別並解決潛在問題。 
+---
+= 了解報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+報告顯示有關儲存、網路、服務品質和保護關係的詳細信息，可幫助您在問題發生之前識別並解決潛在問題。
+
+自訂視圖時，您可以使用唯一的名稱儲存它以供將來使用。您可以根據該視圖安排報告定期運行並與他人共用。您也可以下載 Excel 中的檢視以使用進階 Excel 功能進行自訂，然後將該檔案上傳回 Unified Manager 。如果您使用該視圖安排報告，它將使用您上傳的 Excel 文件來建立您可以分享的可靠報告。
+
+您可以從「報告計畫」頁面管理所有已排程的報告。
+
+[NOTE]
+====
+您必須具有應用程式管理員或儲存管理員角色才能管理報告。
+
+====
+您可以將報告下載為逗號分隔值 (CSV)、Excel 或 PDF 檔案。

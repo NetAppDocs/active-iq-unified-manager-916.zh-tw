@@ -1,0 +1,14 @@
+---
+permalink: config/concept_manage_security_certificates_ocf.html 
+sidebar: sidebar 
+keywords: manage, security, certificates 
+summary: 您可以在 Unified Manager 伺服器中設定 HTTPS，以透過安全連線監控和管理您的叢集。 
+---
+= 管理安全證書
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 Unified Manager 伺服器中設定 HTTPS，以透過安全連線監控和管理您的叢集。

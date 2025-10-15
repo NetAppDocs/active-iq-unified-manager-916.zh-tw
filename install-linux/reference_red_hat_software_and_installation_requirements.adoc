@@ -1,0 +1,115 @@
+---
+permalink: install-linux/reference_red_hat_software_and_installation_requirements.html 
+sidebar: sidebar 
+keywords: linux software, installation requirements, system, authorization,  requirements 
+summary: 安裝 Unified Manager 的 Linux 系統需要特定版本的作業系統和支援軟體。 
+---
+= Linux 軟體和安裝需求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝 Unified Manager 的 Linux 系統需要特定版本的作業系統和支援軟體。
+
+
+
+== 作業系統軟體
+
+Linux系統必須安裝以下版本的作業系統及支援軟體：
+
+* Red Hat Enterprise Linux 8.x 與 9.4 版本，基於 x86_64 架構。
+
+
+請參閱互通性矩陣以取得受支援的 Red Hat Enterprise Linux 版本的完整和最新清單。
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"^]
+
+該伺服器應專用於執行 Unified Manager。伺服器上不應安裝任何其他應用程式。由於公司規定，您的 Linux 系統上可能安裝了像 Qualys 這樣的漏洞掃描程式。您應該在安裝 Unified Manager 之前停用漏洞掃描程序，以防止安裝失敗。
+
+
+NOTE: 漏洞掃描程式（例如 Qualys）在內部掃描虛擬機器 (VM)（其中 Unified Manager 和漏洞掃描程式安裝在同一 VM 上）或外部掃描虛擬機器（其中 Unified Manager 和漏洞掃描程式安裝在兩個不同的伺服器上，且漏洞掃描程式掃描安裝了 Unified Manager 的 VM）時可能會導致 CPU 使用率過高。此問題通常會導致虛擬機器無回應並影響 Unified Manager 服務。因此， NetApp建議在安裝了 Unified Manager 的 VM 中停用漏洞掃描程式。如果無法停用掃描儀，則在非工作時間掃描虛擬機，並在掃描完成後重新啟動服務。
+
+
+
+== 第三方軟體
+
+Unified Manager 部署在 WildFly Web 伺服器上。  WildFly 26.1.3 與 Unified Manager 捆綁並配置。
+
+以下第三方軟體套件是必要的，但不包含在 Unified Manager 中。這些軟體包由 `yum`安裝程序，前提是您已按照以下部分所述配置了儲存庫。
+
+* MySQL 社群版 8.4.4 版（來自 MySQL 儲存庫）
+* OpenJDK 版本 11.0.25（來自 Red Hat Extra Enterprise Linux Server 儲存庫）
+* Python 3.9.x（來自 Red Hat Extra Enterprise Linux Server 儲存庫）
+* p7zip 版本 16.02 或更高版本（來自 Red Hat Extra Packages for Enterprise Linux 儲存庫）
+
+
+[NOTE]
+====
+在升級任何第三方軟體之前，您必須關閉正在執行的 Unified Manager 實例。第三方軟體安裝完成後，您可以重新啟動Unified Manager。
+
+====
+
+
+== 使用者授權要求
+
+Linux 系統上的 Unified Manager 安裝可由 root 使用者或非 root 使用者使用 `sudo`命令。
+
+此外，預設 Unified Manager 安裝在 sudoers 檔案中包含 umadmin 用戶（預設為維護用戶）和 jboss 用戶(`ocum_sudoers`和 `ocie_sudoers`）在 `/etc/sudoers.d/`目錄。如果您因為安全性原則或安全監控工具而從環境中刪除此內容，則必須將其加回。您需要保留 sudoers 配置，因為某些 Unified Manager 操作需要這些 sudo 權限。
+
+
+
+== 安裝要求
+
+以下列出了在您的系統上安裝 Red Hat Enterprise Linux 和相關儲存庫的最佳實務。以不同方式安裝或設定的系統，或在異地（在雲端）部署的系統可能需要額外的步驟，而 Unified Manager 可能無法在這樣的部署中正常運作。
+
+* 您必須按照 Red Hat 最佳實務安裝 Red Hat Enterprise Linux，並且應該選擇以下預設選項，這需要選擇「具有 GUI 的伺服器」基礎環境。
+* 在 Red Hat Enterprise Linux 上安裝 Unified Manager 時，系統必須能夠存取對應的儲存庫，以便安裝程式可以存取和安裝所有必要的軟體相依性。
+* 對於 `yum`安裝程式在 Red Hat Enterprise Linux 儲存庫中尋找相關軟體，您必須在 Red Hat Enterprise Linux 安裝期間或之後使用有效的 Red Hat 訂閱註冊系統。
++
+有關 Red Hat 訂閱管理員的信息，請參閱 Red Hat 文件。
+
+* 您必須啟用 Extra Packages for Enterprise Linux (EPEL) 儲存庫才能在系統上成功安裝所需的第三方公用程式。
++
+如果您的系統上未配置 EPEL 儲存庫，則必須手動下載並配置儲存庫。
+
++
+看link:task_manually_configure_epel_repository.html["手動配置 EPEL 儲存庫"]。
+
+* 如果未安裝正確版本的 MySQL，則必須啟用 MySQL 儲存庫才能在系統上成功安裝 MySQL 軟體。
++
+如果您的系統上未配置 MySQL 儲存庫，則必須手動下載並設定儲存庫。
+
++
+看link:task_manually_configure_mysql_repository.html["手動設定 MySQL 儲存庫"]。
+
+* 您必須在 Unified Manager 主機上僅安裝一個版本的 Java；否則，系統可能無法確定要使用哪個版本。看 https://kb.netapp.com/data-mgmt/AIQUM/AIQUM_Kbs/After_updating_Java_on_the_Active_IQ_Unified_Manager_host_services_will_not_start["在Active IQ Unified Manager主機上更新 Java 後，服務將無法啟動"]。
+
+
+如果您的系統無法存取互聯網，且儲存庫沒有從連接互聯網的系統鏡像到未連接的系統，則您應該按照安裝說明確定係統的外部軟體依賴項。然後，您可以將所需的軟體下載到已連接互聯網的系統，並將 `.rpm`檔案到您計劃安裝 Unified Manager 的系統。要下載工件和包，您必須使用 `yum install`命令。您必須確保兩個系統運行相同的作業系統版本，並且訂閱授權適用於適當的 Red Hat Enterprise Linux。
+
+[NOTE]
+====
+您不得從此處列出的儲存庫以外的儲存庫安裝所需的第三方軟體。從 Red Hat 儲存庫安裝的軟體專為 Red Hat Enterprise Linux 而設計，並符合 Red Hat 最佳實務（目錄佈局、權限等）。其他位置的軟體可能不遵循這些準則，這可能會導致 Unified Manager 安裝失敗，或可能導致未來升級出現問題。
+
+====
+
+
+== 連接埠 443 要求
+
+Red Hat Enterprise Linux 的通用映像可能會阻止對連接埠 443 的外部存取。由於此限制，您可能無法在安裝 Unified Manager 後連線至管理員 Web UI。執行以下命令允許通用 Red Hat Enterprise Linux 上的所有外部使用者和應用程式存取連接埠 443。
+
+`# firewall-cmd --zone=public --add-port=443/tcp --permanent; firewall-cmd --reload`
+
+您必須使用「具有 GUI 的伺服器」基礎環境安裝 Red Hat Enterprise Linux。它提供了 Unified Manager 安裝說明所使用的命令。其他基礎環境可能需要您安裝其他指令來驗證或完成安裝。如果 `firewall-cmd`在您的系統上不可用，您必須透過執行以下命令來安裝它：
+
+`# sudo yum install firewalld`
+
+執行命令之前請聯絡您的 IT 部門，以了解您的安全策略是否需要不同的程序。
+
+[NOTE]
+====
+Red Hat 系統上應停用 THP（透明大頁面）。啟用後，在某些情況下，當某些進程消耗過多記憶體並終止時，它可能會導致 Unified Manager 關閉。
+
+====

@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task_edit_individual_aggregate_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: edit, individual, aggregate, health, threshold, settings 
+summary: 您可以編輯一個或多個聚合的聚合容量、成長和 Snapshot 副本的運作狀況閾值設定。當超過閾值時，就會產生警報並且您會收到通知。這些通知可協助您根據產生的事件採取預防措施。 
+---
+= 編輯單一聚合健康閾值設置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以編輯一個或多個聚合的聚合容量、成長和 Snapshot 副本的運作狀況閾值設定。當超過閾值時，就會產生警報並且您會收到通知。這些通知可協助您根據產生的事件採取預防措施。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+根據閾值的變化，事件會在下一個監控週期中產生或淘汰。
+
+當在聚合上的磁碟區上啟用自動增長時，聚合容量閾值將被視為已突破，具體取決於自動增長設定的最大磁碟區大小，而不是原始磁碟區大小。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*聚合*」。
+. 在「*Health: All Aggregates*」檢視中，選擇一個或多個聚合，然後按一下「*Edit Thresholds*」。
+. 在「編輯聚合閾值」對話框中，透過選取相應的複選框，然後修改設定來編輯以下之一的閾值設定：容量、成長或 Snapshot 副本。
+. 點選“儲存”。
+
+
+*相關資訊*
+
+link:../config/task_add_users.html["新增用戶"]

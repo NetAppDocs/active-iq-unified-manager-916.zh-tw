@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/task_view_performance_threshold_policies.html 
+sidebar: sidebar 
+keywords: view, performance, threshold, policies 
+summary: 您可以從「效能閾值」頁面查看所有目前定義的效能閾值策略。 
+---
+= 查看效能閾值策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從「效能閾值」頁面查看所有目前定義的效能閾值策略。
+
+閾值策略清單按策略名稱的字母順序排序，其中包括針對所有類型儲存物件的策略。您可以按一下列標題來按該列對策略進行排序。如果您正在尋找特定的策略，請使用過濾和搜尋機制來最佳化庫存清單中出現的閾值策略清單。
+
+您可以將遊標停留在策略名稱和條件名稱上以查看策略的配置詳細資訊。此外，您可以使用提供的按鈕來建立、複製、編輯和刪除使用者定義的閾值策略。
+
+.步
+. 在左側導覽窗格中，選擇「*事件閾值*」>「*效能*」。
++
+將顯示“效能閾值”頁面。
+
+

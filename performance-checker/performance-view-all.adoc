@@ -1,0 +1,222 @@
+---
+permalink: performance-checker/performance-view-all.html 
+sidebar: sidebar 
+keywords: performance view 
+summary: 所有儲存物件效能視圖 
+---
+= 查看所有儲存物件的效能清單頁面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用效能清單頁面查看有關每個可用儲存物件（例如叢集、聚合、磁碟區等）的效能資訊摘要。您可以連結到性能對象詳細資訊頁面以查看特定對象的詳細資訊。
+
+預設情況下，視圖頁面中的物件會根據事件嚴重性進行排序。發生嚴重事件的物件列在最前面，發生警告事件的物件列在後面。這提供了必須解決的問題的直接視覺指示。
+
+您可以將這些資料從這些頁面匯出為逗號分隔的值(`.csv`) 文件、Microsoft Excel 文件(`.xlsx`）， 或者(`.pdf`) 文檔，然後使用匯出的資料建立報表。此外，您可以自訂頁面，然後使用「*計畫報告*」按鈕安排定期建立和透過電子郵件傳送報告。
+
+這些頁面上的所有欄位都可以在自訂檢視和報表中使用。一些欄位連結到相關頁面，以便提供更詳細的視圖。
+
+
+
+== 效能：所有叢集視圖
+
+效能：所有叢集視圖顯示由 Unified Manager 實例監控的每個叢集的效能事件、資料和設定資訊概覽。此頁面使您能夠監控叢集的效能，並解決效能問題和閾值事件。
+
+您可以使用*指派效能閾值策略*和*清除效能閾值策略*按鈕為物件庫存頁面上的任何物件指派效能閾值策略或清除閾值策略。
+
+以下是「效能：所有叢集」視圖中的一些重要欄位。
+
+* 集群 FQDN：集群的完全限定域名 (FQDN)。
+* IOPS：叢集每秒的輸入/輸出運算元。
+* MB/s：叢集上的吞吐量，以每秒 MiB 為單位。
+* 容量欄位：可用容量和總容量（以 GiB 為單位）。
+* 主機名稱或 IP 位址：叢集管理 LIF 的主機名稱或 IP 位址（IPv4 或 IPv6）。
+* 作業系統版本：叢集上安裝的ONTAP軟體版本。
++
+
+NOTE: 如果叢集中的節點上安裝了不同版本的ONTAP軟體，則列出最低版本號。您可以從「效能：所有節點」視圖查看每個節點上安裝的ONTAP版本。
+
+* 閾值策略：在此儲存物件上有效的使用者定義的效能閾值策略或策略。您可以將遊標放在包含省略號 (...) 的政策名稱上，以查看完整的策略名稱或已指派的政策名稱清單。指派效能閾值策略和清除效能閾值策略按鈕保持停用狀態，直到您透過點選最左側的複選框選擇一個或多個物件。
+
+
+
+
+== 效能：所有磁碟區視圖
+
+效能：所有磁碟區視圖顯示由 Unified Manager 實例監控的每個FlexVol volume和FlexGroup磁碟區的效能事件、計數器資料和設定資訊概覽。這使您能夠快速監控磁碟區的效能，並解決效能問題和閾值事件。
+
+如果要分析特定物件的延遲和吞吐量，請按一下更多選項按鈕image:icon_kabob.gif[""]然後*分析工作負載*，您可以在工作負載分析頁面上查看效能和容量圖表。如果您擁有系統管理員的有效憑證，則可以在系統管理員上查看詳細資訊。
+
+
+NOTE: 對於資料保護 (DP) 卷，僅顯示使用者產生的流量的計數器值。此頁面上不顯示根卷。
+
+以下是「效能：所有磁碟區」視圖中的一些重要欄位。
+
+* 樣式： FlexVol或FlexGroup。
+* 延遲：對於FlexVol卷，這是卷對所有 I/O 請求的平均回應時間，以每次操作的毫秒數表示。對於FlexGroup卷，這是所有組成捲的平均延遲。
+* IOPS/TB：基於工作負載所消耗的總空間，每秒處理的輸入/輸出運算元（以 TB 為單位）。此計數器測量給定的儲存容量可以提供多少效能。
+* IOPS：對於FlexVol磁碟區，這是磁碟區每秒的輸入/輸出運算元。對於FlexGroup卷，這是所有組成捲的 IOPS 的總和。
+* MB/s：對於FlexVol卷，這是磁碟區上的吞吐量，以每秒兆位元組為單位。對於FlexGroup卷，這是所有組成捲的 MB/s 的總和。
+* 容量欄位：可用容量和總容量（以 GiB 為單位）。
+
+
+請參閱以下連結以了解更多資訊：
+
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["為儲存物件指派效能閾值策略"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["從儲存物件中刪除效能閾值策略"]
+* link:../performance-checker/concept_types_of_workloads_monitored_by_unified_manager.html["Unified Manager 監控的工作負載類型"]
+* link:../performance-checker/task_view_qos_policy_group_settings_for_volumes_or_luns.html["查看應用於特定磁碟區或 LUN 的 QoS 原則群組設置"]
+* link:../performance-checker/concept_understand_um_recommendations_to_tier_data_to_cloud.html["了解 Unified Manager 將資料分層到雲端的建議"]
+* link:../performance-checker/task_view_performance_charts_to_compare_volumes_or_luns_in_qos_policy.html["查看效能圖表以比較同一 QoS 策略群組中的磁碟區或 LUN"]
+
+
+
+
+== 效能：所有聚合視圖
+
+效能：所有聚合視圖顯示由 Unified Manager 實例監控的每個聚合的效能事件、資料和設定資訊概覽。此頁面使您能夠監控聚合的效能，並解決效能問題和閾值事件。
+
+以下是「效能：所有聚合」視圖中的一些重要欄位。
+
+* 類型：聚合的類型：
++
+** 硬碟
+** 雜交種。結合了 HDD 和 SSD，但尚未啟用 Flash Pool。
+** 混合（Flash Pool）。結合了 HDD 和 SSD，並且已啟用 Flash Pool。
+** 固態硬碟
+** SSD（FabricPool）。結合 SSD 和雲層
+** HDD（FabricPool）。結合 HDD 和雲層
+** VM磁碟（SDS）。虛擬機器內的虛擬磁碟
+** VMDisk（FabricPool）。結合虛擬磁碟和雲層
+** LUN（FlexArray）
+
+
+* 非活動資料報告：此聚合上是否啟用或停用非活動資料報告功能。啟用後，此聚合上的磁碟區將在「效能：所有磁碟區」檢視中顯示冷資料量。當ONTAP版本不支援非活動資料報告時，此欄位中的值為「N/A」。
+* 閾值策略：在此儲存物件上有效的使用者定義的效能閾值策略或策略。您可以將遊標放在包含省略號 (...) 的政策名稱上，以查看完整的策略名稱或已指派的政策名稱清單。指派效能閾值策略和清除效能閾值策略按鈕保持停用狀態，直到您透過點選最左側的複選框選擇一個或多個物件。請參閱以下連結以了解更多資訊：
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["為儲存物件指派效能閾值策略"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["從儲存物件中刪除效能閾值策略"]
+
+
+
+
+== 效能：所有節點視圖
+
+效能：所有節點視圖顯示 Unified Manager 實例所監控的每個節點的效能事件、資料和設定資訊概覽。這使您能夠快速監控節點的效能，並排除效能問題和閾值事件的故障。
+
+
+NOTE: Flash Cache Reads 傳回節點上由快取滿足的讀取操作的百分比，而不是從磁碟傳回的。只有在節點中安裝了 Flash Cache 模組時，才會顯示 Flash Cache 資料。
+
+在「*報告*」功能表中，當 Unified Manager 及其管理的叢集安裝在沒有外部網路連線的網站時，會提供「*硬體清單報告*」選項。此按鈕產生一個 .csv 文件，其中包含叢集和節點資訊的完整清單；例如硬體型號和序號、磁碟類型和數量、已安裝的許可證等。此報告功能有助於在未連接到NetApp Active IQ平台的安全性網站內續約。您可以使用*指派效能閾值策略*和*清除效能閾值策略*按鈕為物件庫存頁面上的任何物件指派效能閾值策略或清除閾值策略。
+
+請參閱以下連結以了解更多資訊：
+
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["為儲存物件指派效能閾值策略"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["從儲存物件中刪除效能閾值策略"]
+* link:../health-checker/task_generate_hardware_inventory_report_for_contract_renewal.html["產生合約續約的硬體清單報告"]
+
+
+
+
+== 效能：所有儲存虛擬機器視圖
+
+效能：所有儲存虛擬機器視圖顯示由 Unified Manager 執行個體監控的每個儲存虛擬機器 (SVM) 的效能事件、資料和設定資訊概覽。這使您能夠快速監控 SVM 的效能，並解決效能問題和閾值事件。此頁面上的「延遲」欄位會報告所有 I/O 請求的平均回應時間，以每次操作的毫秒數表示。
+
+
+NOTE: 此頁面上列出的 SVM 僅包括資料 SVM 和叢集 SVM。  Unified Manager 不使用或顯示管理員或節點 SVM。
+
+請參閱以下連結以了解更多資訊：
+
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["為儲存物件指派效能閾值策略"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["從儲存物件中刪除效能閾值策略"]
+
+
+
+
+== 效能：所有 LUN 視圖
+
+效能：所有 LUN 視圖顯示由 Unified Manager 實例監控的每個 LUN 的效能事件、資料和設定資訊概覽。這使您能夠快速監控 LUN 的效能，並排除效能問題和閾值事件的故障。
+
+如果要分析特定物件的延遲和吞吐量，請點擊更多圖標image:icon_kabob.gif[""]，然後*分析工作負載*，您可以在*工作負載分析*頁面查看效能和容量圖表。
+
+請參閱以下連結以了解更多資訊：
+
+* link:../data-protection/view-lun-relationships.html["監控一致性組關係中的 LUN"]
+* link:../storage-mgmt/task_provision_luns.html["配置 LUN"]
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["為儲存物件指派效能閾值策略"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["從儲存物件中刪除效能閾值策略"]
+* link:../performance-checker/task_view_volumes_or_luns_in_same_qos_policy_group.html["查看同一 QoS 策略群組中的磁碟區或 LUN"]。
+* link:../performance-checker/task_view_qos_policy_group_settings_for_volumes_or_luns.html["查看應用於特定磁碟區或 LUN 的 QoS 原則群組設置"]
+* link:../api-automation/concept_provision_luns.html["使用 API 預配 LUN"]
+
+
+
+
+== 效能：所有 NVMe 命名空間視圖
+
+效能：所有 NVMe 命名空間視圖顯示由 Unified Manager 實例監控的每個 NVMe 命名空間的效能事件、資料和設定資訊概覽。這使您能夠快速監控命名空間的效能和健康狀況，並解決問題和閾值事件。
+
+報告的資訊包括：命名空間的目前狀態。  * 離線 - 不允許對命名空間進行讀取或寫入存取。  * 線上 - 允許對命名空間進行讀寫存取。  * NVFail - 由於NVRAM故障，命名空間自動離線。  * 空間錯誤 - 命名空間已耗盡空間。
+
+請參閱以下連結以了解更多資訊：
+
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["為儲存物件指派效能閾值策略"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["從儲存物件中刪除效能閾值策略"]
+
+
+
+
+== 效能：所有網路介面視圖
+
+效能：所有網路介面檢視顯示此 Unified Manager 實例監控的每個網路介面 (LIF) 的效能事件、資料和設定資訊概覽。此頁面使您能夠快速監控介面的效能，並解決效能問題和閾值事件。以下是「效能：所有網路介面」視圖中的一些重要欄位。
+
+* IOPS：每秒的輸入/輸出運算元。  IOPS 不適用於 NFS LIF 和 CIFS LIF，並且對於這些類型顯示為 N/A。
+* 延遲：所有 I/O 請求的平均回應時間，以每次操作的毫秒數表示。延遲不適用於 NFS LIF 和 CIFS LIF，並且對於這些類型顯示為 N/A。
+* 主位置：介面的主位置，顯示為節點名稱和連接埠名稱，以冒號 (:) 分隔。如果位置顯示有省略號 (...)，您可以將遊標放在位置名稱上以查看完整位置。
+* 目前位置：介面的目前位置，顯示為節點名稱和連接埠名稱，以冒號 (:) 分隔。如果位置顯示有省略號 (...)，您可以將遊標放在位置名稱上以查看完整位置。
+* 角色：介面角色：資料、叢集、節點管理或叢集間。
+
+
+
+NOTE: 此頁面上列出的介麵包括資料 LIF、叢集 LIF、節點管理 LIF 和叢集間 LIF。  Unified Manager 不使用或顯示系統 LIF。
+
+
+
+== 效能：所有連接埠視圖
+
+效能：所有連接埠視圖顯示 Unified Manager 實例正在監控的每個連接埠的效能事件、資料和設定資訊概覽。這使您能夠快速監控連接埠的效能，並排除效能問題和閾值事件的故障。對於連接埠角色，顯示網路連接埠功能，即資料或叢集。  FCP埠不能擁有角色，角色顯示為N/A。
+
+
+NOTE: 僅顯示實體連接埠的效能計數器值。不顯示 VLAN 或介面組的計數器值。
+
+請參閱以下連結以了解更多資訊：
+
+* link:../performance-checker/task_assign_performance_threshold_policies_to_storage_objects.html["為儲存物件指派效能閾值策略"]
+* link:../performance-checker/task_remove_performance_threshold_policies_from_storage_objects.html["從儲存物件中刪除效能閾值策略"]
+
+
+
+
+== 效能：QoS 策略群組視圖
+
+QoS 策略群組檢視顯示 Unified Manager 正在監控的叢集上可用的 QoS 策略群組。這包括傳統的 QoS 策略、自適應 QoS 策略和使用效能服務等級分配的 QoS 策略。
+
+以下是效能：QoS 策略群組檢視中的一些重要欄位。
+
+* QoS 策略群組：QoS 策略群組的名稱。對於已匯入 Unified Manager 9.7 或更高版本的NetApp服務等級管理器 (NSLM) 1.3 策略，此處顯示的名稱包括 SVM 名稱以及在 NSLM 中定義效能服務等級時名稱中沒有的其他資訊。例如，名稱「NSLM_vs6_Performance_2_0」表示這是在 SVM「vs6」上建立的 NSLM 系統定義的「效能」PSL 策略，預期延遲為「2 ms/op」。
+* SVM：QoS 策略群組所屬的儲存虛擬機器 (SVM)。您可以按一下儲存虛擬機器名稱來導覽至該儲存虛擬機器的詳細資訊頁面。請注意，如果已在管理儲存虛擬機器上建立了 QoS 策略，則此欄位為空，因為此儲存虛擬機器類型代表叢集。
+* 最小吞吐量：策略群組保證提供的最小吞吐量（以 IOPS 為單位）。對於自適應策略，這是根據儲存物件分配的大小分配給磁碟區或 LUN 的每 TB 的最小預期 IOPS。
+* 最大吞吐量：策略群組不得超過的吞吐量（以 IOPS 和/或 MB/s 為單位）。當此欄位為空時，表示ONTAP中定義的最大吞吐量是無限的。對於自適應策略，這是分配給磁碟區或 LUN 的每 TB 的最大（峰值）可能 IOPS，基於儲存物件分配的大小或儲存物件使用的大小。
+* 絕對最小 IOPS：對於自適應策略，這是絕對最小 IOPS 值，當預期 IOPS 小於此值時，用作覆蓋。
+* 區塊大小：為 QoS 自適應策略指定的區塊大小。
+* 最小分配：使用「分配空間」或「已使用空間」來決定最大吞吐量（峰值）IOPS。
+* 預期延遲：儲存輸入/輸出操作的預期平均延遲。
+* 共用：對於傳統的QoS策略，策略群組中定義的吞吐量值是否在多個物件之間共用。
+* 關聯對象：指派給 QoS 策略群組的工作負載數量。您可以點選展開按鈕（image:../media/chevron_down.gif[""] ) 來查看有關該策略組的更多詳細資訊。
+* 分配容量：QoS 策略群組中的物件目前正在使用的空間量。
+* 關聯物件：指派給 QoS 策略群組的工作負載數量，分為磁碟區和 LUN。您可以按一下該數字以導覽至提供有關所選卷或 LUN 的更多詳細資訊的頁面。
+
+
+更多資訊請參閱以下主題link:..//performance-checker/concept_manage_performance_using_qos_policy_group_information.html["使用 QoS 策略群組資訊管理效能"]。

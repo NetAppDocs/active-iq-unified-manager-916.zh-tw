@@ -1,0 +1,71 @@
+---
+permalink: data-protection/reference_edit_relationship_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, relationship, dialog box 
+summary: 您可以編輯現有的保護關係來變更最大傳輸速率、保護策略或保護計畫。 
+---
+= 編輯關係對話框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以編輯現有的保護關係來變更最大傳輸速率、保護策略或保護計畫。
+
+
+
+== 目的地資訊
+
+* *目標集群*
++
+所選目標群集的名稱。
+
+* *目標 SVM*
++
+所選 SVM 的名稱
+
+* *關係設定*
++
+使您能夠指定保護關係使用的最大傳輸速率、 SnapMirror策略和計劃：
+
++
+** 最大傳輸速率
++
+指定基線資料透過網路在集群之間傳輸的最大速率。選取後，網路頻寬將限制為您指定的值。您可以輸入一個數值，然後選擇每秒千位元組 (KBps)、每秒兆位元組 (MBps)、每秒千兆位元組 (GBps) 或每秒太字節 (TBps)。您指定的最大傳輸速率必須大於 1 KBps 且小於 4 TBps。如果您選擇不使用最大轉移率，則關係之間的基準轉移是無限制的。如果主集群和輔助集群相同，則此設定已停用。
+
+** SnapMirror策略
++
+指定該關係的ONTAP SnapMirror策略。預設值為 DPDefault。
+
+** 創建策略
++
+啟動「建立SnapMirror策略」對話框，在此可以建立和使用新的SnapMirror策略。
+
+** SnapMirror計劃
++
+指定該關係的ONTAP SnapMirror策略。可用的時間表包括無、5 分鐘、8 小時、每天、每小時和每週。預設值為 None，表示沒有與該關係關聯的計劃。沒有時間表的關係沒有滯後狀態值，除非它們屬於儲存服務。
+
+** 創建時間表
++
+啟動「建立計畫」對話框，在此可以建立新的SnapMirror計畫。
+
+
+
+
+
+
+
+== 命令按鈕
+
+命令按鈕使您能夠執行以下任務：
+
+* *取消*
++
+放棄選擇並關閉“配置保護”對話框。
+
+* *提交*
++
+應用您的選擇並關閉“編輯關係”對話框。
+
+

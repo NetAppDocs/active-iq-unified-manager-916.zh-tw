@@ -1,0 +1,276 @@
+---
+permalink: api-automation/concept_provision_luns.html 
+sidebar: sidebar 
+keywords: provision, luns 
+summary: '您可以使用Active IQ Unified Manager提供的設定 API 在儲存虛擬機器 (SVM) 上設定 LUN。此組態工作流程詳細說明了在建立 LUN 之前檢索 SVM、效能服務等級和儲存效率策略的金鑰的步驟。' 
+---
+= 使用 API 預配 LUN
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Active IQ Unified Manager提供的設定 API 在儲存虛擬機器 (SVM) 上設定 LUN。此組態工作流程詳細說明了在建立 LUN 之前檢索 SVM、效能服務等級和儲存效率策略的金鑰的步驟。
+
+下圖說明了 LUN 設定工作流程中的步驟。
+
+image::../media/create_luns.gif[建立 LUN]
+
+[NOTE]
+====
+此工作流程假定ONTAP叢集已新增至 Unified Manager，並且已取得叢集金鑰。該工作流程還假設在叢集上已建立 SVM。
+
+====
+. 取得要在其上建立 LUN 的 SVM 的 SVM 金鑰，如_驗證叢集上的 SVM_ 工作流程主題中所述。
+. 透過執行以下 API 並從回應中檢索金鑰來取得效能服務等級的金鑰。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/performance-service-levels`
+
+|===
++
+[NOTE]
+====
+您可以透過設定 `system_defined`輸入參數 `true`。從輸出中取得要在 LUN 上套用的效能服務等級的金鑰。
+
+====
+. 或者，透過執行以下 API 並從回應中擷取金鑰，取得要在 LUN 上套用的儲存效率策略的儲存效率策略金鑰。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+. 決定是否已建立啟動程式群組 (igroup) 來授予對要建立的 LUN 目標的存取權限。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+資料中心
+ a| 
+得到
+ a| 
+`/datacenter/protocols/san/igroups`  `/datacenter/protocols/san/igroups/\{key}`
+
+|===
++
+您必須輸入參數值來指示 igroup 有權存取的 SVM。此外，如果您想查詢特定的 igroup，請輸入 igroup 名稱（鍵）作為輸入參數。
+
+. 在輸出中，如果您可以找到要授予存取權限的 igroup，請取得金鑰。否則創建 igroup。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+資料中心
+ a| 
+郵政
+ a| 
+`/datacenter/protocols/san/igroups`
+
+|===
++
+您必須輸入要建立的 igroup 的詳細資訊作為輸入參數。這是一個同步調用，您可以在輸出中驗證 igroup 的建立。如果發生錯誤，則會顯示一則訊息，以便您排除故障並重新執行 API。
+
+. 建立 LUN。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+郵政
+ a| 
+`/storage-provider/luns`
+
+|===
++
+若要建立 LUN，請確保已將檢索到的值新增為強制輸入參數。
+
++
+[NOTE]
+====
+儲存效率策略是建立 LUN 的可選參數。
+
+====
++
+*範例 cURL*
+
++
+您必須輸入要建立的 LUN 的所有詳細資訊作為輸入參數。
+
++
+JSON 輸出顯示一個作業物件鍵，您可以使用它來驗證您建立的 LUN。
+
+. 使用查詢作業中傳回的作業物件鍵來驗證 LUN 的建立：
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+管理伺服器
+ a| 
+得到
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
++
+在回應的末尾，您會看到建立的 LUN 的金鑰。
+
+. 透過使用傳回的金鑰執行以下 API 來驗證 LUN 的建立：
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/luns/\{key}`
+
+|===
++
+JSON 輸出範例
+
++
+您可以看到 `/storage-provider/luns`內部呼叫每個函數所需的所有 API 並建立物件。例如，它調用 `/storage-provider/performance-service-levels/`用於在 LUN 上指派效能服務等級的 API。
+
++
+== LUN 建立或對應失敗的故障排除步驟
+
+
+
+完成此工作流程後，您可能仍會看到 LUN 建立失敗。即使成功建立了 LUN，由於建立 LUN 的節點上 SAN LIF 或存取端點不可用，LUN 與 igroup 的對應也可能會失敗。如果發生故障，您將看到以下訊息：
+
+[listing]
+----
+The nodes <node_name> and <partner_node_name> have no LIFs configured with the iSCSI or FCP protocol for Vserver <server_name>. Use the access-endpoints API to create a LIF for the LUN.
+----
+請依照以下故障排除步驟來解決此故障。
+
+. 在您嘗試建立 LUN 的 SVM 上建立支援 ISCSI/FCP 協定的存取端點。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+郵政
+ a| 
+`/storage-provider/access-endpoints`
+
+|===
++
+*範例 cURL*
+
++
+您必須輸入要建立的存取端點的詳細資訊作為輸入參數。
+
++
+[NOTE]
+====
+確保在輸入參數中已新增指示 LUN 主節點的位址和指示主節點的伙伴節點的 ha_address。當您執行此操作時，它會在主節點和夥伴節點上建立存取端點。
+
+====
+. 使用 JSON 輸出中傳回的作業物件鍵查詢作業，以驗證它是否已成功運行以在 SVM 上新增存取端點，以及是否已在 SVM 上啟用 iSCSI/FCP 服務。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+管理伺服器
+ a| 
+得到
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
++
+JSON 輸出範例
+
++
+在輸出的最後，您可以看到建立的存取端點的金鑰。在下面的輸出中，「name」：「accessEndpointKey」值表示在 LUN 的主節點上建立的存取端點，其金鑰為 9c964258-14ef-11ea-95e2-00a098e32c28。  「name」：「accessEndpointHAKey」值表示在主節點的夥伴節點上建立的存取端點，其金鑰為9d347006-14ef-11ea-8760-00a098e3215f。
+
+. 修改 LUN 以更新 igroup 映射。有關工作流程修改的更多信息，請參閱“修改儲存工作負載”。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+修補
+ a| 
+`/storage-provider/lun/\{key}`
+
+|===
++
+在輸入中，指定要用來更新 LUN 對應的 igroup 鍵以及 LUN 鍵。
+
++
+*範例 cURL*
+
++
+JSON 輸出顯示一個 Job 物件鍵，您可以使用它來驗證映射是否成功。
+
+. 透過查詢 LUN 鍵來驗證 LUN 對應。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/luns/\{key}`
+
+|===
++
+JSON 輸出範例
+
++
+在輸出中，您可以看到 LUN 已成功對應到最初設定的 igroup（鍵 d19ec2fa-fec7-11e8-b23d-00a098e32c28）。
+
+

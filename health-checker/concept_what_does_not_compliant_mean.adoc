@@ -1,0 +1,23 @@
+---
+permalink: health-checker/concept_what_does_not_compliant_mean.html 
+sidebar: sidebar 
+keywords: not compliant, compliant 
+summary: '如果根據《NetApp ONTAP 9 安全強化指南》中定義的建議評估的任何安全標準未滿足，則叢集和儲存虛擬機器 (SVM) 被視為不合規。此外，當任何 SVM 被標記為不合規時，該叢集被視為不合規。' 
+---
+= 不合規意味著什麼
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果根據《NetApp ONTAP 9 安全強化指南》中定義的建議評估的任何安全標準未滿足，則叢集和儲存虛擬機器 (SVM) 被視為不合規。此外，當任何 SVM 被標記為不合規時，該叢集被視為不合規。
+
+安全卡中的狀態圖示與其合規性有以下含義：
+
+* image:../media/sev_normal_um60.png["正常的綠色勾號圖標"]- 參數配置符合建議要求。
+* image:../media/sev_warning_um60.png["警告圖示"]- 參數未依建議配置。
+* image:../media/sev_information_um60.gif["資訊圖示"]- 叢集上未啟用此功能，或未依照建議配置該參數，但此參數對物件的合規性沒有貢獻。
+
+
+請注意，磁碟區加密狀態不會影響叢集或 SVM 是否合規。

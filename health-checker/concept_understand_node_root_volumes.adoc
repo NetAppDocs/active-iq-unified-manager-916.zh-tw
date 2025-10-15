@@ -1,0 +1,19 @@
+---
+permalink: health-checker/concept_understand_node_root_volumes.html 
+sidebar: sidebar 
+keywords: understand, node, root, volumes 
+summary: 您可以使用 Unified Manager 監控節點根磁碟區。最佳做法是節點根磁碟區應具有足夠的容量以防止節點關閉。 
+---
+= 了解節點根卷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Unified Manager 監控節點根磁碟區。最佳做法是節點根磁碟區應具有足夠的容量以防止節點關閉。
+
+當節點根磁碟區的已使用容量超過節點根磁碟區總容量的 80% 時，將產生節點根磁碟區空間將會滿事件。您可以為事件配置警報以取得通知。您可以使用ONTAP系統管理員或ONTAP CLI 採取適當的措施來防止節點關閉。
+
+
+NOTE: 如果叢集執行ONTAP 9.14.1 版本或更高版本，則監控節點根磁碟區的功能不可用。

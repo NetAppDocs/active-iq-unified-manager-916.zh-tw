@@ -1,0 +1,66 @@
+---
+permalink: events/reference_volume_move_status_events.html 
+sidebar: sidebar 
+keywords: volume, move, status, events, impact area, capacity 
+summary: 磁碟區移動狀態事件會告訴您磁碟區移動的狀態，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= 磁碟區移動狀態事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+磁碟區移動狀態事件會告訴您磁碟區移動的狀態，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響區域：容量
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+磁碟區移動狀態：正在進行中（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+磁碟區移動狀態 - 失敗（ocumEvtVolumeMoveFailed）
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+磁碟區移動狀態：已完成（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+磁碟區移動 - 切換延遲（ocumEvtVolumeMoveCutoverDeferred）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+|===

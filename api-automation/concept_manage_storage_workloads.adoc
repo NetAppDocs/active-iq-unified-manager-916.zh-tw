@@ -1,0 +1,14 @@
+---
+permalink: api-automation/concept_manage_storage_workloads.html 
+sidebar: sidebar 
+keywords: manage, workloads 
+summary: 這裡描述的 API 涵蓋了儲存管理的各種功能，例如查看儲存工作負載、建立 LUN 和檔案共用、管理效能服務等級和儲存效率策略以及在儲存工作負載上指派策略。 
+---
+= 使用 API 管理工作負載
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+這裡描述的 API 涵蓋了儲存管理的各種功能，例如查看儲存工作負載、建立 LUN 和檔案共用、管理效能服務等級和儲存效率策略以及在儲存工作負載上指派策略。

@@ -1,0 +1,67 @@
+---
+permalink: storage-mgmt/concept_assign_policies_on_workloads.html 
+sidebar: sidebar 
+keywords: assign, policies, workloads, single, multiple, storage, system-recommended, psls 
+summary: '您可以使用不同的導覽選項從「所有工作負載」頁面將儲存效率策略 (SEP) 和效能服務等級 (PSL) 指派給儲存工作負載。' 
+---
+= 為工作負載分配策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用不同的導覽選項從「所有工作負載」頁面將儲存效率策略 (SEP) 和效能服務等級 (PSL) 指派給儲存工作負載。
+
+
+
+== 將策略指派給單一工作負載
+
+您可以為單一工作負載指派 PSL 或 SEP，或者兩者兼而有之。請依照以下步驟操作：
+
+. 選擇工作負載。
+. 點擊行旁邊的編輯圖標，然後點擊“*編輯*”。
++
+*指派的效能服務等級*和*儲存效率策略*欄位已啟用。
+
+. 選擇所需的 PSL 或 SEP，或兩者。
+. 按一下複選圖示以套用變更。
+
+
+[NOTE]
+====
+您也可以選擇一個工作負載並點擊“*更多操作*”來指派策略。
+
+====
+
+
+== 將策略指派給多個儲存工作負載
+
+您可以將 PSL 或 SEP 一起指派給多個儲存工作負載。請依照以下步驟操作：
+
+. 選取要指派策略的工作負載的複選框，或選擇資料中心內的所有工作負載。
+. 按一下“更多操作”。
+. 若要指派 PSL，請選擇*指派效能服務等級*。若要指派 SEP，請選擇*指派儲存效率策略*。將顯示一個彈出視窗供您選擇策略。
+. 選擇適當的策略並點擊*應用*。顯示分配了策略的工作負載的數量。也列出了未分配策略的工作負載及其原因。
++
+[NOTE]
+====
+根據所選工作負載的數量，批量應用策略可能需要一些時間。您可以按一下「在背景執行」按鈕，並在操作在背景執行時繼續執行其他任務。當批次分配完成後，您可以查看完成狀態。如果您在多個工作負載上套用 PSL，則在批次分配的前一個作業執行時，您無法觸發另一個要求。
+
+====
+
+
+
+
+== 將系統建議的 PSL 分配給工作負載
+
+您可以將系統建議的 PSL 指派給資料中心中尚未指派 PSL 或指派的 PSL 與系統建議不符的儲存工作負載。若要使用此功能，請按一下「指派系統建議的 PSL」按鈕。您不必選擇特定的工作負載。
+
+該建議由系統分析內部確定，並且對於那些 IOPS 和其他參數與任何可用 PSL 的定義不一致的工作負載將被跳過。儲存工作負載 `Waiting for I/O`學習狀態也被排除在外。
+
+[NOTE]
+====
+Unified Manager 會在工作負載名稱中尋找特殊關鍵字來覆寫系統分析並為工作負載建議不同的 PSL。當工作負載名稱中包含字母「ora」時，建議使用**極限效能**PSL。當工作負載名稱中包含字母「vm」時，建議使用**Performance**PSL。
+
+====
+另請參閱知識庫 (KB) 文章 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/Performance_Service_Level'_is_not_adaptive_to_a_highly_variable_workload["ActiveIQ Unified Manager「分配系統建議的效能服務等級」不適應高度變化的工作負載"]

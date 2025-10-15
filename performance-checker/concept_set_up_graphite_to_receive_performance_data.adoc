@@ -1,0 +1,50 @@
+---
+permalink: performance-checker/concept_set_up_graphite_to_receive_performance_data.html 
+sidebar: sidebar 
+keywords: setting, graphite, receive, performance, data, unified manager 
+summary: Graphite 是一個用於收集和繪製電腦系統效能資料的開放軟體工具。您的 Graphite 伺服器和軟體必須正確配置才能從 Unified Manager 接收統計資料。 
+---
+= 設定 Graphite 以從 Unified Manager 接收效能數據
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Graphite 是一個用於收集和繪製電腦系統效能資料的開放軟體工具。您的 Graphite 伺服器和軟體必須正確配置才能從 Unified Manager 接收統計資料。
+
+NetApp不會測試或驗證 Graphite 或其他第三方工具的特定版本。
+
+
+NOTE: Graphite 伺服器未從 Unified Manager 接收磁碟區的效能資料。
+
+按照安裝說明安裝 Graphite 後，您需要進行以下變更以支援從 Unified Manager 傳輸統計資料：
+
+* 在 `/opt/graphite/conf/carbon.conf`文件，每分鐘可以在 Graphite 伺服器上建立的最大文件數必須設定為 _200_(`*MAX_CREATES_PER_MINUTE = 200*` ）。
++
+根據您配置中的群集數量和您選擇發送的統計對象，可能需要最初建立數千個新檔案。以每分鐘 200 個檔案的速度，可能需要 15 分鐘或更長時間才能初始建立所有指標檔案。建立所有唯一度量檔案後，此參數不再相關。
+
+* 如果您在使用 IPv6 位址部署的伺服器上執行 Graphite，則 `/opt/graphite/conf/carbon.conf`文件必須從“`0.0.0.0`”更改為“`::`”(`*LINE_RECEIVER_INTERFACE = ::*` ）
+* 在 `/opt/graphite/conf/storage-schemas.conf`文件， `retentions`必須使用參數將頻率設定為 5 分鐘，並將保留期設定為與您的環境相關的天數。
++
+保留期可以根據您的環境允許的時間長短而定，但對於至少一個保留設置，頻率值必須設定為 5 分鐘。在以下範例中，使用 `pattern`參數，其值將初始頻率設定為 5 分鐘，將保留期設定為 100 天： `*[OPM]*`
+
++
+`*pattern = ^netapp-performance\..*`
+
++
+`*retentions = 5m:100d*`
+
++
+[NOTE]
+====
+如果預設供應商標籤從「netapp-performance」變更為其他標籤，則該變更必須反映在 `pattern`參數也是如此。
+
+====
+
+
+[NOTE]
+====
+如果 Unified Manager 伺服器嘗試傳送效能數據時 Graphite 伺服器不可用，則不會傳送數據，且收集的數據中會出現差距。
+
+====

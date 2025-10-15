@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_view_nodes_running_older_versions_of_ontap.html 
+sidebar: sidebar 
+keywords: create, report, view, nodes, running, older versions, ONTAP 
+summary: 您可以建立一個報表來顯示所有叢集節點上安裝的ONTAP軟體版本，以便您可以看到應該升級哪些節點。 
+---
+= 建立報表以查看運行舊版ONTAP的節點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立一個報表來顯示所有叢集節點上安裝的ONTAP軟體版本，以便您可以看到應該升級哪些節點。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+
+
+使用下列步驟建立顯示執行舊版ONTAP的節點的自訂視圖，然後計畫為該視圖產生報表。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*節點*」。
+. 選擇“*顯示/隱藏*”以刪除報告中不需要的任何列。
+. 將“OS Version”列拖曳到“Node”列附近。
+. 點選“OS Version”列頂部，按ONTAP的最舊版本對結果進行排序。
+. 使用反映視圖所顯示內容的特定名稱儲存視圖，例如「按ONTAP版本劃分的節點」。
+. 點擊庫存頁面上的“*計劃報告*”按鈕。
+. 按一下「新增計劃」以新增一行至「報表計畫」頁面，以便您可以定義新報告的計畫特徵。
+. 輸入報告計劃的名稱並填寫其他報告字段，然後按一下複選標記 (image:../media/blue_check.gif[""] ) 位於行尾。
++
+該報告將立即發送以進行測試。此後，將產生報告並透過電子郵件發送給使用指定頻率列出的收件者。
+
+
+
+根據報表中顯示的結果，您可能需要升級執行舊版ONTAP的節點。

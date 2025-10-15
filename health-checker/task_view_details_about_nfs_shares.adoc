@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_view_details_about_nfs_shares.html 
+sidebar: sidebar 
+keywords: view, details, nfs shares 
+summary: '您可以查看有關所有 NFS 共享的詳細信息，例如其狀態、與磁碟區（FlexGroup磁碟區或FlexVol磁碟區）關聯的路徑、客戶端對 NFS 共用的存取等級以及為匯出的磁碟區定義的匯出策略。使用「運作狀況：所有 NFS 共用」視圖查看所有受監控叢集上的所有 NFS 共用，並使用「儲存虛擬機器/運作狀況詳細資料」頁面查看特定儲存虛擬機器 (SVM) 上的所有 NFS 共用。' 
+---
+= 查看有關 NFS 共享的詳細信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看有關所有 NFS 共享的詳細信息，例如其狀態、與磁碟區（FlexGroup磁碟區或FlexVol磁碟區）關聯的路徑、客戶端對 NFS 共用的存取等級以及為匯出的磁碟區定義的匯出策略。使用「運作狀況：所有 NFS 共用」視圖查看所有受監控叢集上的所有 NFS 共用，並使用「儲存虛擬機器/運作狀況詳細資料」頁面查看特定儲存虛擬機器 (SVM) 上的所有 NFS 共用。
+
+.開始之前
+* 必須在叢集上啟用 NFS 許可證。
+* 必須設定服務於 NFS 共享的網路介面。
+* 您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+
+.步
+. 在左側導覽窗格中，根據您要查看所有 NFS 共用還是僅查看特定 SVM 的 NFS 共用，執行下列步驟。
++
+[cols="2*"]
+|===
+| 到... | 請依照以下步驟操作... 
+
+
+ a| 
+查看所有 NFS 共享
+ a| 
+按一下“儲存”>“NFS 共用”
+
+
+
+ a| 
+查看單一 SVM 的 NFS 共享
+ a| 
+.. 按一下“儲存”>“儲存虛擬機器”
+.. 按一下要查看其 NFS 共用詳細資訊的 SVM。
+.. 在儲存虛擬機器/運作狀況詳細資料頁面中，按一下 *NFS 共用* 標籤。
+
+
+|===
+
+
+有關詳細信息，請參閱link:../storage-mgmt/task_provision_fileshares.html["設定檔共享卷"]和link:../api-automation/concept_provision_file_share.html["使用 API 調配 CIFS 和 NFS 檔案共享"]。

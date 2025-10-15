@@ -1,0 +1,56 @@
+---
+permalink: install-windows/task_uninstall_unified_manager_win.html 
+sidebar: sidebar 
+keywords: uninstall, unified manager 
+summary: 您可以使用程式和功能精靈來解除安裝 Unified Manager，或從命令列介面執行無人值守卸載。 
+---
+= 解除安裝 Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:pp: &#43;&#43;
+
+
+[role="lead"]
+您可以使用程式和功能精靈來解除安裝 Unified Manager，或從命令列介面執行無人值守卸載。
+
+.開始之前
+* 您必須具有 Windows 管理員權限。
+* 卸載軟體之前，必須從 Unified Manager 伺服器中刪除所有叢集（資料來源）。
+* 您應該手動刪除為允許或封鎖 MySQL 連接埠 3306 而建立的防火牆規則。防火牆規則不會被自動刪除。
+
+
+.步驟
+. 選擇下列選項之一來解除安裝 Unified Manager：
++
+** 如果從「程式和功能」精靈中解除安裝 Unified Manager，請執行下列步驟：
++
+... 導航至*控制面板*>*程式和功能*。
+... 選擇Active IQ Unified Manager，然後按一下 *解除安裝*。
+
+
+** 如果從命令列卸載 Unified Manager，請執行下列步驟：
++
+... 使用管理員權限登入 Windows 命令列。
+... 導航至Active IQ Unified Manager目錄，然後執行以下命令：
++
+`+msiexec /x {A78760DB-7EC0-4305-97DB-E4A89CDFF4E1} /qn /l*v %systemdrive%\UmUnInstall.log+`
+
++
+如果伺服器上啟用了使用者帳戶控制 (UAC)，且您以網域使用者身分登錄，則必須使用命令列卸載方法。
+
++
+Unified Manager 已從您的系統中解除安裝。
+
+
+
+
+
+. 卸載在 Unified Manager 卸載期間未刪除的以下第三方軟體包和資料：
++
+** 第三方軟體包：JRE、MySQL、Microsoft Visual C++ 2015 Redistributable、Python 和 7zip
+** Unified Manager 產生的 MySQL 應用程式數據
+** 應用程式日誌和應用程式資料目錄的內容
+
+
+

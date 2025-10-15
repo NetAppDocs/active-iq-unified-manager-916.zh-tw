@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_analyze_events_from_dynamic_performance_thresholds.html 
+sidebar: sidebar 
+keywords: analyze, events, dynamic, performance, thresholds 
+summary: 動態閾值產生的事件表明，與預期反應時間範圍相比，工作負載的實際反應時間（延遲）太高或太低。您可以使用事件詳細資訊頁面來分析效能事件，並在必要時採取糾正措施，使效能恢復正常。 
+---
+= 根據動態效能閾值分析事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+動態閾值產生的事件表明，與預期反應時間範圍相比，工作負載的實際反應時間（延遲）太高或太低。您可以使用事件詳細資訊頁面來分析效能事件，並在必要時採取糾正措施，使效能恢復正常。
+
+[NOTE]
+====
+Cloud Volumes ONTAP、 ONTAP Edge 或ONTAP Select系統上未啟用動態效能閾值。
+
+====

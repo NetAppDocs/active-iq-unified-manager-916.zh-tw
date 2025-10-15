@@ -1,0 +1,32 @@
+---
+permalink: health-checker/task_configure_lag_threshold_settings_for_unmanaged_protection.html 
+sidebar: sidebar 
+keywords: configure, lag, threshold settings, unmanaged, protection, relationships 
+summary: 您可以編輯非託管保護關係的全域預設滯後警告和錯誤健康閾值設置，以便按照適合您需求的間隔產生事件。 
+---
+= 為非託管保護關係配置滯後閾值設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以編輯非託管保護關係的全域預設滯後警告和錯誤健康閾值設置，以便按照適合您需求的間隔產生事件。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+滯後時間不得超過定義的傳輸計劃間隔。例如，如果傳輸時間表是每小時一次，那麼滯後時間不得超過一小時。滯後閾值指定滯後時間不得超過的百分比。以一小時為例，如果滯後閾值定義為 150%，那麼當滯後時間超過 1.5 小時時，您將收到事件。
+
+此任務中所述的設定將全域套用至所有非託管保護關係。無法指定這些設定並將其專門應用於一個非託管保護關係。
+
+.步驟
+. 在左側導覽窗格中，按一下「*事件閾值*」>「*關係*」。
+. 根據需要增加或減少全域預設警告或錯誤滯後時間百分比。
+. 若要停用因任何滯後閾值量而觸發的警告或錯誤事件，請取消選取「*已啟用*」旁的方塊。
+. 點選“儲存”。
+
+
+*相關資訊*
+
+link:../config/task_add_users.html["新增用戶"]

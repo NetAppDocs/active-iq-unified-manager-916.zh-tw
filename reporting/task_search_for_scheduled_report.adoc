@@ -1,0 +1,52 @@
+---
+permalink: reporting/task_search_for_scheduled_report.html 
+sidebar: sidebar 
+keywords: search, schedule, report 
+summary: 您可以按名稱、視圖名稱、物件類型或收件人搜尋計劃報告。 
+---
+= 搜尋計劃報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以按名稱、視圖名稱、物件類型或收件人搜尋計劃報告。
+
+. 在左側導覽窗格中，按一下「*儲存管理*」>「*報告計畫*」。
+. 使用*搜尋計劃報告*文字欄位。
++
+[cols="2*"]
+|===
+| 要找報告... | 嘗試 ... 
+
+
+ a| 
+日程表名稱
+ a| 
+輸入報告計畫名稱的一部分。
+
+
+
+ a| 
+視圖名稱
+ a| 
+輸入報表檢視名稱的一部分。預設視圖和自訂視圖出現在視圖清單中。
+
+
+
+ a| 
+接受者
+ a| 
+輸入部分電子郵件地址。
+
+
+
+ a| 
+文件類型
+ a| 
+輸入“PDF”、“CSV”或“XLSX”。
+
+|===
+. 您可以按一下列標題，按該列的升序或降序對報表進行排序，例如計劃名稱或格式。
+

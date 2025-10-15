@@ -1,0 +1,65 @@
+---
+permalink: config/task_access_maintenance_console.html 
+sidebar: sidebar 
+keywords: access, maintenance console 
+summary: 如果 Unified Manager 使用者介面未執行，或者您需要執行使用者介面中不可用的功能，則可以存取維護控制台來管理 Unified Manager 系統。 
+---
+= 存取維護控制台
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果 Unified Manager 使用者介面未執行，或者您需要執行使用者介面中不可用的功能，則可以存取維護控制台來管理 Unified Manager 系統。
+
+.開始之前
+您必須已安裝並設定 Unified Manager。
+
+15 分鐘不活動後，維護控制台將註銷您。
+
+[NOTE]
+====
+在 VMware 上安裝時，如果您已經透過 VMware 控制台以維護使用者身分登錄，則無法同時使用安全外殼登入。
+
+====
+.步
+. 請依照下列步驟存取維護控制台：
++
+[cols="2*"]
+|===
+| 在此作業系統上... | 請依照以下步驟操作... 
+
+
+ a| 
+VMware
+ a| 
+.. 使用安全性外殼連接到 Unified Manager 虛擬設備的 IP 位址或完全限定網域名稱。
+.. 使用您的維護使用者名稱和密碼登入維護控制台。
+
+
+
+
+ a| 
+Linux
+ a| 
+.. 使用安全性外殼連接到 Unified Manager 系統的 IP 位址或完全限定網域名稱。
+.. 使用維護使用者（umadmin）名稱和密碼登入系統。
+.. 輸入命令 `maintenance_console`然後按 Enter 鍵。
+
+
+
+
+ a| 
+視窗
+ a| 
+.. 使用管理員憑證登入 Unified Manager 系統。
+.. 以 Windows 管理員身分啟動 PowerShell。
+.. 輸入命令 `maintenance_console`然後按 Enter 鍵。
+
+
+|===
++
+顯示 Unified Manager 維護控制台選單。
+
+

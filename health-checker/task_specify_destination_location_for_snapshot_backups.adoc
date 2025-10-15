@@ -1,0 +1,44 @@
+---
+permalink: health-checker/task_specify_destination_location_for_snapshot_backups.html 
+sidebar: sidebar 
+keywords: specify, destination location, snapshot copies, copy 
+summary: 您應該在已在某個ONTAP叢集中設定的磁碟區上設定Active IQ Unified Manager Snapshot 副本的目標位置。您應該使用維護控制台來定義位置。 
+---
+= 指定 Snapshot 副本的目標位置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該在已在某個ONTAP叢集中設定的磁碟區上設定Active IQ Unified Manager Snapshot 副本的目標位置。您應該使用維護控制台來定義位置。
+
+* 您必須擁有安裝了Active IQ Unified Manager 的Linux 主機的 root 使用者憑證。
+* 您必須擁有授權登入 Unified Manager 伺服器維護控制台的使用者 ID 和密碼。
+* 您必須擁有叢集管理 IP 位址、儲存 VM 的名稱、磁碟區的名稱以及儲存系統使用者名稱和密碼。
+* 您必須已將磁碟區掛載至Active IQ Unified Manager主機，且必須具有掛載路徑。
+
+
+.步驟
+. 使用安全外殼連接到Active IQ Unified Manager系統的 IP 位址或 FQDN。
+. 使用維護使用者（umadmin）名稱和密碼登入系統。
+. 輸入命令 `maintenance_console`然後按 Enter 鍵。
+. 在維護控制台*主選單*中，輸入*備份還原*選項的編號。
+. 輸入「*配置NetApp快照備份*」的號碼。
+. 輸入數字來設定 NFS。
+. 查看您需要提供的信息，然後輸入“*輸入備份配置詳細信息*”的編號。
+. 若要識別將寫入快照的捲，請輸入叢集管理介面的 IP 位址、儲存 VM 的名稱、磁碟區的名稱、LUN 名稱、儲存系統使用者名稱和密碼以及掛載路徑。
+. 驗證此資訊並輸入 `y`。
++
+系統執行以下任務：
+
++
+** 建立與集群的連接
+** 停止所有服務
+** 在磁碟區中建立新目錄並複製Active IQ Unified Manager資料庫設定檔
+** 從Active IQ Unified Manager中刪除檔案並建立指向新資料庫目錄的符號鏈接
+** 重新啟動所有服務
+
+
+. 如果您尚未執行此操作，請登出維護控制台並啟動Active IQ Unified Manager介面來為 Snapshot 副本建立計畫。
+

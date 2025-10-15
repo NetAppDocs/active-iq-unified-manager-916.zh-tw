@@ -1,0 +1,41 @@
+---
+permalink: health-checker/task_view_aggregate_list_and_details.html 
+sidebar: sidebar 
+keywords: view, aggregate list, details 
+summary: 從「健康狀況：所有聚合體」視圖中，您可以監控聚合體的庫存。透過「容量：所有聚合」視圖，您可以查看有關所有叢集中聚合的容量和利用率的資訊。 
+---
+= 查看匯總列表和詳細信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從「健康狀況：所有聚合體」視圖中，您可以監控聚合體的庫存。透過「容量：所有聚合」視圖，您可以查看有關所有叢集中聚合的容量和利用率的資訊。
+
+.開始之前
+您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+您可以從聚合/健康詳細資料頁面查看聚合容量和配置以及磁碟資訊等詳細資訊。如果需要，您可以在配置閾值設定之前使用這些詳細資訊。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*聚合*」。
+. 選擇以下方式之一來查看聚合詳細資訊：
++
+** 若要查看有關所有叢集中所有聚合的健康狀況的信息，請在「檢視」功能表中選擇「健康狀況：所有聚合視圖」。
+** 若要查看有關所有叢集中所有聚合的容量和利用率的信息，請在「檢視」功能表中選擇「容量：所有聚合視圖」。
+** 要查看完整詳細信息，請按一下聚合名稱。
++
+您也可以透過點擊最小詳細資料對話方塊中的「查看詳細資料」來查看完整的詳細資訊。
+
+
+
+. 透過點擊最小詳細資料對話方塊中的「檢視相關」來查看與聚合相關的物件。
+
+
+*相關資訊*
+
+* link:../health-checker/reference_health_aggregate_details_page.html["聚合/健康詳情頁面"]
+* link:../performance-checker/performance-view-all.html#performance-all-aggregates-view["效能：所有聚合視圖"]
+* link:../reporting/concept_customize_aggregate_capacity_reports.html["自訂聚合容量報告"]
+

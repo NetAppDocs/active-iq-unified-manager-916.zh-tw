@@ -1,0 +1,48 @@
+---
+permalink: data-protection/task_create_snapvault_protection_relationship_from_health_volume_details.html 
+sidebar: sidebar 
+keywords: create, snapvault, protection, relationship, volume, health details page 
+summary: 您可以使用磁碟區/運行狀況詳細資料頁面建立SnapVault關係，以便啟用資料備份來保護磁碟區。 
+---
+= 從磁碟區/運作狀況詳細資料頁面建立SnapVault保護關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用磁碟區/運行狀況詳細資料頁面建立SnapVault關係，以便啟用資料備份來保護磁碟區。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+* 您必須設定工作流程自動化才能執行此任務。
+
+
+在下列情況下不會顯示「保護」選單：
+
+* 如果 RBAC 設定不允許此操作：例如，如果您只有操作員權限
+* 當磁碟區 ID 未知時：例如，當您具有群集間關係且尚未發現目標群集時
+
+
+.步驟
+. 在「*Volume / Health*」詳細資料頁面的「*Protection*」標籤中，右鍵點選拓撲視圖中要保護的磁碟區。
+. 從選單中選擇*保護*>* SnapVault*。
++
+啟動“配置保護”對話框。
+
+. 按一下「* SnapVault*」查看「* SnapVault*」選項卡，配置二級資源資訊。
+. 按一下「*進階*」根據需要設定重複資料刪除、壓縮、自動成長和空間保證，然後按一下「*套用*」。
+. 完成「配置保護」對話方塊中的「目標資訊」區域和「關係設定」區域。
+. 按一下“*應用*”。
++
+您將返回「音量/健康」詳細資訊頁面。
+
+. 按一下「*Volume / Health*」詳細資料頁面頂部的保護配置作業連結。
++
+將顯示「作業詳細資料」頁面。
+
+. 點擊“*刷新*”以更新與保護配置作業相關的任務列表和任務詳細信息，並確定作業何時完成。
++
+當作業任務完成時，新的關係將顯示在磁碟區/健康詳細資料頁面拓撲視圖中。
+
+

@@ -1,0 +1,109 @@
+---
+permalink: api-automation/concept_manage_fileshares_api.html 
+sidebar: sidebar 
+keywords: manage, file, share 
+summary: 您可以使用 /storage-provider/file-shares API 來檢視、新增、修改和刪除資料中心環境中的 CIFS 和 NFS 檔案共用磁碟區。 
+---
+= 使用 API 管理文件共享
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 `/storage-provider/file-shares`用於檢視、新增、修改和刪除資料中心環境中的 CIFS 和 NFS 檔案共用磁碟區的 API。
+
+在設定檔共用磁碟區之前，請確保已建立 SVM 並使用支援的協定進行設定。如果您在設定時指派效能服務等級 (PSL) 或儲存效率原則 (SEP)，則應在建立檔案共用之前建立 PSL 或 SEP。
+
+
+
+== 查看檔案共享
+
+您可以使用下列方法檢視 Unified Manager 環境中可用的檔案共用磁碟區。當您在Active IQ Unified Manager上將ONTAP叢集新增為資料來源時，這些叢集的儲存工作負載會自動新增至您的 Unified Manager 實例中。此 API 會擷取自動和手動新增至 Unified Manager 實例的檔案共用。您可以使用文件共享金鑰運行此 API 來查看特定文件共享的詳細資訊。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/file-shares`
+
+`/storage-provider/file-shares/\{key}`
+
+|===
+
+
+== 新增檔案共享
+
+您可以使用以下方法在 SVM 中新增 CIFS 和 NFS 檔案共用。您必須輸入要建立的文件共享的詳細資訊作為輸入參數。您不能使用此 API 來新增FlexGroup磁碟區。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+郵政
+ a| 
+`/storage-provider/file-shares`
+
+|===
+[NOTE]
+====
+根據是否提供存取控制清單 (ACL) 參數或匯出策略參數，建立 CIFS 共用或 NFS 檔案共用。如果您不提供 ACL 參數的值，則不會建立 CIFS 共享，並且預設建立 NFS 共享，以提供所有人的存取權限。
+
+====
+*建立資料保護磁碟區*：當您向 SVM 新增檔案共用時，預設會掛載的磁碟區類型是 `rw`（讀寫）。若要建立資料保護 (DP) 卷，請指定 `dp`作為 `type`範圍。
+
+
+
+== 刪除檔案共享
+
+您可以使用以下方法刪除特定的檔案共用。您需要輸入檔案共用金鑰作為輸入參數來刪除特定的檔案共用。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+刪除
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===
+
+
+== 修改檔案共享
+
+您可以使用以下方法修改檔案共用並更新其屬性。
+
+您需要提供文件共享金鑰來修改特定的文件共享。此外，您還需要輸入要更新的屬性及其值。
+
+[NOTE]
+====
+請注意，一次呼叫此 API 只能更新一個屬性。對於多次更新，您需要多次執行此 API。
+
+====
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+修補
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===

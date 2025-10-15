@@ -1,0 +1,14 @@
+---
+permalink: events/reference_description_of_script_windows_and_dialog_boxes.html 
+sidebar: sidebar 
+keywords: description, script, windows, dialog boxes 
+summary: 腳本頁面可讓您將腳本新增至 Unified Manager。 
+---
+= 腳本視窗和對話框的描述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+腳本頁面可讓您將腳本新增至 Unified Manager。

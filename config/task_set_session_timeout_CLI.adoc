@@ -1,0 +1,24 @@
+---
+permalink: config/task_set_session_timeout_CLI.html 
+sidebar: sidebar 
+keywords: session timeout, CLI, maximum 
+summary: 您可以使用 CLI 為 Unified Manager 設定最大會話逾時值，以便會話在一定時間後自動終止。 
+---
+= 透過 CLI 設定會話逾時
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 CLI 為 Unified Manager 設定最大會話逾時值，以便會話在一定時間後自動終止。預設情況下，您的會話逾時設定為最大值，即 4,320 分鐘（72 小時）。這表示您的工作階段會在 72 小時後自動結束，即使您已登入並正在使用 Unified Manager。
+
+.關於此任務
+您必須具有應用程式管理員角色。
+
+會話逾時設定會影響所有已登入的使用者會話。
+
+.步驟
+. 透過輸入 `um cli login`命令。使用有效的使用者名稱和密碼進行身份驗證。
+. 輸入 `um option set max.session.timeout.value=<in mins>`命令修改會話逾時值。
+

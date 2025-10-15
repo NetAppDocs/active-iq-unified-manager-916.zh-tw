@@ -1,0 +1,37 @@
+---
+permalink: health-checker/task_determine_if_volume_is_offline_because_of_broken_disks.html 
+sidebar: sidebar 
+keywords: determine, volume, offline, broken disks, aggregate 
+summary: 您可以使用 Unified Manager Web UI 來確認或消除磁碟區離線的可能性，因為 RAID 磁碟問題已導致其主機聚合離線。 
+---
+= 確定磁碟區是否因聚合中的磁碟損壞而處於離線狀態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Unified Manager Web UI 來確認或消除磁碟區離線的可能性，因為 RAID 磁碟問題已導致其主機聚合離線。
+
+.開始之前
+您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+若要確定捲脫機情況是否由導致託管聚合離線的 RAID 磁碟問題所引起，請執行下列操作：
+
+.步驟
+. 找到並點擊「*Volume / Health*」詳細資訊頁面的「*Related Devices*」窗格中「Aggregate」下顯示的超文本連結。
++
+聚合/健康詳情頁面顯示託管聚合的線上或離線狀態。如果聚合狀態為在線，則 RAID 磁碟問題不是導致磁碟區離線的原因。
+
+. 如果聚合狀態為離線，則按一下“*磁碟資訊*”，然後在“*磁碟資訊*”標籤上的“*事件*”清單中尋找損壞的磁碟事件。
+. 若要進一步識別損壞的磁碟，請按一下「相關裝置」窗格中「節點」下顯示的超文本連結。
++
+顯示集群/健康詳情頁面。
+
+. 按一下“*磁碟*”，然後在“*過濾器*”窗格中選擇“*損壞*”以列出所有處於損壞狀態的磁碟。
++
+如果處於損壞狀態的磁碟導致主機聚合處於離線狀態，則該聚合的名​​稱將顯示在「受影響的聚合」欄位中。
+
+
+
+確認卷脫機狀態是由損壞的 RAID 磁碟和隨之而來的主機聚合脫機引起的後，請聯絡相應的管理員或操作員手動更換損壞的磁碟並使聚合重新連線。

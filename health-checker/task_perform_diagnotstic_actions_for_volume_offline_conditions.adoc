@@ -1,0 +1,39 @@
+---
+permalink: health-checker/task_perform_diagnotstic_actions_for_volume_offline_conditions.html 
+sidebar: sidebar 
+keywords: perform, diagnostic actions, volume, offline, conditions 
+summary: 導航至報告離線的捲的捲/健康詳情頁面後，您可以搜尋有助於診斷卷離線狀況的其他資訊。 
+---
+= 對磁碟區離線情況執行診斷操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+導航至報告離線的捲的捲/健康詳情頁面後，您可以搜尋有助於診斷卷離線狀況的其他資訊。
+
+.開始之前
+您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+如果報告脫機的捲不是故意脫機的，則該卷可能由於多種原因而脫機。
+
+從離線磁碟區的磁碟區/執行狀況詳細資料頁面開始，您可以導覽至其他頁面和窗格來確認或消除可能的原因：
+
+* 點擊“*卷/運行狀況*”詳細信息頁面鏈接，確定卷是否處於離線狀態，因為其主機節點已關閉，並且到其 HA 對夥伴的存儲故障轉移也失敗了。
++
+看link:task_determine_if_volume_offline_condition_is_by_down_cluster_node.html["確定卷離線狀況是否由故障節點引起"]。
+
+* 按一下「*磁碟區/運作狀況*詳細資料頁面鏈接，確定磁碟區是否處於離線狀態，以及其主機儲存虛擬機器 (SVM) 是否已停止，因為託管該 SVM 根磁碟區的節點已關閉。
++
+看link:task_determine_if_volume_is_offline_and_its_svm_is_stopped.html["確定磁碟區是否處於離線狀態以及 SVM 是否因節點關閉而停止"]。
+
+* 點擊“*磁碟區/健康*”詳細資料頁面鏈接，確定磁碟區是否由於其主機聚合中的磁碟損壞而處於離線狀態。
++
+看link:task_determine_if_volume_is_offline_because_of_broken_disks.html["確定磁碟區是否因聚合中的磁碟損壞而處於離線狀態"]。
+
+
+
+*相關資訊*
+
+link:../config/reference_unified_manager_roles_and_capabilities.html["Unified Manager 使用者角色和功能"]

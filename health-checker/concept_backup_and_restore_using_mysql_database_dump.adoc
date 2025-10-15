@@ -1,0 +1,34 @@
+---
+permalink: health-checker/concept_backup_and_restore_using_mysql_database_dump.html 
+sidebar: sidebar 
+keywords: backup, restore, using, mysql, database, dump, snapshot copy, copies 
+summary: MySQL 資料庫轉儲備份是Active IQ Unified Manager資料庫和設定檔的副本，您可以在系統故障或資料遺失時使用它。您可以安排將備份寫入本機目標或遠端目標。強烈建議您定義Active IQ Unified Manager主機系統外部的遠端位置。 
+---
+= 使用 MySQL 資料庫轉儲進行備份和還原
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MySQL 資料庫轉儲備份是Active IQ Unified Manager資料庫和設定檔的副本，您可以在系統故障或資料遺失時使用它。您可以安排將備份寫入本機目標或遠端目標。強烈建議您定義Active IQ Unified Manager主機系統外部的遠端位置。
+
+[NOTE]
+====
+當 Unified Manager 安裝在 Linux 和 Windows 伺服器上時，MySQL 資料庫轉儲是預設備份機制。但是，如果 Unified Manager 管理大量叢集和節點，或者您的 MySQL 備份需要花費數小時才能完成，則您可以使用 Snapshot 副本進行備份。此功能可在 Red Hat Enterprise Linux 和 Windows 上使用。
+
+====
+資料庫轉儲備份由備份目錄中的單一檔案和資料庫儲存庫目錄中的一個或多個檔案組成。備份目錄中的檔案非常小，因為它僅包含指向重新建立備份所需的資料庫儲存庫目錄中的檔案的指標。
+
+第一次產生資料庫備份時，會在備份目錄中建立一個文件，並在資料庫儲存庫目錄中建立一個完整的備份文件。下次產生備份時，將在備份目錄中建立一個文件，並在資料庫儲存庫目錄中建立一個增量備份文件，其中包含與完整備份文件的差異。當您建立其他備份時，此過程將繼續，直到達到最大保留設置，如下圖所示。
+
+image::../media/database_backup.gif[資料庫備份]
+
+[NOTE]
+====
+請勿重新命名或刪除這兩個目錄中的任何備份文件，否則任何後續的復原作業都會失敗。
+
+====
+如果您將備份檔案寫入本機系統，則應該啟動一個程序將備份檔案複製到遠端位置，以便在出現需要完全還原的系統問題時可以使用它們。
+
+在開始備份作業之前， Active IQ Unified Manager會執行完整性檢查，以驗證所有必要的備份檔案和備份目錄是否存在且可寫入。它還檢查系統上是否有足夠的空間來建立​​備份檔案。

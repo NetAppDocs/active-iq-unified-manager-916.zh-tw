@@ -1,0 +1,31 @@
+---
+permalink: health-checker/task_edit_individual_qtree_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: edit, individual, qtree, health, threshold, settings 
+summary: 您可以編輯一個或多個 qtree 的 qtree 容量的運作狀況閾值設定。當超過閾值時，就會產生警報並且您會收到通知。這些通知可協助您根據產生的事件採取預防措施。 
+---
+= 編輯單一 qtree 運行狀況閾值設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以編輯一個或多個 qtree 的 qtree 容量的運作狀況閾值設定。當超過閾值時，就會產生警報並且您會收到通知。這些通知可協助您根據產生的事件採取預防措施。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+根據閾值的變化，事件會在下一個監控週期中產生或淘汰。
+
+.步驟
+. 在左側導覽窗格中，按一下「儲存」>「Qtree」。
+. 在「容量：所有 Qtree」視圖中，選擇一個或多個 qtree，然後按一下「編輯閾值」。
+. 在「編輯 Qtree 閾值」對話方塊中，變更所選 qtree 或 qtree 的容量閾值，然後按一下「儲存」。
++
+[NOTE]
+====
+您也可以從儲存虛擬機器/運行狀況詳細資料頁面上的 Qtrees 標籤設定單獨的 qtree 閾值。
+
+====
+

@@ -1,0 +1,46 @@
+---
+permalink: storage-mgmt/concept_provision_and_manage_workloads.html 
+sidebar: sidebar 
+keywords: provision, manage, workloads 
+summary: Active IQ Unified Manager的主動管理功能提供效能服務等級、儲存效率原則和儲存提供者 API，用於設定、監控和管理資料中心中的儲存工作負載。 
+---
+= 預配和管理工作負載
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager的主動管理功能提供效能服務等級、儲存效率原則和儲存提供者 API，用於設定、監控和管理資料中心中的儲存工作負載。
+
+[NOTE]
+====
+Unified Manager 預設提供此功能。如果您不打算使用此功能，您可以從*儲存管理*>*功能設定*中停用它。
+
+====
+啟用後，您可以在由 Unified Manager 實例管理的ONTAP叢集上設定工作負載。您也可以為工作負載指派策略，例如效能服務等級和儲存效率策略，並根據這些策略管理您的儲存環境。
+
+此功能可實現以下功能：
+
+* 自動發現新增的叢集上的儲存工作負載，從而輕鬆評估和部署儲存工作負載
+* 配置支援 NFS 和 CIFS 協定的 NAS 工作負載
+* 配置支援 iSCSI 和 FCP 協定的 SAN 工作負載
+* 在同一文件共享上支援 NFS 和 CIFS 協議
+* 效能服務等級和儲存效率策略的管理
+* 為儲存工作負載分配效能服務等級和儲存效率策略
+
+
+UI 左側窗格上的 *Provisioning*、*Storage* > *Workloads* 和 *Policies* 選項可讓您修改各種設定。
+
+您可以使用這些選項執行下列功能：
+
+* 在「儲存」>「工作負載」頁面上查看儲存工作負載
+* 從「配置工作負載」頁面建立儲存工作負載
+* 根據策略建立和管理效能服務級別
+* 從策略建立和管理儲存效率策略
+* 從「工作負載」頁面向儲存工作負載指派策略
+
+
+*相關資訊*
+
+link:../config/concept_policy_based_storage_management.html["基於策略的儲存管理"]

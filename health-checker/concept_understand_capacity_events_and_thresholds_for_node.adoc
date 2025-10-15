@@ -1,0 +1,21 @@
+---
+permalink: health-checker/concept_understand_capacity_events_and_thresholds_for_node.html 
+sidebar: sidebar 
+keywords: understand, events, thresholds, node, root, aggregates 
+summary: 您可以使用 Unified Manager 監控節點根聚合。最佳做法是在根聚合中密集配置根卷，以防止節點停止運作。 
+---
+= 了解節點根聚合的事件和閾值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Unified Manager 監控節點根聚合。最佳做法是在根聚合中密集配置根卷，以防止節點停止運作。
+
+預設情況下，不會為根聚合產生容量和效能事件。此外，Unified Manager 使用的閾值不適用於節點根聚合。只有技術支援代表可以修改產生這些事件的設定。當技術支援代表修改設定時，容量閾值將應用於節點根聚合。
+
+您可以使用ONTAP系統管理員或ONTAP CLI 採取適當的措施來防止節點停止。
+
+
+NOTE: 如果叢集執行ONTAP 9.14.1 版本或更高版本，則監控節點根聚合的功能不可用。

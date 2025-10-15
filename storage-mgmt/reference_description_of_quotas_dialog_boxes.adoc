@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/reference_description_of_quotas_dialog_boxes.html 
+sidebar: sidebar 
+keywords: description, quotas, dialog, boxes 
+summary: 您可以使用「健康狀況：所有儲存虛擬機器」檢視中「使用者和群組配額」標籤中的對應選項來配置發生配額相關問題時發送的電子郵件通知的格式，並配置規則以根據使用者配額指定電子郵件地址。 
+---
+= 配額對話框的說明
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「健康狀況：所有儲存虛擬機器」檢視中「使用者和群組配額」標籤中的對應選項來配置發生配額相關問題時發送的電子郵件通知的格式，並配置規則以根據使用者配額指定電子郵件地址。

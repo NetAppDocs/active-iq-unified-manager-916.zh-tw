@@ -1,0 +1,37 @@
+---
+permalink: health-checker/task_edit_individual_volume_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: edit, individual, volume, health, threshold, settings 
+summary: 您可以編輯一個或多個磁碟區的磁碟區容量、成長、配額和空間預留的運作狀況閾值設定。當超過閾值時，就會產生警報並且您會收到通知。這些通知可協助您根據產生的事件採取預防措施。 
+---
+= 編輯單一卷健康閾值設置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以編輯一個或多個磁碟區的磁碟區容量、成長、配額和空間預留的運作狀況閾值設定。當超過閾值時，就會產生警報並且您會收到通知。這些通知可協助您根據產生的事件採取預防措施。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+根據閾值的變化，事件會在下一個監控週期中產生或淘汰。
+
+請注意，當在磁碟區上啟用自動增長時，容量閾值將根據自動增長設定的最大磁碟區大小（而不是原始磁碟區大小）被視為已突破。
+
+[NOTE]
+====
+1000 個 Snapshot 副本的預設值僅適用於ONTAP版本為 9.4 或更高版本的FlexVol卷，以及ONTAP版本為 9.8 及更高版本的FlexGroup卷。對於安裝了舊版ONTAP軟體的集群，每個卷的最大 Snapshot 副本數量為 250 個。對於這些舊版本，Unified Manager 將此數字 1000（以及 1000 到 250 之間的任何數字）解釋為 250；這表示當 Snapshot 副本數量達到 250 時，您將繼續接收事件。如果您希望將這些舊版本的閾值設為小於 250，則必須在此處、在「運行狀況：所有磁碟區」視圖中或在「磁碟區/運行狀況詳細資料」頁面中將閾值設為 250 或更低。
+
+====
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*磁碟區*」。
+. 在「*Health: All Volumes*」檢視中，選擇一個或多個磁碟區，然後按一下「*Edit Thresholds*」。
+. 在「編輯卷閾值」對話框中，透過選取相應的複選框，然後修改設置，編輯以下之一的閾值設定：容量、Snapshot 副本、qtree 配額、增長或 inode。
+. 點選“儲存”。
+
+
+*相關資訊*
+
+link:../config/task_add_users.html["新增用戶"]

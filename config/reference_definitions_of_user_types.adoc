@@ -1,0 +1,38 @@
+---
+permalink: config/reference_definitions_of_user_types.html 
+sidebar: sidebar 
+keywords: definitions, user types 
+summary: 使用者類型指定使用者持有的帳戶類型，包括遠端使用者、遠端群組、本機使用者、資料庫使用者和維護使用者。每種類型都有自己的角色，由具有管理員角色的使用者分配。 
+---
+= 使用者類型的定義
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用者類型指定使用者持有的帳戶類型，包括遠端使用者、遠端群組、本機使用者、資料庫使用者和維護使用者。每種類型都有自己的角色，由具有管理員角色的使用者分配。
+
+Unified Manager 使用者類型如下：
+
+* *維護使用者*
++
+在 Unified Manager 的初始設定期間建立。然後，維護使用者建立其他使用者並指派角色。維護使用者也是唯一有權存取維護控制台的使用者。當 Unified Manager 安裝在 Red Hat Enterprise Linux 系統上時，維護使用者的使用者名稱為「umadmin」。
+
+* *本地用戶*
++
+存取 Unified Manager UI 並根據維護使用者或具有應用程式管理員角色的使用者授予的角色執行功能。
+
+* *遠端組*
++
+使用儲存在驗證伺服器上的憑證存取 Unified Manager UI 的一組使用者。該帳戶的名稱應與身份驗證伺服器上儲存的群組的名稱相符。遠端群組內的所有使用者都可以使用各自的使用者憑證存取 Unified Manager UI。遠端群組可以根據指派的角色執行功能。
+
+* *遠端使用者*
++
+使用儲存在驗證伺服器上的憑證存取 Unified Manager UI。遠端使用者根據維護使用者或具有應用程式管理員角色的使用者賦予的角色執行功能。
+
+* *資料庫使用者*
++
+對 Unified Manager 資料庫中的資料具有唯讀存取權限，但無法存取 Unified Manager Web 介面或維護控制台，也無法執行 API 呼叫。
+
+

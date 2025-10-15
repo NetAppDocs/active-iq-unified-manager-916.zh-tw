@@ -1,0 +1,194 @@
+---
+permalink: events/reference_snapmirror_relationship_events.html 
+sidebar: sidebar 
+keywords: snapmirror, relationship, events, impact area, protection 
+summary: SnapMirror關係事件為您提供有關非同步和同步SnapMirror關係狀態的信息，以便您可以監控潛在問題。儲存虛擬機器和磁碟區都會產生非同步SnapMirror關係事件，但僅為磁碟區關係產生同步SnapMirror關係事件。對於作為儲存虛擬機器災難復原關係一部分的組成捲，不會產生任何事件。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= SnapMirror關係事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapMirror關係事件為您提供有關非同步和同步SnapMirror關係狀態的信息，以便您可以監控潛在問題。儲存虛擬機器和磁碟區都會產生非同步SnapMirror關係事件，但僅為磁碟區關係產生同步SnapMirror關係事件。對於作為儲存虛擬機器災難復原關係一部分的組成捲，不會產生任何事件。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響區域：保護
+
+星號 (*) 標識已轉換為 Unified Manager 事件的 EMS 事件。
+
+[NOTE]
+====
+SnapMirror關係事件是針對受儲存虛擬機器災難復原保護的儲存虛擬機器產生的，但不針對任何組成物件關係產生。
+
+====
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+鏡像複製不健康（ocumEvtSnapmirrorRelationshipUnhealthy）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+警告
+
+
+
+ a| 
+鏡像複製中斷（ocumEvtSnapmirrorRelationshipStateBrokenoff）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+錯誤
+
+
+
+ a| 
+鏡像複製初始化失敗（ocumEvtSnapmirrorRelationshipInitializeFailed）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+錯誤
+
+
+
+ a| 
+鏡像複製更新失敗（ocumEvtSnapmirrorRelationshipUpdateFailed）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+錯誤
+
+
+
+ a| 
+鏡像複製延遲錯誤（ocumEvtSnapMirrorRelationshipLagError）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+錯誤
+
+
+
+ a| 
+鏡像複製滯後警告（ocumEvtSnapMirrorRelationshipLagWarning）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+警告
+
+
+
+ a| 
+鏡像複製重新同步失敗（ocumEvtSnapmirrorRelationshipResyncFailed）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+錯誤
+
+
+
+ a| 
+同步複製不同步 *(syncSnapmirrorRelationshipOutofsync)
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+警告
+
+
+
+ a| 
+同步複製已恢復*（syncSnapmirrorRelationshipInSync）
+ a| 
+事件
+ a| 
+SnapMirror關係
+ a| 
+資訊
+
+
+
+ a| 
+同步複製自動重新同步失敗*（syncSnapmirrorRelationshipAutoSyncRetryFailed）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+錯誤
+
+
+
+ a| 
+在叢集上新增了 ONTAP 調解器 (SnapmirrorMediatorAdded)
+ a| 
+事件
+ a| 
+簇
+ a| 
+資訊
+
+
+
+ a| 
+ONTAP 調解器已從叢集中刪除（snapmirrorMediatorRemoved）
+ a| 
+事件
+ a| 
+簇
+ a| 
+資訊
+
+
+
+ a| 
+無法從叢集存取 ONTAP 調解器 (SnapmirrorMediatorUnreachable)
+ a| 
+風險
+ a| 
+調解員
+ a| 
+警告
+
+
+
+ a| 
+無法從叢集存取 ONTAP 調解器（SnapmirrorMediatorMisconfigured）
+ a| 
+風險
+ a| 
+調解員
+ a| 
+錯誤
+
+
+
+ a| 
+ONTAP 調解器連線已重新建立、重新同步並準備好進行SnapMirror主動同步（snapmirrorMediatorInQuorum）
+ a| 
+事件
+ a| 
+調解員
+ a| 
+資訊
+
+|===

@@ -1,0 +1,25 @@
+---
+permalink: data-protection/task_create_resource_pools.html 
+sidebar: sidebar 
+keywords: creating, resource, pools 
+summary: 您可以使用「建立資源池」對話方塊對聚合進行分組以用於配置目的。 
+---
+= 建立資源池
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「建立資源池」對話方塊對聚合進行分組以用於配置目的。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+.步驟
+資源池可以包含來自不同叢集的聚合，但同一個聚合不能屬於不同的資源池。
+
+. 在左側導覽窗格中，按一下「*保護*」>「*資源池*」。
+. 在「資源池」頁面中，按一下「建立」。
+. 依照「建立資源池」對話方塊中的說明提供名稱和描述，並將聚合作為成員新增至要建立的資源池中。
+

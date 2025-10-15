@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_understand_groups.html 
+sidebar: sidebar 
+keywords: understand, groups 
+summary: 您可以在 Unified Manager 中建立群組來管理儲存物件。了解有關群組的概念以及群組規則如何使您能夠將儲存物件新增至群組將有助於您管理環境中的儲存物件。 
+---
+= 了解群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 Unified Manager 中建立群組來管理儲存物件。了解有關群組的概念以及群組規則如何使您能夠將儲存物件新增至群組將有助於您管理環境中的儲存物件。

@@ -1,0 +1,99 @@
+---
+permalink: events/reference_snapvault_relationship_events.html 
+sidebar: sidebar 
+keywords: snapvault, relationship, events, impact area, protection 
+summary: SnapVault關係事件為您提供有關SnapVault關係狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= SnapVault關係事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+SnapVault關係事件為您提供有關SnapVault關係狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響區域：保護
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+非同步 Vault 不健康（ocumEvtSnapVaultRelationshipUnhealthy）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+警告
+
+
+
+ a| 
+非同步保險庫斷開（ocumEvtSnapVaultRelationshipStateBrokenoff）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+錯誤
+
+
+
+ a| 
+非同步 Vault 初始化失敗（ocumEvtSnapVaultRelationshipInitializeFailed）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+錯誤
+
+
+
+ a| 
+非同步 Vault 更新失敗（ocumEvtSnapVaultRelationshipUpdateFailed）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+錯誤
+
+
+
+ a| 
+非同步 Vault 滯後錯誤（ocumEvtSnapVaultRelationshipLagError）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+錯誤
+
+
+
+ a| 
+非同步 Vault 滯後警告（ocumEvtSnapVaultRelationshipLagWarning）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+警告
+
+
+
+ a| 
+非同步 Vault 重新同步失敗（ocumEvtSnapvaultRelationshipResyncFailed）
+ a| 
+風險
+ a| 
+SnapMirror關係
+ a| 
+錯誤
+
+|===

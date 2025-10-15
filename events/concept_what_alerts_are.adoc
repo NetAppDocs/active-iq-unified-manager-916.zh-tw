@@ -1,0 +1,16 @@
+---
+permalink: events/concept_what_alerts_are.html 
+sidebar: sidebar 
+keywords: alerts 
+summary: 雖然事件會持續發生，但只有當事件滿足指定的過濾條件時，Unified Manager 才會產生警報。您可以選擇應產生警報的事件 - 例如，當超過空間閾值或物件離線時。您也可以將警報與觸發警報時執行的腳本關聯。 
+---
+= 什麼是警報
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+雖然事件會持續發生，但只有當事件滿足指定的過濾條件時，Unified Manager 才會產生警報。您可以選擇應產生警報的事件 - 例如，當超過空間閾值或物件離線時。您也可以將警報與觸發警報時執行的腳本關聯。
+
+篩選條件包括物件類別、名稱或事件嚴重性。

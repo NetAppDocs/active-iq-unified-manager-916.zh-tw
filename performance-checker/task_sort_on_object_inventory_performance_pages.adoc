@@ -1,0 +1,23 @@
+---
+permalink: performance-checker/task_sort_on_object_inventory_performance_pages.html 
+sidebar: sidebar 
+keywords: sort, object, inventory, performance, pages 
+summary: 您可以按任意列升序或降序對物件清單效能頁面上的所有資料進行排序。這使您能夠快速找到物件庫存數據，這在檢查效能或開始故障排除過程時很有幫助。 
+---
+= 在物件清單效能頁面上排序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以按任意列升序或降序對物件清單效能頁面上的所有資料進行排序。這使您能夠快速找到物件庫存數據，這在檢查效能或開始故障排除過程時很有幫助。
+
+選定的要排序的列由突出顯示的列標題名稱和指示名稱右側排序方向的箭頭圖示表示。向上箭頭表示升序；向下箭頭表示降序。預設排序順序是依*狀態*（事件嚴重性）降序排列，最關鍵的效能事件列在最前面。
+
+.步
+. 您可以按一下列名來切換列的排序順序（升序或降序）。
++
+根據所選列，物件清單效能頁面內容按升序或降序排序。
+
+

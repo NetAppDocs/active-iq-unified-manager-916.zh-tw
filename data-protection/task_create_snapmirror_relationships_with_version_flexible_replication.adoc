@@ -1,0 +1,51 @@
+---
+permalink: data-protection/task_create_snapmirror_relationships_with_version_flexible_replication.html 
+sidebar: sidebar 
+keywords: create, snapmirror, relationships, version-flexible, replication, backup, option 
+summary: 您可以建立具有版本靈活複製和備份選項功能的SnapMirror關係。備份選項功能可讓您實施SnapMirror保護，並在目標位置保留多個版本的備份副本。 
+---
+= 使用備份選項建立具有版本靈活複製的SnapMirror關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立具有版本靈活複製和備份選項功能的SnapMirror關係。備份選項功能可讓您實施SnapMirror保護，並在目標位置保留多個版本的備份副本。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+* 您必須已經設定了工作流程自動化。
+* 來源 SVM 和目標 SVM 都必須啟用SnapMirror授權。
+* 來源 SVM 和目標 SVM 都必須啟用SnapVault授權。
+* 來源 SVM 和目標 SVM 必須分別在支援版本靈活複製的ONTAP軟體版本下運作。
+
+
+配置具有備份選項功能的SnapMirror可讓您使用SnapMirror災難復原功能（例如磁碟區故障轉移功能）保護您的數據，同時提供SnapVault功能（例如多個備份副本保護）。
+
+.步驟
+. 顯示您想要保護的磁碟區的「設定保護」對話方塊。
++
+** 如果您正在查看「磁碟區/運行狀況詳細資料」頁面的「保護」標籤，請在拓撲視圖中以滑鼠右鍵按一下要保護的磁碟區的名稱，然後從功能表中選擇「*保護*」>「* SnapMirror*」。
+** 如果您正在查看“健康狀況：所有磁碟區”視圖，請找到要保護的捲並右鍵單擊它；然後從選單中選擇“保護”>“SnapMirror”。彈出“配置保護”對話框。
+
+
+. 點擊 * SnapMirror* 以查看 * SnapMirror* 標籤。
+. 完成「配置保護」對話方塊中的「目標資訊」區域和「關係設定」區域。
+. 按一下“*進階*”以顯示“*進階目標設定*”對話方塊。
+. 如果尚未選取「*Version-Flexible Replication*」複選框，請立即選取它。
+. 選取「使用備份選項」複選框以啟用備份選項功能；然後按一下「套用」。
+. 按一下“*應用*”。
++
+您將返回「音量/健康」詳細資訊頁面。
+
+. 按一下「*Volume / Health*」詳細資料頁面頂部的保護配置作業連結。
++
+作業任務和詳細資料顯示在作業詳細資料頁面中。
+
+. 在「*作業*」詳細資料頁面中，按一下「*重新整理*」以更新與保護設定作業相關的任務列表和任務詳細信息，並確定作業何時完成。
+. 當作業任務完成後，按一下瀏覽器上的*返回*即可返回*Volume / Health*詳細資料頁面。
++
+新的關係顯示在磁碟區/健康詳細資料頁面拓撲視圖中。
+
+

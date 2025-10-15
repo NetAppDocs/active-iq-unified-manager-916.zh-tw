@@ -1,0 +1,28 @@
+---
+permalink: storage-mgmt/concept_how_discovery_process_works.html 
+sidebar: sidebar 
+keywords: cluster, discovery, process, works 
+summary: 將叢集新增至 Unified Manager 後，伺服器會發現叢集物件並將其新增至其資料庫。了解發現過程的工作原理有助於您管理組織的集群及其物件。 
+---
+= 集群發現過程的工作原理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+將叢集新增至 Unified Manager 後，伺服器會發現叢集物件並將其新增至其資料庫。了解發現過程的工作原理有助於您管理組織的集群及其物件。
+
+收集群集配置資訊的監控間隔為15分鐘。例如，新增叢集後，需要 15 分鐘才能在 Unified Manager UI 中顯示叢集物件。對叢集進行變更時，此時間範圍也是如此。例如，如果您在叢集中的 SVM 中新增兩個新磁碟區，您將在下一個輪詢間隔（最長可達 15 分鐘）後在 UI 中看到這些新物件。
+
+下圖說明了發現過程：
+
+image::../media/discovery_process_oc_6_0.gif[發現過程如何​​運作]
+
+發現新叢集的所有物件後，Unified Manager 開始收集前 15 天的歷史效能資料。這些統計數據是使用數據連續性收集功能收集的。此功能可在新增叢集後立即為您提供該叢集超過兩週的效能資訊。資料連續性收集週期完成後，預設每五分鐘收集一次即時叢集效能資料。
+
+[NOTE]
+====
+由於收集 15 天的效能資料需要大量 CPU，因此建議您錯開新叢集的添加，以便資料連續性收集輪詢不會同時在太多叢集上運行。
+
+====

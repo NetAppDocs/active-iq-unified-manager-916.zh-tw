@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_what_storage_capacity_health_thresholds_are.html 
+sidebar: sidebar 
+keywords: storage, capacity, health, thresholds 
+summary: 儲存容量健康閾值是 Unified Manager 伺服器產生事件以報告儲存物件的任何容量問題的點。您可以配置警報以便在發生此類事件時發送通知。 
+---
+= 儲存容量健康閾值是什麼
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+儲存容量健康閾值是 Unified Manager 伺服器產生事件以報告儲存物件的任何容量問題的點。您可以配置警報以便在發生此類事件時發送通知。
+
+所有聚合、磁碟區和 qtree 的儲存容量健康閾值均設定為預設值。您可以根據需要變更一個物件或一組物件的設定。

@@ -1,0 +1,36 @@
+---
+permalink: health-checker/task_configure_global_health_threshold_settings.html 
+sidebar: sidebar 
+keywords: configure, global health, threshold settings 
+summary: 您可以配置容量、成長、快照預留、配額和 inode 的全域健康閾值條件，以有效監控聚合、磁碟區和 qtree 大小。您也可以編輯產生超過滯後閾值的事件的設定。 
+---
+= 配置全域健康閾值設置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以配置容量、成長、快照預留、配額和 inode 的全域健康閾值條件，以有效監控聚合、磁碟區和 qtree 大小。您也可以編輯產生超過滯後閾值的事件的設定。
+
+全域健康閾值設定適用於與其關聯的所有對象，例如聚合、磁碟區等。當超過閾值時，就會產生一個事件，並且如果配置了警報，則會發送警報通知。閾值預設值設定為建議值，但您可以修改它們以按一定間隔產生事件，以滿足您的特定需求。當閾值發生變化時，事件會在下一個監控週期中產生或淘汰。
+
+可以從左側導覽選單的事件閾值部分存取全域健康閾值設定。您也可以從該物件的庫存頁面或詳細資訊頁面修改單一物件的閾值設定。
+
+* 有關信息，請參閱link:task_configure_global_aggregate_health_threshold_values.html["配置全域聚合健康閾值"]。
++
+您可以為所有聚合配置容量、增長和 Snapshot 副本的運行狀況閾值設置，以追蹤任何閾值違規。
+
+* 有關信息，請參閱link:task_configure_global_volume_health_threshold_values.html["配置全域磁碟區健康閾值"]。
++
+您可以編輯所有磁碟區的容量、Snapshot 副本、qtree 配額、磁碟區增長、覆蓋保留空間和 inode 的運行狀況閾值設置，以追蹤任何閾值違規。
+
+* 有關信息，請參閱link:task_configure_global_qtree_health_threshold_values.html["配置全域 qtree 運行狀況閾值"]。
++
+您可以編輯所有 qtree 的容量健康閾值設置，以追蹤任何閾值違規。
+
+* 有關信息，請參閱link:task_configure_lag_threshold_settings_for_unmanaged_protection.html["編輯非託管保護關係的滯後健康閾值設置"]。
++
+您可以增加或減少警告或錯誤延遲時間百分比，以便以更適合您需求的間隔產生事件。
+
+

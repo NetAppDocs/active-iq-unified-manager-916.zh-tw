@@ -1,0 +1,184 @@
+---
+permalink: data-protection/reference_select_source_snapshot_copy_dialog_box.html 
+sidebar: sidebar 
+keywords: select, source, snapshot, copy, dialog box 
+summary: 您可以使用「選擇來源 Snapshot 副本」對話方塊選擇特定的 Snapshot 副本以在保護關係之間傳輸數據，或選擇預設行為，該行為取決於您是初始化、更新還是重新同步關係，以及關係是SnapMirror還是SnapVault。 
+---
+= 選擇來源 Snapshot 副本對話框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「選擇來源 Snapshot 副本」對話方塊選擇特定的 Snapshot 副本以在保護關係之間傳輸數據，或選擇預設行為，該行為取決於您是初始化、更新還是重新同步關係，以及關係是SnapMirror還是SnapVault。
+
+
+
+== 預設
+
+使您能夠選擇預設行為來確定使用哪個 Snapshot 副本來初始化、更新和重新同步SnapVault和SnapMirror關係的傳輸。
+
+如果您正在執行SnapVault傳輸，則每個操作的預設行為如下：
+
+[cols="3*"]
+|===
+| 手術 | 來源為讀/寫時的預設SnapVault行為 | 來源為資料保護 (DP) 時的預設SnapVault行為 
+
+
+ a| 
+初始化
+ a| 
+建立新的 Snapshot 副本並傳輸它。
+ a| 
+傳輸最後匯出的 Snapshot 副本。
+
+
+
+ a| 
+更新
+ a| 
+僅傳輸策略中指定的標記的 Snapshot 副本。
+ a| 
+傳輸最後匯出的 Snapshot 副本。
+
+
+
+ a| 
+重新同步
+ a| 
+傳輸在最新的通用 Snapshot 副本之後建立的所有帶有標籤的 Snapshot 副本。
+ a| 
+傳輸最新的標記 Snapshot 副本。
+
+|===
+如果您正在執行SnapMirror傳輸，則每個操作的預設行為如下：
+
+[cols="3*"]
+|===
+| 手術 | 預設SnapMirror行為 | 當關係是SnapMirror到SnapMirror級聯中的第二跳時，預設的SnapMirror行為 
+
+
+ a| 
+初始化
+ a| 
+建立新的 Snapshot 副本並傳輸該副本以及在該新 Snapshot 副本之前建立的所有 Snapshot 副本。
+ a| 
+從來源傳輸所有 Snapshot 副本。
+
+
+
+ a| 
+更新
+ a| 
+建立新的 Snapshot 副本並傳輸該副本以及在該新 Snapshot 副本之前建立的所有 Snapshot 副本。
+ a| 
+傳輸所有 Snapshot 副本。
+
+
+
+ a| 
+重新同步
+ a| 
+建立新的 Snapshot 副本，然後從來源傳輸所有 Snapshot 副本。
+ a| 
+將所有 Snapshot 副本從二級卷傳輸到三級卷，並刪除在創建最新通用 Snapshot 副本後添加的任何資料。
+
+|===
+
+
+== 現有快照副本
+
+如果該操作允許選擇 Snapshot 副本，則您可以從清單中選擇現有的 Snapshot 副本。
+
+* *快照副本*
++
+顯示現有的 Snapshot 副本，您可以從中選擇進行傳輸。
+
+* *建立日期*
++
+顯示建立 Snapshot 副本的日期和時間。快照副本按從最新到最早的順序列出，最新的副本位於清單頂部。
+
+
+
+如果您正在執行SnapVault傳輸，並且想要選擇現有的 Snapshot 副本從來源傳輸到目標，則每個操作的行為如下：
+
+[cols="3*"]
+|===
+| 手術 | 指定 Snapshot 副本時的SnapVault行為 | 在級聯中指定 Snapshot 副本時的SnapVault行為 
+
+
+ a| 
+初始化
+ a| 
+傳輸指定的 Snapshot 副本。
+ a| 
+資料保護卷不支援來源 Snapshot 副本選擇。
+
+
+
+ a| 
+更新
+ a| 
+傳輸指定的 Snapshot 副本。
+ a| 
+資料保護卷不支援來源 Snapshot 副本選擇。
+
+
+
+ a| 
+重新同步
+ a| 
+傳輸選定的 Snapshot 副本。
+ a| 
+資料保護卷不支援來源 Snapshot 副本選擇。
+
+|===
+如果您正在執行SnapMirror傳輸，並且想要選擇現有的 Snapshot 副本從來源傳輸到目標，則每個操作的行為如下：
+
+[cols="3*"]
+|===
+| 手術 | 指定 Snapshot 副本時的SnapMirror行為 | 在級聯中指定 Snapshot 副本時的SnapMirror行為 
+
+
+ a| 
+初始化
+ a| 
+傳輸來源上的所有 Snapshot 副本，直到指定的 Snapshot 副本。
+ a| 
+資料保護卷不支援來源 Snapshot 副本選擇。
+
+
+
+ a| 
+更新
+ a| 
+傳輸來源上的所有 Snapshot 副本，直到指定的 Snapshot 副本。
+ a| 
+資料保護卷不支援來源 Snapshot 副本選擇。
+
+
+
+ a| 
+重新同步
+ a| 
+將所有 Snapshot 副本從來源傳輸到選定的 Snapshot 副本，然後刪除在建立最新的通用 Snapshot 副本後新增的任何資料。
+ a| 
+資料保護卷不支援來源 Snapshot 副本選擇。
+
+|===
+
+
+== 命令按鈕
+
+命令按鈕使您能夠執行以下任務：
+
+* *提交*
++
+提交您的選擇並關閉「選擇來源 Snapshot 副本」對話框。
+
+* *取消*
++
+放棄您的選擇並關閉「選擇來源 Snapshot 副本」對話框。
+
+

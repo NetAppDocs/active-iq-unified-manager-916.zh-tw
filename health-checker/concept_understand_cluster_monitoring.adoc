@@ -1,0 +1,16 @@
+---
+permalink: health-checker/concept_understand_cluster_monitoring.html 
+sidebar: sidebar 
+keywords: understand, cluster, monitor 
+summary: 您可以將叢集新增至 Unified Manager 資料庫，以監控叢集的可用性、容量和其他詳細信息，例如 CPU 使用率、介面統計資料、可用磁碟空間、qtree 使用率和機箱環境。 
+---
+= 了解集群監控
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以將叢集新增至 Unified Manager 資料庫，以監控叢集的可用性、容量和其他詳細信息，例如 CPU 使用率、介面統計資料、可用磁碟空間、qtree 使用率和機箱環境。
+
+如果狀態異常或超出預先定義的閾值，則會產生事件。如果已設定為這樣做，當事件觸發警報時，Unified Manager 會向指定收件者傳送通知。

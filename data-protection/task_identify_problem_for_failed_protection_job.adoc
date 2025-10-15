@@ -1,0 +1,127 @@
+---
+permalink: data-protection/task_identify_problem_for_failed_protection_job.html 
+sidebar: sidebar 
+keywords: identify, problem, perform, corrective actions, failed, protection job 
+summary: 您在「事件詳細資料」頁面的「原因」欄位中查看作業失敗錯誤訊息，並確定作業因 Snapshot 副本錯誤而失敗。然後，您可以進入「音量/健康詳細資料」頁面來收集更多資訊。 
+---
+= 識別問題並對失敗的保護作業執行糾正措施
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您在「事件詳細資料」頁面的「原因」欄位中查看作業失敗錯誤訊息，並確定作業因 Snapshot 副本錯誤而失敗。然後，您可以進入「音量/健康詳細資料」頁面來收集更多資訊。
+
+.開始之前
+您必須具有應用程式管理員角色。
+
+事件詳細資訊頁面上的原因欄位中提供的錯誤訊息包含有關失敗作業的以下文字：
+
+[listing]
+----
+Protection Job Failed. Reason: (Transfer operation for
+relationship 'cluster2_src_svm:cluster2_src_vol2->cluster3_dst_svm:
+managed_svc2_vol3' ended unsuccessfully. Last error reported by
+Data ONTAP: Failed to create Snapshot copy 0426cluster2_src_vol2snap
+on volume cluster2_src_svm:cluster2_src_vol2. (CSM: An operation
+failed due to an ONC RPC failure.)
+Job Details
+----
+此訊息提供以下資訊：
+
+* 備份或鏡像作業未成功完成。
++
+此作業涉及來源磁碟區之間的保護關係 `cluster2_src_vol2`在虛擬伺服器上 `cluster2_src_svm`以及目標卷 `managed_svc2_vol3`在名為 `cluster3_dst_svm`。
+
+* Snapshot 複製作業失敗 `0426cluster2_src_vol2snap`在來源磁碟區上 `cluster2_src_svm:/cluster2_src_vol2`。
+
+
+在這種情況下，您可以確定作業失敗的原因和潛在的糾正措施。但是，解決故障需要您存取系統管理員 Web UI 或ONTAP CLI 命令。
+
+.步驟
+. 您查看錯誤訊息並確定來源磁碟區上的 Snapshot 複製作業失敗，這表示來源磁碟區可能有問題。
++
+或者，您可以單擊錯誤訊息末尾的“*作業詳細資料*”鏈接，但出於此場景的目的，您選擇不這樣做。
+
+. 您決定嘗試解決該事件，因此請執行以下操作：
++
+.. 點擊“*分配給*”按鈕並從選單中選擇“*我*”。
+.. 如果為該事件設定了警報，請按一下「*確認*」按鈕，這樣您就不會繼續收到重複的警報通知。
+.. 您也可以選擇新增有關該事件的註解。
+
+
+. 按一下「摘要」窗格中的「來源」欄位可查看有關來源磁碟區的詳細資訊。
++
+*Source* 欄位包含來源物件的名稱：在本例中，即計劃執行 Snapshot 複製作業的磁碟區。
+
++
+音量/健康詳情頁面顯示 `cluster2_src_vol2`，顯示「保護」標籤的內容。
+
+. 查看保護拓撲圖，您會看到與拓撲中第一個磁碟區關聯的錯誤圖標，該磁碟區是SnapMirror關係的來源磁碟區。
++
+您也會看到來源磁碟區圖示中的水平條，表示為該磁碟區設定的警告和錯誤閾值。
+
++
+image::../media/um_topology_cascade_job_failure.gif[作業失敗級聯拓撲]
+
+. 將遊標放在錯誤圖示上，可以看到顯示閾值設定的彈出對話框，並看到磁碟區已超過錯誤閾值，表示存在容量問題。
+. 按一下“*容量*”標籤。
++
+有關磁碟區的容量資訊 `cluster2_src_vol2`顯示。
+
+. 在“*容量*”面板中，您會看到條形圖中有一個錯誤圖標，再次表明卷容量已超過為該卷設定的閾值水平。
+. 在容量圖下方，您可以看到磁碟區自動增長已停用，並且已設定磁碟區空間保證。
++
+您可以決定啟用自動成長，但出於此場景的目的，您決定在決定如何解決容量問題之前進一步調查。
+
+. 您向下捲動到「*事件*」列表，會看到產生了「保護作業失敗」、「捲滿天數」和「磁碟區空間滿」事件。
+. 在*事件*列表中，點擊*卷空間已滿*事件以獲取更多信息，並確定此事件似乎與您的容量問題最相關。
++
+事件詳細資料頁面顯示來源磁碟區的磁碟區空間已滿事件。
+
+. 在「*摘要*」區域中，您可以閱讀該事件的「原因」欄位： `The full threshold set at 90% is breached. 45.38 MB (95.54%) of 47.50 MB is used` 。
+. 在摘要區域下方，您可以看到建議的糾正措施。
++
+[TIP]
+====
+建議的糾正措施僅針對某些事件顯示，因此您不會看到針對所有類型事件的此區域。
+
+====
++
+按一下可執行的建議操作清單來解決磁碟區空間已滿事件：
+
++
+** 在此磁碟區啟用自動增長。
+** 調整捲大小。
+** 在此磁碟區上啟用並執行重複資料刪除。
+** 在此磁碟區上啟用並運行壓縮。
+
+
+. 您決定在磁碟區上啟用自動成長，但要做到這一點，您必須確定父聚合上的可用空間和目前磁碟區成長率：
++
+.. 查看父聚合， `cluster2_src_aggr1` ，在「相關設備」窗格中。
++
+[TIP]
+====
+您可以按一下聚合的名稱以取得有關聚合的更多詳細資訊。
+
+====
++
+您確定聚合具有足夠的空間來啟用磁碟區自動增長。
+
+.. 在頁面頂部，查看表示關鍵事件的圖示並查看圖示下方的文字。
++
+您確定「滿員天數：少於一天 | 每日成長率：5.4%」。
+
+
+
+. 前往系統管理員或存取ONTAP CLI 以啟用 `volume autogrow`選項。
++
+[TIP]
+====
+記下磁碟區和聚合的名稱，以便在啟用自動增長時可以使用它們。
+
+====
+. 解決容量問題後，返回 Unified Manager *事件*詳細資料頁面並將事件標記為已解決。
+

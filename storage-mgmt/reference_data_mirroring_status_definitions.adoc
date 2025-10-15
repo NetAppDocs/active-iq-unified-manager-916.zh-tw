@@ -1,0 +1,42 @@
+---
+permalink: storage-mgmt/reference_data_mirroring_status_definitions.html 
+sidebar: sidebar 
+keywords: data mirror, status, definitions 
+summary: MetroCluster配置提供資料鏡像以及在整個站點不可用時啟動故障轉移的附加功能。 MetroCluster配置中叢集之間的資料鏡像狀態可以是「正常」或「鏡像不可用」。了解狀態使您能夠有效地管理MetroCluster配置。 
+---
+= MetroCluster over FC 的資料鏡像狀態定義
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+FC 配置上的MetroCluster提供資料鏡像以及在整個站點不可用時啟動故障轉移的附加功能。透過 FC 配置的MetroCluster中叢集之間的資料鏡像狀態可以是「正常」或「鏡像不可用」。了解狀態使您能夠有效地管理MetroCluster配置。
+
+|===
+| 資料鏡像狀態 | 描述 | 顯示的圖示 
+
+
+ a| 
+普通的
+ a| 
+MetroCluster配置中的叢集之間的資料鏡像正常。
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif["城域集群連接最佳圖標"]
+
+
+
+ a| 
+鏡像不可用
+ a| 
+由於切換， MetroCluster配置中的叢集之間的資料鏡像不可用。例如，當合作夥伴叢集因災難而關閉或為了測試目的而計劃切換時。
+ a| 
+切換時出現錯誤：
+
+image::../media/metrocluster_connectivity_down.gif[城域集群連線中斷圖標]
+
+切換成功：
+
+image::../media/metrocluster_connectivity_failover.gif[城域集群連接故障轉移圖標]
+
+|===

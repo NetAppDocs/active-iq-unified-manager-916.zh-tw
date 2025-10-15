@@ -1,0 +1,125 @@
+---
+permalink: storage-mgmt/reference_dashboard_page.html 
+sidebar: sidebar 
+keywords: dashboard page, 
+summary: 儀表板頁面有“面板”，顯示您正在監控的叢集的高級容量、效能和安全健康狀況。此頁面還提供了一個管理操作面板，其中列出了 Unified Manager 可以採取的修復措施來解決某些事件。 
+---
+= 儀表板頁面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+儀表板頁面有“面板”，顯示您正在監控的叢集的高級容量、效能和安全健康狀況。此頁面還提供了一個管理操作面板，其中列出了 Unified Manager 可以採取的修復措施來解決某些事件。
+
+大多數面板還顯示該類別中的活躍事件數，以及過去 24 小時內新增的事件數。此資訊可協助您確定需要進一步分析哪些叢集以解決事件。點擊事件將顯示熱門事件，並提供指向事件管理庫存頁面的鏈接，該頁面經過篩選以顯示該類別中的活動事件。
+
+在儀表板頂部，您可以選擇面板是否顯示所有受監控集群（「所有集群」）或單一集群的資訊。您可以先查看所有叢集的狀態，然後在想要查看詳細資訊時深入到單一叢集。
+
+[NOTE]
+====
+下面列出的一些面板將根據您的配置出現在儀表板上。
+
+====
+
+
+== 管理操作面板
+
+Unified Manager 可以徹底診斷某些問題並提供單一解決方案。當可用時，這些解析度將顯示在此面板中，並帶有“修復”或“修復全部”按鈕。您可以從 Unified Manager 立即修復這些問題，而不必使用ONTAP System Manager 或ONTAP CLI。要查看所有問題，請點擊查看link:concept_fix_ontap_issues_directly_from_unified_manager.html["直接從 Unified Manager 修復ONTAP問題"]了解更多。
+
+
+
+== 容量面板
+
+在查看所有叢集時，此面板顯示每個叢集的實體已使用容量（應用儲存效率節省後）和實體可用容量（不包括潛在的儲存效率節省）、磁碟預計滿載的天數以及基於配置的ONTAP儲存效率設定的資料縮減率（不含 Snapshot 副本）。它還列出了任何已配置雲層的已使用容量。點擊條形圖將轉到該叢集的聚合庫存頁面。按一下「剩餘容量天數」文字將顯示一則訊息，標識剩餘容量天數最少的聚合；按一下聚合名稱以查看更多詳細資訊。
+
+查看單一叢集時，此面板顯示按本機層和雲層上的每個磁碟類型排序的資料聚合的實體已使用容量和實體可用容量。按一下磁碟類型的長條圖將前往使用該磁碟類型的磁碟區的磁碟區清單頁面。
+
+
+
+== 性能容量面板
+
+查看所有群集時，此面板顯示每個群集的效能容量值（前 1 小時的平均值）以及效能容量達到上限的天數（基於每日成長率）。點擊長條圖將轉到該叢集的節點清單頁面。請注意，節點清單頁面顯示過去 72 小時的平均效能容量。按一下「剩餘效能容量天數」文字將顯示一則訊息，標識剩餘效能容量天數最少的節點；按一下節點名稱以查看更多詳細資訊。
+
+查看單一叢集時，此面板顯示叢集效能容量使用百分比、總 IOPS 和總吞吐量（MB/s）值，以及預計這三個指標達到其上限的天數。
+
+
+
+== 工作負載 IOPS 面板
+
+查看單一叢集時，此面板顯示目前在特定 IOPS 範圍內執行的工作負載總數，並在將遊標停留在圖表上時指示每種磁碟類型的數量。
+
+
+
+== 工作負載效能面板
+
+此面板顯示指派給每個效能服務等級 (PSL) 策略的符合和不符合的工作負載總數。它還顯示未分配 PSL 的工作負載數量。按一下長條圖可前往「工作負載」頁面中指派給該策略的符合工作負載。點擊條形圖後面的數字即可查看分配給該策略的符合和不符合的工作負載。
+
+
+
+== 安全面板
+
+根據您目前的視圖，安全面板顯示所有叢集或單一叢集的進階安全狀態。此面板顯示：
+
+* 過去 24 小時內收到的安全事件清單。點擊事件，在事件詳情頁面查看事件詳情
+* 集群安全狀態（合規和不合規集群的數量）
+* 儲存虛擬機器安全狀態（合規和不合規儲存虛擬機器的數量）
+* 卷加密狀態（已加密或未加密的磁碟區的數量）
+* 捲反勒索軟體狀態（啟用或停用反勒索軟體的捲數）
+
+
+您可以點選合規與不合規叢集、儲存虛擬機器、加密與非加密磁碟區、捲防勒索狀態長條圖，進入對應頁面，查看已篩選叢集、儲存虛擬機器、磁碟區的安全詳情。
+
+合規性基於 https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp ONTAP 9 安全強化指南"^]。按一下面板頂部的右箭頭可在「安全性」頁面上查看所有叢集的安全性詳細資訊。有關信息，請參閱link:../health-checker/task_view_detailed_security_status_for_clusters_and_svms.html["查看叢集和儲存虛擬機器的詳細安全狀態"]。
+
+
+
+== 資料保護面板
+
+此面板顯示資料中心內單一或所有群集的資料保護摘要。它顯示ONTAP中過去 24 小時內發生的資料保護事件、 MetroCluster事件和活動事件的總數。點擊每個事件的連結即可進入事件詳細資訊頁面。您可以點擊「查看全部」連結以查看事件管理庫存頁面中的所有活動保護事件。面板顯示：
+
+* 受 Snapshot 副本保護的叢集或資料中心內所有叢集中的磁碟區數。
+* 受SnapMirror關係保護的叢集或資料中心內所有叢集中的磁碟區數。對於SnapMirror關係，將考慮來源叢集中的磁碟區數。
+* 透過 IP 或 FC 受MetroCluster配置保護的資料中心中的叢集數量或所有叢集。
+* 根據滯後狀態，具有SnapMirror恢復點目標 (RPO) 滯後的捲關係的數量。
+
+
+您可以將滑鼠懸停在螢幕上以查看相應的計數和圖例。您可以點擊面板頂部的右箭頭來查看資料保護頁面上的單一或所有叢集的詳細資訊。您也可以點擊：
+
+* 未受保護的捲和受 Snapshot 副本保護的捲的條形圖，可前往「卷」頁面並查看詳細資訊。
+* 受MetroCluster配置保護或未受保護的叢集的長條圖，可前往「叢集」頁面並查看詳細資訊。
+* 所有關係的長條圖都會轉到「關係」頁面，其中會根據來源集群過濾詳細資訊。
+
+
+有關詳細信息，請參閱 link:../data-protection/view-protection-status.html["查看卷宗保護狀態"]。
+
+
+
+== 使用情況概覽面板
+
+在查看所有叢集時，您可以選擇按最高 IOPS、最高吞吐量（MB/s）或最高已用實體容量排序以查看叢集。
+
+查看單一叢集時，您可以選擇以最高 IOPS、最高吞吐量（MB/s）或最高使用邏輯容量排序來查看工作負載。
+
+*相關資訊*
+
+link:../events/task_fix_issues_using_um_automatic_remediations.html["使用 Unified Manager 自動修復修復問題"]
+
+link:../performance-checker/task_display_information_about_performance_event.html["顯示有​​關性能事件的信息"]
+
+link:../performance-checker/concept_manage_performance_using_perf_capacity_available_iops.html["使用效能容量和可用 IOPS 資訊管理效能"]
+
+link:../health-checker/reference_health_volume_details_page.html["音量/健康詳情頁面"]
+
+link:../performance-checker/reference_performance_event_analysis_and_notification.html["效能事件分析和通知"]
+
+link:../events/reference_description_of_event_severity_types.html["事件嚴重性類型描述"]
+
+link:../performance-checker/concept_sources_of_performance_events.html["性能事件的來源"]
+
+link:../health-checker/concept_manage_cluster_security_objectives.html["管理叢集安全目標"]
+
+link:../performance-checker/concept_monitor_cluster_performance_from_cluster_landing_page.html["從效能叢集登入頁面監控叢集效能"]
+
+link:../performance-checker/concept_monitor_performance_using_object_performance.html["使用「效能清單」頁面監控效能"]

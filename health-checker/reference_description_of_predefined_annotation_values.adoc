@@ -1,0 +1,28 @@
+---
+permalink: health-checker/reference_description_of_predefined_annotation_values.html 
+sidebar: sidebar 
+keywords: description, predefined, annotation values 
+summary: 資料優先權是一個預定義註釋，其值為任務關鍵、高和低。這些值使您能夠根據儲存物件所包含的資料的優先順序對其進行註釋。您不能編輯或刪除預先定義的註釋值。 
+---
+= 預定義註釋值的描述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+*資料優先權* 是一個預定義註釋，其值為任務關鍵、高和低。這些值使您能夠根據儲存物件所包含的資料的優先順序對其進行註釋。您不能編輯或刪除預先定義的註釋值。
+
+* *資料優先：任務關鍵*
++
+此註釋適用於包含關鍵任務資料的儲存物件。例如，包含生產應用程式的物件可以被視為任務關鍵型。
+
+* *資料優先：高*
++
+此註釋適用於包含高優先權資料的儲存物件。例如，承載業務應用程式的物件可以被視為高優先級。
+
+* *資料優先：低*
++
+此註釋適用於包含低優先級資料的儲存物件。例如，位於二級儲存上的物件（如備份和鏡像目標）可能優先順序較低。
+
+

@@ -1,0 +1,21 @@
+---
+permalink: storage-mgmt/concept_why_you_use_quotas.html 
+sidebar: sidebar 
+keywords: use, quotas 
+summary: 您可以使用配額來限制FlexVol磁碟區中的資源使用情況，在資源使用達到特定水準時提供通知，或追蹤資源使用情況。 
+---
+= 為什麼要使用配額
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用配額來限制FlexVol磁碟區中的資源使用情況，在資源使用達到特定水準時提供通知，或追蹤資源使用情況。
+
+您指定配額的原因如下：
+
+* 限制使用者或群組可以使用的磁碟空間量或檔案數量，或限制 qtree 可以包含的磁碟空間量或檔案數量
+* 追蹤使用者、群組或 qtree 使用的磁碟空間量或檔案數量，而不施加限制
+* 當使用者的磁碟使用率或檔案使用率過高時發出警告
+

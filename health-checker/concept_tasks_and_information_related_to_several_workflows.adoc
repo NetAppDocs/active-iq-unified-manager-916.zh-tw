@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_tasks_and_information_related_to_several_workflows.html 
+sidebar: sidebar 
+keywords: tasks, information, workflows 
+summary: '一些可以幫助您理解和完成工作流程的任務和參考文字對於 Unified Manager 中的許多工作流程都是通用的，包括添加和查看有關事件的註釋、分配事件、確認和解決事件以及有關磁碟區、儲存虛擬機器 (SVM)、聚合等的詳細資訊。' 
+---
+= 與多個工作流程相關的任務和訊息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+一些可以幫助您理解和完成工作流程的任務和參考文字對於 Unified Manager 中的許多工作流程都是通用的，包括添加和查看有關事件的註釋、分配事件、確認和解決事件以及有關磁碟區、儲存虛擬機器 (SVM)、聚合等的詳細資訊。

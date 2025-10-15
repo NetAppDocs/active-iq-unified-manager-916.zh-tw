@@ -1,0 +1,408 @@
+---
+permalink: events/reference_lun_events.html 
+sidebar: sidebar 
+keywords: lun, events, impact area, availability, capacity, configuration, performance 
+summary: LUN 事件為您提供有關 LUN 狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= LUN 事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+LUN 事件為您提供有關 LUN 狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響領域：可用性
+
+星號 (*) 標識已轉換為 Unified Manager 事件的 EMS 事件。
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+LUN 離線(ocumEvtLunOffline)
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+LUN 已銷毀*(lunDestroy)
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+資訊
+
+
+
+ a| 
+LUN 對應了 igroup 中不支援的作業系統（igroupUnsupportedOsType）
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+造訪 LUN 的單一活動路徑 (ocumEvtLunSingleActivePath)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+沒有存取 LUN 的活動路徑（ocumEvtLunNotReachable）
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+沒有存取 LUN 的最佳化路徑（ocumEvtLunOptimizedPathInactive）
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+沒有從 HA 合作夥伴訪問 LUN 的路徑（ocumEvtLunHaPathInactive）
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+沒有從 HA 對中的一個節點存取 LUN 的路徑（ocumEvtLunNodePathStatusDown）
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+錯誤
+
+|===
+
+
+== 影響區域：容量
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+LUN 快照複製空間不足（ocumEvtLunSnapshotNotPossible）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+|===
+
+
+== 影響區域：配置
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+LUN 對應了 igroup 中不支援的作業系統（igroupUnsupportedOsType）
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+|===
+
+
+== 影響領域：性能
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+LUN IOPS 臨界閾值被突破（ocumLunIopsIncident）
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+LUN IOPS 警告閾值超出 (ocumLunIopsWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+LUN MB/s 臨界閾值超出（ocumLunMbpsIncident）
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+超出 LUN MB/s 警告閾值 (ocumLunMbpsWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+LUN 延遲 ms/op 臨界閾值超出 (ocumLunLatencyIncident)
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+LUN 延遲 ms/op 警告閾值已超出 (ocumLunLatencyWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+LUN 延遲和 IOPS 臨界閾值被突破 (ocumLunLatencyIopsIncident)
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+LUN 延遲和 IOPS 警告閾值超出 (ocumLunLatencyIopsWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+LUN 延遲和 MB/s 臨界閾值被突破（ocumLunLatencyMbpsIncident）
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+超出 LUN 延遲和 MB/s 警告閾值 (ocumLunLatencyMbpsWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+LUN 延遲和聚合效能容量使用臨界閾值被突破 (ocumLunLatencyAggregatePerfCapacityUsedIncident)
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+LUN 延遲和聚合效能容量使用警告閾值已突破 (ocumLunLatencyAggregatePerfCapacityUsedWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+LUN 延遲和聚合利用率臨界閾值被突破 (ocumLunLatencyAggregateUtilizationIncident)
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+LUN 延遲和聚合利用率警告閾值超出 (ocumLunLatencyAggregateUtilizationWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+LUN 延遲和節點效能容量使用臨界閾值被突破 (ocumLunLatencyNodePerfCapacityUsedIncident)
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+LUN 延遲和節點效能容量使用警告閾值已突破 (ocumLunLatencyNodePerfCapacityUsedWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+LUN 延遲和已使用節點效能容量 - 超出接管臨界閾值 (ocumLunLatencyAggregatePerfCapacityUsedTakeoverIncident)
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+LUN 延遲和已使用節點效能容量 - 超出接管警告閾值 (ocumLunLatencyAggregatePerfCapacityUsedTakeoverWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+LUN 延遲和節點利用率臨界閾值被突破 (ocumLunLatencyNodeUtilizationIncident)
+ a| 
+事件
+ a| 
+邏輯單元號
+ a| 
+批判的
+
+
+
+ a| 
+LUN 延遲和節點利用率警告閾值超出 (ocumLunLatencyNodeUtilizationWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+QoS LUN 最大 IOPS 警告閾值超出 (ocumQosLunMaxIopsWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+QoS LUN 最大 MB/s 警告閾值超出 (ocumQosLunMaxMbpsWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+
+
+ a| 
+工作負載 LUN 延遲閾值超出效能服務等級策略所定義的範圍 (ocumConformanceLatencyWarning)
+ a| 
+風險
+ a| 
+邏輯單元號
+ a| 
+警告
+
+|===

@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_define_schedule_for_snapshot_backups.html 
+sidebar: sidebar 
+keywords: define, backup, schedule, linux, windows, snapshot copy, copies 
+summary: 您可以使用 Unified Manager UI 設定建立 Unified Manager Snapshot 副本的計畫。 
+---
+= 為 Linux 和 Windows 定義備份計劃
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Unified Manager UI 設定建立 Unified Manager Snapshot 副本的計畫。
+
+.開始之前
+* 您必須具有操作員、應用程式管理員或儲存管理員角色。
+* 您必須已從維護控制台配置建立 Snapshot 副本的設置，以確定將建立快照的目標位置。
+
+
+只需幾分鐘即可建立快照副本，並且 Unified Manager 資料庫僅鎖定幾秒鐘。
+
+[NOTE]
+====
+在新叢集新增後的最初 15 天內進行的備份可能不夠準確，無法取得歷史效能資料。
+
+====
+.步驟
+. 在左側導覽窗格中，按一下「*常規*」>「*資料庫備份*」。
+. 在*資料庫備份*頁面中，按一下*備份設定*。
+. 在「保留計數」欄位中輸​​入要保留的 Snapshot 副本的最大數量。
++
+保留計數的預設值為 10。 Snapshot 副本的最大數量由叢集上的ONTAP軟體版本決定。無論ONTAP版本為何，您都可以將此欄位留空以實現最大值。
+
+. 選擇*每日計劃*或*每週計劃*按鈕，然後指定計劃詳細資訊。
+. 按一下“*應用*”。
+
+
+快照副本是根據計劃建立的。您可以在資料庫備份頁面中看到可用的備份檔案。
+
+由於此磁碟區和快照的重要性，您可能需要為此磁碟區建立一個或兩個警報，以便在以下情況下收到通知：
+
+* 捲空間已滿 90%。使用事件 *Volume Space Full* 來設定警報。
++
+您可以使用ONTAP System Manager 或ONTAP CLI 為磁碟區新增容量，以便 Unified Manager 資料庫不會耗盡空間。
+
+* 快照數量已接近最大數量。使用事件 *Too Many Snapshot Copies* 來設定警報。
++
+您可以使用ONTAP System Manager 或ONTAP CLI 刪除舊快照，以便始終有空間儲存新的 Snapshot 副本。
+
+
+
+您可以在警報設定頁面中配置警報。

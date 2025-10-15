@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/reference_cluster_summary_page_opm.html 
+sidebar: sidebar 
+keywords: performance, cluster, summary page 
+summary: 效能群集摘要頁面提供群集的活動事件、IOPS 效能和 MB/s 效能的摘要。此頁面還包括叢集中儲存物件的總數。 
+---
+= 效能集群摘要頁面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+效能群集摘要頁面提供群集的活動事件、IOPS 效能和 MB/s 效能的摘要。此頁面還包括叢集中儲存物件的總數。

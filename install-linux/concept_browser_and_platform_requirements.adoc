@@ -1,0 +1,22 @@
+---
+permalink: install-linux/concept_browser_and_platform_requirements.html 
+sidebar: sidebar 
+keywords: supported browsers 
+summary: 若要存取 Unified Manager Web UI，請使用支援的瀏覽器。 
+---
+= 支援的瀏覽器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要存取 Unified Manager Web UI，請使用支援的瀏覽器。
+
+互通性矩陣列出了受支援的瀏覽器版本。
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]
+
+對於所有瀏覽器，停用彈出視窗阻止程式可確保軟體功能正常顯示。
+
+如果您打算設定 Unified Manager 進行 SAML 驗證，以便身分提供者 (IdP) 可以對使用者進行驗證，那麼您也應該檢查 IdP 支援的瀏覽器清單。

@@ -1,0 +1,46 @@
+---
+permalink: events/reference_management_scripts_page.html 
+sidebar: sidebar 
+keywords: scripts, page, command, buttons, list, view 
+summary: 透過「腳本」頁面，您可以將自訂腳本新增至 Unified Manager。您可以將這些腳本與警報關聯起來，以實現儲存物件的自動重新配置。 
+---
+= 腳本頁面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+透過「腳本」頁面，您可以將自訂腳本新增至 Unified Manager。您可以將這些腳本與警報關聯起來，以實現儲存物件的自動重新配置。
+
+腳本頁面可讓您從 Unified Manager 新增或刪除腳本。
+
+
+
+== 命令按鈕
+
+* *添加*
++
+顯示「新增腳本」對話框，您可以在其中新增腳本。
+
+* *刪除*
++
+刪除選定的腳本。
+
+
+
+
+
+== 清單視圖
+
+清單檢視以表格形式顯示您新增至 Unified Manager 的腳本。
+
+* *姓名*
++
+顯示腳本的名稱。
+
+* *描述*
++
+顯示腳本的描述。
+
+

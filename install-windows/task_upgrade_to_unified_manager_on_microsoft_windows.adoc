@@ -1,0 +1,86 @@
+---
+permalink: install-windows/task_upgrade_to_unified_manager_on_microsoft_windows.html 
+sidebar: sidebar 
+keywords: upgrade, unified manager 
+summary: 您可以透過在 Windows 平台上下載並執行安裝檔案來升級 Unified Manager。 
+---
+= 升級 Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以透過在 Windows 平台上下載並執行安裝檔案將 Unified Manager 9.13 或 9.14 升級至 9.16。
+
+.開始之前
+* 要升級 Unified Manager 的系統應符合系統和軟體需求。
++
+看link:concept_virtual_infrastructure_or_hardware_system_requirements.html["硬體系統需求"]。
+
++
+看link:reference_windows_software_and_installation_requirements.html["Windows 軟體和安裝要求"]。
+
++
+[NOTE]
+====
+從 Unified Manager 9.5 開始，OpenJDK 在安裝套件中提供並自動安裝。從 Unified Manager 9.5 開始不再支援 Oracle Java。
+
+====
++
+[NOTE]
+====
+在開始升級之前，請確保您的系統上安裝了 Microsoft .NET 4.5.2 或更高版本。
+
+====
+* MySQL 社群版會在 Unified Manager 升級期間自動升級。如果您系統上安裝的 MySQL 版本早於 8.4.4，則 Unified Manager 升級過程會自動將 MySQL 升級到 8.4.4。您無法執行早期版本的 MySQL 到 8.4.4 的獨立昇級。
+* 除ASA r2 系統外，所有群集均支援。
+* 您應該具有 Windows 管理員權限。確保您的用戶名不以感嘆號“”開頭!`". Installation of Unified Manager might fail if the user name of user running the installation begins with "`！ 「」。
+* 您應該擁有有效的憑證才能登入NetApp支援網站。
+* 為避免資料遺失，您應該建立 Unified Manager 機器的備份，以防升級期間出現問題。
+* 您應該有足夠的磁碟空間來執行升級。
++
+安裝磁碟機上的可用空間應比資料目錄的大小大 2.5 GB。如果可用空間不足，升級將停止並顯示錯誤訊息，指示要新增的空間量。
+
+* 升級過程中，系統可能會提示您確認是否要保留先前的預設設定（即保留效能資料 13 個月）或將其變更為 6 個月。確認後，6個月後的歷史績效數據將被清除。
+* 升級之前，您應該關閉 _<InstallDir>\JDK_ 和 _MySQL Data Directory_ 中所有開啟的檔案或資料夾。
+* 如果您的 Windows 系統上安裝了活動的防毒軟體，Unified Manager 升級可能會失敗。在升級 Unified Manager 之前，您應該停用系統上的所有病毒掃描軟體。
+
+
+在升級過程中，Unified Manager 不可用。在升級 Unified Manager 之前，您應該完成所有正在執行的操作。
+
+如果 Unified Manager 與OnCommand Workflow Automation實例配對，且這兩種產品都有新版本的軟體可用，則必須中斷這兩種產品的連接，然後在執行升級後建立新的 Workflow Automation 連接。如果您只對其中一個產品進行升級，則應在升級後登入工作流程自動化並驗證它是否仍在從 Unified Manager 取得資料。
+
+.步驟
+. 登入NetApp支援站點，然後導覽至 Unified Manager 的下載頁面：
++
+https://mysupport.netapp.com/site/products/all/details/activeiq-unified-manager/downloads-tab["NetApp支援站點"^]。
+
+. 選擇所需版本的 Unified Manager 並接受最終使用者授權協議 (EULA)。
+. 將 Unified Manager Windows 安裝檔案或 zip 檔案下載到 Windows 系統上的目標目錄。如果需要，請解壓縮 zip 文件，然後導覽至安裝文件所在的目錄。右鍵點選並以管理員身分執行 Unified Manager 安裝程式執行檔 (.exe)。
++
+Unified Manager 會提示您以下訊息：
+
++
+[listing]
+----
+This setup will perform an upgrade of Unified Manager. Do you want to continue?
+----
+. 按一下“是”，然後按一下“下一步”。
+. 輸入安裝時設定的MySQL84 root密碼，然後點選*下一步*。
+. 在支援的 Web 瀏覽器的新視窗中啟動 Web UI 並登入以使用升級版的 Unified Manager。
+. 如果您的 Windows 系統上安裝了活動的防毒軟體，請確保在升級完成後手動將以下路徑從防毒掃描中排除：
++
+** Unified Manager 資料目錄
+** Unified Manager 安裝目錄
+** MySQL 資料目錄
+
+
+
+
+[NOTE]
+====
+若要執行 Unified Manager 的靜默升級，請執行下列命令：
+`ActiveIQUnifiedManager-<version\>.exe /s /v"MYSQL_PASSWORD=<password> /qn /l*v <system_drive>:\install.log"`
+
+====

@@ -1,0 +1,33 @@
+---
+permalink: health-checker/task_view_health_and_capacity_status_of_all_san_array_clusters.html 
+sidebar: sidebar 
+keywords: view, all san array, health and capacity, clusters 
+summary: 您可以使用叢集清單頁面顯示所有 SAN 陣列叢集的健康和容量狀態。 
+---
+= 查看所有 SAN 陣列叢集的健康和容量狀態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用叢集清單頁面顯示所有 SAN 陣列叢集的健康和容量狀態。
+
+.開始之前
+您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+您可以在「運作狀況：所有叢集」視圖和「容量：所有叢集」視圖中查看所有 SAN 陣列叢集的概述資訊。此外，您還可以在集群/健康詳情頁面查看詳細資訊。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*叢集*」。
+. 確保「個性」列顯示在*健康：所有群集*視圖中，或使用*顯示/隱藏*控制項新增它。
++
+此列顯示您的所有 SAN 陣列叢集的「所有 SAN 陣列」。
+
+. 查看資訊。
+. 若要查看這些叢集中的儲存容量信息，請選擇容量：所有叢集視圖。
+. 若要查看這些叢集的運作狀況和儲存容量的詳細信息，請按一下全 SAN 陣列叢集的名稱。
++
+在「叢集/健康詳情」頁面的「健康」、「容量」和「節點」標籤中查看詳細信息
+
+

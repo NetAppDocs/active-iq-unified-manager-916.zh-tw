@@ -1,0 +1,228 @@
+---
+permalink: config/reference_unified_manager_roles_and_capabilities.html 
+sidebar: sidebar 
+keywords: unified manager, user, roles, capabilities 
+summary: 根據您指派的使用者角色，您可以決定可以在 Unified Manager 中執行哪些操作。 
+---
+= Unified Manager 使用者角色和功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+根據您指派的使用者角色，您可以決定可以在 Unified Manager 中執行哪些操作。
+
+下表顯示了每個使用者角色可以執行的功能：
+
+[cols="6*"]
+|===
+| 功能 | 操作員 | 儲存管理員 | 應用程式管理員 | 整合模式 | 報告架構 
+
+
+ a| 
+查看儲存系統資訊
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+查看其他數據，例如歷史記錄和容量趨勢
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+•
+
+
+
+ a| 
+查看、分配和解決事件
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+檢視儲存服務對象，例如 SVM 關聯和資源池
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+查看閾值策略
+ a| 
+•
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+管理儲存服務對象，例如 SVM 關聯和資源池
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+定義警報
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+管理儲存管理選項
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+管理儲存管理策略
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+管理用戶
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+管理管理選項
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+定義閾值策略
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+管理資料庫訪問
+ a| 
+ a| 
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+管理與 WFA 的整合並提供對資料庫視圖的訪問
+ a| 
+ a| 
+ a| 
+ a| 
+•
+ a| 
+
+
+
+ a| 
+安排和保存報告
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+從管理操作執行「修復」操作
+ a| 
+ a| 
+•
+ a| 
+•
+ a| 
+ a| 
+
+
+
+ a| 
+提供對資料庫視圖的唯讀存取權限
+ a| 
+ a| 
+ a| 
+ a| 
+ a| 
+•
+
+|===

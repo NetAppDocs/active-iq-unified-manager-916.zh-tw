@@ -1,0 +1,29 @@
+---
+permalink: api-automation/reference_recommendations_to_use_um_apis.html 
+sidebar: sidebar 
+keywords: recommendations, apis, active iq, unified, manager 
+summary: 使用Active IQ Unified Manager中的 API 時，您應該遵循某些建議的做法。 
+---
+= 使用Active IQ Unified Manager API 的建議
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用Active IQ Unified Manager中的 API 時，您應該遵循某些建議的做法。
+
+* 為了有效執行，所有回應內容類型必須採用以下格式：
++
+[listing]
+----
+application/json
+----
+* API版本號與產品版本號無關。您應該使用適用於 Unified Manager 實例的最新版本的 API。有關 Unified Manager API 版本的更多信息，請參閱「 Active IQ Unified Manager中的 REST API 版本控制」部分。
+* 使用 Unified Manager API 更新陣列值時，必須更新整個值字串。您不能將值附加到數組。您只能替換現有陣列。
+* 您可以對所有查詢參數使用篩選運算符，例如垂直線 (|) 和通配符 (+*+)，但雙精確度值除外，例如指標 API 中的 IOPS 和效能。
+* 避免使用篩選運算子通配符 (+*+) 和管道符 (|) 的組合來查詢物件。它可能會檢索到不正確數量的物件。
+* 使用值進行過濾時，請確保值不包含任何 `?`特點。這是為了減輕 SQL 注入的風險。
+* 請注意 `GET`任何 API 的 (all) 請求最多傳回 1000 筆記錄。即使您透過設定 `max_records`參數設定為高於 1000 的值，則僅傳回 1000 筆記錄。
+* 為了執行管理功能，建議您使用 Unified Manager UI。
+

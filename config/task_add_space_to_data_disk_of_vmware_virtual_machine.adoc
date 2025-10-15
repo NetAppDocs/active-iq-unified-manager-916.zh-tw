@@ -1,0 +1,33 @@
+---
+permalink: config/task_add_space_to_data_disk_of_vmware_virtual_machine.html 
+sidebar: sidebar 
+keywords: add, space, data, disk, vmware, virtual, machine 
+summary: 如果需要增加 Unified Manager 資料庫的資料磁碟空間量，則可以在安裝後使用 Unified Manager 維護控制台增加磁碟空間來增加容量。 
+---
+= 為VMware虛擬機器資料盤新增空間
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果需要增加 Unified Manager 資料庫的資料磁碟空間量，則可以在安裝後使用 Unified Manager 維護控制台增加磁碟空間來增加容量。
+
+.開始之前
+* 您必須具有 vSphere Client 的存取權限。
+* 虛擬機器一定不能有本地儲存的快照。
+* 您必須擁有維護使用者憑證。
+
+
+我們建議您在增加虛擬磁碟的大小之前備份虛擬機器。
+
+.步驟
+. 在 vSphere 用戶端中，選擇 Unified Manager 虛擬機，然後在資料中新增更多磁碟容量 `disk 3`。有關詳細信息，請參閱 VMware 文件。
++
+在極少數情況下，Unified Manager 部署使用「硬碟 2」而不是「硬碟 3」作為資料磁碟。如果您的部署中出現這種情況，請增加較大磁碟的空間。資料磁碟的空間總是比其他磁碟大。
+
+. 在 vSphere 用戶端中，選擇 Unified Manager 虛擬機，然後選擇「*控制台*」標籤。
+. 按一下控制台窗口，然後使用您的使用者名稱和密碼登入維護控制台。
+. 在主選單中，輸入*系統配置*選項的編號。
+. 在系統設定選單中，輸入「增加資料磁碟大小」選項的數字。
+

@@ -1,0 +1,14 @@
+---
+permalink: config/concept_manage_user_access.html 
+sidebar: sidebar 
+keywords: manage, user, access 
+summary: 您可以建立角色並指派功能來控制使用者對選取叢集物件的存取。您可以識別具有存取叢集內選定物件所需能力的使用者。只有這些使用者才有權管理叢集物件。 
+---
+= 管理用戶訪問
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立角色並指派功能來控制使用者對Active IQ Unified Manager 的存取。您可以識別具有存取 Unified Manager 中選取物件所需權限的使用者。只有擁有這些角色和功能的使用者才能管理 Unified Manager 中的物件。

@@ -1,0 +1,62 @@
+---
+permalink: data-protection/task_view_storage_vms_based_on_protection_status.html 
+sidebar: sidebar 
+keywords: storage vm, view protection status 
+summary: 您可以使用清單的「儲存虛擬機」頁面查看Active IQ Unified Manager中的所有儲存虛擬機，並根據其保護狀態篩選儲存虛擬機。 
+---
+= 根據保護狀態查看儲存虛擬機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用清單的「儲存虛擬機」頁面查看Active IQ Unified Manager中的所有儲存虛擬機，並根據其保護狀態篩選儲存虛擬機。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+儲存虛擬機器視圖中新增了一個新的欄位“保護角色”，提供有關儲存虛擬機器是否受保護或不受保護的資訊。
+
+[NOTE]
+====
+如果未將來源叢集新增至Active IQ Unified Manager，則與該叢集相關的所有資訊在網格中均不可用。
+
+====
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*儲存虛擬機器*」。
+. 從 *VIEW* 選單中，選擇 *Health* > *All Storage VMs*。
++
+顯示健康狀況：所有儲存虛擬機器。
+
+. 按一下「*篩選器*」以查看以下儲存虛擬機器之一。
++
+[cols="2*"]
+|===
+| 查看 | 過濾值 
+
+
+ a| 
+受保護的儲存虛擬機
+ a| 
+*保護角色* 是 *受保護*
+
+
+
+ a| 
+未受保護的儲存虛擬機
+ a| 
+*保護角色*處於*未受保護狀態*
+
+|===
++
+[NOTE]
+====
+您不能同時查看受保護和不受保護的儲存虛擬機器。您需要清除現有過濾器才能重新套用新的過濾器選項。
+
+====
+. 按一下“套用過濾器”。
++
+未儲存視圖可根據您的篩選器選擇顯示所有受儲存虛擬機器災難復原保護或不受保護的儲存虛擬機器。
+
+

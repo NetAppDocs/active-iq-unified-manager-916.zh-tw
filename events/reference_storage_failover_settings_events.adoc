@@ -1,0 +1,99 @@
+---
+permalink: events/reference_storage_failover_settings_events.html 
+sidebar: sidebar 
+keywords: storage, failover, settings, events, impact area, availability 
+summary: '儲存故障轉移 (SFO) 設定事件為您提供有關儲存故障轉移是否已停用或未配置的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。' 
+---
+= 儲存故障轉移設定事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+儲存故障轉移 (SFO) 設定事件為您提供有關儲存故障轉移是否已停用或未配置的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+儲存故障轉移互連一個或多個連結斷開(ocumEvtSfoInterconnectOneOrMoreLinksDown)
+ a| 
+風險
+ a| 
+節點
+ a| 
+警告
+
+
+
+ a| 
+儲存故障轉移已停用（ocumEvtSfoSettingsDisabled）
+ a| 
+風險
+ a| 
+節點
+ a| 
+錯誤
+
+
+
+ a| 
+未配置儲存故障轉移（ocumEvtSfoSettingsNotConfigured）
+ a| 
+風險
+ a| 
+節點
+ a| 
+錯誤
+
+
+
+ a| 
+儲存故障轉移狀態 - 接管（ocumEvtSfoStateTakeover）
+ a| 
+風險
+ a| 
+節點
+ a| 
+警告
+
+
+
+ a| 
+儲存故障轉移狀態 - 部分交還 (ocumEvtSfoStatePartialGiveback)
+ a| 
+風險
+ a| 
+節點
+ a| 
+錯誤
+
+
+
+ a| 
+儲存故障轉移節點狀態關閉（ocumEvtSfoNodeStatusDown）
+ a| 
+風險
+ a| 
+節點
+ a| 
+錯誤
+
+
+
+ a| 
+儲存故障轉移接管不可能（ocumEvtSfoTakeoverNotPossible）
+ a| 
+風險
+ a| 
+節點
+ a| 
+錯誤
+
+|===

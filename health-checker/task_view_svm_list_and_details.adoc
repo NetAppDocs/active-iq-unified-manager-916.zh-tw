@@ -1,0 +1,42 @@
+---
+permalink: health-checker/task_view_svm_list_and_details.html 
+sidebar: sidebar 
+keywords: view, storage vm list, details 
+summary: '從「運作狀況：所有儲存虛擬機器」檢視中，您可以監控儲存虛擬機器 (SVM) 的庫存。您可以使用儲存虛擬機器/運作狀況詳細資訊頁面查看有關受監控的 SVM 的詳細資訊。' 
+---
+= 查看儲存虛擬機器列表和詳細信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從「運作狀況：所有儲存虛擬機器」檢視中，您可以監控儲存虛擬機器 (SVM) 的庫存。您可以使用儲存虛擬機器/運作狀況詳細資訊頁面查看有關受監控的 SVM 的詳細資訊。
+
+.開始之前
+您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+您可以查看 SVM 詳細信息，例如 SVM 的容量、效率和配置。您也可以查看有關該 SVM 的相關設備和相關警報的資訊。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*儲存虛擬機器*」。
+. 選擇以下方式之一以查看 SVM 詳細資料：
++
+** 若要查看所有叢集中所有 SVM 的運行狀況信息，請在「檢視」功能表中選擇「運行狀況：所有儲存虛擬機器視圖」。
+** 要查看完整詳細信息，請按一下儲存虛擬機器名稱。
++
+您也可以透過點擊最小詳細資料對話方塊中的「查看詳細資料」來查看完整的詳細資訊。
+
+
+
+. 透過點選最小詳細資料對話方塊中的「檢視相關」來查看與 SVM 相關的物件。
+
+
+*相關資訊*
+
+* link:../health-checker/reference_health_svm_details_page.html["儲存虛擬機器：健康詳情頁面"]
+* link:../performance-checker/performance-view-all.html#performance-all-storage-vms-view["效能：所有儲存虛擬機器視圖"]
+* link:../health-checker/task_view_antiransomware_status_of_all_volumes_storage_vms.html#view-security-details-of-all-volumes-with-anti-ransomware-detection["安全：反勒索軟體視圖"]
+* link:../health-checker/task_view_detailed_security_status_for_clusters_and_svms.html["查看叢集和儲存虛擬機器的安全狀態"]
+* link:../data-protection/reference_relationship_all_relationships_view.html["關係：所有關係視圖"]
+

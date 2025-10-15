@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_configure_volume_health_thresholds_for_groups.html 
+sidebar: sidebar 
+keywords: configure, volume, health, thresholds, groups 
+summary: 您可以為容量、Snapshot 副本、qtree 配額、增長和 inode 配置組級卷健康閾值。 
+---
+= 為組配置卷健康閾值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以為容量、Snapshot 副本、qtree 配額、增長和 inode 配置組級卷健康閾值。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+磁碟區健康閾值類型的群組操作僅適用於群組的磁碟區。
+
+.步驟
+. 在左側導覽窗格中，按一下「儲存管理」>「群組」。
+. 在「群組動作」標籤中，按一下「新增」。
+. 輸入組操作的名稱和描述。
+. 從*群組*下拉方塊中，選擇要配置群組操作的群組。
+. 選擇*操作類型*作為磁碟區健康閾值。
+. 選擇要設定閾值的類別。
+. 輸入健康閾值所需的值。
+. 按一下“*新增*”。
+

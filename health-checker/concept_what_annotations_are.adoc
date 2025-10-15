@@ -1,0 +1,18 @@
+---
+permalink: health-checker/concept_what_annotations_are.html 
+sidebar: sidebar 
+keywords: annotations 
+summary: '註釋是分配給另一個文字字串（值）的文字字串（名稱）。每個註解名稱-值對可以使用註解規則動態地與儲存物件關聯。當您將儲存物件與預先定義註解關聯時，您可以篩選和查看與它們相關的事件。您可以將註解套用至叢集、磁碟區和儲存虛擬機器 (SVM)。' 
+---
+= 什麼是註釋
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+註釋是分配給另一個文字字串（值）的文字字串（名稱）。每個註解名稱-值對可以使用註解規則動態地與儲存物件關聯。當您將儲存物件與預先定義註解關聯時，您可以篩選和查看與它們相關的事件。您可以將註解套用至叢集、磁碟區和儲存虛擬機器 (SVM)。
+
+每個註釋名稱可以有多個值；每個名稱-值對都可以透過規則與一個儲存物件相關聯。
+
+例如，您可以建立一個名為“data-center”的註釋，其值為“Boston”和“Canada”。然後，您可以將註解「data-center」和值「Boston」套用到磁碟區 v1。當針對標有“data-center”的磁碟區 v1 上的任何事件產生警報時，產生的電子郵件會指示卷的位置“Boston”，這使您能夠確定問題的優先順序並解決問題。

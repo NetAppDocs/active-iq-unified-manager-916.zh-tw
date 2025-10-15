@@ -1,0 +1,29 @@
+---
+permalink: data-protection/task_break_snapmirror_relationship_from_health_volume_details.html 
+sidebar: sidebar 
+keywords: break, snapmirror, relationship, volume, health details 
+summary: 您可以從「磁碟區/運行狀況詳細資料」頁面中斷保護關係，並停止SnapMirror關係中來源磁碟區和目標磁碟區之間的資料傳輸。當您想要遷移資料、進行災難復原或進行應用程式測試時，您可能會中斷關係。目標卷更改為讀寫卷。您不能破壞SnapVault關係。 
+---
+= 從磁碟區/運作狀況詳細資料頁面中斷SnapMirror關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從「磁碟區/運行狀況詳細資料」頁面中斷保護關係，並停止SnapMirror關係中來源磁碟區和目標磁碟區之間的資料傳輸。當您想要遷移資料、進行災難復原或進行應用程式測試時，您可能會中斷關係。目標卷更改為讀寫卷。您不能破壞SnapVault關係。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+* 您必須已經設定了工作流程自動化。
+
+
+.步驟
+. 在「*Volume / Health*」詳細資料頁面的「*Protection*」標籤中，從拓撲中選擇要中斷的SnapMirror關係。
+. 右鍵單擊目標並從選單中選擇*Break*。
++
+將顯示「中斷關係」對話框。
+
+. 點擊“繼續”即可斷開關係。
+. 在拓樸中，驗證關係是否中斷。
+

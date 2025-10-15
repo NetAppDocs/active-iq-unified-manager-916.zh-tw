@@ -1,0 +1,59 @@
+---
+permalink: storage-mgmt/concept_monitor_vmware_virtual_infrastructure.html 
+sidebar: sidebar 
+keywords: monitor, vmware, virtual, infrastructure, not, supported 
+summary: 'Active IQ Unified Manager提供對虛擬基礎架構中虛擬機器 (VM) 的可見性，並支援監控和排除虛擬環境中的儲存和效能問題。您可以使用此功能來確定儲存環境中的任何延遲問題，或確定 vCenter Server 上報告的效能事件。' 
+---
+= 監控 VMware 虛擬基礎架構
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager提供對虛擬基礎架構中虛擬機器 (VM) 的可見性，並支援監控和排除虛擬環境中的儲存和效能問題。您可以使用此功能來確定儲存環境中的任何延遲問題，或確定 vCenter Server 上報告的效能事件。
+
+ONTAP上的典型虛擬基礎架構部署具有分佈在運算、網路和儲存層的各種元件。 VM 應用程式中的任何效能滯後都可能是由於各個層上的各個元件所面臨的延遲組合所造成的。此功能對於需要分析虛擬環境中的效能問題並了解問題發生在哪個元件中的儲存和 vCenter Server 管理員和 IT 通才非常有用。
+
+現在您可以從 VMware 部分的 vCenter 選單存取 vCenter Server。列出的每個虛擬機的預覽視圖在拓撲視圖中都有 *VCENTER SERVER* 鏈接，可在新瀏覽器中啟動 vCenter Server。您也可以使用*擴充拓樸*按鈕啟動 vCenter Server，然後按一下*在 vCenter 中檢視*按鈕檢視 vCenter Server 中的資料儲存體。
+
+Unified Manager 以拓撲視圖的形式呈現虛擬環境的底層子系統，以確定計算節點、網路或儲存中是否出現了延遲問題。該視圖還突出顯示了導致效能滯後的具體對象，以便採取補救措施並解決根本問題。
+
+部署在ONTAP儲存上的虛擬基礎架構包括以下物件：
+
+* vCenter Server：用於管理虛擬環境中的 VMware VM、ESXi 主機和所有相關元件的集中控制平面。有關 vCenter Server 的更多信息，請參閱 VMware 文件。
+* 主機：執行 ESXi（VMware 的虛擬化軟體）並託管 VM 的實體或虛擬系統。
+* 資料儲存：資料儲存是連接到 ESXi 主機的虛擬儲存物件。資料儲存庫是ONTAP的可管理儲存實體，例如 LUN 或磁碟區，用作 VM 檔案（例如日誌檔案、腳本、設定檔和虛擬磁碟）的儲存庫。它們透過 SAN 或 IP 網路連接與環境中的主機連接。對應到 vCenter Server 的ONTAP以外的資料儲存庫不受 Unified Manager 支援或顯示。
+* VM：VMware 虛擬機器。
+* 虛擬磁碟：屬於虛擬機器的資料儲存區上的副檔名為 VMDK 的虛擬磁碟。虛擬磁碟中的資料儲存在對應的 VMDK 上。
+* VMDK：資料儲存上的虛擬機器磁碟，為虛擬磁碟提供儲存空間。對於每個虛擬磁碟，都有一個對應的 VMDK。
+
+
+這些物件在 VM 拓撲視圖中表示。
+
+ONTAP上的 VMware 虛擬化
+
+image::../media/vm_deployment.gif[虛擬機器部署]
+
+*使用者工作流程*
+
+下圖顯示了使用 VM 拓樸視圖的典型用例：
+
+image::../media/vm_workflow.gif[虛擬機器工作流程]
+
+
+
+== 不支援的內容
+
+* Unified Manager 不支援位於ONTAP之外並對應到 vCenter Server 執行個體的資料儲存庫。這些資料儲存區上具有虛擬磁碟的任何虛擬機器也不受支援。
+* 不支援跨多個 LUN 的資料儲存。
+* 不支援使用網路位址轉換 (NAT) 來映射資料 LIF（存取端點）的資料儲存。
+* 不支援在多 LIF 配置中將磁碟區或 LUN 匯出為具有相同 IP 位址的不同叢集上的資料存儲，因為 Unified Manager 無法識別哪個資料儲存屬於哪個叢集。
++
+範例：假設叢集 A 具有資料儲存庫 A。資料儲存庫 A 透過具有相同 IP 位址 xxxx 的資料 LIF 匯出，且虛擬機器 A 在此資料儲存庫上建立。類似地，集群 B 具有資料儲存庫 B。資料儲存庫 B 透過相同 IP 位址 xxxx 的資料 LIF 匯出，並在資料儲存庫 B 上建立 VM B。 UM 既無法將 VM A 拓樸的資料儲存庫 A 對應到對應的ONTAP磁碟區/LUN，也無法對應 VM B。
+
+* 僅支援 NAS 和 SAN 磁碟區（用於 VMFS 的 iSCSI 和 FCP）作為資料存儲，不支援虛擬磁碟區（vVols）。
+* 僅支援 iSCSI 虛擬磁碟。不支援 NVMe 和 SATA 類型的虛擬磁碟。
+* 這些視圖不允許您產生用於分析各個元件效能的報表。
+* 對於僅支援 Unified Manager 上的虛擬基礎架構的儲存虛擬機器 (storage VM) 災難復原 (DR) 設定，必須在 vCenter Server 中手動變更配置以指向切換和切換回場景中的活動 LUN。如果沒有人工幹預，他們的資料儲存將無法存取。
+

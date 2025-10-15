@@ -1,0 +1,939 @@
+---
+permalink: events/reference_volume_events.html 
+sidebar: sidebar 
+keywords: volume, events, impact area, availability, capacity, configuration, performance 
+summary: 卷事件提供有關磁碟區狀態的信息，使您能夠監控潛在問題。事件依影響區域分組，包括事件名稱、陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= 成交量事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+卷事件提供有關磁碟區狀態的信息，使您能夠監控潛在問題。事件依影響區域分組，包括事件名稱、陷阱名稱、影響等級、來源類型和嚴重性。
+
+星號 (*) 標識已轉換為 Unified Manager 事件的 EMS 事件。
+
+
+
+== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+音量限制（ocumEvtVolumeRestricted）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷線離線（ocumEvtVolumeOffline）
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+卷部分可用（ocumEvtVolumePartiallyAvailable）
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+卷已卸載（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+已安裝磁碟區（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+磁碟區已重新安裝（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+磁碟區連接路徑非活動狀態（ocumEvtVolumeJunctionPathInactive）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+已啟用磁碟區自動調整大小（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+磁碟區自動調整大小 - 已停用（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+磁碟區自動調整最大容量已修改（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+磁碟區自動調整增量大小已修改（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+|===
+
+
+== 影響區域：容量
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+精簡配置磁碟區空間風險（ocumThinProvisionVolumeSpaceAtRisk）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+體積效率操作錯誤（ocumEvtVolumeEfficiencyOperationError）
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+卷空間已滿（ocumEvtVolumeFull）
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+卷空間幾乎已滿（ocumEvtVolumeNearlyFull）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+捲邏輯空間已滿 *(volumeLogicalSpaceFull)
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+捲邏輯空間幾乎已滿 *(volumeLogicalSpaceNearlyFull)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷邏輯空間正常*(volumeLogicalSpaceAllOK)
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+卷快照保留空間已滿（ocumEvtSnapshotFull）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+快照副本過多（ocumEvtSnapshotTooMany）
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+卷 Qtree 配額過載(ocumEvtVolumeQtreeQuotaOvercommitted)
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+卷 Qtree 配額幾乎過量使用（ocumEvtVolumeQtreeQuotaAlmostOvercommitted）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+成交量成長率異常（ocumEvtVolumeGrowthRateAbnormal）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+交易量滿前的天數（ocumEvtVolumeDaysUntilFullSoon）
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+磁碟區空間保證已停用（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+磁碟區空間保證已啟用（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+磁碟區空間保證已修改（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+卷快照預留天數至滿（ocumEvtVolumeSnapshotReserveDaysUntilFullSoon）
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+FlexGroup組成部分存在空間問題 *(flexGroupConstituentsHaveSpaceIssues)
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+FlexGroup組成部分空間狀態全部正常 *(flexGroupConstituentsSpaceStatusAllOK)
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+FlexGroup組成部分存在 Inode 問題 *(flexGroupConstituentsHaveInodesIssues)
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+FlexGroup組成部分 Inode 狀態全部正常 *(flexGroupConstituentsInodesStatusAllOK)
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+WAFL磁碟區自動調整大小失敗 *(waflVolAutoSizeFail)
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+WAFL磁碟區自動調整大小完成 *(waflVolAutoSizeDone)
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+FlexGroup捲利用率超過 80%*
+ a| 
+事件
+ a| 
+體積
+ a| 
+錯誤
+
+
+
+ a| 
+FlexGroup捲利用率超過 90%*
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+磁碟區儲存效率異常（ocumVolumeAbnormalStorageEfficiencyWarning）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+磁碟區快照預留未充分利用（volumeSnaphotReserveUnderutilizedWarning）
+ a| 
+事件
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷快照預留未充分利用（volumeSnaphotReserveUnderutilizedCleared）
+ a| 
+事件
+ a| 
+體積
+ a| 
+警告
+
+|===
+
+
+== 影響區域：配置
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+磁碟區已重新命名（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+已發現卷（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+卷已刪除（不適用）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+|===
+
+
+== 影響領域：性能
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+QoS 磁碟區最大 IOPS 警告閾值超出 (ocumQosVolumeMaxIopsWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+QoS 磁碟區最大 MB/s 警告閾值超出 (ocumQosVolumeMaxMbpsWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+QoS 磁碟區最大 IOPS/TB 警告閾值已超出 (ocumQosVolumeMaxIopsPerTbWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+工作負載卷延遲閾值超出效能服務等級策略所定義的範圍（ocumConformanceLatencyWarning）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷 IOPS 臨界閾值被突破（ocumVolumeIopsIncident）
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+卷 IOPS 警告閾值超出 (ocumVolumeIopsWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷 MB/s 臨界閾值突破（ocumVolumeMbpsIncident）
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+超出磁碟區 MB/s 警告閾值（ocumVolumeMbpsWarning）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+突破磁碟區延遲臨界閾值 (ocumVolumeLatencyIncident)
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+超出磁碟區延遲警告閾值 (ocumVolumeLatencyWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷緩存未命中率臨界閾值被突破（ocumVolumeCacheMissRatioIncident）
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+卷緩存未命中率警告閾值已超出 (ocumVolumeCacheMissRatioWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷延遲和 IOPS 臨界閾值被突破（ocumVolumeLatencyIopsIncident）
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+卷延遲和 IOPS 警告閾值超出 (ocumVolumeLatencyIopsWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷延遲和 MB/s 臨界閾值被突破（ocumVolumeLatencyMbpsIncident）
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+超出磁碟區延遲和 MB/s 警告閾值 (ocumVolumeLatencyMbpsWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷延遲和聚合效能容量使用臨界閾值被突破（ocumVolumeLatencyAggregatePerfCapacityUsedIncident）
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+磁碟區延遲和聚合效能容量使用警告閾值已突破 (ocumVolumeLatencyAggregatePerfCapacityUsedWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷延遲和聚合利用率臨界閾值被突破（ocumVolumeLatencyAggregateUtilizationIncident）
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+卷延遲和聚合利用率警告閾值超出 (ocumVolumeLatencyAggregateUtilizationWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷延遲和節點效能容量使用臨界閾值突破（ocumVolumeLatencyNodePerfCapacityUsedIncident）
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+磁碟區延遲和節點效能容量使用警告閾值已突破 (ocumVolumeLatencyNodePerfCapacityUsedWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+已使用的磁碟區延遲和節點效能容量 - 超出接管臨界閾值 (ocumVolumeLatencyAggregatePerfCapacityUsedTakeoverIncident)
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+磁碟區延遲和節點效能容量使用情況 - 超出接管警告閾值 (ocumVolumeLatencyAggregatePerfCapacityUsedTakeoverWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷延遲和節點利用率臨界閾值被突破（ocumVolumeLatencyNodeUtilizationIncident）
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+磁碟區延遲和節點利用率警告閾值超出 (ocumVolumeLatencyNodeUtilizationWarning)
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+|===
+
+
+== 影響領域：安全
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+容量反勒索軟體監控已啟用（主動模式）（antiRansomwareVolumeStateEnabled）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+大量反勒索軟體監控已停用（antiRansomwareVolumeStateDisabled）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+容量反勒索軟體監控已啟用（學習模式）（antiRansomwareVolumeStateDryrun）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+大量反勒索軟體監控已暫停（學習模式）（antiRansomwareVolumeStateDryrunPaused）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+大量反勒索軟體監控已暫停（活動模式）（antiRansomwareVolumeStateEnablePaused）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+大量反勒索軟體監控正在停用（antiRansomwareVolumeStateDisableInProgress）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+發現勒索軟體活動（callHomeRansomwareActivitySeen）
+ a| 
+事件
+ a| 
+體積
+ a| 
+批判的
+
+
+
+ a| 
+適合反勒索軟體監控的磁碟區（學習模式）（ocumEvtVolumeArwCandidate）
+ a| 
+事件
+ a| 
+體積
+ a| 
+資訊
+
+
+
+ a| 
+適合反勒索軟體監控的磁碟區（主動模式）（ocumVolumeSuitedForActiveAntiRansomwareDetection）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+音量顯示吵雜的反勒索軟體警報（antiRansomwareFeatureNoisyVolume）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+|===
+
+
+== 影響領域：資料保護
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+磁碟區的本地快照保護不足（volumeLacksLocalProtectionWarning）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+卷的本地快照保護不足（volumeLacksLocalProtectionCleared）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+|===

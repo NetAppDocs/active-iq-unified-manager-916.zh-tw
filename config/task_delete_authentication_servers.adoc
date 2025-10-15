@@ -1,0 +1,28 @@
+---
+permalink: config/task_delete_authentication_servers.html 
+sidebar: sidebar 
+keywords: delete, authentication, servers 
+summary: 如果您想要封鎖 Unified Manager 伺服器與身份驗證伺服器通信，您可以刪除該身份驗證伺服器。例如，如果您想要變更管理伺服器正在與之通訊的身份驗證伺服器，您可以刪除該驗證伺服器並新增新的身份驗證伺服器。 
+---
+= 刪除身份驗證伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您想要封鎖 Unified Manager 伺服器與身份驗證伺服器通信，您可以刪除該身份驗證伺服器。例如，如果您想要變更管理伺服器正在與之通訊的身份驗證伺服器，您可以刪除該驗證伺服器並新增新的身份驗證伺服器。
+
+.開始之前
+您必須具有應用程式管理員角色。
+
+當您刪除身份驗證伺服器時，該驗證伺服器的遠端使用者或群組將無法再存取 Unified Manager。
+
+.步驟
+. 在左側導覽窗格中，按一下「*常規*」>「*遠端驗證*」。
+. 選擇一個或多個要刪除的身份驗證伺服器，然後按一下「刪除」。
+. 按一下“是”確認刪除請求。
++
+如果啟用了「使用安全連線」選項，則與驗證伺服器關聯的憑證將與驗證伺服器一起刪除。
+
+

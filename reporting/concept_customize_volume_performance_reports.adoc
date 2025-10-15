@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_volume_performance_reports.html 
+sidebar: sidebar 
+keywords: customize, volume, performance, reports 
+summary: 這些範例自訂報表用於協助您識別和回應與磁碟區效能相關的潛在問題。 
+---
+= 自訂磁碟區效能報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+這些範例自訂報表用於協助您識別和回應與磁碟區效能相關的潛在問題。

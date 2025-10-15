@@ -1,0 +1,41 @@
+---
+permalink: config/task_enable_and_disable_ability_to_upload_scripts.html 
+sidebar: sidebar 
+keywords: script upload, enable, disable 
+summary: 預設情況下，將腳本上傳到 Unified Manager 並執行它們的功能是啟用的。如果您的組織出於安全原因不想允許此活動，您可以停用此功能。 
+---
+= 啟用和停用腳本上傳
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+預設情況下，將腳本上傳到 Unified Manager 並執行它們的功能是啟用的。如果您的組織出於安全原因不想允許此活動，您可以停用此功能。
+
+.開始之前
+您必須具有應用程式管理員角色。
+
+.步驟
+. 在左側導覽窗格中，按一下「*常規*」>「*功能設定*」。
+. 在「功能設定」頁面中，透過選擇以下選項之一來停用或啟用腳本：
++
+[cols="2*"]
+|===
+| 如果你想... | 然後這樣做... 
+
+
+ a| 
+停用腳本
+ a| 
+在*腳本上傳*面板中，將滑桿按鈕向左移動。
+
+
+
+ a| 
+啟用腳本
+ a| 
+在*腳本上傳*面板中，將滑桿按鈕向右移動。
+
+|===
+

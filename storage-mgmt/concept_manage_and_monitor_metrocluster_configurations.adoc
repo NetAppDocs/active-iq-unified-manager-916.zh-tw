@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_manage_and_monitor_metrocluster_configurations.html 
+sidebar: sidebar 
+keywords: manage, monitor, metrocluster, configurations 
+summary: Unified Manager Web UI 中對MetroCluster配置的監控支援可讓您檢查MetroCluster配置中的任何連線問題。儘早發現連線問題使您能夠有效地管理MetroCluster配置。 
+---
+= 管理和監控MetroCluster配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager Web UI 中對MetroCluster配置的監控支援可讓您檢查MetroCluster透過 FC 和 IP 設定中的任何連線問題。儘早發現連線問題使您能夠有效地管理MetroCluster配置。

@@ -1,0 +1,41 @@
+---
+permalink: reporting/task_create_report_to_view_qtrees_that_are_nearly_full.html 
+sidebar: sidebar 
+keywords: create, report, view, qtrees, full 
+summary: 您可以建立報表來分析 qtree 的儲存容量和利用率，並查看幾乎已滿的 qtree。 
+---
+= 建立報告以查看幾乎已滿的 qtree
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立報表來分析 qtree 的儲存容量和利用率，並查看幾乎已滿的 qtree。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+
+
+使用下列步驟建立顯示幾乎已滿的 qtree 的自訂視圖，然後計劃為該視圖產生報表。
+
+.步驟
+. 在左側導覽窗格中，按一下「儲存」>「Qtree」。
+. 選擇“*顯示/隱藏*”以刪除報告中不需要的任何列。
+. 將“磁碟已使用百分比”列拖曳到“Qtrees”列附近。
+. 點擊過濾器圖標，添加以下過濾器，然後點擊*應用過濾器*：
++
+** 磁碟使用率百分比大於 75%
+
+
+. 按一下「磁碟使用百分比」列的頂部，按容量百分比對結果進行排序。
+. 使用反映視圖所顯示內容的特定名稱儲存視圖，例如“`Qtrees nearing full`”，然後按一下複選標記（image:../media/blue_check.gif[""] ）。
+. 點擊庫存頁面上的“*計劃報告*”按鈕。
+. 按一下「*新增計畫*」為「*報告計畫*」頁面新增一行，以便您可以定義新報告的計畫特徵。
+. 輸入報告計劃的名稱並填寫其他報告字段，然後按一下複選標記 (image:../media/blue_check.gif[""] ) 位於行尾。
++
+該報告將立即發送以進行測試。此後，將產生報告並透過電子郵件發送給使用指定頻率列出的收件者。
+
+
+
+根據報告中顯示的結果，您可能需要調整磁碟硬限制和軟限制（如果設定），或在 qtree 之間平衡資料。

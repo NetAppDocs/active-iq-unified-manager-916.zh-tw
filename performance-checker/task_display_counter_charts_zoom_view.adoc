@@ -1,0 +1,21 @@
+---
+permalink: performance-checker/task_display_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: display, counter charts, zoom, view 
+summary: 計數器圖表縮放視圖為所選計數器圖表及其相關時間軸提供了更精細的細節。這會放大計數器圖表數據，使您能夠更清晰地了解效能事件及其根本原因。 
+---
+= 顯示計數器圖表縮放視圖
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+計數器圖表縮放視圖為所選計數器圖表及其相關時間軸提供了更精細的細節。這會放大計數器圖表數據，使您能夠更清晰地了解效能事件及其根本原因。
+
+您可以顯示任何計數器圖表的計數器圖表縮放檢視。
+
+.步驟
+. 按一下「縮放檢視」以在新瀏覽器視窗中開啟選定的圖表。
+. 如果您正在查看細分圖表，然後按一下“縮放檢視”，細分圖表將以縮放檢視顯示。如果您想要變更檢視選項，可以在「縮放檢視」中選擇「*總計*」。
+

@@ -1,0 +1,16 @@
+---
+permalink: storage-mgmt/concept_override_management_actions_through_scripts.html 
+sidebar: sidebar 
+keywords: override, management, actions, scripts 
+summary: 您可以建立自訂腳本並將其與警報關聯，以針對特定事件採取特定操作，而不是選擇「管理操作」頁面或 Unified Manager 儀表板上可用的預設管理操作。 
+---
+= 透過腳本覆蓋管理操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立自訂腳本並將其與警報關聯，以針對特定事件採取特定操作，而不是選擇「管理操作」頁面或 Unified Manager 儀表板上可用的預設管理操作。
+
+如果您想要針對某種事件類型採取特定操作，並選擇不將其作為 Unified Manager 提供的管理操作功能的一部分進行修復，則可以為特定操作配置自訂腳本。然後，您可以將腳本與該事件類型的警報關聯起來，並單獨處理此類事件。在這種情況下，管理操作頁面或 Unified Manager 儀表板上不會針對該特定事件類型產生管理操作。

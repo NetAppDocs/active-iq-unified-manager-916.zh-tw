@@ -1,0 +1,24 @@
+---
+permalink: api-automation/reference_intended_audience_for_this_guide.html 
+sidebar: sidebar 
+keywords: audience, api, rest 
+summary: 本節適用於建立透過 REST API 與Active IQ Unified Manager軟體互動的應用程式的開發人員。 
+---
+= 此內容的受眾
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+此處的主題適用於建立透過 REST API 與Active IQ Unified Manager軟體互動的應用程式的開發人員。
+
+儲存管理員和架構師可以參考這些資訊來基本了解如何使用 Unified Manager REST API 建立用戶端應用程式來管理和監控NetApp儲存系統。
+
+如果您想使用儲存提供者、 ONTAP叢集和管理管理 API 來管理存儲，則應該使用此資訊。
+
+[NOTE]
+====
+您必須具有以下角色之一：操作員、儲存管理員或應用程式管理員。您必須知道要在其上執行 REST API 的 Unified Manager 伺服器的 IP 位址或完全限定網域名稱。
+
+====

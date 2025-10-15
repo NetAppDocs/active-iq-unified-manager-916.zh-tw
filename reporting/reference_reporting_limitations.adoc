@@ -1,0 +1,52 @@
+---
+permalink: reporting/reference_reporting_limitations.html 
+sidebar: sidebar 
+keywords: reporting, limitations 
+summary: 您應該注意，新的Active IQ Unified Manager報告功能有一些限制。 
+---
+= 報告限制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您應該注意，新的Active IQ Unified Manager報告功能有一些限制。
+
+
+
+== Unified Manager 先前版本的現有報告
+
+您只能編輯在 Unified Manager 9.5 及更早版本中建立和匯入（作為 .rptdesign 檔案）的現有報告的計畫和收件者。如果您自訂了 Unified Manager 9.5 或更早版本提供的任何標準報告，則這些自訂報告將不會匯入新的報告工具​​中。
+
+如果您需要編輯從 .rptdesign 檔案匯入的現有報告，請執行下列操作之一併刪除匯入的報告：
+
+* 建立新視圖並從該視圖安排報表（首選）
+* 將滑鼠懸停在報告上，複製 SQL，然後使用外部工具提取數據
+
+
+預設視圖可以產生為報告，無需任何自訂。您可以使用新的報表解決方案來重新建立任何自訂報表。
+
+
+
+== 日程與報告關係
+
+您可以為每個已儲存的報表建立許多不同的時間表，並可任意組合收件者。但是，您不能將該計劃重複用於多個報告。
+
+
+
+== 報告保護
+
+任何具有適當權限的使用者都可以編輯或刪除報告。無法封鎖其他使用者刪除或變更已儲存的視圖或時間表。
+
+
+
+== 活動報告
+
+雖然您可以自訂事件檢視並以 CSV 格式下載產生的報告，但您無法排程重複事件報告的產生和分發。
+
+
+
+== 報告附件
+
+報告不能以電子郵件正文的形式傳送。相反，報告僅以 PDF、Excel 或 CSV 附件的形式傳送。

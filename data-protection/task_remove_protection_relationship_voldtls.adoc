@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_remove_protection_relationship_voldtls.html 
+sidebar: sidebar 
+keywords: remove, protection, relationship,  volume, health details page 
+summary: 您可以刪除保護關係以永久刪除所選來源和目標之間的現有關係：例如，當您想要使用不同的目標建立關係時。此操作將刪除所有元資料並且無法撤銷。 
+---
+= 從卷/健康詳情頁面中刪除保護關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以刪除保護關係以永久刪除所選來源和目標之間的現有關係：例如，當您想要使用不同的目標建立關係時。此操作將刪除所有元資料並且無法撤銷。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+* 您必須已經設定了工作流程自動化。
+
+
+.步驟
+. 在「*Volume / Health*」詳細資料頁面的「*Protection*」標籤中，從拓撲中選擇要刪除的SnapMirror關係。
+. 右鍵單擊目的地的名稱，然後從選單中選擇“*刪除*”。
++
+將顯示「刪除關係」對話方塊。
+
+. 點擊“繼續”以刪除關係。
++
+該關係已從卷/健康詳細資料頁面中刪除。
+
+

@@ -1,0 +1,53 @@
+---
+permalink: data-protection/task_resynchronize_protection_relationships_voldtls.html 
+sidebar: sidebar 
+keywords: resynchronize, protection, relationships, volume, health details page 
+summary: 您可以重新同步已中斷的SnapMirror或SnapVault關係上的數據，然後將目標設為讀/寫，以便來源上的資料與目標上的資料相符。當來源磁碟區上所需的通用 Snapshot 副本被刪除導致SnapMirror或SnapVault更新失敗時，您可能還需要重新同步。 
+---
+= 從卷/健康詳情頁面重新同步保護關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以重新同步已中斷的SnapMirror或SnapVault關係上的數據，然後將目標設為讀/寫，以便來源上的資料與目標上的資料相符。當來源磁碟區上所需的通用 Snapshot 副本被刪除導致SnapMirror或SnapVault更新失敗時，您可能還需要重新同步。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+* 您必須已設定OnCommand Workflow Automation。
+
+
+.步驟
+. 從「*Volume / Health*」詳細資料頁面的「*Protection*」標籤中，在拓撲中找到要重新同步的保護關係並右鍵單擊它。
+. 從選單中選擇*重新同步*。
++
+或者，從*操作*選單中，選擇*關係*>*重新同步*以重新同步您目前正在查看詳細資料的關係。
+
++
+將顯示“重新同步”對話框。
+
+. 在「重新同步選項」標籤中，選擇傳輸優先權和最大傳輸速率。
+. 按一下「來源快照副本」；然後在「快照副本」欄位中按一下「預設」。
++
+系統彈出「選擇來源Snapshot副本」對話框。
+
+. 如果您想要指定現有的 Snapshot 副本而不是傳輸預設的 Snapshot 副本，請按一下「*現有 Snapshot 副本*」並從清單中選擇一個 Snapshot 副本。
+. 點選“*提交*”。
++
+您將返回「重新同步」對話方塊。
+
+. 如果您選擇了多個要重新同步的來源，請按一下「*預設*」以選擇要為其指定現有 Snapshot 副本的下一個來源。
+. 按一下「*提交*」開始重新同步作業。
++
+重新同步作業已啟動，您將返回磁碟區/健康詳細資料頁面，並且頁面頂部會顯示作業連結。
+
+. *可選：*按一下「磁碟區/健康詳情」頁面上的「檢視作業」以追蹤每個重新同步作業的狀態。
++
+顯示經過篩選的作業清單。
+
+. *可選：*按一下瀏覽器上的*後退*箭頭返回*音量/健康*詳細資訊頁面。
++
+當所有作業任務成功完成後，重新同步作業即完成。
+
+

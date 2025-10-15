@@ -1,0 +1,137 @@
+---
+permalink: api-automation/concept_events_api.html 
+sidebar: sidebar 
+keywords: view, events, system, details 
+summary: 事件 API 使您能夠檢索為資料中心中受監控的叢集所產生的事件。 
+---
+= 使用 API 管理事件和警報
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+這 `events`， `alerts` ， 和 `scripts`API 下的 `management-server`類別可讓您管理Active IQ Unified Manager環境中的事件、警報以及與警報相關的腳本。
+
+
+
+== 查看和修改事件
+
+Unified Manager 接收在ONTAP上為由 Unified Manager 監控和管理的叢集產生的事件。透過使用這些 API，您可以查看為您的叢集產生的事件，並解決和更新它們。
+
+透過運行 `GET`方法 `/management-server/events`API，可以查詢您資料中心內的事件，包括歷史資料。使用內建篩選器（例如名稱、影響等級、影響區域、嚴重性、狀態、資源名稱和資源類型）來查看特定事件。資源類型和區域參數傳回有關發生事件的儲存物件的信息，影響區域傳回有關引發事件的問題的信息，例如可用性、容量、配置、安全性、保護和效能。
+
+透過執行此 API 的 PATCH 操作，您可以啟用事件的解決工作流程。您可以將事件指派給自己或其他使用者並確認收到該事件。在資源上執行步驟以解決觸發事件的問題時，您可以使用此 API 將事件標記為已解決。
+
+有關事件的更多信息，請參閱link:../events/concept_manage_events.html["管理活動"]。
+
+[cols="4*"]
+|===
+| 類別 | HTTP 動詞 | 小路 | 描述 
+
+
+ a| 
+管理伺服器
+ a| 
+得到
+ a| 
+`/management-server/events`
+`/management-server/events/{key}`
+ a| 
+當您執行 Get ALL 方法時，回應主體包含資料中心中所有事件的事件詳細資訊。當您透過特定鍵檢索事件詳細資訊時，您可以查看特定事件的詳細資訊並對資源執行下一組操作。回應主體包含該事件的詳細資訊。
+
+
+
+ a| 
+管理伺服器
+ a| 
+修補
+ a| 
+`management-server/events/{key}`
+ a| 
+執行此 API 來指派事件或將狀態變更為已確認或已解決。您也可以使用此方法將事件指派給您自己或其他使用者。這是一個同步操作。
+
+|===
+
+
+== 管理警報
+
+事件是自動且連續產生的。僅當事件滿足特定過濾條件時，Unified Manager 才會產生警報。您可以選擇應產生警報的事件。透過使用 `/management-server/alerts`API，您可以設定警報，以便在發生特定事件或某些嚴重程度類型的事件時自動發送通知。
+
+有關警報的更多信息，請參閱link:../events/concept_manage_alerts.html["管理警報"]。
+
+[cols="4*"]
+|===
+| 類別 | HTTP 動詞 | 小路 | 描述 
+
+
+ a| 
+管理伺服器
+ a| 
+得到
+ a| 
+`/management-server/alerts`
+`/management-server/alerts/{key}`
+ a| 
+使用警報鍵查詢環境中所有現有警報或特定警報。您可以查看有關您的環境中產生的警報的信息，例如警報描述、操作、發送通知的電子郵件 ID、事件和嚴重性。
+
+
+
+ a| 
+管理伺服器
+ a| 
+郵政
+ a| 
+`/management-server/alerts`
+ a| 
+此方法使您能夠為特定事件新增警報。您必須新增警報名稱、警報適用的實體或邏輯資源或事件、警報是否啟用以及是否發出 SNMP 陷阱。您可以添加要生成警報的其他詳細信息，例如操作、通知電子郵件 ID、腳本詳細信息（如果您要添加警報腳本）等等。
+
+
+
+ a| 
+管理伺服器
+ a| 
+修補並刪除
+ a| 
+`management-server/events/{key}`
+ a| 
+您可以使用這些方法來修改和刪除特定的警報。您可以修改不同的屬性，例如描述、名稱以及啟用和停用警報。當不再需要警報時，您可以刪除該警報。
+
+|===
+
+NOTE: 在選擇用於新增警報的資源時，請注意，選擇叢集作為資源並不會自動選擇該叢集內的儲存物件。例如，如果您為所有叢集的所有關鍵事件建立警報，那麼您將只收到叢集關鍵事件的警報。您將不會收到有關節點、聚合等的關鍵事件的警報。
+
+
+
+== 管理腳本
+
+透過使用 `/management-server/scripts`API，您也可以將警報與觸發警報時執行的腳本關聯起來。您可以使用腳本自動修改或更新 Unified Manager 中的多個儲存物件。該腳本與警報相關。當事件觸發警報時，腳本就會執行。您可以上傳自訂腳本並在產生警報時測試其執行情況。您可以將警報與腳本關聯，以便在 Unified Manager 中針對某個事件發出警報時執行該腳本。
+
+有關腳本的更多信息，請參閱link:../events/concept_manage_scripts.html["管理腳本"]。
+
+[cols="4*"]
+|===
+| 類別 | HTTP 動詞 | 小路 | 描述 
+
+
+ a| 
+管理伺服器
+ a| 
+得到
+ a| 
+`/management-server/scripts`
+ a| 
+使用此 API 查詢您環境中所有現有的腳本。使用標準過濾和排序操作來僅查看特定腳本。
+
+
+
+ a| 
+管理伺服器
+ a| 
+郵政
+ a| 
+`/management-server/scripts`
+ a| 
+使用此 API 為腳本新增描述並上傳與警報相關的腳本檔案。
+
+|===

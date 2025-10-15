@@ -1,0 +1,41 @@
+---
+permalink: performance-checker/task_view_volume_latency_by_cluster_component.html 
+sidebar: sidebar 
+keywords: view, volume, latency, cluster, component 
+summary: 您可以使用磁碟區效能資源管理器頁面查看磁碟區的詳細延遲資訊。延遲 - 總計數器圖表顯示磁碟區上的總延遲，延遲 - 細分計數器圖表有助於確定讀寫延遲對磁碟區的影響。 
+---
+= 按集群組件查看卷延遲
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用磁碟區效能資源管理器頁面查看磁碟區的詳細延遲資訊。延遲 - 總計數器圖表顯示磁碟區上的總延遲，延遲 - 細分計數器圖表有助於確定讀寫延遲對磁碟區的影響。
+
+此外，「延遲 - 群集組件」圖表顯示了每個群集組件的延遲的詳細比較，以幫助確定每個組件對卷的總延遲的貢獻。將顯示以下集群組件：
+
+* 網路
+* QoS 限制最大值
+* QoS 限制最小值
+* 網路處理
+* 集群互連
+* Data Processing
+* 聚合操作
+* 大量啟用設定
+* MetroCluster資源
+* 雲延遲
+* 同步SnapMirror
+
+
+.步驟
+. 在您選擇的磁碟區的「磁碟區效能資源管理器」頁面中，從延遲圖表的下拉式功能表中選擇「叢集元件」。
++
+顯示延遲 - 叢集組件圖表。
+
+. 若要查看圖表的較大版本，請選擇「縮放檢視」。
++
+顯示集群組件比較圖。您可以透過取消選擇或選擇image:../media/eye_icon.gif["眼睛圖示"]與每個集群組件相關聯的。
+
+. 若要查看特定值，請將遊標移到圖表區域以查看彈出視窗。
+

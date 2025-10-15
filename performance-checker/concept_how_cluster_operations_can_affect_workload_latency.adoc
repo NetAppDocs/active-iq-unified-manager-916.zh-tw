@@ -1,0 +1,26 @@
+---
+permalink: performance-checker/concept_how_cluster_operations_can_affect_workload_latency.html 
+sidebar: sidebar 
+keywords: cluster, operations, affect, workload, latency 
+summary: 操作（IOPS）代表叢集上所有使用者定義和系統定義的工作負載的活動。  IOPS 統計資料可協助您確定叢集進程（例如進行備份或執行重複資料刪除）是否會影響工作負載延遲（回應時間）或可能導致或促成效能事件。 
+---
+= 叢集操作如何影響工作負載延遲
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+操作（IOPS）代表叢集上所有使用者定義和系統定義的工作負載的活動。  IOPS 統計資料可協助您確定叢集進程（例如進行備份或執行重複資料刪除）是否會影響工作負載延遲（回應時間）或可能導致或促成效能事件。
+
+分析效能事件時，您可以使用 IOPS 統計資料來確定效能事件是否由叢集問題引起。您可以識別可能是效能事件主要影響因素的特定工作負載活動。  IOPS 以每秒運算元 (ops/sec) 來衡量。
+
+image::../media/opm_ops_chart_png.png[Unified Manager IOPS 圖表]
+
+此範例顯示 IOPS 圖表。實際操作統計資料為藍線，操作統計資料的 IOPS 預測為綠色。
+
+[NOTE]
+====
+在某些情況下，當叢集過載時，Unified Manager 可能會顯示訊息 `Data collection is taking too long on Cluster _cluster_name_`。這意味著沒有收集足夠的統計資料供 Unified Manager 進行分析。您需要減少叢集正在使用的資源，以便收集統計資料。
+
+====

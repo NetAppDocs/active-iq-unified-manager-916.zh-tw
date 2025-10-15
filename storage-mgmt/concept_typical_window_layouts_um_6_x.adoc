@@ -1,0 +1,28 @@
+---
+permalink: storage-mgmt/concept_typical_window_layouts_um_6_x.html 
+sidebar: sidebar 
+keywords: typical, window, layouts, object, list, details 
+summary: 了解典型的視窗佈局有助於您有效地導覽和使用Active IQ Unified Manager 。大多數 Unified Manager 視窗類似於兩種常規佈局之一：物件清單或詳細資訊。建議的顯示設定至少為 1280 x 1024 像素。 
+---
+= 典型的視窗佈局
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解典型的視窗佈局有助於您有效地導覽和使用Active IQ Unified Manager 。大多數 Unified Manager 視窗類似於兩種常規佈局之一：物件清單或詳細資訊。建議的顯示設定至少為 1280 x 1024 像素。
+
+並非每個視窗都包含下圖中的每個元素。
+
+
+
+== 物件清單視窗佈局
+
+image::../media/object_list.png[物件列表]
+
+
+
+== 物件詳細資料視窗佈局
+
+image::../media/object_details.gif[物件詳細資訊]

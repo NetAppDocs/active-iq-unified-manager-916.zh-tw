@@ -1,0 +1,51 @@
+---
+permalink: config/concept_security_dashboard.html 
+sidebar: sidebar 
+keywords: security compliance settings, security feature settings, ONTAP hardening guide, AutoSupport settings, authentication settings 
+summary: 您可以在 Unified Manager 上啟用或停用合規性監控的安全性參數。 
+---
+= 啟用和停用安全設定以實現合規性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+透過使用「功能設定」頁面的「安全儀表板」面板上的「自訂」按鈕，您可以啟用或停用 Unified Manager 上的合規性監控的安全性參數。
+
+從此頁面啟用或停用的設定控制 Unified Manager 上叢集和儲存虛擬機器的整體合規性狀態。根據選擇，對應的列將顯示在叢集清單頁面的*安全性：所有叢集*視圖和儲存虛擬機器清單頁面的*安全性：所有儲存虛擬機器*視圖中。
+
+[NOTE]
+====
+只有具有管理員角色的使用者才能編輯這些設定。
+
+====
+您的ONTAP叢集、儲存虛擬機器和磁碟區的安全標準將根據link:https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp ONTAP 9 安全強化指南"]。儀表板上的安全面板和安全性頁面顯示叢集、儲存虛擬機器和磁碟區的預設安全合規狀態。也會產生安全事件並針對存在安全違規的叢集和儲存虛擬機器啟用管理操作。
+
+
+
+== 自訂安全設定
+
+若要根據您的ONTAP環境自訂合規性監控設置，請依照下列步驟操作：
+
+.步驟
+. 點選*常規>功能設定>安全儀表板>自訂*。出現「自訂安全儀表板設定」彈出視窗。
++
+[NOTE]
+====
+您啟用或停用的安全性合規性參數會直接影響叢集和儲存虛擬機器畫面上的預設安全性視圖、報表和排程報告。如果您在修改安全參數之前從這些畫面上傳了 Excel 報告，則下載的 Excel 報告可能有錯誤。
+
+====
+. 若要啟用或停用ONTAP叢集的自訂設置，請在 *叢集* 下選擇所需的常規設定。有關自訂叢集合規性的選項的信息，請參閱link:../health-checker/reference_cluster_compliance_categories.html["集群合規性類別"]。
+. 若要啟用或停用儲存虛擬機器的自訂設置，請在「儲存虛擬機器」下選擇所需的常規設定。有關自訂儲存虛擬機器合規性的選項的信息，請參閱link:../health-checker/reference_svm_compliance_categories.html["儲存虛擬機器合規性類別"]。
+
+
+
+
+== 自訂AutoSupport和身份驗證設置
+
+在 * AutoSupport設定* 部分，您可以指定是否使用 HTTPS 傳送從ONTAP傳送AutoSupport訊息。
+
+從「驗證設定」部分，您可以啟用 Unified Manager 警報來向預設ONTAP管理員使用者發出警報。
+
+'''

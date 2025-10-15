@@ -1,0 +1,69 @@
+---
+permalink: install-windows/task_restart_unified_manager_win.html 
+sidebar: sidebar 
+keywords: restart, unified manager 
+summary: 更改配置後，您可能需要重新啟動 Unified Manager。 
+---
+= 重新啟動 Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+更改配置後，您可能需要重新啟動 Unified Manager。
+
+.開始之前
+您必須具有 Windows 管理員權限。
+
+.步驟
+. 使用預設本機管理員帳戶登入 Windows。
+. 停止 Unified Manager 服務：
++
+[cols="2*"]
+|===
+| 從... | 按以下順序停止服務... 
+
+
+ a| 
+命令列
+ a| 
+.. `sc stop ocie-au`
+.. `sc stop Oncommandsvc`
+
+
+
+
+ a| 
+Microsoft 服務管理員
+ a| 
+.. NetApp Active IQ收購服務 (Ocie-au)
+.. NetApp Active IQ管理伺服器服務 (Oncommandsvc)
+
+
+|===
+. 啟動 Unified Manager 服務：
++
+[cols="2*"]
+|===
+| 從... | 按以下順序啟動服務... 
+
+
+ a| 
+命令列
+ a| 
+.. `sc start Oncommandsvc`
+.. `sc start ocie-au`
+
+
+
+
+ a| 
+Microsoft 服務管理員
+ a| 
+.. NetApp Active IQ管理伺服器服務 (Oncommandsvc)
+.. NetApp Active IQ收購服務 (Ocie-au)
+
+
+|===
+

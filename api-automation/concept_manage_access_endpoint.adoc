@@ -1,0 +1,98 @@
+---
+permalink: api-automation/concept_manage_access_endpoint.html 
+sidebar: sidebar 
+keywords: manage, endpoints, access 
+summary: '您需要建立存取端點或邏輯介面 (LIF)，這是設定儲存虛擬機器 (SVM)、LUN 和檔案共用所必需的。您可以檢視、建立、修改和刪除Active IQ Unified Manager環境中的 SVM、LUN 或檔案共用的存取端點。' 
+---
+= 使用 API 管理存取端點
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您需要建立存取端點或邏輯介面 (LIF)，這是設定儲存虛擬機器 (SVM)、LUN 和檔案共用所必需的。您可以檢視、建立、修改和刪除Active IQ Unified Manager環境中的 SVM、LUN 或檔案共用的存取端點。
+
+
+
+== 查看存取端點
+
+您可以使用下列方法檢視 Unified Manager 環境中的存取端點清單。若要查詢特定 SVM、LUN 或檔案共用的存取端點列表，您需要輸入 SVM、LUN 或檔案共用的唯一識別碼。您也可以輸入唯一的存取端點金鑰來擷取特定存取端點的詳細資訊。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/access-endpoints`
+
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+== 新增存取端點
+
+您可以建立自訂存取端點並為其指派所需的屬性。您必須輸入要建立的存取端點的詳細資訊作為輸入參數。您可以使用此 API、系統管理員或ONTAP CLI 在每個節點上建立存取端點。支援使用 IPv4 和 IPv6 位址建立存取端點。
+
+[NOTE]
+====
+您必須為每個節點的 SVM 配置最少數量的存取端點，才能成功設定 LUN 和檔案共用。您應該為每個節點配置至少兩個 SVM 存取端點，一個支援 CIFS 和/或 NFS 協議，另一個支援 iSCSI 或 FCP 協定。
+
+====
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+郵政
+ a| 
+`/storage-provider/access-endpoints`
+
+|===
+
+
+== 刪除存取端點
+
+您可以使用以下方法刪除特定的存取端點。您需要提供存取端點金鑰作為輸入參數來刪除特定的存取端點。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+刪除
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===
+
+
+== 修改訪問端點
+
+您可以使用下列方法修改存取端點並更新其屬性。您需要提供存取端點金鑰來修改特定的存取端點。您還需要輸入要更新的屬性及其值。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+修補
+ a| 
+`/storage-provider/access-endpoints/\{key}`
+
+|===

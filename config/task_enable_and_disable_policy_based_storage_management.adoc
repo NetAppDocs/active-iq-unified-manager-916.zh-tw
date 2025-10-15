@@ -1,0 +1,78 @@
+---
+permalink: config/task_enable_and_disable_policy_based_storage_management.html 
+sidebar: sidebar 
+keywords: provisioning, performance service levels, storage management, enable, disable, policy-based 
+summary: 從 Unified Manager 9.7 開始，您可以在ONTAP叢集上設定儲存工作負載（磁碟區和 LUN），並根據指派的效能服務等級管理這些工作負載。此功能類似於在ONTAP系統管理員中建立工作負載並附加 QoS 策略，但使用 Unified Manager 應用程式時，您可以設定和管理 Unified Manager 實例正在監控的所有叢集中的工作負載。 
+---
+= 啟用和停用基於策略的儲存管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+從 Unified Manager 9.7 開始，您可以在ONTAP叢集上設定儲存工作負載（磁碟區和 LUN），並根據指派的效能服務等級管理這些工作負載。此功能類似於在ONTAP系統管理員中建立工作負載並附加 QoS 策略，但使用 Unified Manager 應用程式時，您可以設定和管理 Unified Manager 實例正在監控的所有叢集中的工作負載。
+
+您必須具有應用程式管理員角色。
+
+此選項預設為啟用，但如果您不想使用 Unified Manager 設定和管理工作負載，則可以停用它。
+
+啟用後，此選項會在使用者介面中提供許多新項目：
+
+[cols="2*"]
+|===
+| 新內容 | 地點 
+
+
+ a| 
+配置新工作負載的頁面
+ a| 
+可從「常見任務」>「配置」取得
+
+
+
+ a| 
+建立效能服務等級策略的頁面
+ a| 
+可從 *設定* > *策略* > *效能服務等級* 取得
+
+
+
+ a| 
+建立效能儲存效率策略的頁面
+ a| 
+可從“*設定*”>“*策略*”>“*儲存效率*”存取
+
+
+
+ a| 
+描述目前工作負載效能和工作負載 IOPS 的面板
+ a| 
+可從儀表板取得
+
+|===
+有關這些頁面和此功能的更多信息，請參閱產品中的線上說明。
+
+.步驟
+. 在左側導覽窗格中，按一下「*常規*」>「*功能設定*」。
+. 在「功能設定」頁面中，透過選擇以下選項之一來停用或啟用基於政策的儲存管理：
++
+[cols="2*"]
+|===
+| 如果你想... | 然後這樣做... 
+
+
+ a| 
+禁用基於策略的儲存管理
+ a| 
+在*基於策略的儲存管理*面板中，將滑桿按鈕向左移動。
+
+
+
+ a| 
+啟用基於策略的儲存管理
+ a| 
+在*基於策略的儲存管理*面板中，將滑桿按鈕向右移動。
+
+|===
+

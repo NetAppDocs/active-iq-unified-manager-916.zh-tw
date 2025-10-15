@@ -1,0 +1,35 @@
+---
+permalink: events/task_schedule_maintenance_window_to_disable_cluster_notifications.html 
+sidebar: sidebar 
+keywords: schedule, maintenance, window, disable, cluster, event, notifications 
+summary: 如果您打算對叢集進行停機，例如，升級叢集或移動其中一個節點，則可以透過排程 Unified Manager 維護視窗來抑制通常在該時間範圍內產生的事件和警報。 
+---
+= 安排維護時段以停用叢集事件通知
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您打算對叢集進行停機，例如，升級叢集或移動其中一個節點，則可以透過排程 Unified Manager 維護視窗來抑制通常在該時間範圍內產生的事件和警報。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+在維護時段期間，仍會產生與該叢集上所有物件相關的事件，但它們不會出現在事件頁面中，並且不會針對這些事件發送任何警報或其他類型的通知。
+
+您輸入的維護視窗時間是基於 Unified Manager 伺服器的時間。
+
+.步驟
+. 在左側導覽窗格中，按一下「儲存管理」>「叢集設定」。
+. 在叢集的*維護模式*列中，選擇滑桿按鈕並將其向右移動。
++
+顯示日曆視窗。
+
+. 選擇維護視窗的開始和結束日期和時間，然後按一下「*套用*」。
++
+滑桿按鈕旁邊會出現「已排程」訊息。
+
+
+
+當達到開始時間時，叢集進入維護模式並產生「物件維護視窗已開始」事件。

@@ -1,0 +1,40 @@
+---
+permalink: data-protection/task_quiesce_protection_relationship_from_health_volume_details.html 
+sidebar: sidebar 
+keywords: quiesce, protection, relationship, volume, health details page 
+summary: 您可以停止保護關係以暫時阻止資料傳輸的發生。當您想要建立包含資料庫的SnapMirror目標磁碟區的 Snapshot 副本時，您可能會停頓關係，並且您希望確保其內容在 Snapshot 副本期間保持穩定。 
+---
+= 從卷/健康詳情頁暫停保護關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以停止保護關係以暫時阻止資料傳輸的發生。當您想要建立包含資料庫的SnapMirror目標磁碟區的 Snapshot 副本時，您可能會停頓關係，並且您希望確保其內容在 Snapshot 副本期間保持穩定。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+* 您必須已經設定了工作流程自動化。
+
+
+在下列情況下不會顯示靜默操作：
+
+* 如果 RBAC 設定不允許此操作，例如，如果您只有操作員權限
+* 當磁碟區 ID 未知時，例如，當您具有群集間關係且尚未發現目標群集時
+* 當您尚未配對 Workflow Automation 和 Unified Manager 時
+
+
+.步驟
+. 在「*Volume / Health*」詳細資料頁面的「*Protection*」標籤中，右鍵點選拓撲視圖中要靜止的保護關係的關係。
+. 從選單中選擇*靜默*。
+. 點選“是”繼續。
++
+靜默作業的狀態顯示在磁碟區/健康詳情頁面的頂部，同時顯示作業詳情的連結。
+
+. 點擊「查看詳細資料」連結前往「工作」詳細資料頁面，查看更多詳細資料和工作進度。
+. *可選：*按一下瀏覽器上的「後退」箭頭返回「*Volume / Health*」詳細資料頁面。
++
+當所有作業任務成功完成後，靜默作業即完成。
+
+

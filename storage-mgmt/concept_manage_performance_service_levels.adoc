@@ -1,0 +1,267 @@
+---
+permalink: storage-mgmt/concept_manage_performance_service_levels.html 
+sidebar: sidebar 
+keywords: manage, performance service level, PSL, User-defined, system-defined PSL, bursty, Database PSL, extreme PSL, beyond extreme PSL 
+summary: 效能服務水準計算和管理。 
+---
+= 性能服務水平
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+效能服務等級 (PSL) 可讓您定義工作負載的效能和儲存目標。您可以在最初建立工作負載時將 PSL 指派給工作負載，也可以在之後透過編輯工作負載來指派 PSL。
+
+儲存資源的管理和監控基於服務等級目標（SLO）。 SLO 由基於所需效能和容量的服務等級協定定義。在 Unified Manager 中，SLO 是指在NetApp儲存體上執行的應用程式的 PSL 定義。儲存服務根據底層資源的效能和利用率進行區分。  PSL 是對儲存服務目標的描述。 PSL 使儲存提供者能夠指定工作負載的效能和容量目標。當您在工作負載上指派 PSL 時， ONTAP上的對應工作負載將由其效能和容量目標進行管理。每個 PSL 都受峰值、預期和絕對最小 IOP 以及預期延遲的控制。
+
+Unified Manager 具有以下類型的 PSL：
+
+* *系統定義*：Unified Manager 提供了一些無法變更的固定策略。這些預定義的 PSL 是：
++
+** 極致性能
+** 表現
+** 價值
++
+極限效能、效能和價值 PSL 適用於資料中心中的大多數常見儲存工作負載。
+
++
+Unified Manager 也為資料庫應用程式提供三種效能服務等級。這些是支援突發 IOPS 的極高效能 PSL，適用於具有最高吞吐量需求的資料庫應用程式。
+
+** 資料庫日誌的極致
+** 資料庫共享資料的極致
+** 資料庫資料的極致
+
+
+* *使用者定義*：如果預先定義的效能服務等級無法滿足您的要求，那麼您可以建立新的 PSL 來滿足您的需求。有關信息，請參閱link:../storage-mgmt/task_create_and_edit_psls.html["建立和編輯效能服務級別"]。
+* *超越極限*：超越極限 PSL 是系統建議的 PSL，建議用於需要高於極限的 IOP 的工作負載。根據工作負載的 IOPS、容量和延遲進行內部分析，並在「儲存」>「工作負載」>「所有工作負載」畫面上為每個工作負載推薦一個 Beyond Extreme PSL。您可以將 PSL 應用於工作負載以確保最佳效能。
++
+工作負載的 IOP 參數是根據工作負載行為動態產生的，並以以下格式附加到 Beyond Extreme PSL 的名稱中 `Beyond Extreme <number-(peak IOPS/TB)> <number(expected IOPS/TB)>`。例如，如果系統確定工作負載的峰值和預期 IOP 為 `106345`和 `37929`分別為工作負載產生的 Beyond Extreme PSL 命名為 `Beyond Extreme 106345 37929`。雖然這些 PSL 是系統建議的，但當您將它們指派給工作負載時，這些 PSL 會被標記為 `User-defined`在類型中。
+
+
+
+
+
+== 透過分配 PSL 來管理工作負載
+
+您可以從「*策略*」>「*效能服務等級*」頁面存取 PSL，也可以使用儲存提供者 API 存取。透過為儲存工作負載指派 PSL 來管理儲存工作負載非常方便，因為您不必單獨管理儲存工作負載。任何修改也可以透過重新分配另一個 PSL 來管理，而不是單獨管理它們。  Unified Manager 可協助您根據內部評估和建議為工作負載指派 PSL。
+
+有關將系統建議的 PSL 指派給工作負載的信息，請參閱link:..//storage-mgmt/concept_assign_policies_on_workloads.html#assign-system-recommended-psls-to-workloads["將系統建議的 PSL 分配給工作負載"]
+
+效能服務等級頁面列出了可用的 PSL 策略，並允許您新增、編輯和刪除它們。
+
+
+NOTE: 您不能修改系統定義或目前指派給工作負載的 PSL。您無法刪除已指派給工作負載的 PSL，或它是唯一可用的 PSL。
+
+此頁面顯示以下資訊：
+
+|===
+| 場地 | 描述 
+
+
+ a| 
+Name
+ a| 
+PSL 的名稱。
+
+
+
+ a| 
+類型
+ a| 
+該策略是系統定義的還是使用者定義的。
+
+
+
+ a| 
+預期 IOPS/TB
+ a| 
+應用程式預計在 LUN 或檔案共用上執行的最小 IOPS 數。預期 IOPS 根據分配的儲存物件大小指定分配的最小預期 IOPS。
+
+
+
+ a| 
+峰值 IOPS/TB
+ a| 
+應用程式在 LUN 或檔案共用上可以執行的最大 IOPS 數。峰值 IOPS 根據分配的儲存物件大小或使用的儲存物件大小指定可能分配的最大 IOPS。
+
+峰值 IOPS 基於分配策略。分配策略是已分配空間或已使用空間。當分配策略設定為allocated-space時，峰值IOPS是根據儲存物件的大小來計算的。當分配策略設定為已使用空間時，峰值 IOPS 是根據儲存物件中儲存的資料量計算的，同時考慮儲存效率。預設情況下，分配策略設定為已使用空間。
+
+
+
+ a| 
+絕對最小 IOPS
+ a| 
+當預期 IOPS 小於此值時，絕對最小 IOPS 將用作覆蓋。系統定義的PSL的預設值如下：
+
+* 極限表現：如果預期 IOPS >= 6144/TB，則絕對最小 IOPS = 1000
+* 效能：如果預期 IOPS >= 2048/TB 且 < 6144/TB，則絕對最小 IOPS = 500
+* 值：如果預期 IOPS >= 128/TB 且 < 2048/TB，則絕對最小 IOPS = 75
+
+
+系統定義的資料庫 PSL 的預設值如下：
+
+* 資料庫日誌的極限：如果預期 IOPS >= 22528，則絕對最小 IOPS = 4000
+* 資料庫共享資料的極限：如果預期 IOPS >= 16384，則絕對最小 IOPS = 2000
+* 資料庫資料的極端情況：如果預期 IOPS >= 12288，則絕對最小 IOPS = 2000
+
+
+自訂 PSL 的絕對最小 IOPS 的較高值最大可以為 75000。較低值的計算方法如下：
+
+1000/預期延遲
+
+
+
+ a| 
+預期延遲
+ a| 
+儲存 IOPS 的預期延遲（以每次操作的毫秒數 (ms/op) 為單位）。
+
+
+
+ a| 
+容量
+ a| 
+叢集中可用和已使用的總容量。
+
+
+
+ a| 
+工作負載
+ a| 
+已分配 PSL 的儲存工作負載的數量。
+
+|===
+有關峰值 IOPS 和預期 IOPS 如何幫助在ONTAP叢集上實現一致的差異化效能的信息，請參閱以下知識庫文章：https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/What_is_Performance_Budgeting%3F["什麼是績效預算？"]
+
+
+
+=== 因工作負載超出 PSL 定義的閾值而產生的事件
+
+請注意，如果工作負載在前一小時內有 30% 的時間超過預期延遲值，Unified Manager 將產生以下事件之一來通知您潛在的效能問題：
+
+* 工作負載卷延遲閾值超出效能服務等級策略所定義的範圍
+* 工作負載 LUN 延遲閾值已超出效能服務等級策略所定義的範圍。
+
+
+您可能需要分析工作負載以查看導致較高延遲值的原因。
+
+有關詳細信息，請參閱以下連結：
+
+* link:../events/reference_volume_events.html#impact-area-performance["成交量事件"]
+* link:../performance-checker/concept_what_happens_when_performance_threshold_policy_is_breached.html["當違反績效閾值策略時會發生什麼"]
+* link:..//performance-checker/concept_how_unified_manager_uses_workload_response_time.html["Unified Manager 如何使用工作負載延遲來識別效能問題"]
+* link:../performance-checker/concept_what_performance_events_are.html["什麼是表演活動"]
+
+
+
+
+=== 系統定義的 PSL
+
+下表提供了有關係統定義的 PSL 的資訊：
+
+|===
+| 性能服務水平 | 描述和用例 | 預期延遲（毫秒/操作） | 峰值 IOPS | 預期 IOPS | 絕對最小 IOPS 
+
+
+ a| 
+極致性能
+ a| 
+以極低的延遲提供極高的吞吐量
+
+非常適合延遲敏感的應用程式
+ a| 
+1
+ a| 
+12288
+ a| 
+6144
+ a| 
+1000
+
+
+
+ a| 
+表現
+ a| 
+以低延遲提供高吞吐量
+
+非常適合資料庫和虛擬化應用程式
+ a| 
+2
+ a| 
+4096
+ a| 
+2048
+ a| 
+500
+
+
+
+ a| 
+價值
+ a| 
+提供高儲存容量和適度延遲
+
+非常適合電子郵件、Web 內容、文件共享和備份目標等大容量應用程式
+ a| 
+17
+ a| 
+512
+ a| 
+128
+ a| 
+75
+
+
+
+ a| 
+資料庫日誌的極致
+ a| 
+以最低的延遲提供最大的吞吐量。
+
+非常適合支援資料庫日誌的資料庫應用程式。由於資料庫日誌極為突發且對日誌記錄的需求不斷增加，因此此 PSL 可提供最高的吞吐量。
+ a| 
+1
+ a| 
+45056
+ a| 
+22528
+ a| 
+4000
+
+
+
+ a| 
+資料庫共享資料的極致
+ a| 
+以最低的延遲提供非常高的吞吐量。
+
+非常適合儲存在公共資料儲存中但跨資料庫共享的資料庫應用程式資料。
+ a| 
+1
+ a| 
+32768
+ a| 
+16384
+ a| 
+2000
+
+
+
+ a| 
+資料庫資料的極致
+ a| 
+以最低的延遲提供高吞吐量。
+
+非常適合資料庫應用程式數據，例如資料庫表格資訊和元數據。
+ a| 
+1
+ a| 
+24576
+ a| 
+12288
+ a| 
+2000
+
+|===

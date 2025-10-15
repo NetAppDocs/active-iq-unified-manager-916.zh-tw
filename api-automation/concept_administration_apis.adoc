@@ -1,0 +1,86 @@
+---
+permalink: api-automation/concept_administration_apis.html 
+sidebar: sidebar 
+keywords: perform, administrative, tasks 
+summary: 您可以使用管理類別下的 API 來修改備份設定、驗證備份檔案資訊和叢集證書，也可以將ONTAP叢集作為Active IQ Unified Manager資料來源進行管理。 
+---
+= 使用 API 執行管理任務
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 `administration`類別來修改備份設定、驗證備份檔案資訊和叢集證書，以及將ONTAP叢集作為Active IQ Unified Manager資料來源進行管理。
+
+[NOTE]
+====
+您必須具有應用程式管理員角色才能執行這些操作。您也可以使用 Unified Manager Web UI 設定這些設定。
+
+====
+[cols="3*"]
+|===
+| HTTP 動詞 | 小路 | 描述 
+
+
+ a| 
+`GET`
+
+`PATCH`
+ a| 
+`/admin/backup-settings`
+
+`/admin/backup-settings`
+ a| 
+您可以使用 `GET`方法查看 Unified Manager 中預設配置的備份計畫的設定。您可以驗證以下內容：
+
+* 計劃是否啟用或停用
+* 計劃備份的頻率（每日或每週）
+* 備份時間
+* 應用程式中應保留的最大備份檔案數量
+
+
+備份時間為伺服器時區。
+
+預設情況下，資料庫備份設定在 Unified Manager 上可用，您無法建立備份計畫。但是，您可以使用 `PATCH`方法來修改預設值。
+
+
+
+ a| 
+`GET`
+ a| 
+`/admin/backup-file-info`
+ a| 
+每次修改 Unified Manager 的備份計畫時都會產生備份轉儲檔案。您可以使用此方法來驗證備份檔案是否根據修改後的備份設定生成，以及檔案上的資訊是否與修改後的設定相符。
+
+
+
+ a| 
+`GET`
+ a| 
+`/admin/datasource-certificate`
+ a| 
+您可以使用此方法從信任庫中查看資料來源（叢集）憑證。在將ONTAP叢集新增為 Unified Manager 資料來源之前，需要先驗證憑證。
+
+
+
+ a| 
+`GET`
+
+`POST`
+
+`PATCH`
+
+`DELETE`
+ a| 
+`/admin/datasources/clusters`
+
+`/admin/datasources/clusters/\{key}`
+ a| 
+您可以使用 `GET`方法來檢索由 Unified Manager 管理的資料來源（ONTAP叢集）的詳細資訊。
+
+您也可以將新叢集新增至 Unified Manager 作為資料來源。要新增集群，您必須知道其主機名稱、使用者名稱和密碼。
+
+若要修改和刪除由 Unified Manager 作為資料來源管理的叢集，請使用ONTAP叢集金鑰。
+
+|===

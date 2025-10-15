@@ -1,0 +1,29 @@
+---
+permalink: health-checker/task_configure_windows_host_machine.html 
+sidebar: sidebar 
+keywords: netapp, snapshot copy, copies windows, configure, windows host machine 
+summary: 您需要先設定 Windows 主機，然後才能使用NetApp Snapshot 備份和還原Active IQ Unified Manager。若要在 Windows 主機上啟動 Microsoft iSCSI 啟動器，請在搜尋列中輸入“iscsi”，然後按一下 iSCSI 啟動器。 
+---
+= 配置 Windows 主機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您需要先設定 Windows 主機，然後才能使用NetApp Snapshot 備份和還原Active IQ Unified Manager。若要在 Windows 主機上啟動 Microsoft iSCSI 啟動器，請在搜尋列中輸入“iscsi”，然後按一下 *iSCSI Initiator*。
+
+.開始之前
+您應該清理主機上的所有先前配置。
+
+如果您嘗試在全新安裝的 Windows 上啟動 iSCSI 啟動器，系統會提示您確認，確認後將顯示「iSCSI 屬性」對話方塊。如果是現有的 Windows 安裝，則會顯示「iSCSI 屬性」對話框，其中的目標處於非活動狀態或正在嘗試連線。因此，您需要確保刪除 Windows 主機上的所有先前配置。
+
+.步驟
+. 清理主機上的所有先前配置。
+. 發現目標門戶。
+. 連接到目標門戶。
+. 使用多路徑連接到目標入口網站。
+. 發現這兩個 LIF。
+. 發現在 Windows 機器中配置為裝置的 LUN。
+. 在 Windows 中將發現的 LUN 設定為新的磁碟區磁碟機。
+

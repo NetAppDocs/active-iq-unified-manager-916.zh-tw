@@ -1,0 +1,19 @@
+---
+permalink: reporting/task_sort_data.html 
+sidebar: sidebar 
+keywords: sort, data 
+summary: 若要對結果進行排序，請按一下某一列並指示升序或降序。對資料進行排序可以確定報告所需資訊的優先順序。 
+---
+= 對資料進行排序
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要對結果進行排序，請按一下某一列並指示升序或降序。對資料進行排序可以確定報告所需資訊的優先順序。
+
+.步驟
+. 點擊列的頂部對結果進行排序，以便最重要的資訊顯示在視圖的頂部。
+. 命名未儲存的視圖以儲存您的變更。
+

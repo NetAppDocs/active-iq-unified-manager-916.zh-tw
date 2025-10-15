@@ -1,0 +1,14 @@
+---
+permalink: data-protection/reference_description_of_protection_relationships_window.html 
+sidebar: sidebar 
+keywords: description, protect, relationships, windows, dialog boxes 
+summary: 您可以查看和管理與保護相關的詳細信息，例如資源池、SVM 關聯和保護作業。您可以使用適當的「健康閾值」頁面來設定聚合、磁碟區和關係的全域健康閾值。 
+---
+= 保護關係視窗和對話框的描述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看和管理與保護相關的詳細信息，例如資源池、SVM 關聯和保護作業。您可以使用適當的「健康閾值」頁面來設定聚合、磁碟區和關係的全域健康閾值。

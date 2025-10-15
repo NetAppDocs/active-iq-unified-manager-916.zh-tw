@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_work_with_reports.html 
+sidebar: sidebar 
+keywords: work, reports 
+summary: 了解如何尋找庫存頁面視圖並將其自訂為可共享的計劃報告。 
+---
+= 使用報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解如何尋找庫存頁面視圖並將其自訂為可共享的計劃報告。

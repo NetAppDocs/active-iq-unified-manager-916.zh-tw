@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_monitor_performance_using_performance_explorer_pages.html 
+sidebar: sidebar 
+keywords: monitoring, performance, explorer, pages 
+summary: 效能資源管理器頁面顯示有關叢集中每個物件的效能的詳細資訊。此頁面提供了所有叢集物件效能的詳細視圖，可讓您選擇和比較不同時間段內特定物件的效能資料。 
+---
+= 使用效能資源管理器頁面監視效能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+效能資源管理器頁面顯示有關叢集中每個物件的效能的詳細資訊。此頁面提供了所有叢集物件效能的詳細視圖，可讓您選擇和比較不同時間段內特定物件的效能資料。
+
+您還可以評估所有物件的整體效能，並以並排格式比較物件效能資料。

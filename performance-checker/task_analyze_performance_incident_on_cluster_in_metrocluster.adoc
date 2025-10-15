@@ -1,0 +1,52 @@
+---
+permalink: performance-checker/task_analyze_performance_incident_on_cluster_in_metrocluster.html 
+sidebar: sidebar 
+keywords: analyze, dynamic, performance, event, cluster, metrocluster, configuration 
+summary: 您可以使用 Unified Manager 分析MetroCluster配置中偵測到效能事件的叢集。您可以識別叢集名稱、事件偵測時間以及所涉及的霸凌者和受害者工作負載。 
+---
+= 分析MetroCluster配置中叢集的動態效能事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Unified Manager 分析MetroCluster配置中偵測到效能事件的叢集。您可以識別叢集名稱、事件偵測時間以及所涉及的_bully_和_victim_工作負載。
+
+.開始之前
+* 您必須具有操作員、應用程式管理員或儲存管理員角色。
+* MetroCluster配置必須有新的、已確認的或過時的效能事件。
+* MetroCluster配置中的兩個叢集必須由同一個 Unified Manager 實例監控。
+
+
+.步驟
+. 顯示*活動詳情*頁面以查看活動的資訊。
+. 查看事件描述以了解所涉及的工作負載的名稱以及所涉及的工作負載的數量。
++
+在此範例中， MetroCluster資源圖示為紅色，表示MetroCluster資源處於爭用狀態。將遊標放在圖示上即可顯示該圖示的描述。
+
++
+image::../media/opm_mcc_incident_summary_png.gif[MetroCluster配置的效能事件摘要]
+
+. 記下叢集名稱和事件偵測時間，您可以使用它們來分析夥伴叢集上的效能事件。
+. 在圖表中，查看_受害者_工作負載以確認其回應時間高於效能閾值。
++
+在此範例中，受害者工作負載顯示在懸停文字中。延遲圖表從高層次顯示了所涉及的受害工作負載的一致延遲模式。即使受害工作負載的異常延遲觸發了該事件，一致的延遲模式可能表明工作負載在其預期範圍內執行，但 I/O 的峰值增加了延遲並觸發了該事件。
+
++
+image::../media/opm_mcc_incident_victim_workloads_png.gif[MetroCluster配置的效能事件中的受害者工作負載]
+
++
+如果您最近在存取這些磁碟區工作負載的用戶端上安裝了應用程序，並且該應用程式會向它們發送大量 I/O，那麼您可能會預期它們的延遲會增加。如果工作負載的延遲恢復到預期範圍內，事件狀態變為過時，並保持此狀態超過 30 分鐘，您可能可以忽略該事件。如果事件正在進行，並且保持新狀態，您可以進一步調查以確定是否有其他問題導致了該事件。
+
+. 在工作負載吞吐量圖表中，選擇 *Bully Workloads* 來顯示負載較大的工作負載。
++
+存在霸凌工作負載表示該事件可能是由於本地叢集上的一個或多個工作負載過度利用MetroCluster資源而導致的。欺負工作負載的寫入吞吐量（MB/s）偏差較大。
+
++
+此圖表從總體上顯示了工作負載的寫入吞吐量（MB/s）模式。您可以查看寫入 MB/s 模式來識別異常吞吐量，這可能表示工作負載過度利用了MetroCluster資源。
+
++
+如果事件中不涉及任何霸凌工作負載，則該事件可能是由叢集之間的連結的健康問題或夥伴叢集上的效能問題引起的。您可以使用 Unified Manager 檢查MetroCluster配置中兩個叢集的運作狀況。您也可以使用 Unified Manager 檢查和分析合作夥伴叢集上的效能事件。
+
+

@@ -1,0 +1,53 @@
+---
+permalink: health-checker/task_view_details_about_cifs_shares.html 
+sidebar: sidebar 
+keywords: smb, cifs, view, shares, details 
+summary: '您可以查看有關所有 SMB/CIFS 共享的詳細信息，例如共享名稱、連接路徑、包含的物件、安全性設定以及為共享定義的匯出策略。使用「運作狀況：所有 SMB 共用」視圖查看所有受監控叢集上的所有 SMB 共用，並使用「儲存虛擬機器/運作狀況詳細資料」頁面查看特定儲存虛擬機器 (SVM) 上的所有 SMB 共用。' 
+---
+= 查看有關 SMB/CIFS 共享的詳細信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看有關所有 SMB/CIFS 共享的詳細信息，例如共享名稱、連接路徑、包含的物件、安全性設定以及為共享定義的匯出策略。使用「運作狀況：所有 SMB 共用」視圖查看所有受監控叢集上的所有 SMB 共用，並使用「儲存虛擬機器/運作狀況詳細資料」頁面查看特定儲存虛擬機器 (SVM) 上的所有 SMB 共用。
+
+.開始之前
+* 必須在叢集上啟用 CIFS 許可證。
+* 必須設定服務於 SMB/CIFS 共享的網路介面。
+* 您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+
+[NOTE]
+====
+資料夾中的共享不顯示。
+
+====
+.步
+. 在左側導覽窗格中，根據您要查看所有 SMB/CIFS 共用還是僅查看特定 SVM 的共用，請執行下列步驟。
++
+[cols="2*"]
+|===
+| 到... | 請依照以下步驟操作... 
+
+
+ a| 
+查看所有 SMB/CIFS 共享
+ a| 
+按一下“儲存”>“SMB 共用”
+
+
+
+ a| 
+查看單一 SVM 的 SMB/CIFS 共享
+ a| 
+.. 按一下“儲存”>“儲存虛擬機器”
+.. 按一下要查看其 SMB/CIFS 共用詳細資訊的 SVM。
+.. 在儲存虛擬機器/運作狀況詳細資料頁面中，按一下 *SMB 共用* 標籤。
+
+
+|===
+
+
+有關詳細信息，請參閱 link:../api-automation/concept_provision_file_share.html["使用 API 調配 CIFS 和 NFS 檔案共享"]。

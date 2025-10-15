@@ -1,0 +1,48 @@
+---
+permalink: health-checker/task_configure_backup_location_for_windows_snapshot_backup.html 
+sidebar: sidebar 
+keywords: configure, backup, location, windows, snapshot copy, copies 
+summary: 在 Windows 上備份 Unified Manager 後，您應該設定用於儲存 Snapshot 副本的磁碟區。 
+---
+= 配置 Windows 的備份位置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 Windows 上備份 Unified Manager 後，您應該設定用於儲存 Snapshot 副本的磁碟區。
+
+.開始之前
+叢集、儲存虛擬機器和磁碟區必須符合以下要求：
+
+* 集群要求：
++
+** 必須安裝ONTAP 9.3 或更高版本
+** 它應該在地理位置上靠近 Unified Manager 伺服器
+** 由 Unified Manager 監控
+
+
+* 儲存虛擬機器需求：
++
+** ONTAP叢集上的 iSCSI 連接
+** 必須為配置的機器啟用 iSCSI 協議
+** 您應該有一個專用捲和 LUN 用於備份配置。所選卷應該只包含一個 LUN，而不包含任何其他內容。
+** LUN 的大小應至少為 9.9 Active IQ Unified Manager中預期處理的資料大小的兩倍。
++
+這也對體積提出了相同的尺寸要求。
+
+** 確保選擇了“所有讀取/寫入訪問”
+** 確保在匯出策略中將超級使用者存取權限設定為“any”
+
+
+* 捲和 LUN 要求：
++
+** 該磁碟區的大小至少應為 Unified Manager MySQL 資料目錄的兩倍。
+** 安全模式必須設定為 Windows
+** 必須停用本機快照策略
+** 應啟用磁碟區自動調整功能
+** 效能服務等級應設定為高IOPS、低延遲的策略，例如“Extreme”
+
+
+

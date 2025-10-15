@@ -1,0 +1,26 @@
+---
+permalink: events/reference_what_suggested_actions_section_displays.html 
+sidebar: sidebar 
+keywords: suggest, actions, section, displays 
+summary: 事件詳細資訊頁面的建議操作部分提供了事件的可能原因並建議了一些操作，以便您可以嘗試自行解決該事件。建議的操作是根據事件類型或已突破的閾值類型自訂的。 
+---
+= “建議的操作”部分顯示的內容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+事件詳細資訊頁面的建議操作部分提供了事件的可能原因並建議了一些操作，以便您可以嘗試自行解決該事件。建議的操作是根據事件類型或已突破的閾值類型自訂的。
+
+此區域僅針對某些類型的事件顯示。
+
+在某些情況下，頁面上會提供*幫助*鏈接，其中引用了許多建議操作的附加信息，包括執行特定操作的說明。某些操作可能涉及使用 Unified Manager、 ONTAP System Manager、 OnCommand Workflow Automation、 ONTAP CLI 指令或這些工具的組合。
+
+您應該將此處建議的操作視為解決此事件的唯一指導。您為解決此事件所採取的措施應基於您的環境背景。
+
+如果要更詳細地分析物件和事件，請按一下「分析工作負載」按鈕以顯示「工作負載分析」頁面。
+
+Unified Manager 可以徹底診斷某些事件並提供單一解決方案。當可用時，這些解析度將顯示一個「修復」按鈕。按一下此按鈕可讓 Unified Manager 修復導致該事件的問題。
+
+對於Active IQ平台事件，本部分可能包含指向NetApp知識庫文章（如果有）的鏈接，其中描述了問題和可能的解決方案。在沒有外部網路存取權限的網站中，知識庫文章的 PDF 會在本機開啟；該 PDF 是您手動下載至 Unified Manager 實例的規則檔案的一部分。

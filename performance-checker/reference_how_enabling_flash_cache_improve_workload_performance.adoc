@@ -1,0 +1,24 @@
+---
+permalink: performance-checker/reference_how_enabling_flash_cache_improve_workload_performance.html 
+sidebar: sidebar 
+keywords: enabling, flash cache, node, improve, workload, performance 
+summary: 您可以透過在叢集中的每個節點上啟用 Flash Cache™ 智慧資料快取來提高工作負載效能。 
+---
+= 在節點上啟用快閃記憶體如何提高工作負載效能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以透過在叢集中的每個節點上啟用 Flash Cache™ 智慧資料快取來提高工作負載效能。
+
+快閃記憶體模組（或基於 PCIe 的效能加速模組）透過充當智慧外部讀取快取來優化隨機讀取密集型工作負載的效能。此硬體與ONTAP的WAFL外部快取軟體元件協同工作。
+
+在 Unified Manager 的「事件詳細資料」頁面上，代表爭用聚合的叢集元件圖示以紅色突出顯示。圖示下方的括號中是聚合的名稱，用於標識聚合。您可以在聚合所在的節點上啟用快閃記憶體。
+
+您可以使用ONTAP System Manager 或ONTAP指令來查看 Flash Cache 是否已安裝或啟用，如果尚未啟用，請啟用它。以下命令指示特定節點上是否啟用了 Flash Cache： `*cluster::> run local options flexscale.enable*`
+
+有關 Flash Cache 及其使用要求的更多信息，請參閱以下技術報告：
+
+https://www.netapp.com/pdf.html?item=/media/19754-tr-3832.pdf["技術報告 3832：快閃記憶體快取最佳實務指南"^]

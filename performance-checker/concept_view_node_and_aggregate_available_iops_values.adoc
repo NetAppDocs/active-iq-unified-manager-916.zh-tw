@@ -1,0 +1,25 @@
+---
+permalink: performance-checker/concept_view_node_and_aggregate_available_iops_values.html 
+sidebar: sidebar 
+keywords: view, node, aggregate, available, iops, values 
+summary: 您可以監控叢集中所有節點或所有聚合的可用 IOPS 值，也可以查看單一節點或聚合的詳細資訊。 
+---
+= 查看節點並聚合可用 IOPS 值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以監控叢集中所有節點或所有聚合的可用 IOPS 值，也可以查看單一節點或聚合的詳細資訊。
+
+可用的 IOPS 值顯示在效能清單頁面和節點和聚合的效能資源管理器頁面圖表中。例如，在節點/效能資源管理器頁面中檢視節點時，您可以從清單中選擇「可用 IOPS」計數器圖表，以便比較該節點和該節點上的多個聚合的可用 IOPS 值。
+
+image::../media/available_iops_zoom.gif[一個 UI 螢幕截圖，顯示如何在節點/效能資源管理器頁面中查看節點並從清單中選擇「可用 IOPS」。]
+
+監控可用的 IOPS 計數器可讓您識別：
+
+* 具有最大可用 IOPS 值的節點或聚合有助於確定未來工作負載的部署位置。
+* 具有最小可用 IOPS 值的節點或聚合，用於確定您應該監控的潛在未來效能問題的資源。
+* 聚合上可用 IOPS 值較小的最繁忙的捲和 LUN。
+

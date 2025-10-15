@@ -1,0 +1,69 @@
+---
+permalink: performance-checker/concept_understand_events_from_adaptive_qos_policies.html 
+sidebar: sidebar 
+keywords: understand, events, adaptive, qos, policies, defined, block, size 
+summary: 自適應 QoS 策略群組根據磁碟區大小自動擴展吞吐量上限或下限，並在磁碟區大小變化時保持 IOPS 與 TB 的比率。從ONTAP 9.5 開始，您可以在 QoS 策略中指定區塊大小，以便同時有效地套用 MB/s 閾值。 
+---
+= 了解具有定義區塊大小的自適應 QoS 策略中的事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+自適應 QoS 策略群組根據磁碟區大小自動擴展吞吐量上限或下限，並在磁碟區大小變化時保持 IOPS 與 TB 的比率。從ONTAP 9.5 開始，您可以在 QoS 策略中指定區塊大小，以便同時有效地套用 MB/s 閾值。
+
+在自適應 QoS 策略中分配 IOPS 閾值僅對每個工作負載中發生的操作數量進行限制。根據產生工作負載的用戶端上設定的區塊大小，某些 IOPS 包含更多數據，因此給處理作業的節點帶來更大的負擔。
+
+工作負載的 MB/s 值是使用下列公式產生的：
+
+[listing]
+----
+MB/s = (IOPS * Block Size) / 1000
+----
+如果工作負載平均為 3,000 IOPS，且用戶端上的區塊大小設定為 32 KB，則該工作負載的有效 MB/s 為 96。如果相同的工作負載平均為 3,000 IOPS，且用戶端上的區塊大小設定為 48 KB，則該工作負載的有效 MB/s 為 144。您可以看到，當區塊大小較大時，節點處理的資料增加了 50%。
+
+讓我們來看看具有定義區塊大小的以下自適應 QoS 策略，以及如何根據客戶端上設定的區塊大小觸發事件。
+
+建立策略並將峰值吞吐量設定為 2,500 IOPS/TB，區塊大小為 32KB。對於已使用容量為 1 TB 的捲，這實際上將 MB/s 閾值設為 80 MB/s ((2500 IOPS * 32KB) / 1000)。請注意，當吞吐量值比定義的閾值低 10% 時，Unified Manager 會產生警告事件。在以下情況下會產生事件：
+
+|===
+| 已用容量 2+| 當吞吐量超過此數量時會產生事件... 
+
+
+|  | 每秒輸入/輸出次數 | MB/秒 
+
+
+ a| 
+1TB
+ a| 
+2,250 IOPS
+ a| 
+72 MB/秒
+
+
+
+ a| 
+2TB
+ a| 
+4,500 IOPS
+ a| 
+144 MB/秒
+
+
+
+ a| 
+5TB
+ a| 
+11,250 IOPS
+ a| 
+360MB/秒
+
+|===
+如果磁碟區使用 2TB 可用空間，IOPS 為 4,000，且用戶端上的 QoS 區塊大小設定為 32KB，則 MB/ps 吞吐量為 128 MB/s ((4,000 IOPS * 32 KB) / 1000)。在這種情況下不會產生任何事件，因為 4,000 IOPS 和 128 MB/s 均低於使用 2 TB 空間的捲的閾值。
+
+如果磁碟區使用 2TB 可用空間，IOPS 為 4,000，且用戶端上的 QoS 區塊大小設定為 64KB，則 MB/s 吞吐量為 256 MB/s ((4,000 IOPS * 64 KB) / 1000)。在這種情況下，4,000 IOPS 不會產生事件，但 256 MB/s 的 MB/s 值高於 144 MB/s 的閾值，因此會產生事件。
+
+因此，當基於包含區塊大小的自適應 QoS 政策的 MB/s 違規觸發事件時，事件詳細資訊頁面的系統診斷部分將顯示 MB/s 圖表。如果基於自適應 QoS 政策的 IOPS 違規觸發事件，則會在系統診斷部分顯示 IOPS 圖表。如果 IOPS 和 MB/s 都發生違規，您將收到兩個事件。
+
+有關調整 QoS 設定的更多信息，請參閱 https://docs.netapp.com/us-en/ontap/performance-admin/index.html["績效管理概述"]。

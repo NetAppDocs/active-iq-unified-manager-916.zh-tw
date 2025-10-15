@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_run_storage_efficiency_operations_at_less_busy_times.html 
+sidebar: sidebar 
+keywords: run, storage, efficiency, operations, less, busy, times 
+summary: 您可以修改處理儲存效率操作的策略或計劃，以便在受影響的磁碟區工作負載不太繁忙時運行。 
+---
+= 在不太繁忙的時間運行儲存效率操作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以修改處理儲存效率操作的策略或計劃，以便在受影響的磁碟區工作負載不太繁忙時運行。
+
+儲存效率操作可能會佔用大量叢集 CPU 資源，並成為執行作業的磁碟區的負擔。如果在執行儲存效率操作的同時受害磁碟區具有較高的活動性，則其延遲可能會增加並觸發事件。
+
+在事件詳細資料頁面上，系統診斷部分會依活動高峰偏差顯示 QoS 策略群組中的工作負載，以識別霸凌工作負載。如果您看到表格頂部附近顯示“儲存效率”，則這些操作正在欺負受害者工作負載。透過修改效率策略或計劃以在這些工作負載不太繁忙時運行，您可以防止儲存效率操作引起叢集爭用。
+
+您可以使用ONTAP系統管理員來管理效率策略。您可以使用ONTAP指令來管理效率策略和計畫。

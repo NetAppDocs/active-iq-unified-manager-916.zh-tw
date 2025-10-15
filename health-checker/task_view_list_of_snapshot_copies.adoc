@@ -1,0 +1,33 @@
+---
+permalink: health-checker/task_view_list_of_snapshot_copies.html 
+sidebar: sidebar 
+keywords: view, list, Snapshot copies 
+summary: 您可以查看選定磁碟區的 Snapshot 副本清單。您可以使用 Snapshot 副本清單來計算刪除一個或多個 Snapshot 副本後可以回收的磁碟空間量，並且可以根據需要刪除 Snapshot 副本。 
+---
+= 查看 Snapshot 副本列表
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看選定磁碟區的 Snapshot 副本清單。您可以使用 Snapshot 副本清單來計算刪除一個或多個 Snapshot 副本後可以回收的磁碟空間量，並且可以根據需要刪除 Snapshot 副本。
+
+.開始之前
+* 您必須具有操作員、應用程式管理員或儲存管理員角色。
+* 包含 Snapshot 副本的磁碟區必須處於連線狀態。
+
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*磁碟區*」。
+. 在「*Health: All Volumes*」檢視中，選擇包含要檢視的 Snapshot 副本的磁碟區。
+. 在*Volume / Health*詳細資訊頁面中，按一下*Capacity*標籤。
+. 在「*容量*」標籤的「*詳細資料*」窗格中，在其他詳細資料部分中，按一下「*快照副本*」旁的連結。
++
+Snapshot 副本數量是一個顯示 Snapshot 副本清單的連結。
+
+
+
+*相關資訊*
+
+link:../health-checker/reference_health_volume_details_page.html["健康/容量頁面"]

@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/reference_performance_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: performance, cluster, landing page 
+summary: 效能集群登入頁面顯示所選集群的高階效能狀態。透過此頁面，您可以存取所選叢集上儲存物件的每個效能計數器的完整詳細資訊。 
+---
+= 性能集群登陸頁面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+效能集群登入頁面顯示所選集群的高階效能狀態。透過此頁面，您可以存取所選叢集上儲存物件的每個效能計數器的完整詳細資訊。
+
+效能群集登入頁麵包含四個選項卡，將群集詳細資料分為四個資訊區域：
+
+* 摘要頁面
++
+** 叢集事件窗格
+** MB/s 和 IOPS 效能圖表
+** 管理物件窗格
+
+
+* 最佳表演者頁面
+* 資源管理器頁面
+* 資訊頁面
+

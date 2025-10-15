@@ -1,0 +1,33 @@
+---
+permalink: events/reference_power_supplies_events.html 
+sidebar: sidebar 
+keywords: power, supplies, events, impact area, availability 
+summary: 電源事件為您提供有關硬體狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= 電源事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+電源事件為您提供有關硬體狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+一個或多個電源故障(ocumEvtPowerSupplyOneOrMoreFailed)
+ a| 
+事件
+ a| 
+節點
+ a| 
+批判的
+
+|===

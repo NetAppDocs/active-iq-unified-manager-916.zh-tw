@@ -1,0 +1,128 @@
+---
+permalink: events/reference_port_events.html 
+sidebar: sidebar 
+keywords: port, events, impact area, availability, performance 
+summary: 連接埠事件為您提供有關叢集連接埠的狀態，以便您可以監控連接埠上的變更或問題，例如連接埠是否已關閉。 
+---
+= 港口事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+連接埠事件為您提供有關叢集連接埠的狀態，以便您可以監控連接埠上的變更或問題，例如連接埠是否已關閉。
+
+
+
+== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+連接埠狀態關閉（ocumEvtPortStatusDown）
+ a| 
+事件
+ a| 
+節點
+ a| 
+批判的
+
+|===
+
+
+== 影響領域：性能
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+網路連接埠 MB/s 臨界閾值突破（ocumNetworkPortMbpsIncident）
+ a| 
+事件
+ a| 
+港口
+ a| 
+批判的
+
+
+
+ a| 
+網路連接埠 MB/s 警告閾值超出 (ocumNetworkPortMbpsWarning)
+ a| 
+風險
+ a| 
+港口
+ a| 
+警告
+
+
+
+ a| 
+FCP 連接埠 MB/s 臨界閾值突破（ocumFcpPortMbpsIncident）
+ a| 
+事件
+ a| 
+港口
+ a| 
+批判的
+
+
+
+ a| 
+FCP 連接埠 MB/s 警告閾值超出 (ocumFcpPortMbpsWarning)
+ a| 
+風險
+ a| 
+港口
+ a| 
+警告
+
+
+
+ a| 
+網路連接埠利用率臨界閾值被突破（ocumNetworkPortUtilizationIncident）
+ a| 
+事件
+ a| 
+港口
+ a| 
+批判的
+
+
+
+ a| 
+網路連接埠利用率警告閾值超出 (ocumNetworkPortUtilizationWarning)
+ a| 
+風險
+ a| 
+港口
+ a| 
+警告
+
+
+
+ a| 
+FCP 連接埠利用率臨界閾值被突破（ocumFcpPortUtilizationIncident）
+ a| 
+事件
+ a| 
+港口
+ a| 
+批判的
+
+
+
+ a| 
+FCP 連接埠利用率警告閾值超出 (ocumFcpPortUtilizationWarning)
+ a| 
+風險
+ a| 
+港口
+ a| 
+警告
+
+|===

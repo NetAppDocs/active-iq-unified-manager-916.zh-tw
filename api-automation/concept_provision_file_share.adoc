@@ -1,0 +1,452 @@
+---
+permalink: api-automation/concept_provision_file_share.html 
+sidebar: sidebar 
+keywords: provision, cifs, nfs, file, shares 
+summary: '您可以使用Active IQ Unified Manager提供的設定 API 在儲存虛擬機器 (SVM) 上設定 CIFS 共用和 NFS 檔案共用。此組態工作流程詳細說明了在建立文件共用之前檢索 SVM、效能服務等級和儲存效率策略的金鑰的步驟。' 
+---
+= 使用 API 預配 CIFS 和 NFS 檔案共用
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Active IQ Unified Manager提供的設定 API 在儲存虛擬機器 (SVM) 上設定 CIFS 共用和 NFS 檔案共用。此組態工作流程詳細說明了在建立文件共用之前檢索 SVM、效能服務等級和儲存效率策略的金鑰的步驟。
+
+下圖說明了文件共用配置工作流程中的每個步驟。它包括配置 CIFS 共享和 NFS 檔案共享。
+
+image::../media/create_fileshares.gif[建立文件共享]
+
+[NOTE]
+====
+確保以下事項：
+
+* ONTAP叢集已新增至 Unified Manager，並且已取得叢集金鑰。
+* 已在叢集上建立 SVM。
+* SVM 支援 CIFS 和 NFS 服務。如果 SVM 不支援所需的服務，則設定檔共用可能會失敗。
+* FCP 連接埠已上線，可供連接埠設定。
+
+
+====
+. 確定要建立 CIFS 共享的 SVM 上是否有可用的資料 LIF 或存取端點。取得 SVM 上可用存取端點的清單：
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/access-endpoints`
+`/storage-provider/access-endpoints/\{key}`
+
+|===
++
+*範例 cURL*
+
++
+[listing]
+----
+curl -X GET "https://<hostname>/api/storage-provider/access-endpoints?resource.key=7d5a59b3-953a-11e8-8857-00a098dcc959" -H "accept: application/json" -H "Authorization: Basic <Base64EncodedCredentials>"
+----
+. 如果您的存取端點在清單中，則取得存取端點金鑰，否則建立存取端點。
++
+[NOTE]
+====
+確保建立已啟用 CIFS 協定的存取端點。除非您建立了啟用了 CIFS 協定的存取端點，否則配置 CIFS 共用將會失敗。
+
+====
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+郵政
+ a| 
+`/storage-provider/access-endpoints`
+
+|===
++
+*範例 cURL*
+
++
+您必須輸入要建立的存取端點的詳細資訊作為輸入參數。
+
++
+[listing]
+----
+curl -X POST "https://<hostname>/api/storage-provider/access-endpoints" -H "accept: application/json" -H "Content-Type: application/json" -H "Authorization: Basic <Base64EncodedCredentials>"
+{ \"data_protocols\": \"nfs\",
+\"fileshare\": { \"key\": \"cbd1757b-0580-11e8-bd9d-00a098d39e12:type=volume,uuid=f3063d27-2c71-44e5-9a69-a3927c19c8fc\" },
+\"gateway\": \"10.132.72.12\",
+\"ip\": { \"address\": \"10.162.83.26\",
+\"ha_address\": \"10.142.83.26\",
+\"netmask\": \"255.255.0.0\" },
+\"lun\": { \"key\": \"cbd1757b-0580-11e8-bd9d-00a098d39e12:type=lun,uuid=d208cc7d-80a3-4755-93d4-5db2c38f55a6\" },
+\"mtu\": 15000, \"name\": \"aep1\",
+\"svm\": { \"key\": \"cbd1757b-0580-11e8-bd9d-00a178d39e12:type=vserver,uuid=1d1c3198-fc57-11e8-99ca-00a098d38e12\" },
+\"vlan\": 10}"
+----
++
+JSON 輸出顯示一個作業物件鍵，您可以使用它來驗證您建立的存取端點。
+
+. 驗證存取端點：
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+管理伺服器
+ a| 
+得到
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
+. 確定是否必須建立 CIFS 共用或 NFS 檔案共用。若要建立 CIFS 共享，請依照下列子步驟操作：
++
+.. 確定您的 SVM 上是否配置了 CIFS 伺服器，即確定 SVM 上是否建立了 Active Directory 對應。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/active-directories-mappings`
+
+|===
+.. 如果建立了 Active Directory 映射，則取得金鑰，否則在 SVM 上建立 Active Directory 映射。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+郵政
+ a| 
+`/storage-provider/active-directories-mappings`
+
+|===
++
+*範例 cURL*
+
++
+您必須輸入建立 Active Directory 對應的詳細資訊作為輸入參數。
+
++
+[listing]
+----
+curl -X POST "https://<hostname>/api/storage-provider/active-directories-mappings" -H "accept: application/json" -H "Content-Type: application/json" -H "Authorization: Basic <Base64EncodedCredentials>"
+{ \"_links\": {},
+\"dns\": \"10.000.000.000\",
+\"domain\": \"example.com\",
+\"password\": \"string\",
+\"svm\": { \"key\": \"9f4ddea-e395-11e9-b660-005056a71be9:type=vserver,uuid=191a554a-f0ce-11e9-b660-005056a71be9\" },
+\"username\": \"string\"}"
+----
++
+這是一個同步調用，您可以在輸出中驗證 Active Directory 映射的建立。如果發生錯誤，則會顯示錯誤訊息，以便您排除故障並重新執行請求。
+
+
+
+. 取得要在其上建立 CIFS 共用或 NFS 檔案共用的 SVM 的 SVM 金鑰，如_驗證叢集上的 SVM_工作流程主題中所述。
+. 透過執行以下 API 並從回應中檢索金鑰來取得效能服務等級的金鑰。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/performance-service-levels`
+
+|===
++
+[NOTE]
+====
+您可以透過設定 `system_defined`輸入參數 `true`。從輸出中取得要在檔案共用上套用的效能服務等級的金鑰。
+
+====
+. 或者，透過執行以下 API 並從回應中檢索金鑰，取得要在文件共用上套用的儲存效率策略的儲存效率策略金鑰。
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+. 建立文件共享。您可以透過指定存取控制清單和匯出策略來建立同時支援 CIFS 和 NFS 的檔案共用。如果您想要建立文件共用以僅支援磁碟區上的一種協議，則下列子步驟將提供資訊。建立 NFS 共用後，您還可以更新 NFS 檔案共用以包含存取控制清單。有關信息，請參閱“修改儲存工作負載”主題。
++
+.. 若要僅建立 CIFS 共享，請收集有關存取控制清單 (ACL) 的資訊。若要建立 CIFS 共享，請為下列輸入參數提供有效值。對於您指派的每個使用者群組，在設定 CIFS/SMB 共用時都會建立一個 ACL。根據您為 ACL 和 Active Directory 對應輸入的值，在建立 CIFS 共用時決定其存取控制和對應。
++
+*帶有範例值的 cURL 指令*
+
++
+[listing]
+----
+{
+  "access_control": {
+    "acl": [
+      {
+        "permission": "read",
+        "user_or_group": "everyone"
+      }
+    ],
+    "active_directory_mapping": {
+      "key": "3b648c1b-d965-03b7-20da-61b791a6263c"
+    },
+----
+.. 若要僅建立 NFS 檔案共享，請收集有關匯出策略的資訊。若要建立 NFS 檔案共享，請為以下輸入參數提供有效值。根據您的值，匯出策略在建立時會附加到 NFS 檔案共用。
++
+[NOTE]
+====
+在配置 NFS 共用時，您可以透過提供所有必要的值來建立匯出策略，或提供匯出策略金鑰並重複使用現有的匯出策略。如果要重複使用儲存虛擬機器的導出策略，則需要新增匯出策略金鑰。除非您知道金鑰，否則您可以使用 `/datacenter/protocols/nfs/export-policies`API。若要建立新策略，您必須輸入如以下範例所示的規則。對於輸入的規則，API 嘗試透過匹配主機、儲存虛擬機器和規則來搜尋現有的匯出策略。如果存在現有的匯出策略，則使用該策略。否則，將建立新的出口政策。
+
+====
++
+*帶有範例值的 cURL 指令*
+
++
+[listing]
+----
+"export_policy": {
+      "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=export_policy,uuid=1460288880641",
+      "name_tag": "ExportPolicyNameTag",
+      "rules": [
+        {
+          "clients": [
+            {
+              "match": "0.0.0.0/0"
+            }
+----
+
+
++
+配置存取控制清單和匯出策略後，為 CIFS 和 NFS 檔案共用的強制輸入參數提供有效值：
+
+
+
+[NOTE]
+====
+儲存效率策略是建立文件共享的可選參數。
+
+====
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+郵政
+ a| 
+`/storage-provider/file-shares`
+
+|===
+JSON 輸出顯示一個作業物件鍵，您可以使用它來驗證您建立的檔案共用。。使用查詢作業中傳回的作業物件鍵來驗證檔案共用的建立：
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+管理伺服器
+ a| 
+得到
+ a| 
+`/management-server/jobs/\{key}`
+
+|===
+在回應的末尾，您會看到建立的文件共享的金鑰。
+
+[listing]
+----
+
+    ],
+    "job_results": [
+        {
+            "name": "fileshareKey",
+            "value": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=volume,uuid=e581c23a-1037-11ea-ac5a-00a098dcc6b6"
+        }
+    ],
+    "_links": {
+        "self": {
+            "href": "/api/management-server/jobs/06a6148bf9e862df:-2611856e:16e8d47e722:-7f87"
+        }
+    }
+}
+----
+. 透過使用傳回的金鑰運行以下 API 來驗證文件共享的建立：
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/file-shares/\{key}`
+
+|===
++
+JSON 輸出範例
+
++
+您可以看到 `/storage-provider/file-shares`內部呼叫每個函數所需的所有 API 並建立物件。例如，它調用 `/storage-provider/performance-service-levels/`用於指派文件共用上的效能服務等級的 API。
+
++
+[listing]
+----
+{
+    "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=volume,uuid=e581c23a-1037-11ea-ac5a-00a098dcc6b6",
+    "name": "FileShare_377",
+    "cluster": {
+        "uuid": "7d5a59b3-953a-11e8-8857-00a098dcc959",
+        "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=cluster,uuid=7d5a59b3-953a-11e8-8857-00a098dcc959",
+        "name": "AFFA300-206-68-70-72-74",
+        "_links": {
+            "self": {
+                "href": "/api/datacenter/cluster/clusters/7d5a59b3-953a-11e8-8857-00a098dcc959:type=cluster,uuid=7d5a59b3-953a-11e8-8857-00a098dcc959"
+            }
+        }
+    },
+    "svm": {
+        "uuid": "b106d7b1-51e9-11e9-8857-00a098dcc959",
+        "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=vserver,uuid=b106d7b1-51e9-11e9-8857-00a098dcc959",
+        "name": "RRT_ritu_vs1",
+        "_links": {
+            "self": {
+                "href": "/api/datacenter/svm/svms/7d5a59b3-953a-11e8-8857-00a098dcc959:type=vserver,uuid=b106d7b1-51e9-11e9-8857-00a098dcc959"
+            }
+        }
+    },
+    "assigned_performance_service_level": {
+        "key": "1251e51b-069f-11ea-980d-fa163e82bbf2",
+        "name": "Value",
+        "peak_iops": 75,
+        "expected_iops": 75,
+        "_links": {
+            "self": {
+                "href": "/api/storage-provider/performance-service-levels/1251e51b-069f-11ea-980d-fa163e82bbf2"
+            }
+        }
+    },
+    "recommended_performance_service_level": {
+        "key": null,
+        "name": "Idle",
+        "peak_iops": null,
+        "expected_iops": null,
+        "_links": {}
+    },
+    "space": {
+        "size": 104857600
+    },
+    "assigned_storage_efficiency_policy": {
+        "key": null,
+        "name": "Unassigned",
+        "_links": {}
+    },
+    "access_control": {
+        "acl": [
+            {
+                "user_or_group": "everyone",
+                "permission": "read"
+            }
+        ],
+        "export_policy": {
+            "id": 1460288880641,
+            "key": "7d5a59b3-953a-11e8-8857-00a098dcc959:type=export_policy,uuid=1460288880641",
+            "name": "default",
+            "rules": [
+                {
+                    "anonymous_user": "65534",
+                    "clients": [
+                        {
+                            "match": "0.0.0.0/0"
+                        }
+                    ],
+                    "index": 1,
+                    "protocols": [
+                        "nfs3",
+                        "nfs4"
+                    ],
+                    "ro_rule": [
+                        "sys"
+                    ],
+                    "rw_rule": [
+                        "sys"
+                    ],
+                    "superuser": [
+                        "none"
+                    ]
+                },
+                {
+                    "anonymous_user": "65534",
+                    "clients": [
+                        {
+                            "match": "0.0.0.0/0"
+                        }
+                    ],
+                    "index": 2,
+                    "protocols": [
+                        "cifs"
+                    ],
+                    "ro_rule": [
+                        "ntlm"
+                    ],
+                    "rw_rule": [
+                        "ntlm"
+                    ],
+                    "superuser": [
+                        "none"
+                    ]
+                }
+            ],
+            "_links": {
+                "self": {
+                    "href": "/api/datacenter/protocols/nfs/export-policies/7d5a59b3-953a-11e8-8857-00a098dcc959:type=export_policy,uuid=1460288880641"
+                }
+            }
+        }
+    },
+    "_links": {
+        "self": {
+            "href": "/api/storage-provider/file-shares/7d5a59b3-953a-11e8-8857-00a098dcc959:type=volume,uuid=e581c23a-1037-11ea-ac5a-00a098dcc6b6"
+        }
+    }
+}
+----
+

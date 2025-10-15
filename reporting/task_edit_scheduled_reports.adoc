@@ -1,0 +1,35 @@
+---
+permalink: reporting/task_edit_scheduled_reports.html 
+sidebar: sidebar 
+keywords: editing, schedule, reports 
+summary: 報告安排完成後，您可以在「報告安排」頁面上編輯它們。 
+---
+= 編輯計劃報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+報告安排完成後，您可以在「報告安排」頁面上編輯它們。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存管理*」>「*報告計畫*」。
++
+image::../media/scheduled_reports_2.gif[顯示預定報告的 UI 螢幕截圖。]
+
++
+[NOTE]
+====
+如果您擁有適當的權限，您可以變更系統中的任何報告及其時間表。
+
+====
+. 點擊更多圖標image:../media/more_icon.gif[""]您想要更改的時間表。
+. 按一下“*編輯*”。
+. 您可以變更報告計劃的*計劃名稱*、*收件者*清單、*頻率*和*格式*。
+. 完成後，按一下複選標記以儲存變更。
+

@@ -1,0 +1,16 @@
+---
+permalink: config/concept_change_unified_manager_host_name.html 
+sidebar: sidebar 
+keywords: change, unified manager, host, name 
+summary: 在某些時候，您可能會想要變更已安裝 Unified Manager 的系統的主機名稱。例如，您可能想要重新命名主機，以便更輕鬆地按類型、工作群組或受監控的叢集群組識別 Unified Manager 伺服器。 
+---
+= 更改 Unified Manager 主機名
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在某些時候，您可能會想要變更已安裝 Unified Manager 的系統的主機名稱。例如，您可能想要重新命名主機，以便更輕鬆地按類型、工作群組或受監控的叢集群組識別 Unified Manager 伺服器。
+
+更改主機名稱所需的步驟有所不同，取決於 Unified Manager 是在 VMware ESXi 伺服器、Red Hat Linux 伺服器還是 Microsoft Windows 伺服器上執行。

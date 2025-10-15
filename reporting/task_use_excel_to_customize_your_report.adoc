@@ -1,0 +1,54 @@
+---
+permalink: reporting/task_use_excel_to_customize_your_report.html 
+sidebar: sidebar 
+keywords: excel, customize, report 
+summary: '儲存檢視後，您可以以 Excel 工作簿格式 (.xlsx) 下載它。開啟 Excel 檔案時，您可以使用進階 Excel 功能來自訂位報表。' 
+---
+= 使用 Excel 自訂報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+儲存檢視後，您可以以 Excel 工作簿格式 (.xlsx) 下載它。開啟 Excel 檔案時，您可以使用進階 Excel 功能來自訂位報表。
+
+.開始之前
+您只能上傳副檔名為 .xlsx 的 Excel 工作簿檔案。
+
+例如，您可以在報表中使用的一些進階 Excel 功能包括：
+
+* 多列排序
+* 複雜過濾
+* 數據透視表
+* 圖表
+
+
+[NOTE]
+====
+* 下載的 Excel 檔案使用視圖的預設檔名，而不是您儲存的名稱。
++
+** 格式為 `<View Area>-<Day>-<Month>-<Year>-<Hour>-<Minute>-<Second>.xlsx.`
+** 例如，名為 `Volumes-not online`檔案名為 `health-volumes-05-May-2020-19-18-00.xlsx`如果在那天和那個時間保存。
+
+
+* 您可以為 Excel 檔案新增工作表，但不要變更現有工作表。
++
+** 不要更改現有的表格、數據和資訊。相反，將資料複製到您創建的新頁面。
+** 上述規則的例外是您可以在「資料」頁面上建立公式。使用資料頁公式在新頁面上建立圖表。
+** 不要命名新表資料或資訊。
+
+
+* 如果存在自訂的 Excel 文件，則 *報表* > *上傳 Excel* 選單項目旁邊會有一個複選標記。下載 Excel 檔案時，將使用具有自訂的版本。image:../media/upload_excel.png["顯示如何將 Excel 上傳到報表的 UI 螢幕截圖。"]
+
+
+====
+.步驟
+. 開啟您想要用作報表基礎的預設、自訂或已儲存的檢視。
+. 選擇*報表* > *下載 Excel*。
+. 儲存文件。該文件已保存到您的下載資料夾。
+. 在 Excel 中開啟已儲存的檔案。請勿將檔案移至新位置，或如果您在其他位置進行工作，請在上傳檔案之前使用原始檔案名稱將檔案儲存回原始位置。
+. 使用 Excel 功能（例如複雜排序、分層篩選器、資料透視表或圖表）自訂檔案。有關更多信息，請參閱 Microsoft® Excel 文件。
+. 選擇*報表* > *上傳 Excel*並選擇您修改的檔案。最近下載的檔案是從相同檔案位置上傳的。
+. 使用*計劃報告*功能向自己發送測試報告。
+

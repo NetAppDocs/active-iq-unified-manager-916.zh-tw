@@ -1,0 +1,25 @@
+---
+permalink: health-checker/task_delete_scripts.html 
+sidebar: sidebar 
+keywords: delete, scripts 
+summary: 當腳本不再需要或有效時，您可以從 Unified Manager 中刪除該腳本。 
+---
+= 刪除腳本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當腳本不再需要或有效時，您可以從 Unified Manager 中刪除該腳本。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+* 該腳本不得與警報關聯。
+
+
+.步驟
+. 在左側導覽窗格中，按一下「儲存管理」>「腳本」。
+. 在「*腳本*」頁面中，選擇要刪除的腳本，然後按一下「*刪除*」。
+. 在「*警告*」對話方塊中，按一下「*是*」確認刪除。
+

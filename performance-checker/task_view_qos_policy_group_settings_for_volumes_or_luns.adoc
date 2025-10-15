@@ -1,0 +1,31 @@
+---
+permalink: performance-checker/task_view_qos_policy_group_settings_for_volumes_or_luns.html 
+sidebar: sidebar 
+keywords: view, qos, policy, group, settings, applied, specific, volumes, luns 
+summary: 您可以查看已套用至磁碟區和 LUN 的 QoS 原則群組，並且可以連結至效能/QoS 策略群組視圖以顯示每個 QoS 原則的詳細設定設定。 
+---
+= 查看應用於特定磁碟區或 LUN 的 QoS 原則群組設置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以查看已套用至磁碟區和 LUN 的 QoS 原則群組，並且可以連結至效能/QoS 策略群組視圖以顯示每個 QoS 原則的詳細設定設定。
+
+查看應用於磁碟區的 QoS 策略的步驟如下所示。查看 LUN 的此資訊的步驟類似。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*磁碟區*」。
++
+預設顯示“健康狀況：所有磁碟區”視圖。
+
+. 在「檢視」功能表中，選擇「效能：QoS 策略群組中的磁碟區」。
+. 找到您要查看的磁碟區並向右捲動，直到您看到 *QoS 策略群組* 列。
+. 按一下 QoS 策略群組名稱。
++
+根據傳統 QoS 策略、自適應 QoS 策略或使用 Unified Manager 效能服務等級所建立的 QoS 策略，將顯示對應的服務品質頁面。
+
+. 查看 QoS 策略組的詳細設定設定。
+. 點選展開按鈕（image:../media/chevron_down.gif[""] ) 來查看有關該策略組的更多詳細資訊。
+

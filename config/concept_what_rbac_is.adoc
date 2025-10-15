@@ -1,0 +1,14 @@
+---
+permalink: config/concept_what_rbac_is.html 
+sidebar: sidebar 
+keywords: rbac, active iq unified manager, server 
+summary: RBAC（基於角色的存取控制）可以控制誰有權存取Active IQ Unified Manager伺服器中的各種功能和資源。 
+---
+= 什麼是 RBAC
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+RBAC（基於角色的存取控制）可以控制誰有權存取Active IQ Unified Manager伺服器中的各種功能和資源。

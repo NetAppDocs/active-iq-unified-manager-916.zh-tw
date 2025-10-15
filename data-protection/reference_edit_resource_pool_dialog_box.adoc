@@ -1,0 +1,46 @@
+---
+permalink: data-protection/reference_edit_resource_pool_dialog_box.html 
+sidebar: sidebar 
+keywords: edit, resource pool, dialog box 
+summary: 您可以使用「編輯資源池」對話方塊來變更現有資源池的名稱和描述。例如，如果原始名稱和描述不準確或不正確，您可以更改它們以使其更精確。 
+---
+= 編輯資源池對話框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「編輯資源池」對話方塊來變更現有資源池的名稱和描述。例如，如果原始名稱和描述不準確或不正確，您可以更改它們以使其更精確。
+
+
+
+== 文字方塊
+
+您可以使用文字方塊變更所選資源池的以下資訊：
+
+* *資源池名稱*
++
+使您能夠輸入新名稱。
+
+* *描述*
++
+使您能夠輸入新的描述。
+
+
+
+
+
+== 命令按鈕
+
+命令按鈕使您能夠執行以下任務：
+
+* *節省*
++
+儲存資源池名稱和描述的變更。
+
+* *取消*
++
+放棄變更並關閉「編輯資源池」對話方塊。
+
+

@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_manage_and_monitor_groups.html 
+sidebar: sidebar 
+keywords: manage, monitor, groups 
+summary: 您可以在 Unified Manager 中建立群組來管理儲存物件。 
+---
+= 管理和監控群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以在 Unified Manager 中建立群組來管理儲存物件。

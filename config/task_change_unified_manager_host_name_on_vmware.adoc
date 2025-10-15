@@ -1,0 +1,38 @@
+---
+permalink: config/task_change_unified_manager_host_name_on_vmware.html 
+sidebar: sidebar 
+keywords: change, unified manager, virtual, appliance, host name 
+summary: 首次部署 Unified Manager 虛擬設備時，會為網路主機指派名稱。您可以在部署後變更主機名稱。如果變更主機名，也必須重新產生 HTTPS 憑證。 
+---
+= 更改 Unified Manager 虛擬設備主機名
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+首次部署 Unified Manager 虛擬設備時，會為網路主機指派名稱。您可以在部署後變更主機名稱。如果變更主機名，也必須重新產生 HTTPS 憑證。
+
+.開始之前
+您必須以維護使用者身分登入 Unified Manager，或指派應用程式管理員角色才能執行這些任務。
+
+您可以使用主機名稱（或主機 IP 位址）存取 Unified Manager Web UI。如果您在部署期間為網路配置了靜態 IP 位址，那麼您將為網路主機指定名稱。如果您使用 DHCP 配置網絡，則主機名稱應從 DNS 中取得。如果 DHCP 或 DNS 設定不正確，則會自動指派主機名稱「Unified Manager」並將其與安全性憑證關聯。
+
+無論主機名稱為何分配，如果您變更主機名，並打算使用新主機名稱存取 Unified Manager Web UI，則必須產生新的安全性憑證。
+
+如果您使用伺服器的 IP 位址而不是主機名稱存取 Web UI，則變更主機名稱時無需產生新憑證。但是，最佳做法是更新證書，以便證書中的主機名稱與實際主機名稱相符。
+
+如果您在 Unified Manager 中變更主機名，則必須在OnCommand Workflow Automation (WFA) 中手動更新主機名稱。主機名稱不會在 WFA 中自動更新。
+
+直到 Unified Manager 虛擬機器重新啟動後，新憑證才會生效。
+
+.步驟
+. xref:task_generate_an_https_security_certificate_ocf.adoc[產生 HTTPS 安全性憑證]
++
+如果您想要使用新的主機名稱存取 Unified Manager Web UI，則必須重新產生 HTTPS 憑證以將其與新的主機名稱關聯。
+
+. xref:task_restart_unified_manager_virtual_machine.adoc[重新啟動 Unified Manager 虛擬機]
++
+重新產生 HTTPS 憑證後，您必須重新啟動 Unified Manager 虛擬機器。
+
+

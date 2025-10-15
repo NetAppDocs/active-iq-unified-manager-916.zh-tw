@@ -1,0 +1,51 @@
+---
+permalink: health-checker/task_create_volume_where_backups_are_stored.html 
+sidebar: sidebar 
+keywords: configure, snapshot copy, copies location 
+summary: 您可以使用ONTAP系統管理員或ONTAP CLI 來配置在其中一個ONTAP叢集上儲存 Snapshot 副本的磁碟區。 
+---
+= 配置 Snapshot 副本位置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用ONTAP系統管理員或ONTAP CLI 來配置在其中一個ONTAP叢集上儲存 Snapshot 副本的磁碟區。
+
+.開始之前
+叢集、儲存虛擬機器和磁碟區必須符合以下要求：
+
+* 集群要求：
++
+** 必須安裝ONTAP 9.3 或更高版本
+** 它應該在地理位置上靠近 Unified Manager 伺服器
+** 它可以透過 Unified Manager 進行監控，但這不是必要的
+
+
+* 儲存虛擬機器需求：
++
+** 必須設定名稱開關和名稱映射才能使用“檔案”
+** 建立與客戶端用戶對應的本機用戶
+** 確保選擇了“所有讀取/寫入訪問”
+** 確保在匯出策略中將超級使用者存取權限設定為“any”
+** 適用於 Linux 的NetApp快照的 NFS
+** 必須在 NFS 伺服器上啟用 NFSv4，並在用戶端和儲存虛擬機器上指定 NFSv4 ID 網域
+** 該磁碟區的大小至少應為 Unified Manager/opt/netapp/data 目錄的兩倍
++
+使用指令 du -sh /opt/netapp/data/ 檢查目前大小。
+
+
+
+* 音量要求：
++
+** 該磁碟區的大小至少應為 Unified Manager /opt/netapp/data 目錄的兩倍
+** 安全模式必須設定為 UNIX
+** 必須停用本機快照策略
+** 應啟用磁碟區自動調整功能
+** 效能服務等級應設定為高IOPS、低延遲的策略，例如“Extreme”
+
+
+
+
+有關建立 NFS 磁碟區的詳細步驟，請參閱 https://kb.netapp.com/Advice_and_Troubleshooting/Data_Storage_Software/ONTAP_OS/How_to_configure_NFSv4_in_Cluster-Mode["如何在ONTAP 9 中設定 NFSv4"]以及 http://docs.netapp.com/ontap-9/topic/com.netapp.doc.exp-nfsv3-cg/home.html["ONTAP 9 NFS 設定快速指南"]。

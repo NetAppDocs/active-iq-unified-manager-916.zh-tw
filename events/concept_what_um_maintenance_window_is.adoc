@@ -1,0 +1,20 @@
+---
+permalink: events/concept_what_um_maintenance_window_is.html 
+sidebar: sidebar 
+keywords: unified manager, maintenance, window 
+summary: 當您安排了叢集維護並且不想收到大量不必要的通知時，您可以定義 Unified Manager 維護視窗來抑制特定時間範圍內的事件和警報。 
+---
+= Unified Manager 維護視窗是什麼
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您安排了叢集維護並且不想收到大量不必要的通知時，您可以定義 Unified Manager 維護視窗來抑制特定時間範圍內的事件和警報。
+
+當維護視窗開始時，「物件維護視窗已啟動」事件將發佈到事件管理庫存頁面。維護時段結束後，此事件將自動失效。
+
+在維護視窗期間，仍會產生與該叢集上所有物件相關的事件，但它們不會出現在任何 UI 頁面中，並且不會針對這些事件發送任何警報或其他類型的通知。但是，您可以透過選擇「事件管理」庫存頁面上的「檢視」選項之一來查看維護時段內為所有儲存物件產生的事件。
+
+您可以安排將來啟動的維護窗口，可以更改計劃維護窗口的開始和結束時間，也可以取消計劃維護窗口。

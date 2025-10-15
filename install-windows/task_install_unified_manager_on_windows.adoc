@@ -1,0 +1,92 @@
+---
+permalink: install-windows/task_install_unified_manager_on_windows.html 
+sidebar: sidebar 
+keywords: install, unified manager 
+summary: 您可以安裝 Unified Manager 來監控和排除資料儲存容量、可用性、效能和保護問題。 
+---
+= 安裝 Unified Manager
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以安裝 Unified Manager 來監控和排除資料儲存容量、可用性、效能和保護問題。
+
+.開始之前
+* 您計劃安裝 Unified Manager 的系統應符合系統和軟體需求。
++
+看link:concept_virtual_infrastructure_or_hardware_system_requirements.html["硬體系統需求"]。
+
++
+看link:reference_windows_software_and_installation_requirements.html["Windows 軟體和安裝要求"]。
+
++
+[NOTE]
+====
+從 Unified Manager 9.5 開始，OpenJDK 在安裝套件中提供並自動安裝。從 Unified Manager 9.5 開始不再支援 Oracle Java。
+
+====
+* 您應該具有 Windows 管理員權限。確保您的用戶名不以感嘆號“”開頭!`". Installation of Unified Manager might fail if the user name of user running the installation begins with "`！ 「」。
+* 除ASA r2 系統外，所有群集均支援。
+* 您應該有一個受支援的 Web 瀏覽器。
+* Unified Manager 維護使用者密碼應介於 8 到 20 個字元之間，應包含大寫字母或小寫字母、數字和特殊字元。
+* 維護使用者或 MySQL 根使用者的密碼字串中不允許使用以下特殊字元：「'`%、=&<>|^\/()[];：
++
+允許使用以下特殊字元：~！ @#$​​-？。  + { }
+
+
+
+.步驟
+. 使用預設本機管理員帳戶登入 Windows。
+. 登入NetApp支援站點，然後導覽至 Unified Manager 的下載頁面：
++
+https://mysupport.netapp.com/site/products/all/details/activeiq-unified-manager/downloads-tab["NetApp支援站點"^]
+
+. 選擇所需版本的 Unified Manager 並接受最終使用者授權協議 (EULA)。
+. 將 Unified Manager Windows 安裝檔案或 zip 檔案下載到 Windows 系統上的目標目錄。
+. 如果需要，請解壓縮 zip 文件，然後導覽至安裝文件所在的目錄。
+. 右鍵點選並以管理員身分執行 Unified Manager 安裝程式執行檔 (.exe)。
++
+Unified Manager 會偵測缺少或預先安裝的第三方軟體套件並列出它們。如果系統中未安裝所需的第三方軟體包，Unified Manager 會在安裝過程中安裝它們。
+
+. 按一下“下一步”。
+. 輸入使用者名稱和密碼來建立維護使用者。
+. 在資料庫連線精靈中，輸入 MySQL 根密碼。
+. 按一下「*變更*」為 Unified Manager 安裝目錄和 MySQL 資料目錄指定新位置。
++
+如果您不變更安裝目錄，Unified Manager 將安裝在預設安裝目錄中。
+
+. 按一下“下一步”。
+. 在「準備安裝 Shield」精靈中，按一下「*安裝*」。
+. 安裝完成後，按一下*完成*。
+. 如果您的 Windows 系統上安裝了活動的防毒軟體，請在安裝完成後手動將下列路徑從防毒掃描中排除：
++
+** Unified Manager 資料目錄
+** Unified Manager 安裝目錄
+** MySQL 資料目錄
+
+
+
+
+安裝過程中會建立多個目錄：
+
+* 安裝目錄
++
+這是您在安裝期間指定的 Unified Manager 的根目錄。例子： `C:\Program Files\NetApp\`
+
+* MySQL 資料目錄
++
+這是儲存 MySQL 資料庫的目錄，您在安裝期間指定。例子： `C:\ProgramData\MySQL\MySQLServerData\`
+
+* Java 目錄
++
+這是 OpenJDK 的安裝目錄。例子： `C:\Program Files\NetApp\JDK\`
+
+* Unified Manager 應用程式資料目錄 (appDataDir)
++
+這是儲存所有應用程式產生的資料的目錄。這包括日誌、支援包、備份和所有其他附加資料。例子： `C:\ProgramData\NetApp\OnCommandAppData\`
+
+
+
+您可以存取 Web UI 來執行 Unified Manager 的初始設置，例如link:../config/concept_configure_unified_manager.html["配置Active IQ Unified Manager"]。

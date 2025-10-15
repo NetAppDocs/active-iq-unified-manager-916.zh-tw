@@ -1,0 +1,20 @@
+---
+permalink: reporting/concept_schedule_reports.html 
+sidebar: sidebar 
+keywords: scheduling, reports 
+summary: 在您擁有想要重複使用並作為報表共用的視圖後，您可以使用Active IQ Unified Manager來安排它。您可以管理計劃報告，更改每個報告計劃的收件人和分發頻率。 
+---
+= 計劃報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在您擁有想要重複使用並作為報表共用的視圖後，您可以使用Active IQ Unified Manager來安排它。您可以管理計劃報告，更改每個報告計劃的收件人和分發頻率。
+
+您可以在 Unified Manager 中安排大多數檢視或庫存頁面。例外情況是事件，它們是您可以作為 CSV 檔案下載的報告，但您無法安排事件進行重新產生和共用。您也無法下載或排程儀表板、收藏夾或設定頁面。
+
+從Active IQ Unified Manager 9.8 開始，您可以下載 Microsoft® Excel 格式的檢視並自訂。您可以使用進階 Excel 功能，例如複雜排序、分層篩選器、資料透視表和圖表。當對產生的 Excel 報表滿意時，您可以上傳 Excel 檔案以供每次排程和共用報表時使用。
+
+您可以安排內建視圖或自訂視圖。您可以選擇要傳​​送的文件類型，CSV、PDF 或 XSLX。當您第一次安排報告時，您可以下載報告並將自己指定為唯一查看該報告的收件人，因為您的收件人將會看到它。

@@ -1,0 +1,37 @@
+---
+permalink: performance-checker/task_analyze_performance_incident_in_metrocluster.html 
+sidebar: sidebar 
+keywords: analyzing, dynamic, performance, event, remote, cluster, metrocluster, configuration 
+summary: 您可以使用 Unified Manager 分析MetroCluster配置中遠端叢集上的動態效能事件。此分析可協助您確定遠端叢集上的事件是否導致了其夥伴叢集上的事件。 
+---
+= 分析MetroCluster配置上的遠端叢集的動態效能事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Unified Manager 分析MetroCluster配置中遠端叢集上的動態效能事件。此分析可協助您確定遠端叢集上的事件是否導致了其夥伴叢集上的事件。
+
+.開始之前
+* 您必須具有操作員、應用程式管理員或儲存管理員角色。
+* 您必須已經分析了MetroCluster配置中本地叢集上的效能事件並取得了事件偵測時間。
+* 您必須檢查涉及效能事件的本地群集及其夥伴群集的健康狀況，並取得夥伴群集的名稱。
+
+
+.步驟
+. 登入正在監控合作夥伴叢集的 Unified Manager 實例。
+. 在左側導覽窗格中，按一下「*事件*」以顯示事件清單。
+. 從*時間範圍*選擇器中，選擇*過去一小時*，然後按一下*套用範圍*。
+. 在*過濾*選擇器中，從左側下拉選單中選擇*集群*，在文字欄位中輸入合作夥伴集群的名稱，然後按一下*套用過濾器*。
++
+如果所選群集在過去一小時內沒有發生任何事件，則表示該群集在其夥伴群集上偵測到該事件期間沒有遇到任何效能問題。
+
+. 如果選定群集在過去一小時內偵測到事件，則將事件偵測時間與本地群集上事件的事件偵測時間進行比較。
++
+如果這些事件涉及導致資料處理元件爭用的霸凌工作負載，則這些霸凌者中的一個或多個可能在本地叢集上引發了該事件。您可以單擊該事件來分析它，並在事件詳細資訊頁面上查看解決該事件的建議操作。
+
++
+如果這些事件不涉及霸凌工作負載，則它們不會導致本地叢集上的效能事件。
+
+

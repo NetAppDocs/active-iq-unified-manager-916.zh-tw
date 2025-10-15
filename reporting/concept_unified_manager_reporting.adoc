@@ -1,0 +1,32 @@
+---
+permalink: reporting/concept_unified_manager_reporting.html 
+sidebar: sidebar 
+keywords: unified, manager, reporting 
+summary: Active IQ Unified Manager （以前稱為OnCommand Unified Manager）提供檢視、自訂、下載和排程ONTAP儲存系統報告的功能。報告可以提供有關儲存系統容量、健康狀況、效能和保護關係的詳細資訊。 
+---
+= 統一管理器報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Active IQ Unified Manager （以前稱為OnCommand Unified Manager）提供檢視、自訂、下載和排程ONTAP儲存系統報告的功能。報告可以提供有關儲存系統容量、健康狀況、效能、安全性和保護關係的詳細資訊。
+
+Active IQ Unified Manager 9.6 中引入的新 Unified Manager 報表和排程功能取代了 Unified Manager 9.5 版中已淘汰的先前報告引擎。
+
+報告提供網路的不同視圖，提供有關容量、健康、效能、安全性和保護資料的可操作情報。您可以透過顯示、隱藏和重新排列列、過濾資料、排序資料和搜尋結果來自訂視圖。您可以儲存自訂檢視以供重複使用，將其下載為報告，並將它們安排為定期報告以透過電子郵件分發。
+
+您可以下載 Microsoft® Excel 格式的檢視並對其進行自訂。您可以使用進階 Excel 功能，例如複雜排序、分層篩選器、資料透視表和圖表。當對產生的 Excel 報表滿意時，您可以上傳 Excel 檔案以供每次排程和共用報表時使用。
+
+除了從使用者介面產生報表之外，您還可以使用下列附加方法從 Unified Manager 中提取運行狀況、安全性和效能資料：
+
+* 使用開放資料庫連線 (ODBC) 和 ODBC 工具直接存取資料庫以取得叢集訊息
+* 執行 Unified Manager REST API 以傳回您感興趣的訊息
+
+
+從此版本的Active IQ Unified 管理器開始，對報告進行了以下增強：
+
+* 根據配置的時間表發送報告電子郵件。即使您產生按需報告，您也會收到一封電子郵件。
+* 報告的檔案名稱和報告的元資料包括產生報告的主機名稱。即使任何人更改了檔案名，您仍然可以透過此增強功能識別產生報告的主機名稱。
+

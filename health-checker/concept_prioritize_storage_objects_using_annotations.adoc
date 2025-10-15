@@ -1,0 +1,14 @@
+---
+permalink: health-checker/concept_prioritize_storage_objects_using_annotations.html 
+sidebar: sidebar 
+keywords: prioritize, storage, object, events, annotations 
+summary: 您可以建立註釋規則並將其應用於儲存對象，以便您可以根據所應用的註釋類型及其優先順序來識別和篩選這些對象。 
+---
+= 使用註釋確定儲存物件事件的優先權
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立註釋規則並將其應用於儲存對象，以便您可以根據所應用的註釋類型及其優先順序來識別和篩選這些對象。

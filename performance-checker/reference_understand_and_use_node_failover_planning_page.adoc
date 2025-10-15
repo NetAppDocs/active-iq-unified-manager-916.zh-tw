@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/reference_understand_and_use_node_failover_planning_page.html 
+sidebar: sidebar 
+keywords: understanding, node, failover, planning page 
+summary: '如果節點的高可用性 (HA) 夥伴節點發生故障，效能/節點故障轉移規劃頁面將估計對節點效能的影響。  Unified Manager 根據 HA 對中節點的歷史效能進行估算。' 
+---
+= 了解並使用節點故障轉移規劃頁面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果節點的高可用性 (HA) 夥伴節點發生故障，效能/節點故障轉移規劃頁面將估計對節點效能的影響。  Unified Manager 根據 HA 對中節點的歷史效能進行估算。
+
+估計故障轉移對效能的影響有助於您在以下情況下進行規劃：
+
+* 如果故障轉移持續使接管節點的估計效能降低到不可接受的水平，您可以考慮採取糾正措施來減少故障轉移造成的效能影響。
+* 在啟動手動故障轉移來執行硬體維護任務之前，您可以估計故障轉移對接管節點效能的影響，以確定執行該任務的最佳時間。
+

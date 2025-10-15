@@ -1,0 +1,23 @@
+---
+permalink: data-protection/task_view_job_details.html 
+sidebar: sidebar 
+keywords: view, job, details 
+summary: 開始工作後，您可以從「工作詳情」頁面追蹤其進度，並監控相關任務是否有錯誤。 
+---
+= 查看職位詳情
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+開始工作後，您可以從「工作詳情」頁面追蹤其進度，並監控相關任務是否有錯誤。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+.步驟
+. 在左側導覽窗格中，按一下「*保護*」>「*作業*」。
+. 在「作業」頁面中，按一下「名稱」欄位中的作業名稱以顯示與該作業相關的任務清單。
+. 按一下某個任務即可在任務清單右側的「*任務詳細資料*」窗格和「*任務訊息*」窗格中顯示其他資訊。
+

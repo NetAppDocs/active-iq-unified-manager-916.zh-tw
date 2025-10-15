@@ -1,0 +1,23 @@
+---
+permalink: reporting/task_customize_columns.html 
+sidebar: sidebar 
+keywords: customize, columns 
+summary: 使用“顯示/隱藏”來選擇您想要在報告中使用的列。拖曳庫存頁面上的列以重新排列它們。 
+---
+= 自訂列
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用*顯示/隱藏*來選擇您想要在報表中使用的欄位。拖曳庫存頁面上的列以重新排列它們。
+
+.步驟
+. 按一下“顯示/隱藏”以新增或刪除列。
++
+image::../media/show_hide_3.png[顯示如何新增或刪除列的 UI 螢幕截圖。]
+
+. 在庫存頁面上，拖曳列以按照報告中所需的順序重新排列它們。
+. 命名未儲存的視圖以儲存您的變更。
+

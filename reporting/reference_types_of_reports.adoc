@@ -1,0 +1,109 @@
+---
+permalink: reporting/reference_types_of_reports.html 
+sidebar: sidebar 
+keywords: types, reports 
+summary: 該表提供了可作為報告使用的視圖和庫存頁面的綜合列表，您可以自訂、下載和安排這些視圖和庫存頁面。 
+---
+= 報告類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+該表提供了可作為報告使用的視圖和庫存頁面的綜合列表，您可以自訂、下載和安排這些視圖和庫存頁面。
+
+
+
+== Active IQ Unified Manager報告
+
+[cols="2*"]
+|===
+| 類型 | 儲存或網路對象 
+
+
+ a| 
+容量
+ a| 
+叢集
+
+聚合
+
+卷
+
+配額樹
+
+
+
+ a| 
+健康
+ a| 
+叢集
+
+節點
+
+聚合
+
+儲存虛擬機
+
+卷
+
+SMB/CIFS 共享
+
+NFS 分享
+
+
+
+ a| 
+表現
+ a| 
+叢集
+
+節點
+
+聚合
+
+儲存虛擬機
+
+卷
+
+LUN
+
+NVMe 命名空間
+
+網路介面 (LIF)
+
+連接埠
+
+
+
+ a| 
+服務品質
+ a| 
+傳統 QoS 策略組
+
+自適應 QoS 策略組
+
+效能服務等級策略群組
+
+
+
+ a| 
+卷保護關係（可從卷頁取得）
+ a| 
+所有關係
+
+最近 1 個月的轉帳狀態
+
+過去 1 個月的轉帳費率
+
+
+
+ a| 
+安全
+ a| 
+儲存虛擬機
+
+叢集
+
+|===

@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_manage_performance_using_qos_policy_group_information.html 
+sidebar: sidebar 
+keywords: managing, performance, qos, policy, group, information 
+summary: 'Unified Manager 可讓您查看您正在監控的所有叢集上可用的服務品質 (QoS) 策略群組。這些策略可能已使用ONTAP軟體（系統管理員或ONTAP CLI）或 Unified Manager 效能服務等級策略定義。  Unified Manager 也顯示哪些磁碟區和 LUN 指派了 QoS 原則群組。' 
+---
+= 使用 QoS 策略群組資訊管理效能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager 可讓您查看您正在監控的所有叢集上可用的服務品質 (QoS) 策略群組。這些策略可能已使用ONTAP軟體（系統管理員或ONTAP CLI）或 Unified Manager 效能服務等級策略定義。  Unified Manager 也顯示哪些磁碟區和 LUN 指派了 QoS 原則群組。
+
+有關調整 QoS 設定的更多信息，請參閱 https://docs.netapp.com/us-en/ontap/performance-admin/index.html["績效管理概述"]

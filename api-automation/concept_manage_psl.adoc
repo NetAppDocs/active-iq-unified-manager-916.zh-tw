@@ -1,0 +1,114 @@
+---
+permalink: api-automation/concept_manage_psl.html 
+sidebar: sidebar 
+keywords: manage, performance, service, level 
+summary: 您可以使用Active IQ Unified Manager上的儲存提供者 API 檢視、建立、修改和刪除效能服務等級。 
+---
+= 使用 API 管理效能服務級別
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Active IQ Unified Manager上的儲存提供者 API 檢視、建立、修改和刪除效能服務等級。
+
+
+
+== 查看效能服務級別
+
+您可以使用下列方法查看效能服務級別，並將其指派給儲存工作負載。 API 列出了所有系統定義和使用者建立的效能服務級別，並檢索所有效能服務等級的屬性。如果要查詢特定的效能服務級別，則需要輸入該效能服務等級的唯一ID來擷取其詳細資訊。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/performance-service-levels`
+
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+== 新增效能服務級別
+
+如果系統定義的效能服務等級不符合儲存工作負載所需的服務等級目標 (SLO)，您可以使用下列方法建立自訂效能服務等級並指派給儲存工作負載。輸入您想要建立的效能服務等級的詳細資訊。對於 IOPS 屬性，請確保輸入有效範圍的值。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+郵政
+ a| 
+`/storage-provider/performance-service-levels`
+
+|===
+
+
+== 刪除效能服務級別
+
+您可以使用以下方法刪除特定的效能服務等級。如果效能服務等級已指派給工作負載，或者它是唯一可用的效能服務級別，則您無法刪除該效能服務等級。您需要提供效能服務等級的唯一 ID 作為輸入參數來刪除特定的效能服務等級。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+刪除
+ a| 
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+== 修改效能服務級別
+
+您可以使用下列方法修改效能服務等級並更新其屬性。您無法修改系統定義或指派給工作負載的效能服務等級。您需要提供唯一的 ID 來修改特定的效能服務等級。您還必須輸入要更新的 IOPS 屬性以及有效值。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+修補
+ a| 
+`/storage-provider/performance-service-levels/\{key}`
+
+|===
+
+
+== 根據效能服務等級查看聚合功能
+
+您可以使用下列方法查詢基於效能服務等級的聚合能力。此 API 傳回資料中心中可用的聚合列表，並指示這些聚合中可以支援的效能服務等級方面的功能。在磁碟區上配置工作負載時，您可以查看聚合支援特定效能服務等級的能力，並根據該能力配置工作負載。只有當您使用 API 調配工作負載時，才可以指定聚合。此功能在 Unified Manager Web UI 上不可用。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/aggregate-capabilities`
+
+`/storage-provider/aggregate-capabilities/\{key}`
+
+|===

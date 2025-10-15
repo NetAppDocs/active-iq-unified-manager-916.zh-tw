@@ -1,0 +1,36 @@
+---
+permalink: config/concept_maintenance_console_menu.html 
+sidebar: sidebar 
+keywords: maintenance, console, menus 
+summary: 維護控制台由不同的選單組成，可讓您維護和管理 Unified Manager 伺服器的特殊功能和設定設定。 
+---
+= 維護控制台選單
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+維護控制台由不同的選單組成，可讓您維護和管理 Unified Manager 伺服器的特殊功能和設定設定。
+
+根據安裝 Unified Manager 的作業系統，維護控制台包含下列選單：
+
+* 升級 Unified Manager（僅限 VMware）
+* 網路配置（僅限 VMware）
+* 系統配置（僅限 VMware）
++
+.. 支持/診斷
+.. 重置伺服器憑證
+.. 外部資料提供者
+.. 備份還原
+.. 效能輪詢間隔配置
+.. 禁用 SAML 身份驗證
+.. 查看/更改應用程式端口
+.. 偵錯日誌配置
+.. 控制對 MySQL 連接埠 3306 的訪問
+.. 出口
+
+
+
+
+您從清單中選擇數字來存取特定的選單選項。例如，對於備份和恢復，您選擇_4_。

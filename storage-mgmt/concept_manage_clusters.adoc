@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_manage_clusters.html 
+sidebar: sidebar 
+keywords: manage, clusters 
+summary: 您可以使用 Unified Manager 監控、新增、編輯和刪除叢集來管理ONTAP叢集。 
+---
+= 管理集群
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Unified Manager 監控、新增、編輯和刪除叢集來管理ONTAP叢集。

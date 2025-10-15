@@ -1,0 +1,26 @@
+---
+permalink: health-checker/task_add_groups.html 
+sidebar: sidebar 
+keywords: add, groups 
+summary: '您可以建立群組來組合叢集、磁碟區和儲存虛擬機器 (SVM)，以便於管理。' 
+---
+= 新增群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立群組來組合叢集、磁碟區和儲存虛擬機器 (SVM)，以便於管理。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+您可以定義群組規則來新增或刪除群組成員以及修改群組的群組操作。
+
+.步驟
+. 在左側導覽窗格中，按一下「儲存管理」>「群組」。
+. 在「*群組*」標籤中，按一下「*新增*」。
+. 在「新增群組」對話方塊中，輸入群組的名稱和描述。
+. 按一下“*新增*”。
+

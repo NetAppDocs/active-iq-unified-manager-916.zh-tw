@@ -1,0 +1,54 @@
+---
+permalink: health-checker/task_view_node_list_and_details.html 
+sidebar: sidebar 
+keywords: view, node list, details 
+summary: 您可以使用「運行狀況：所有節點」視圖來查看叢集中的節點清單。您可以使用叢集/健康詳情頁面來查看有關受監控叢集的節點的詳細資訊。 
+---
+= 查看節點列表及詳情
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「運行狀況：所有節點」視圖來查看叢集中的節點清單。您可以使用叢集/健康詳情頁面來查看有關受監控叢集的節點的詳細資訊。
+
+.開始之前
+您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+您可以查看節點狀態、包含該節點的叢集、聚合容量詳細資訊（已使用容量和總計容量）以及原始容量詳細資訊（可用容量、備用容量和總計容量）等詳細資訊。您還可以獲得有關 HA 對、磁碟架和連接埠的資訊。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*節點*」。
+. 在「*Health: All Nodes*」檢視中，按一下要查看其詳細資訊的節點。
++
+所選節點的詳細資訊顯示在叢集/健康詳細資訊頁面中。左側窗格顯示 HA 對清單。預設情況下，HA 詳細資訊是開啟的，其中顯示與所選 HA 對相關的 HA 狀態詳細資訊和事件。
+
+. 要查看有關節點的其他詳細信息，請執行相應的操作：
++
+[cols="2*"]
+|===
+| 要查看... | 點擊... 
+
+
+ a| 
+有關磁碟架的詳細信息
+ a| 
+*磁碟架*。
+
+
+
+ a| 
+港口相關資訊
+ a| 
+*連接埠*。
+
+|===
+
+
+有關詳細信息，請參閱：For more information, see:
+
+* link:../performance-checker/performance-view-all.html#performance-all-nodes-view["效能：所有節點視圖"]
+* link:../performance-checker/concept_view_node_and_aggregate_available_iops_values.html["查看節點和聚合可用 IOPS 值"]
+* link:../performance-checker/concept_view_node_and_aggregate_performance_capacity_used_values.html["查看節點和聚合效能容量使用值"]
+

@@ -1,0 +1,27 @@
+---
+permalink: health-checker/task_configure_global_qtree_health_threshold_values.html 
+sidebar: sidebar 
+keywords: configure, global, qtree, health, threshold values 
+summary: 您可以為所有 qtree 配置全域健康閾值，以追蹤任何閾值違規。對於健康閾值違規，會產生適當的事件，您可以根據這些事件採取預防措施。您可以根據適用於所有受監控 qtree 的閾值的最佳實務設定來設定全域值。 
+---
+= 配置全域 qtree 運行狀況閾值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以為所有 qtree 配置全域健康閾值，以追蹤任何閾值違規。對於健康閾值違規，會產生適當的事件，您可以根據這些事件採取預防措施。您可以根據適用於所有受監控 qtree 的閾值的最佳實務設定來設定全域值。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+閾值選項具有預設值以便更好地監控，但是，您可以更改這些值以滿足您的環境要求。
+
+只有在 qtree 上設定了 qtree 配額或預設配額時，才會為 qtree 產生事件。如果使用者配額或群組配額中定義的空間超出閾值，則不會產生事件。
+
+.步驟
+. 在左側導覽窗格中，按一下「*事件閾值*」>「*Qtree*」。
+. 配置適當的容量閾值。
+. 點選“儲存”。
+

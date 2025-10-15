@@ -1,0 +1,18 @@
+---
+permalink: storage-mgmt/concept_what_quota_limits_are.html 
+sidebar: sidebar 
+keywords: quota, limits 
+summary: 使用者配額限制是 Unified Manager 伺服器用來評估使用者的空間消耗是否接近限製或已達到使用者配額設定的限制的值。如果超過軟體限製或達到硬限制，Unified Manager 伺服器將產生使用者配額事件。 
+---
+= 什麼是配額限制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+使用者配額限制是 Unified Manager 伺服器用來評估使用者的空間消耗是否接近限製或已達到使用者配額設定的限制的值。如果超過軟體限製或達到硬限制，Unified Manager 伺服器將產生使用者配額事件。
+
+預設情況下，Unified Manager 伺服器會向超過配額軟體限製或達到配額硬限制且配置了使用者配額事件的使用者發送通知電子郵件。具有應用程式管理員角色的使用者可以設定警報，以通知指定的接收者有關使用者或使用者群組配額事件的資訊。
+
+您可以使用ONTAP系統管理員或ONTAP CLI 指定配額限制。

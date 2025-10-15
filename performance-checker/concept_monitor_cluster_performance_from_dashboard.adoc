@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_from_dashboard.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, dashboard 
+summary: Unified Manager 儀表板提供了幾個面板，顯示由此 Unified Manager 實例監控的所有叢集的進階效能狀態。它使您能夠評估託管叢集的整體效能，並快速記錄、定位或分配解決任何已識別的特定事件。 
+---
+= 從儀表板監控叢集效能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager 儀表板提供了幾個面板，顯示由此 Unified Manager 實例監控的所有叢集的進階效能狀態。它使您能夠評估託管叢集的整體效能，並快速記錄、定位或分配解決任何已識別的特定事件。

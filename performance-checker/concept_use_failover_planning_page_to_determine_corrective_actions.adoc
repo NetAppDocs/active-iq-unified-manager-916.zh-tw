@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_use_failover_planning_page_to_determine_corrective_actions.html 
+sidebar: sidebar 
+keywords: node, failover, planning page, determine, corrective, actions 
+summary: 根據「效能/節點故障轉移規劃」頁面中顯示的信息，您可以採取措施確保故障轉移不會導致 HA 對的效能下降到可接受的水平以下。 
+---
+= 使用節點故障轉移計劃頁面確定糾正措施
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+根據「效能/節點故障轉移規劃」頁面中顯示的信息，您可以採取措施確保故障轉移不會導致 HA 對的效能下降到可接受的水平以下。
+
+例如，為了減少故障轉移對效能的估計影響，您可以將某些磁碟區或 LUN 從 HA 對中的節點移至叢集中的其他節點。這樣做可確保主節點在故障轉移後能夠繼續提供可接受的效能。

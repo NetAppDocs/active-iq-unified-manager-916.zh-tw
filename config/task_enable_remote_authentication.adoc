@@ -1,0 +1,76 @@
+---
+permalink: config/task_enable_remote_authentication.html 
+sidebar: sidebar 
+keywords: enable, remote, authentication 
+summary: 您可以啟用遠端身份驗證，以便 Unified Manager 伺服器可以與您的身份驗證伺服器通訊。身份驗證伺服器的使用者可以存取 Unified Manager 圖形介面來管理儲存物件和資料。 
+---
+= 啟用遠端身份驗證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以啟用遠端身份驗證，以便 Unified Manager 伺服器可以與您的身份驗證伺服器通訊。身份驗證伺服器的使用者可以存取 Unified Manager 圖形介面來管理儲存物件和資料。
+
+.開始之前
+您必須具有應用程式管理員角色。
+
+[NOTE]
+====
+Unified Manager 伺服器必須直接與驗證伺服器連線。您必須停用任何本機 LDAP 用戶端，例如 SSSD（系統安全服務守護程式）或 NSLCD（名稱服務 LDAP 快取守護程式）。
+
+====
+您可以使用 Open LDAP 或 Active Directory 啟用遠端驗證。如果停用遠端驗證，遠端使用者將無法存取 Unified Manager。
+
+透過 LDAP 和 LDAPS（安全 LDAP）支援遠端身份驗證。  Unified Manager 使用 389 作為非安全通訊的預設端口，使用 636 作為安全通訊的預設端口。
+
+[NOTE]
+====
+用於驗證使用者身分的憑證必須符合X.509格式。
+
+====
+.步驟
+. 在左側導覽窗格中，按一下「*常規*」>「*遠端驗證*」。
+. 選取“啟用遠端身份驗證...”複選框。
+. 在身分驗證服務欄位中，選擇服務類型並配置身分驗證服務。
++
+[cols="2*"]
+|===
+| 對於身份驗證類型... | 輸入以下資訊... 
+
+
+ a| 
+活動目錄
+ a| 
+** 認證伺服器管理員名稱採用以下格式之一：
++
+*** `domainname\username`
+*** `username@domainname`
+*** `Bind Distinguished Name`（使用適當的 LDAP 符號）
+
+
+** 管理者密碼
+** 基本可分辨名稱（使用適當的 LDAP 符號）
+
+
+
+
+ a| 
+開啟 LDAP
+ a| 
+** 綁定可分辨名稱（以適當的 LDAP 符號表示）
+** 綁定密碼
+** 基本可分辨名稱
+
+
+|===
++
+如果 Active Directory 使用者的驗證花費很長時間或逾時，則驗證伺服器可能需要很長時間才能回應。停用 Unified Manager 中對嵌套群組的支援可能會減少身份驗證時間。
+
++
+如果您為身分驗證伺服器選擇「使用安全連線」選項，則 Unified Manager 將使用安全通訊端層 (SSL) 協定與身分驗證伺服器進行通訊。
+
+. *可選：*新增身份驗證伺服器，並測試身份驗證。
+. 點選“儲存”。
+

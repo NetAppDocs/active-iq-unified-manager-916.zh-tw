@@ -1,0 +1,22 @@
+---
+permalink: health-checker/reference_description_of_cluster_object_windows_and_dialog_boxes.html 
+sidebar: sidebar 
+keywords: description, cluster, object, windows, dialog boxes 
+summary: 您可以從對應的儲存物件頁面查看所有叢集和叢集物件。您也可以從對應的儲存對象詳情頁面查看詳情。現在您可以從 INVENTORY 的以下 STORAGE 和 PROTECTION 部分啟動系統管理器使用者介面。 
+---
+= 集群物件視窗和對話框的描述
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以從對應的儲存物件頁面查看所有叢集和叢集物件。您也可以從對應的儲存對象詳情頁面查看詳情。現在您可以從 INVENTORY 的以下 STORAGE 和 PROTECTION 部分啟動系統管理器使用者介面。
+
+* 叢集清單、叢集運作狀況和叢集效能頁面
+* 匯總庫存、匯總健康狀況和匯總績效頁面
+* 磁碟區清單、磁碟區運行狀況和磁碟區效能頁面
+* 節點清單和節點效能頁面
+* StorageVM 庫存、StorageVM 運作狀況和 StorageVM 效能頁面
+* 保護關係頁面
+

@@ -1,0 +1,43 @@
+---
+permalink: api-automation/concept_events_workflows.html 
+sidebar: sidebar 
+keywords: determine, issues, storage, objects, events 
+summary: 當資料中心中的儲存物件超過閾值時，您會收到有關該事件的通知。使用此通知，您可以分析問題並使用事件 API 採取糾正措施。 
+---
+= 使用事件 API 確定儲存物件中的問題
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當資料中心中的儲存物件超過閾值時，您會收到有關該事件的通知。使用此通知，您可以分析問題並採取糾正措施，方法是使用 `events`蜜蜂。
+
+此工作流程以磁碟區作為資源物件的範例。您可以使用 `events`API 用於檢索與磁碟區相關的事件列表，分析該卷的關鍵問題，然後採取糾正措施來糾正問題。
+
+image::../media/handling_event_related_issues_of_a_storage_object_flowchart.gif[處理儲存物件流程圖的事件相關問題]
+
+在採取補救措施之前，請按照以下步驟確定卷中的問題。
+
+.步驟
+. 分析資料中心磁碟區的關鍵Active IQ Unified Manager事件通知。
+. 使用 /management-server/events API 中的以下參數查詢卷的所有事件：
+`"*resource_type": "volume*"`
+`"*severity": "critical*"`
++
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+管理伺服器
+ a| 
+得到
+ a| 
+/管理伺服器/事件
+
+|===
+. 查看輸出並分析特定磁碟區中的問題。
+. 使用 Unified Manager REST API 或 Web UI 執行必要的操作來解決問題。
+

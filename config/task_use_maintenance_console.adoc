@@ -1,0 +1,14 @@
+---
+permalink: config/task_use_maintenance_console.html 
+sidebar: sidebar 
+keywords: use, maintenance, console 
+summary: 您可以使用維護控制台設定網路設定、設定和管理安裝了 Unified Manager 的系統，以及執行其他維護任務以協助您預防和排除可能出現的問題。 
+---
+= 使用維護控制台
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用維護控制台設定網路設定、設定和管理安裝了 Unified Manager 的系統，以及執行其他維護任務以協助您預防和排除可能出現的問題。

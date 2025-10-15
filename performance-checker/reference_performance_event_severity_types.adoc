@@ -1,0 +1,45 @@
+---
+permalink: performance-checker/reference_performance_event_severity_types.html 
+sidebar: sidebar 
+keywords: performance, event, severity, types 
+summary: 每個效能事件都與一個嚴重性類型相關聯，以幫助您確定需要立即採取糾正措施的事件的優先順序。 
+---
+= 效能事件嚴重性類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+每個效能事件都與一個嚴重性類型相關聯，以幫助您確定需要立即採取糾正措施的事件的優先順序。
+
+* *批判的*
++
+發生了效能事件，如果不立即採取糾正措施，可能會導致服務中斷。
+
++
+關鍵事件僅從使用者定義的閾值發送。
+
+* *警告*
++
+群集對象的效能計數器超出正常範圍，應進行監控以確保其不會達到嚴重程度。這種嚴重程度的事件不會導致服務中斷，並且可能不需要立即採取糾正措施。
+
++
+警告事件由使用者定義、系統定義或動態閾值發送。
+
+* *資訊*
++
+當發現新物件或執行使用者操作時，就會發生該事件。例如，當刪除任何儲存物件或發生任何配置變更時，就會產生嚴重性類型為資訊的事件。
+
++
+當 ONTAP 偵測到設定變更時，會直接從ONTAP傳送訊息事件。
+
+
+
+有關詳細信息，請參閱以下連結：
+
+* link:../events/concept_what_happens_when_an_event_is_received.html["收到事件時會發生什麼"]
+* link:../events/concept_what_information_is_contained_in_an_alert_email.html["警報電子郵件包含哪些訊息"]
+* link:../events/task_add_alerts.html["添加警報"]
+* link:../events/task_add_alerts_for_performance_events.html["新增性能事件警報"]
+

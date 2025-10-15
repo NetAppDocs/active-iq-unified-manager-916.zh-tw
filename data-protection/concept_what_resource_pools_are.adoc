@@ -1,0 +1,25 @@
+---
+permalink: data-protection/concept_what_resource_pools_are.html 
+sidebar: sidebar 
+keywords: resource pools 
+summary: 資源池是由儲存管理員使用 Unified Manager 建立的聚合群組，用於為合作夥伴應用程式提供備份管理的配置。 
+---
+= 什麼是資源池
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資源池是由儲存管理員使用 Unified Manager 建立的聚合群組，用於為合作夥伴應用程式提供備份管理的配置。
+
+您可以根據效能、成本、實體位置或可用性等屬性來匯集資源。透過將相關資源分組到一個池中，您可以將該池視為一個單獨的單元進行監控和配置。這簡化了這些資源的管理，並允許更靈活、更有效地使用儲存。
+
+在二級儲存配置期間，Unified Manager 使用下列標準來確定資源池中最適合保護的聚合：
+
+* 此聚合是資料聚合（不是根聚合）並且處於線上狀態。
+* 聚合位於目標叢集節點上，其ONTAP版本與來源叢集主版本相同或更高。
+* 此聚合具有資源池中所有聚合中最大的可用空間。
+* 配置目標磁碟區後，聚合空間處於為聚合定義的接近滿和接近過量使用的閾值內（全域或本地閾值，以適用者為準）。
+* 目標節點上的FlexVol磁碟區數量不得超過平台限制。
+

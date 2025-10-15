@@ -1,0 +1,37 @@
+---
+permalink: config/task_disable_saml_authentication_um.html 
+sidebar: sidebar 
+keywords: disable, saml authentication 
+summary: '當您想要在遠端使用者登入 Unified Manager Web UI 之前停止透過安全性身分提供者 (IdP) 對其進行驗證時，可以停用 SAML 驗證。當停用 SAML 驗證時，設定的目錄服務提供者（例如 Active Directory 或 LDAP）將執行登入驗證。' 
+---
+= 禁用 SAML 身份驗證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您想要在遠端使用者登入 Unified Manager Web UI 之前停止透過安全性身分提供者 (IdP) 對其進行驗證時，可以停用 SAML 驗證。當停用 SAML 驗證時，設定的目錄服務提供者（例如 Active Directory 或 LDAP）將執行登入驗證。
+
+停用 SAML 身份驗證後，除了配置的遠端使用者之外，本機使用者和維護使用者也將能夠存取圖形使用者介面。
+
+如果您無法存取圖形使用者介面，您也可以使用 Unified Manager 維護控制台停用 SAML 驗證。
+
+[NOTE]
+====
+停用 SAML 驗證後，Unified Manager 會自動重新啟動。
+
+====
+.步驟
+. 在左側導覽窗格中，按一下「*常規*」>「*SAML 驗證*」。
+. 取消選取*啟用 SAML 驗證*複選框。
+. 點選“儲存”。
++
+將顯示一個訊息框，確認您是否要完成設定並重新啟動 Unified Manager。
+
+. 點選*確認並登出*，Unified Manager 將重新啟動。
+
+
+下次遠端使用者嘗試造訪 Unified Manager 圖形介面時，他們將在 Unified Manager 登入頁面而不是 IdP 登入頁面輸入其憑證。
+
+存取您的 IdP 並刪除 Unified Manager 伺服器 URI 和元資料。

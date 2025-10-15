@@ -1,0 +1,35 @@
+---
+permalink: data-protection/task_create_snapvault_policy_to_maximize_transfer_efficiency.html 
+sidebar: sidebar 
+keywords: create, snapvault, policy,  maximize, transfer, efficiency 
+summary: 您可以建立新的SnapVault策略來設定SnapVault傳輸的優先順序。您可以使用策略來最大程度地提高保護關係中從主節點到次節點的傳輸效率。 
+---
+= 創建SnapVault策略以最大程度提高傳輸效率
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立新的SnapVault策略來設定SnapVault傳輸的優先順序。您可以使用策略來最大程度地提高保護關係中從主節點到次節點的傳輸效率。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+* 您必須已經設定了工作流程自動化。
+* 您必須已經完成了配置保護對話方塊中的目標資訊區域。
+
+
+.步驟
+. 在「配置保護」對話方塊的「SnapVault」標籤中，按一下「關係設定」區域中的「建立政策」連結。
++
+將顯示SnapVault選項卡。
+
+. 在「*策略名稱*」欄位中，輸入您想要賦予該策略的名稱。
+. 在*轉移優先權*欄位中，選擇您想要指派給策略的轉移優先權。
+. *可選：*在*註釋*欄位中，輸入該政策的註解。
+. 在「*複製標籤*」區域中，根據需要新增或編輯複製標籤。
+. 按一下“*建立*”。
++
+新策略顯示在「建立策略」下拉清單中。
+
+

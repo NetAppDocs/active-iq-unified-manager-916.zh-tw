@@ -1,0 +1,120 @@
+---
+permalink: config/concept_install_https_certificate_generated_using_external_tools.html 
+sidebar: sidebar 
+keywords: install, HTTPS, certificate, generated from external tools 
+summary: 您可以安裝自簽名或 CA 簽署的證書，並使用外部工具（如 OpenSSL、BoringSSL、LetsEncrypt）產生。 
+---
+= 安裝使用外部工具產生的 HTTPS 憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以安裝自簽名或 CA 簽署的證書，並使用外部工具（如 OpenSSL、BoringSSL、LetsEncrypt）產生。
+
+您應該將私鑰與憑證鏈一起加載，因為這些憑證是外部產生的公鑰-私鑰對。允許的金鑰對演算法是“RSA”和“EC”。在「常規」部分下的「HTTPS 憑證」頁面中提供了「*安裝 HTTPS 憑證*」選項。您上傳的文件應採用以下輸入格式。
+
+. 屬於Active IQ Unified Manager主機的伺服器的私鑰
+. 與私鑰匹配的伺服器憑證
+. 反向直到根的 CA 證書，用於簽署上述證書
+
+
+
+
+== 載入帶有 EC 金鑰對的憑證的格式
+
+允許的曲線是“prime256v1”和“secp384r1”。具有外部產生的 EC 對的憑證樣本：
+
+[listing]
+----
+ -----BEGIN EC PRIVATE KEY-----
+<EC private key of Server>
+-----END EC PRIVATE KEY-----
+----
+[listing]
+----
+ -----BEGIN CERTIFICATE-----
+ <Server certificate>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #1 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #2 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Root signing certificate>
+ -----END CERTIFICATE-----
+----
+
+
+== 使用 RSA 金鑰對載入憑證的格式
+
+屬於主機憑證的 RSA 金鑰對允許的金鑰大小為 2048、3072 和 4096。具有外部產生的 *RSA 金鑰對* 的憑證：
+
+[listing]
+----
+-----BEGIN RSA PRIVATE KEY-----
+ <RSA private key of Server>
+ -----END RSA PRIVATE KEY-----
+ -----BEGIN CERTIFICATE-----
+ <Server certificate>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #1 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Intermediate certificate #2 (if present)>
+ -----END CERTIFICATE-----
+ -----BEGIN CERTIFICATE-----
+ <Root signing certificate>
+ -----END CERTIFICATE-----
+----
+上傳憑證後，您應該重新啟動Active IQ Unified Manager實例以使變更生效。
+
+
+
+== 上傳外部產生的憑證時進行檢查
+
+系統在上傳使用外部工具產生的憑證時執行檢查。如果任何檢查失敗，則證書被拒絕。還包括產品內 CSR 產生的憑證和使用外部工具產生的憑證的驗證。
+
+* 輸入中的私鑰根據輸入中的主機憑證進行驗證。
+* 主機憑證中的通用名稱 (CN) 與主機的 FQDN 進行檢查。
+* 主機憑證的通用名稱（CN）不能為空或空白，且不能設定為localhost。
+* 證書的有效期限起始日期不應為日後日期，且證書的有效期限到期日不應為過去日期。
+* 如果存在中級 CA 或 CA，則憑證的有效期開始日期不應在未來，有效期到期日不應在過去。
+
+
+[NOTE]
+====
+輸入中的私鑰不應該被加密。如果有任何私鑰被加密，那麼系統就會拒絕它們。
+
+====
+範例 1
+
+[listing]
+----
+----BEGIN ENCRYPTED PRIVATE KEY-----
+<Encrypted private key>
+-----END ENCRYPTED PRIVATE KEY-----
+----
+範例 2
+
+[listing]
+----
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+<content here>
+-----END RSA PRIVATE KEY-----
+----
+範例 3
+
+[listing]
+----
+-----BEGIN EC PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+<content here>
+-----END EC PRIVATE KEY-----
+----
+如果憑證安裝失敗，請參閱知識庫 (KB) 文章：https://kb.netapp.com/mgmt/AIQUM/AIQUM_fails_to_install_externally_generated_certificate["ActiveIQ Unified Manager 無法安裝外部產生的憑證"^]

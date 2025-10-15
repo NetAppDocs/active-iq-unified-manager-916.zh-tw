@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_svm_reports.html 
+sidebar: sidebar 
+keywords: customize, storage, vm reports 
+summary: 您可以建立儲存虛擬機器報告來分析磁碟區資訊並查看整體運作狀況和儲存可用性。例如，您可以建立報表來顯示達到最大磁碟區數的 SVM 並分析已停止的 SVM。 
+---
+= 自訂儲存虛擬機器報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立儲存虛擬機器報告來分析磁碟區資訊並查看整體運作狀況和儲存可用性。例如，您可以建立報表來顯示達到最大磁碟區數的 SVM 並分析已停止的 SVM。

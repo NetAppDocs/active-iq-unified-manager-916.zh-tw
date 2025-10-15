@@ -1,0 +1,14 @@
+---
+permalink: events/reference_list_of_events_and_severity_types.html 
+sidebar: sidebar 
+keywords: list, events, severity, types 
+summary: 您可以使用事件清單來熟悉事件類別、事件名稱以及您可能在 Unified Manager 中看到的每個事件的嚴重性類型。事件按照物件類別的字母順序列出。 
+---
+= 事件和嚴重性類型列表
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用事件清單來熟悉事件類別、事件名稱以及您可能在 Unified Manager 中看到的每個事件的嚴重性類型。事件按照物件類別的字母順序列出。

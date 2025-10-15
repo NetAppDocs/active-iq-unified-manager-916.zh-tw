@@ -1,0 +1,103 @@
+---
+permalink: api-automation/concept_manage_sep.html 
+sidebar: sidebar 
+keywords: manage, storage, efficiency, policy 
+summary: 您可以使用儲存提供者 API 檢視、建立、修改和刪除儲存效率策略。 
+---
+= 使用 API 管理儲存效率策略
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用儲存提供者 API 檢視、建立、修改和刪除儲存效率策略。
+
+[NOTE]
+====
+請注意以下幾點：
+
+* 在 Unified Manager 上建立工作負載時，指派儲存效率策略並不是強制性的。
+* 在為工作負載指派策略後，您無法取消指派該策略。
+* 如果工作負載在ONTAP磁碟區上指定了某些儲存設定（例如重複資料刪除和壓縮），則這些設定可能會被您在 Unified Manager 上新增儲存工作負載時所套用的儲存效率原則中指定的設定所覆寫。
+
+
+====
+
+
+== 查看儲存效率策略
+
+您可以使用以下方法在將儲存效率策略指派給儲存工作負載之前查看儲存效率策略。此 API 列出所有系統定義和使用者建立的儲存效率策略，並檢索所有儲存效率策略的屬性。如果您想查詢特定的儲存效率策略，您需要輸入該策略的唯一 ID 來檢索其詳細資訊。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+== 新增儲存效率策略
+
+如果系統定義的策略不符合您的儲存工作負載的配置要求，您可以使用下列方法建立自訂儲存效率策略，並將其指派給您的儲存工作負載。輸入要建立的儲存效率策略的詳細資訊作為輸入參數。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+郵政
+ a| 
+`/storage-provider/storage-efficiency-policies`
+
+|===
+
+
+== 刪除儲存效率策略
+
+您可以使用以下方法刪除特定的儲存效率策略。如果儲存效率策略已指派給工作負載，或者它是唯一可用的儲存效率策略，則您無法刪除該策略。您需要提供儲存效率策略的唯一 ID 作為輸入參數來刪除特定的儲存效率策略。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+刪除
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===
+
+
+== 修改儲存效率策略
+
+您可以使用下列方法修改儲存效率策略並更新其屬性。您無法修改系統定義或指派給工作負載的儲存效率策略。您需要提供儲存效率策略的唯一 ID 來修改特定的儲存效率策略。此外，您還需要提供想要更新的屬性及其值。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+修補
+ a| 
+`/storage-provider/storage-efficiency-policies/\{key}`
+
+|===

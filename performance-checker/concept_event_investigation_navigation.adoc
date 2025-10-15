@@ -1,0 +1,30 @@
+---
+permalink: performance-checker/concept_event_investigation_navigation.html 
+sidebar: sidebar 
+keywords: event, investigation, navigation 
+summary: Unified Manager 事件詳細資訊頁面可讓您深入了解任何效能事件。這在調查效能事件、排除故障和微調系統效能時非常有用。 
+---
+= 事件調查導航
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager 事件詳細資訊頁面可讓您深入了解任何效能事件。這在調查效能事件、排除故障和微調系統效能時非常有用。
+
+根據效能事件的類型，您可能會看到以下兩種類型的事件詳細資訊頁面之一：
+
+* 使用者定義和系統定義的閾值策略事件的事件詳細資訊頁面
+* 動態閾值策略事件的事件詳細資訊頁面
+
+
+這是事件調查導航的一個例子。
+
+. 在左側導覽窗格中，按一下「事件管理」。
+. 從「檢視」功能表中，按一下「活動效能事件」。
+. 按一下要調查的事件的名稱，將顯示事件詳細資訊頁面。
+. 查看事件描述並查看建議的操作（如果有）以查看有關該事件的更多詳細信息，這可能有助於您解決問題。您可以按一下「分析工作負載」按鈕來顯示詳細的效能圖表，以協助進一步分析問題。
+
+
+image::../media/event_flow.png[顯示事件調查導航的 UI 螢幕截圖。]

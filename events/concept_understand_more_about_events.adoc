@@ -1,0 +1,14 @@
+---
+permalink: events/concept_understand_more_about_events.html 
+sidebar: sidebar 
+keywords: understand, more, events 
+summary: 了解有關事件的概念有助於您有效地管理叢集和叢集物件並適當地定義警報。 
+---
+= 了解更多活動信息
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解有關事件的概念有助於您有效地管理叢集和叢集物件並適當地定義警報。

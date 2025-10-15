@@ -1,0 +1,214 @@
+---
+permalink: install-windows/reference_complete_worksheet_um.html 
+sidebar: sidebar 
+keywords: complete, worksheet 
+summary: 在安裝和設定 Unified Manager 之前，您應該準備好有關您的環境的具體資訊。您可以在工作表中記錄該資訊。 
+---
+= 完成工作表
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在安裝和設定 Unified Manager 之前，您應該準備好有關您的環境的具體資訊。您可以在工作表中記錄該資訊。
+
+
+
+== Unified Manager 安裝訊息
+
+安裝 Unified Manager 所需的詳細資訊。
+
+[cols="2*"]
+|===
+| 部署軟體的系統 | 你的價值 
+
+
+ a| 
+主機完全限定域名
+ a| 
+
+
+
+ a| 
+主機 IP 位址
+ a| 
+
+
+
+ a| 
+網路遮罩
+ a| 
+
+
+
+ a| 
+網關 IP 位址
+ a| 
+
+
+
+ a| 
+主 DNS 位址
+ a| 
+
+
+
+ a| 
+輔助 DNS 位址
+ a| 
+
+
+
+ a| 
+搜尋域名
+ a| 
+
+
+
+ a| 
+維護用戶名
+ a| 
+
+
+
+ a| 
+維護用戶密碼
+ a| 
+
+|===
+
+
+== Unified Manager 設定訊息
+
+安裝後設定 Unified Manager 的詳細資訊。根據您的配置，某些值是可選的。
+
+[cols="2*"]
+|===
+| 環境 | 你的價值 
+
+
+ a| 
+維護使用者電子郵件地址
+ a| 
+
+
+
+ a| 
+SMTP 伺服器主機名稱或 IP 位址
+ a| 
+
+
+
+ a| 
+SMTP使用者名稱
+ a| 
+
+
+
+ a| 
+SMTP 密碼
+ a| 
+
+
+
+ a| 
+SMTP 連接埠
+ a| 
+25（預設值）
+
+
+
+ a| 
+發送警報通知的電子郵件
+ a| 
+
+
+
+ a| 
+身份驗證伺服器主機名稱或 IP 位址
+ a| 
+
+
+
+ a| 
+Active Directory 管理員名稱或 LDAP 綁定可分辨名稱
+ a| 
+
+
+
+ a| 
+Active Directory 密碼或 LDAP 綁定密碼
+ a| 
+
+
+
+ a| 
+認證伺服器基礎可分辨名稱
+ a| 
+
+
+
+ a| 
+身分識別提供者 (IdP) URL
+ a| 
+
+
+
+ a| 
+身分提供者 (IdP) 元資料
+ a| 
+
+
+
+ a| 
+SNMP 陷阱目標主機 IP 位址
+ a| 
+
+
+
+ a| 
+SNMP 連接埠
+ a| 
+
+|===
+
+
+== 集群資訊
+
+使用 Unified Manager 管理的儲存系統的詳細資訊。
+
+[cols="2*"]
+|===
+| N 的簇 1 | 你的價值 
+
+
+ a| 
+主機名稱或叢集管理 IP 位址
+ a| 
+
+
+
+ a| 
+ONTAP管理員使用者名稱
+
+[NOTE]
+====
+必須為管理員指派“admin”角色。
+
+==== a| 
+
+
+
+ a| 
+ONTAP管理員密碼
+ a| 
+
+
+
+ a| 
+協定
+ a| 
+HTTPS
+
+|===

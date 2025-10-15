@@ -1,0 +1,28 @@
+---
+permalink: events/concept_what_happens_when_an_event_is_received.html 
+sidebar: sidebar 
+keywords: happens, when, event, received 
+summary: 當 Unified Manager 收到事件時，它會顯示在「儀表板」頁面、「活動管理」庫存頁面、「叢集/效能」頁面的「摘要」和「資源管理器」標籤以及特定於物件的庫存頁面（例如，「磁碟區/運作狀況」庫存頁面）中。 
+---
+= 收到事件時會發生什麼
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當 Unified Manager 收到事件時，它會顯示在「儀表板」頁面、「活動管理」庫存頁面、「叢集/效能」頁面的「摘要」和「資源管理器」標籤以及特定於物件的庫存頁面（例如，「磁碟區/運作狀況」庫存頁面）中。
+
+當 Unified Manager 偵測到相同叢集元件連續多次出現相同事件條件時，它會將所有出現的事件視為單一事件，而不是單獨的事件。事件的持續時間會增加，以表明事件仍然有效。
+
+根據您在「警報設定」頁面中配置設定的方式，您可以將這些事件通知其他使用者。此警報將導致以下操作啟動：
+
+* 可以將有關該事件的電子郵件傳送給所有 Unified Manager 管理員使用者。
+* 該事件可以傳送給其他電子郵件收件者。
+* SNMP 陷阱可以傳送到陷阱接收器。
+* 可以執行自訂腳本來執行操作。
+
+
+此工作流程如下圖所示。
+
+image::../media/um_perf_threshold_event_flow.gif[um 效能閾值事件流]

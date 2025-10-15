@@ -1,0 +1,20 @@
+---
+permalink: health-checker/concept_backup_and_restore_using_netapp_snapshots.html 
+sidebar: sidebar 
+keywords: snapshot copy, copies, restore, using, netapp, snapshots 
+summary: NetApp Snapshot 副本會建立 Unified Manager 資料庫和設定檔的時間點映像，您可以在系統發生故障或資料遺失時使用這些映像進行復原。您可以安排定期將 Snapshot 副本寫入其中一個ONTAP叢集上的捲，以便始終擁有最新副本。 
+---
+= 使用NetApp快照進行備份與還原
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NetApp Snapshot 副本會建立 Unified Manager 資料庫和設定檔的時間點映像，您可以在系統發生故障或資料遺失時使用這些映像進行復原。您可以安排定期將 Snapshot 副本寫入其中一個ONTAP叢集上的捲，以便始終擁有最新副本。
+
+[NOTE]
+====
+此功能不適用於安裝在虛擬裝置上的Active IQ Unified Manager 。
+
+====

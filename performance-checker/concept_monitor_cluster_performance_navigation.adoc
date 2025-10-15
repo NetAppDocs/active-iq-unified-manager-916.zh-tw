@@ -1,0 +1,28 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_navigation.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, navigation 
+summary: 您可以監控 Unified Manager 管理的所有叢集的效能。監控叢集可為您提供叢集和物件效能的概覽，並包含效能事件監控。您可以從高層次查看效能和事件，也可以進一步調查叢集和物件效能以及效能事件的任何詳細資訊。 
+---
+= 監控叢集效能導航
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以監控 Unified Manager 管理的所有叢集的效能。監控叢集可為您提供叢集和物件效能的概覽，並包含效能事件監控。您可以從高層次查看效能和事件，也可以進一步調查叢集和物件效能以及效能事件的任何詳細資訊。
+
+這是許多可能的叢集效能導航路徑的一個範例：
+
+. 在左側導覽窗格中，按一下「*儲存*」>「*聚合*」。
+. 要查看有關這些聚合的性能的信息，請選擇“性能：所有聚合”視圖。
+. 確定您想要調查的聚合，然後按一下該聚合名稱以導覽至聚合/效能資源管理器頁面。
+. 或者，在「檢視與比較」功能表中選擇要與此聚合進行比較的其他對象，然後將其中一個物件新增至比較窗格。
++
+兩個物件的統計資料將出現在計數器圖表中以供比較。
+
+. 在資源管理器頁面右側的比較窗格中，按一下其中一個計數器圖表中的「縮放檢視」以查看有關該聚合的效能記錄的詳細資訊。
+
+
+image::../media/monitor_cluster_performance.png[一個 UI 螢幕截圖，展示如何調查特定的聚合。]

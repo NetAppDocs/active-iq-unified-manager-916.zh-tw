@@ -1,0 +1,26 @@
+---
+permalink: events/reference_add_script_dialog_box.html 
+sidebar: sidebar 
+keywords: add, script, dialog, box 
+summary: 透過「新增腳本」對話框，您可以將腳本新增至 Unified Manager。您可以使用腳本配置警報，以自動解決為儲存物件產生的事件。 
+---
+= 新增腳本對話框
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+透過「新增腳本」對話框，您可以將腳本新增至 Unified Manager。您可以使用腳本配置警報，以自動解決為儲存物件產生的事件。
+
+您必須具有應用程式管理員或儲存管理員角色。
+
+* *選擇腳本檔案*
++
+使您能夠選擇警報的腳本。
+
+* *描述*
++
+使您能夠指定腳本的描述。
+
+

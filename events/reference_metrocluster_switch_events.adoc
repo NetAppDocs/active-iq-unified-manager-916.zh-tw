@@ -1,0 +1,82 @@
+---
+permalink: events/reference_metrocluster_switch_events.html 
+sidebar: sidebar 
+keywords: metrocluster, switch, events, impact area, availability 
+summary: MetroCluster交換器事件為您提供有關MetroCluster交換器狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= MetroCluster交換器事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+MetroCluster over FC 配置的MetroCluster交換器事件為您提供有關MetroCluster交換器狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+開關溫度異常(ocumEvtSwitchTemperatureAbnormal)
+ a| 
+事件
+ a| 
+MetroCluster交換機
+ a| 
+批判的
+
+
+
+ a| 
+交換器不可達（ocumEvtSwitchUnreachable）
+ a| 
+事件
+ a| 
+MetroCluster交換機
+ a| 
+批判的
+
+
+
+ a| 
+交換器風扇故障（ocumEvtSwitchFansOneOrMoreFailed）
+ a| 
+事件
+ a| 
+MetroCluster交換機
+ a| 
+批判的
+
+
+
+ a| 
+開關電源故障（ocumEvtSwitchPowerSuppliesOneOrMoreFailed）
+ a| 
+事件
+ a| 
+MetroCluster交換機
+ a| 
+批判的
+
+
+
+ a| 
+開關溫度感測器故障（ocumEvtSwitchTemperatureSensorFailed）
+
+[NOTE]
+====
+此事件僅適用於Cisco交換器。
+
+==== a| 
+事件
+ a| 
+MetroCluster交換機
+ a| 
+批判的
+
+|===

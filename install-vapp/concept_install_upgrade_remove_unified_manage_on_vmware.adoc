@@ -1,0 +1,14 @@
+---
+permalink: install-vapp/concept_install_upgrade_remove_unified_manage_on_vmware.html 
+sidebar: sidebar 
+keywords: install, upgrade, remove, unified manager, software 
+summary: 在 VMware vSphere 系統上，您可以安裝 Unified Manager 軟體、升級至較新版本的軟體或移除 Unified Manager 虛擬設備。 
+---
+= 安裝、升級和刪除 Unified Manager 軟體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 VMware vSphere 系統上，您可以安裝 Unified Manager、升級至較新版本的軟體或移除 Unified Manager 虛擬設備 (vApp)。

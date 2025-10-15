@@ -1,0 +1,22 @@
+---
+permalink: health-checker/concept_manage_cluster_security_objectives.html 
+sidebar: sidebar 
+keywords: cluster, security, manage, objectives 
+summary: 'Unified Manager 提供了一個儀表板，可根據NetApp ONTAP 9 安全性強化指南中定義的建議，識別ONTAP叢集、儲存虛擬機器 (SVM) 和磁碟區的安全性。' 
+---
+= 管理叢集安全目標
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager 提供了一個儀表板，可根據《NetApp ONTAP 9 安全強化指南》中定義的建議來確定ONTAP叢集、儲存虛擬機器 (SVM) 和磁碟區的安全性。
+
+安全儀表板的目標是顯示ONTAP叢集與NetApp建議指南不一致的任何區域，以便您可以修復這些潛在問題。大多數情況下，您可以使用ONTAP System Manager 或ONTAP CLI 來解決問題。您的組織可能不會遵循所有建議，因此在某些情況下您不需要進行任何更改。
+
+查看 https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp ONTAP 9 安全強化指南"^]（TR-4569）以獲取詳細的建議和解決方案。
+
+除了報告安全狀態之外，Unified Manager 還會為任何有安全性違規的叢集或 SVM 產生安全性事件。您可以在事件管理庫存頁面中追蹤這些問題，並且可以為這些事件配置警報，以便在發生新的安全事件時通知您的儲存管理員。
+
+有關詳細信息，請參閱 link:../health-checker/concept_what_security_criteria_is_being_evaluated.html["正在評估哪些安全標準"]。

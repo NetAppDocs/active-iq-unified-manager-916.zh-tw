@@ -1,0 +1,36 @@
+---
+permalink: performance-checker/concept_move_logical_interfaces.html 
+sidebar: sidebar 
+keywords: move, logical, interfaces, lifs 
+summary: '將邏輯介面 (LIF) 移至不太繁忙的連接埠可以幫助改善負載平衡、協助維護操作和效能調整，並減少間接存取。' 
+---
+= 行動邏輯介面 (LIF)
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+將邏輯介面 (LIF) 移至不太繁忙的連接埠可以幫助改善負載平衡、協助維護操作和效能調整，並減少間接存取。
+
+間接存取會降低系統效率。當磁碟區工作負載使用不同的節點進行網路處理和資料處理時，就會發生這種情況。為了減少間接訪問，您可以重新排列 LIF，這涉及移動 LIF 以使用相同的節點進行網路處理和資料處理。您可以配置負載平衡，讓ONTAP自動將繁忙的 LIF 移動到其他端口，或者您可以手動移動 LIF。
+
+[cols="2*"]
+|===
+| *好處* | *注意事項* 
+
+
+ a| 
+* 改善負載平衡。
+* 減少間接存取。
+
+ a| 
+[NOTE]
+====
+當移動連接到 CIFS 共享的 LIF 時，存取 CIFS 共享的用戶端將斷開連線。對 CIFS 共享的任何讀取或寫入請求都會中斷。
+
+====
+|===
+您可以使用ONTAP指令來設定負載平衡。有關更多信息，請參閱ONTAP網絡文檔。
+
+您可以使用ONTAP系統管理員和ONTAP CLI 指令手動移動 LIF。

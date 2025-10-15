@@ -1,0 +1,36 @@
+---
+permalink: reporting/task_create_report_to_group_volume_relationships_by_issue.html 
+sidebar: sidebar 
+keywords: create, report, group, volume, relationships, issue 
+summary: 您可以建立一個按問題對磁碟區關係進行分組的報表。 
+---
+= 建立報告以按問題對卷宗關係進行分組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立一個按問題對磁碟區關係進行分組的報表。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+
+
+使用下列步驟建立按問題對磁碟區關係進行分組的自訂視圖，然後安排為該視圖產生報表。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*磁碟區*」。
+. 在「檢視」功能表中，選擇「*關係*」>「*所有關係*」。
+. 選擇“*顯示/隱藏*”以刪除報告中不需要的任何列。
+. 將「不健康原因」欄位拖曳到「狀態」列附近。
+. 按一下「不健康原因」列的頂部，按問題將磁碟區分組。
+. 使用反映視圖所顯示內容的特定名稱儲存視圖，例如「`Vol relationships by issue`」。
+. 點擊庫存頁面上的“*計劃報告*”按鈕。
+. 輸入報告計劃的名稱並填寫其他報告字段，然後按一下複選標記 (image:../media/blue_check.gif[""] ) 位於行尾。
++
+該報告將立即發送以進行測試。此後，將產生報告並透過電子郵件發送給使用指定頻率列出的收件者。
+
+
+
+根據報告中顯示的結果，您可以調查每種問題的來源和影響。

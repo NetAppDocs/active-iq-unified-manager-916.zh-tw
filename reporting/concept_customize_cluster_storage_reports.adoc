@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_cluster_storage_reports.html 
+sidebar: sidebar 
+keywords: customize, cluster, storage, reports 
+summary: 本節中的範例叢集儲存報表只是幫助您了解如何建立有關叢集容量的報表以協助您監控儲存系統資源的範例。 
+---
+= 自訂叢集儲存報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本節中的範例叢集儲存報表只是幫助您了解如何建立有關叢集容量的報表以協助您監控儲存系統資源的範例。

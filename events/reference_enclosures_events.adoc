@@ -1,0 +1,101 @@
+---
+permalink: events/reference_enclosures_events.html 
+sidebar: sidebar 
+keywords: enclosures, events, impact area, availability, configuration 
+summary: 機箱事件為您提供有關資料中心磁碟架機箱狀態的信息，以便您監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= 圍欄事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+機箱事件為您提供有關資料中心磁碟架機箱狀態的信息，以便您監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+磁碟架風扇故障（ocumEvtShelfFanFailed）
+ a| 
+事件
+ a| 
+置物架
+ a| 
+批判的
+
+
+
+ a| 
+磁碟架電源故障（ocumEvtShelfPowerSupplyFailed）
+ a| 
+事件
+ a| 
+置物架
+ a| 
+批判的
+
+
+
+ a| 
+未配置磁碟架多路徑 (ocumDiskShelfConnectivityNotInMultiPath)
+
+此活動不適用於：
+
+* MetroCluster配置中的集群
+* 以下平台：FAS2554、FAS2552、FAS2520 和 FAS2240
+
+ a| 
+風險
+ a| 
+節點
+ a| 
+警告
+
+
+
+ a| 
+磁碟架路徑故障（ocumDiskShelfConnectivityPathFailure）
+ a| 
+風險
+ a| 
+置物架
+ a| 
+警告
+
+|===
+
+
+== 影響區域：配置
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+已發現磁碟架（不適用）
+ a| 
+事件
+ a| 
+節點
+ a| 
+資訊
+
+
+
+ a| 
+磁碟架已移除（不適用）
+ a| 
+事件
+ a| 
+節點
+ a| 
+資訊
+
+|===

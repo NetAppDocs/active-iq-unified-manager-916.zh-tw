@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_report_work_flow.html 
+sidebar: sidebar 
+keywords: report, workflow 
+summary: 描述報告工作流程的決策樹。 
+---
+= 報告工作流程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+描述報告工作流程的決策樹。
+
+image::../media/reports_view_workflow.png[報告查看工作流程]

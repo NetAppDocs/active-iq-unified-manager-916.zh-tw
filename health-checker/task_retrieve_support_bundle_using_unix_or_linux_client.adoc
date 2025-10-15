@@ -1,0 +1,73 @@
+---
+permalink: health-checker/task_retrieve_support_bundle_using_unix_or_linux_client.html 
+sidebar: sidebar 
+keywords: retrieve, support bundle, unix, linux, client 
+summary: '如果您是 UNIX 或 Linux 用戶，則可以使用 Linux 用戶端伺服器上的命令列介面 (CLI) 從 vApp 中擷取支援包。您可以使用 SCP 或 SFTP 來檢索支援包。' 
+---
+= 使用 UNIX 或 Linux 用戶端檢索支援包
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您是 UNIX 或 Linux 用戶，則可以使用 Linux 用戶端伺服器上的命令列介面 (CLI) 從 vApp 中擷取支援包。您可以使用 SCP 或 SFTP 來檢索支援包。
+
+.開始之前
+您必須是維護使用者才能執行此任務。
+
+您必須已使用維護控制台產生支援包並具有可用的支援包名稱。
+
+.步驟
+. 使用 Linux 用戶端伺服器透過 Telnet 或控制台存取 CLI。
+. 訪問/`support`目錄。
+. 使用以下命令檢索支援包並將其複製到本機目錄：
++
+[cols="2*"]
+|===
+| 如果您正在使用... | 然後使用以下命令... 
+
+
+ a| 
+SCP
+ a| 
+`scp <maintenance-user>@<vApp-name-or-ip>:/support/support_bundle_file_name.7z <destination-directory>`
+
+
+
+ a| 
+安全FTP
+ a| 
+`sftp <maintenance-user>@<vApp-name-or-ip>:/support/support_bundle_file_name.7z <destination-directory>`
+
+|===
++
+當您使用維護控制台產生支援包時，會向您提供其名稱。
+
+. 輸入維護用戶密碼。
+
+
+
+
+== 範例
+
+以下範例使用 SCP 檢索支援包：
+
+[listing]
+----
+
+        `$ scp admin@10.10.12.69:/support/support_bundle_20160216_145359.7z .`
+Password: `<maintenance_user_password>`
+support_bundle_20160216_145359.7z   100%  119MB  11.9MB/s   00:10
+----
+以下範例使用 SFTP 檢索支援包：
+
+[listing]
+----
+
+        `$ sftp admin@10.10.12.69:/support/support_bundle_20160216_145359.7z .`
+Password: `<maintenance_user_password>`
+Connected to 10.228.212.69.
+Fetching /support/support_bundle_20130216_145359.7z to ./support_bundle_20130216_145359.7z
+/support/support_bundle_20160216_145359.7z
+----

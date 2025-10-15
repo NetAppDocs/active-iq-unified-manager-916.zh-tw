@@ -1,0 +1,44 @@
+---
+permalink: events/reference_inodes_events.html 
+sidebar: sidebar 
+keywords: inodes, events, impact area, capacity 
+summary: 當 inode 已滿或接近已滿時，inode 事件會提供信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= Inode 事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當 inode 已滿或接近已滿時，inode 事件會提供信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響區域：容量
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+Inode 幾乎已滿（ocumEvtInodesAlmostFull）
+ a| 
+風險
+ a| 
+體積
+ a| 
+警告
+
+
+
+ a| 
+Inode 已滿（ocumEvtInodesFull）
+ a| 
+風險
+ a| 
+體積
+ a| 
+錯誤
+
+|===

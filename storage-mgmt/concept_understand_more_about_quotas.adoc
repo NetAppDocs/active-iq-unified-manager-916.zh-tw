@@ -1,0 +1,14 @@
+---
+permalink: storage-mgmt/concept_understand_more_about_quotas.html 
+sidebar: sidebar 
+keywords: understand, more, quotas 
+summary: 了解有關配額的概念有助於您有效地管理使用者配額和使用者群組配額。 
+---
+= 詳細了解配額
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+了解有關配額的概念有助於您有效地管理使用者配額和使用者群組配額。

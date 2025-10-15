@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_counter_charts_zoom_view.html 
+sidebar: sidebar 
+keywords: counter, charts, zoom, view 
+summary: 計數器圖表提供縮放視圖，使您能夠放大指定時間段內的效能詳細資訊。這使您能夠以更高的粒度查看效能詳細資訊和事件，這在解決效能問題時非常有用。 
+---
+= 計數器圖表縮放視圖
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+計數器圖表提供縮放視圖，使您能夠放大指定時間段內的效能詳細資訊。這使您能夠以更高的粒度查看效能詳細資訊和事件，這在解決效能問題時非常有用。
+
+當以縮放視圖顯示時，某些細分圖表會提供比圖表未以縮放視圖顯示時顯示的資訊更多的資訊。例如，如果已在ONTAP中設定了磁碟區和 LUN 的 QoS 策略值，則 IOPS、IOPS/TB 和 MBps 細分圖縮放檢視頁面將顯示這些值。
+
+[NOTE]
+====
+對於系統定義的效能閾值策略，*策略*清單中只有「節點資源過度利用」和「QoS 吞吐量限制突破」策略可用。其他系統定義的閾值策略目前無法使用。
+
+====

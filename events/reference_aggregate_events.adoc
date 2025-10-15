@@ -1,0 +1,408 @@
+---
+permalink: events/reference_aggregate_events.html 
+sidebar: sidebar 
+keywords: aggregate events, impact, area, availability, capacity, configuration, performance 
+summary: 聚合事件為您提供有關聚合狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= 聚合事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+聚合事件為您提供有關聚合狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響領域：可用性
+
+星號 (*) 標識已轉換為 Unified Manager 事件的 EMS 事件。
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+聚合離線（ocumEvtAggregateStateOffline）
+ a| 
+事件
+ a| 
+總計的
+ a| 
+批判的
+
+
+
+ a| 
+聚合失敗（ocumEvtAggregateStateFailed）
+ a| 
+事件
+ a| 
+總計的
+ a| 
+批判的
+
+
+
+ a| 
+聚合限制（ocumEvtAggregateStateRestricted）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+聚合重建（ocumEvtAggregateRaidStateReconstructing）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+聚合降級（ocumEvtAggregateRaidStateDegraded）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+雲層部分可達（ocumEventCloudTierPartiallyReachable）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+雲層無法存取（ocumEventCloudTierUnreachable）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+錯誤
+
+
+
+ a| 
+拒絕雲層存取以進行聚合重新定位 *(arlNetraCaCheckFailed)
+ a| 
+風險
+ a| 
+總計的
+ a| 
+錯誤
+
+
+
+ a| 
+在儲存故障轉移期間拒絕雲層存取以進行聚合重定位 *(gbNetraCaCheckFailed)
+ a| 
+風險
+ a| 
+總計的
+ a| 
+錯誤
+
+
+
+ a| 
+MetroCluster聚合滯後 (ocumEvtMetroClusterAggregateLeftBehind)
+ a| 
+風險
+ a| 
+總計的
+ a| 
+錯誤
+
+
+
+ a| 
+MetroCluster聚合鏡像降級 (ocumEvtMetroClusterAggregateMirrorDegraded)
+ a| 
+風險
+ a| 
+總計的
+ a| 
+錯誤
+
+|===
+
+
+== 影響區域：容量
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+聚合空間幾乎已滿（ocumEvtAggregateNearlyFull）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+聚合空間已滿（ocumEvtAggregateFull）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+錯誤
+
+
+
+ a| 
+滿載前的總天數（ocumEvtAggregateDaysUntilFullSoon）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+錯誤
+
+
+
+ a| 
+聚合過度提交（ocumEvtAggregateOvercommitted）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+錯誤
+
+
+
+ a| 
+聚合幾乎過度承諾（ocumEvtAggregateAlmostOvercommitted）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+聚合快照保留已滿（ocumEvtAggregateSnapReserveFull）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+整體成長率異常（ocumEvtAggregateGrowthRateAbnormal）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+|===
+
+
+== 影響區域：配置
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+發現的總量（不適用）
+ a| 
+事件
+ a| 
+總計的
+ a| 
+資訊
+
+
+
+ a| 
+聚合重命名（不適用）
+ a| 
+事件
+ a| 
+總計的
+ a| 
+資訊
+
+
+
+ a| 
+已刪除的集合（不適用）
+ a| 
+事件
+ a| 
+節點
+ a| 
+資訊
+
+|===
+
+
+== 影響領域：性能
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+聚合 IOPS 臨界閾值被突破（ocumAggregateIopsIncident）
+ a| 
+事件
+ a| 
+總計的
+ a| 
+批判的
+
+
+
+ a| 
+超出聚合 IOPS 警告閾值 (ocumAggregateIopsWarning)
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+總計 MB/s 臨界門檻突破（ocumAggregateMbpsIncident）
+ a| 
+事件
+ a| 
+總計的
+ a| 
+批判的
+
+
+
+ a| 
+超出聚合 MB/s 警告閾值 (ocumAggregateMbpsWarning)
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+聚合延遲臨界閾值突破（ocumAggregateLatencyIncident）
+ a| 
+事件
+ a| 
+總計的
+ a| 
+批判的
+
+
+
+ a| 
+超出聚合延遲警告閾值（ocumAggregateLatencyWarning）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+已使用的總效能容量臨界門檻已突破 (ocumAggregatePerfCapacityUsedIncident)
+ a| 
+事件
+ a| 
+總計的
+ a| 
+批判的
+
+
+
+ a| 
+已使用總體效能容量警告閾值已突破 (ocumAggregatePerfCapacityUsedWarning)
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+總體利用率臨界門檻被突破（ocumAggregateUtilizationIncident）
+ a| 
+事件
+ a| 
+總計的
+ a| 
+批判的
+
+
+
+ a| 
+超出聚合利用率警告閾值（ocumAggregateUtilizationWarning）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+聚合磁碟過度利用閾值已突破 (ocumAggregateDisksOverUtilizedWarning)
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+
+
+ a| 
+聚合動態閾值突破（ocumAggregateDynamicEventWarning）
+ a| 
+風險
+ a| 
+總計的
+ a| 
+警告
+
+|===

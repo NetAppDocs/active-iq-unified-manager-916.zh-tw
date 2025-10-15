@@ -1,0 +1,45 @@
+---
+permalink: health-checker/task_delete_snapshot_copies.html 
+sidebar: sidebar 
+keywords: delete, snapshot copies 
+summary: 您可以刪除 Snapshot 副本以節省空間或釋放磁碟空間，或者如果不再需要 Snapshot 副本，您也可以將其刪除。 
+---
+= 刪除 Snapshot 副本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以刪除 Snapshot 副本以節省空間或釋放磁碟空間，或者如果不再需要 Snapshot 副本，您也可以將其刪除。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+該卷必須處於線上狀態。
+
+要刪除處於繁忙或鎖定狀態的 Snapshot 副本，您必須從正在使用它的應用程式中釋放該 Snapshot 副本。
+
+* 如果FlexClone磁碟區正在使用基線 Snapshot 副本，則您無法刪除父磁碟區中的該 Snapshot 副本。
++
+基本 Snapshot 副本是用於建立FlexClone磁碟區並顯示狀態的 Snapshot 副本 `Busy`和應用程式依賴關係 `Busy, Vclone`在父親卷中。
+
+* 您無法刪除SnapMirror關係中使用的鎖定 Snapshot 副本。
++
+Snapshot 副本已被鎖定，下次更新時需要它。
+
+
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*磁碟區*」。
+. 在「*Health: All Volumes*」檢視中，選擇包含要檢視的 Snapshot 副本的磁碟區。
++
+將顯示 Snapshot 副本清單。
+
+. 在*Volume / Health*詳細資訊頁面中，按一下*Capacity*標籤。
+. 在「*容量*」標籤的「*詳細資料*」窗格中，在其他詳細資料部分中，按一下「*快照副本*」旁的連結。
++
+Snapshot 副本數量是一個顯示 Snapshot 副本清單的連結。
+
+. 在「Snapshot 副本」檢視中，選擇要刪除的 Snapshot 副本，然後按一下「刪除所選」。
+

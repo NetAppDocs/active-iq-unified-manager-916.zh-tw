@@ -1,0 +1,14 @@
+---
+permalink: performance-checker/concept_monitor_cluster_performance_from_cluster_landing_page.html 
+sidebar: sidebar 
+keywords: monitor, cluster, performance, performance, cluster, landing, page 
+summary: 效能群集登入頁面顯示由 Unified Manager 實例監控的選定群集的進階效能狀態。此頁面可讓您評估特定叢集的整體效能，並快速記錄、定位或指派已識別的任何特定於叢集的事件以供解決。 
+---
+= 從效能叢集登入頁面監控叢集效能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+效能群集登入頁面顯示由 Unified Manager 實例監控的選定群集的進階效能狀態。此頁面可讓您評估特定叢集的整體效能，並快速記錄、定位或指派已識別的任何特定於叢集的事件以供解決。

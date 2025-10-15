@@ -1,0 +1,185 @@
+---
+permalink: events/reference_nvme_namespace_events.html 
+sidebar: sidebar 
+keywords: nvme, namespace, events, impact area, availability, performance 
+summary: NVMe 命名空間事件為您提供有關命名空間狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= NVMe 命名空間事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+NVMe 命名空間事件為您提供有關命名空間狀態的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+星號 (*) 標識已轉換為 Unified Manager 事件的 EMS 事件。
+
+
+
+== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+NVMeNS 離線 *(nvmeNamespaceStatusOffline)
+ a| 
+事件
+ a| 
+命名空間
+ a| 
+資訊
+
+
+
+ a| 
+NVMeNS 線上 *(nvmeNamespaceStatusOnline)
+ a| 
+事件
+ a| 
+命名空間
+ a| 
+資訊
+
+
+
+ a| 
+NVMeNS 空間不足 *(nvmeNamespaceSpaceOutOfSpace)
+ a| 
+風險
+ a| 
+命名空間
+ a| 
+警告
+
+
+
+ a| 
+NVMeNS 銷毀 *(nvmeNamespaceDestroy)
+ a| 
+事件
+ a| 
+命名空間
+ a| 
+資訊
+
+|===
+
+
+== 影響領域：性能
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+NVMe 命名空間 IOPS 臨界閾值被突破（ocumNvmeNamespaceIopsIncident）
+ a| 
+事件
+ a| 
+命名空間
+ a| 
+批判的
+
+
+
+ a| 
+NVMe 命名空間 IOPS 警告閾值已超出 (ocumNvmeNamespaceIopsWarning)
+ a| 
+風險
+ a| 
+命名空間
+ a| 
+警告
+
+
+
+ a| 
+NVMe 命名空間 MB/s 臨界閾值被突破（ocumNvmeNamespaceMbpsIncident）
+ a| 
+事件
+ a| 
+命名空間
+ a| 
+批判的
+
+
+
+ a| 
+超出 NVMe 命名空間 MB/s 警告閾值 (ocumNvmeNamespaceMbpsWarning)
+ a| 
+風險
+ a| 
+命名空間
+ a| 
+警告
+
+
+
+ a| 
+NVMe 命名空間延遲 ms/op 臨界閾值突破（ocumNvmeNamespaceLatencyIncident）
+ a| 
+事件
+ a| 
+命名空間
+ a| 
+批判的
+
+
+
+ a| 
+NVMe 命名空間延遲 ms/op 警告閾值已超出 (ocumNvmeNamespaceLatencyWarning)
+ a| 
+風險
+ a| 
+命名空間
+ a| 
+警告
+
+
+
+ a| 
+NVMe 命名空間延遲和 IOPS 臨界閾值被突破（ocumNvmeNamespaceLatencyIopsIncident）
+ a| 
+事件
+ a| 
+命名空間
+ a| 
+批判的
+
+
+
+ a| 
+NVMe 命名空間延遲和 IOPS 警告閾值已超出 (ocumNvmeNamespaceLatencyIopsWarning)
+ a| 
+風險
+ a| 
+命名空間
+ a| 
+警告
+
+
+
+ a| 
+NVMe 命名空間延遲和 MB/s 臨界閾值被突破（ocumNvmeNamespaceLatencyMbpsIncident）
+ a| 
+事件
+ a| 
+命名空間
+ a| 
+批判的
+
+
+
+ a| 
+NVMe 命名空間延遲和 MB/s 警告閾值超出 (ocumNvmeNamespaceLatencyMbpsWarning)
+ a| 
+風險
+ a| 
+命名空間
+ a| 
+警告
+
+|===

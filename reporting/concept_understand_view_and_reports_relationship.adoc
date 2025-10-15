@@ -1,0 +1,29 @@
+---
+permalink: reporting/concept_understand_view_and_reports_relationship.html 
+sidebar: sidebar 
+keywords: understand, view, report, relationship 
+summary: 當您下載或安排視圖和庫存頁面時，它們將成為報表。 
+---
+= 了解視圖和報表關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您下載或安排視圖和庫存頁面時，它們將成為報表。
+
+您可以自訂和儲存視圖和庫存頁面以供重複使用。幾乎您可以在 Unified Manager 中查看的所有內容都可以儲存、重複使用、自訂、排程和共用為報表。
+
+在視圖下拉式選單中，帶有刪除圖示的項目是您或其他使用者建立的現有自訂視圖。沒有圖示的項目是 Unified Manager 提供的預設視圖。預設視圖不能被修改或刪除。
+
+[NOTE]
+====
+* 如果從清單中刪除自訂視圖，則也會刪除使用該視圖的所有 Excel 檔案或計畫報表。
+* 如果您變更自訂視圖，則使用該視圖的報表將在下次產生報表並根據報表計畫透過電子郵件傳送時反映變更。變更視圖時，請確保您的變更與用於報表的任何相關 Excel 自訂相容。如果需要，您可以下載 Excel 文件，進行必要的更改，然後將其作為視圖的新 Excel 自訂上傳，以更新該文件。
+
+
+====
+image::../media/view_drop_down_3.png[視圖下拉選單的 UI 螢幕截圖。]
+
+只有具有應用程式管理員或儲存管理員角色的使用者才能看到刪除圖示、變更或刪除視圖，或變更或刪除計劃報告。

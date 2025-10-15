@@ -1,0 +1,49 @@
+---
+permalink: install-vapp/reference_vmware_software_and_installation_requirements.html 
+sidebar: sidebar 
+keywords: vmware, software, installation, requirements 
+summary: 安裝 Unified Manager 的 VMware vSphere 系統需要特定版本的作業系統和特定版本的支援軟體。 
+---
+= VMware 軟體和安裝要求
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安裝 Unified Manager 的 VMware vSphere 系統需要特定版本的作業系統和特定版本的支援軟體。
+
+
+
+== 作業系統軟體
+
+支援的作業系統是 VMware ESXi 8.0。
+
+[NOTE]
+====
+VMware vSphere 系統上的 Unified Manager OVA 在內部執行 Debian OS 12（bookworm）。有關支援版本的 ESXi 伺服器可以支援的虛擬機器硬體版本的信息，請參閱 VMware 文件。
+
+====
+支援以下版本的 vSphere：
+
+* VMware vCenter Server 7.0 和 8.0
+
+
+請參閱互通性矩陣以取得受支援的 ESXi 版本的完整和最新清單。
+
+http://mysupport.netapp.com/matrix["mysupport.netapp.com/matrix"]
+
+為了確保虛擬設備正常運作，VMware ESXi 伺服器時間應與 NTP 伺服器時間相同。將 VMware ESXi 伺服器時間與 NTP 伺服器時間同步可防止時間錯誤。
+
+
+
+== 安裝要求
+
+支援 Unified Manager 虛擬設備的 VMware High Availability。
+
+如果在執行ONTAP軟體的儲存系統上部署 NFS 資料儲存庫，請使用適用於 VMware VAAI 的NetApp NFS 外掛程式來使用厚配置。
+
+如果由於資源不足導致使用啟用高可用性的環境進行部署失敗，則可能需要透過停用虛擬機器重新啟動優先權並保持主機隔離回應為開啟狀態來修改叢集功能虛擬機器選項。
+
+
+NOTE: 安裝或升級 Unified Manager 時，所需的第三方軟體和安全性修補程式會在 VMware vSphere 系統上自動安裝或升級。由於 Unified Manager 安裝和升級程序控制這些元件，因此您不應嘗試獨立安裝或升級任何第三方元件。

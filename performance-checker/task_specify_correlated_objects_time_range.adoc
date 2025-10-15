@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/task_specify_correlated_objects_time_range.html 
+sidebar: sidebar 
+keywords: specify, time range, correlated objects 
+summary: 效能資源管理器頁面上的時間範圍選擇器可讓您指定物件資料比較的時間範圍。指定時間範圍可最佳化效能資源管理器頁面的內容，以僅顯示您指定的時間範圍內的物件資料。 
+---
+= 指定相關對象的時間範圍
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+效能資源管理器頁面上的時間範圍選擇器可讓您指定物件資料比較的時間範圍。指定時間範圍可最佳化效能資源管理器頁面的內容，以僅顯示您指定的時間範圍內的物件資料。
+
+細化時間範圍提供了一種有效的方法，可以僅顯示您感興趣的性能數據。您可以選擇預先定義的時間範圍或指定自訂時間範圍。預設時間範圍是前 72 小時。

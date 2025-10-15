@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/concept_how_enabling_flash_pool_can_improve_workload_performance.html 
+sidebar: sidebar 
+keywords: enable, flash pool, storage, aggregate, improve, workload, performance 
+summary: 您可以透過在聚合上啟用 Flash Pool 功能來提高工作負載效能。  Flash Pool 是包含 HDD 和 SSD 的聚合體。  HDD 用於主存儲，SSD 提供高效能讀寫快取以提高整體效能。 
+---
+= 在儲存聚合上啟用 Flash Pool 可以如何提高工作負載效能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以透過在聚合上啟用 Flash Pool 功能來提高工作負載效能。  Flash Pool 是包含 HDD 和 SSD 的聚合體。  HDD 用於主存儲，SSD 提供高效能讀寫快取以提高整體效能。
+
+在 Unified Manager 中，「事件詳細資料」頁面顯示存在爭用的聚合的名稱。您可以使用ONTAP系統管理員或ONTAP指令來查看是否為聚合啟用了 Flash Pool。如果您安裝了 SSD，則可以使用命令列介面來啟用它。如果您安裝了 SSD，則可以在聚合上執行以下命令以查看 Flash Pool 是否已啟用： `*cluster::> storage aggregate show -aggregate aggr_name -field hybrid-enabled*`
+
+在此命令中， `_aggr_name_`是聚合的名稱，例如爭用中的聚合。
+
+有關 Flash Pool 及其使用要求的更多信息，請參閱《叢集模式Data ONTAP實體儲存管理指南》。

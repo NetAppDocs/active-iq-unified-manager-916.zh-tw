@@ -1,0 +1,84 @@
+---
+permalink: events/reference_storage_services_events.html 
+sidebar: sidebar 
+keywords: storage, services, events, impact area, configuration, protection 
+summary: 儲存服務事件為您提供有關儲存服務的建立和訂閱的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= 儲存服務事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+儲存服務事件為您提供有關儲存服務的建立和訂閱的信息，以便您可以監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響區域：配置
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+已建立儲存服務（不適用）
+ a| 
+事件
+ a| 
+儲存服務
+ a| 
+資訊
+
+
+
+ a| 
+已訂購儲存服務（不適用）
+ a| 
+事件
+ a| 
+儲存服務
+ a| 
+資訊
+
+
+
+ a| 
+儲存服務已取消（不適用）
+ a| 
+事件
+ a| 
+儲存服務
+ a| 
+資訊
+
+|===
+
+
+== 影響區域：保護
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+意外刪除託管SnapMirror關係 ocumEvtStorageServiceUnsupportedRelationshipDeletion
+ a| 
+風險
+ a| 
+儲存服務
+ a| 
+警告
+
+
+
+ a| 
+儲存服務成員磁碟區意外刪除（ocumEvtStorageServiceUnexpectedVolumeDeletion）
+ a| 
+事件
+ a| 
+儲存服務
+ a| 
+批判的
+
+|===

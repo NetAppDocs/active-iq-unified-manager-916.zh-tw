@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_what_performance_events_are.html 
+sidebar: sidebar 
+keywords: performance, events 
+summary: 效能事件是與叢集上的工作負載效能相關的事件。它們可以幫助您識別響應時間較慢的工作負載。結合同時發生的健康事件，您可以確定可能導致或造成反應時間緩慢的問題。 
+---
+= 什麼是表演活動
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+效能事件是與叢集上的工作負載效能相關的事件。它們可以幫助您識別響應時間較慢的工作負載。結合同時發生的健康事件，您可以確定可能導致或造成反應時間緩慢的問題。
+
+當 Unified Manager 偵測到相同叢集元件多次出現相同事件條件時，它會將所有出現的事件視為單一事件，而不是單獨的事件。

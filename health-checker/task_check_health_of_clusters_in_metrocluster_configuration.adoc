@@ -1,0 +1,76 @@
+---
+permalink: health-checker/task_check_health_of_clusters_in_metrocluster_configuration.html 
+sidebar: sidebar 
+keywords: check, health, clusters, metrocluster, configuration 
+summary: 您可以使用 Unified Manager 檢查MetroCluster配置中的叢集及其元件的運作狀況。如果叢集涉及 Unified Manager 偵測到的效能事件，則健康狀況可以協助您確定硬體或軟體問題是否導致了該事件。 
+---
+= 檢查MetroCluster配置中叢集的運作狀況
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用Active IQ Unified Manager （Unified Manager）檢查MetroCluster over FC 和MetroCluster over IP 設定中的叢集及其元件的運作狀況。如果叢集涉及 Unified Manager 偵測到的效能事件，則健康狀況可以協助您確定硬體或軟體問題是否導致了該事件。
+
+.開始之前
+* 您必須具有操作員、應用程式管理員或儲存管理員角色。
+* 您必須已經分析了MetroCluster配置的效能事件並取得了所涉及的叢集的名稱。
+* 透過 FC 和 IP 的MetroCluster配置中的兩個叢集必須由同一個 Unified Manager 實例監控。
+
+
+
+
+== 確定MetroCluster透過 FC 配置中的叢集運作狀況
+
+請依照下列步驟確定MetroCluster over FC 配置中的叢集運作狀況。
+
+.步驟
+. 在左側導覽列中，點選“事件管理”，顯示事件清單。
+. 在過濾器面板中，選擇「來源類型」類別下的所有MetroCluster過濾器。您將看到您的環境中針對所有MetroCluster配置引發的所有事件。
+. 在MetroCluster事件旁邊，按一下叢集的名稱。
++
+[NOTE]
+====
+如果沒有顯示MetroCluster事件，您可以使用搜尋列搜尋與您的MetroCluster over FC 設定相關的事件所涉及的叢集的名稱。
+
+====
++
+健康狀況：所有群集視圖顯示有關該事件的詳細資訊。
+
+. 選擇「MetroCluster Connectivity」標籤以顯示所選叢集與其夥伴叢集之間的連線運作狀況。
++
+image::../media/opm_um_mcc_connectivity_tab_png.gif[Unified Manager MetroCluster連線選項卡]
+
++
+在此範例中，顯示了本機叢集及其夥伴叢集的名稱和元件。黃色或紅色圖示表示突出顯示的元件的健康事件。連接圖示表示叢集之間的連結。您可以將滑鼠遊標指向圖示以顯示事件訊息，或按一下圖示以顯示事件。任一集群的健康問題都可能導致性能事件。
+
++
+Unified Manager 監控叢集之間連結的NVRAM元件。如果本地或合作夥伴叢集上的 FC 交換器圖示或連線圖示為紅色，則可能是連結健康問題導致了效能事件。
+
+. 選擇“MetroCluster複製”標籤。
++
+image::../media/opm_um_mcc_replication_tab_png.gif[Unified Manager MetroCluster “複製”選項卡]
+
++
+在此範例中，如果本機或合作夥伴叢集上的NVRAM圖示為黃色或紅色，則NVRAM的健康問題可能導致了效能事件。如果頁面上沒有紅色或黃色圖標，則可能是合作夥伴叢集上的效能問題導致了效能事件。
+
+
+
+
+
+== 確定MetroCluster over IP 配置中的叢集運作狀況
+
+請依照下列步驟確定MetroCluster over IP 配置中的叢集運作狀況。
+
+.步驟
+. 在左側導覽列中，點選“事件管理”，顯示事件清單。
+. 在過濾器面板的“來源類型”類別下，選擇 `MetroCluster Relationship`篩選。您將看到您的環境中針對所有MetroCluster配置引發的所有事件。
++
+[NOTE]
+====
+如果您看不到已報告的MetroCluster事件，您可以使用搜尋列依照與您的MetroCluster over IP 設定相關的事件所涉及的叢集名稱進行搜尋。
+
+====
+. 在相關的MetroCluster事件旁邊，按一下叢集的名稱。將顯示「集群」頁面，其中包含該集群的詳細資訊。有關確定健康問題的信息，請參閱link:../storage-mgmt/task_monitor_metrocluster_configurations.html["監控MetroCluster透過 IP 設定中的連線問題"]。
+

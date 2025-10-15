@@ -1,0 +1,22 @@
+---
+permalink: performance-checker/concept_what_timestamp_means_in_collected_data_and_events.html 
+sidebar: sidebar 
+keywords: timestamp, means, collected, data, events 
+summary: 收集的健康和效能資料中出現的時間戳，或作為事件偵測時間出現的時間戳，基於ONTAP叢集時間，並根據 Web 瀏覽器上設定的時區進行調整。 
+---
+= 時間戳在收集的資料和事件中意味著什麼
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+收集的健康和效能資料中出現的時間戳，或作為事件偵測時間出現的時間戳，基於ONTAP叢集時間，並根據 Web 瀏覽器上設定的時區進行調整。
+
+強烈建議您使用網路時間協定 (NTP) 伺服器來同步 Unified Manager 伺服器、 ONTAP叢集和 Web 瀏覽器上的時間。
+
+[NOTE]
+====
+如果您發現某個特定叢集的時間戳記不正確，您可能需要檢查叢集時間是否設定正確。
+
+====

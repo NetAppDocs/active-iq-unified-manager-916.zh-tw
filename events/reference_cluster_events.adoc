@@ -1,0 +1,662 @@
+---
+permalink: events/reference_cluster_events.html 
+sidebar: sidebar 
+keywords: cluster events, impact, area, availability, capacity, configuration, performance, security 
+summary: 叢集事件提供有關叢集狀態的信息，使您能夠監控叢集中的潛在問題。事件依影響區域分組，包括事件名稱、陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= 叢集事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+叢集事件提供有關叢集狀態的信息，使您能夠監控叢集中的潛在問題。事件依影響區域分組，包括事件名稱、陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響領域：可用性
+
+星號 (*) 標識已轉換為 Unified Manager 事件的 EMS 事件。
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+叢集缺少備用磁碟（ocumEvtDisksNoSpares）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+叢集不可存取（ocumEvtClusterUnreachable）
+ a| 
+風險
+ a| 
+簇
+ a| 
+錯誤
+
+
+
+ a| 
+叢集監控失敗（ocumEvtClusterMonitoringFailed）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+叢集FabricPool許可證容量限制已超出 (ocumEvtExternalCapacityTierSpaceFull)
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+NVMe-oF 寬限期開始*(nvmfGracePeriodStart)
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+NVMe-oF 寬限期活動 *(nvmfGracePeriodActive)
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+NVMe-oF 寬限期已過期 *(nvmfGracePeriodExpired)
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+物件維護視窗已啟動（objectMaintenanceWindowStarted）
+ a| 
+事件
+ a| 
+簇
+ a| 
+批判的
+
+
+
+ a| 
+物件維護視窗結束（objectMaintenanceWindowEnded）
+ a| 
+事件
+ a| 
+簇
+ a| 
+資訊
+
+
+
+ a| 
+MetroCluster剩餘磁碟 (ocumEvtSpareDiskLeftBehind)
+ a| 
+風險
+ a| 
+簇
+ a| 
+錯誤
+
+
+
+ a| 
+MetroCluster自動排程外切換已停用 (ocumEvtMccAutomaticUnplannedSwitchOverDisabled)
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+叢集使用者密碼已更改*(cluster.passwd.changed)
+ a| 
+事件
+ a| 
+簇
+ a| 
+資訊
+
+|===
+
+
+== 影響區域：容量
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+叢集容量不平衡閾值突破（ocumConformanceNodeImbalanceWarning）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+叢集雲規劃（clusterCloudTierPlanningWarning）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+FabricPool鏡像複製重新同步已完成*（waflCaResyncComplete）
+ a| 
+事件
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+FabricPool空間幾乎已滿 *(fabricpoolNearlyFull)
+ a| 
+風險
+ a| 
+簇
+ a| 
+錯誤
+
+|===
+
+
+== 影響區域：配置
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+節點已新增（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+資訊
+
+
+
+ a| 
+節點已移除（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+資訊
+
+
+
+ a| 
+集群已移除（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+資訊
+
+
+
+ a| 
+群集新增失敗（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+錯誤
+
+
+
+ a| 
+群集名稱已更改（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+資訊
+
+
+
+ a| 
+收到緊急 EMS（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+批判的
+
+
+
+ a| 
+收到關鍵 EMS（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+批判的
+
+
+
+ a| 
+已收到警報 EMS（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+錯誤
+
+
+
+ a| 
+錯誤 EMS 已收到（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+警告 EMS 已收到（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+收到調試 EMS（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+通知 EMS 已收到（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+訊息 EMS 已收到（不適用）
+ a| 
+事件
+ a| 
+簇
+ a| 
+警告
+
+|===
+ONTAP EMS 事件分為三個 Unified Manager 事件嚴重性等級。
+
+|===
+
+
+| Unified Manager 事件嚴重性等級 | ONTAP EMS 事件嚴重性級別 
+
+
+ a| 
+批判的
+ a| 
+緊急狀況
+
+批判的
+
+
+
+ a| 
+錯誤
+ a| 
+警報
+
+
+
+ a| 
+警告
+ a| 
+錯誤
+
+警告
+
+偵錯
+
+注意
+
+資訊
+
+|===
+
+
+== 影響領域：性能
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+叢集負載不平衡閾值突破()
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+集群 IOPS 臨界閾值被突破（ocumClusterIopsIncident）
+ a| 
+事件
+ a| 
+簇
+ a| 
+批判的
+
+
+
+ a| 
+群集 IOPS 警告閾值超出 (ocumClusterIopsWarning)
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+集群 MB/s 臨界閾值突破（ocumClusterMbpsIncident）
+ a| 
+事件
+ a| 
+簇
+ a| 
+批判的
+
+
+
+ a| 
+群集 MB/s 警告閾值超出 (ocumClusterMbpsWarning)
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+集群動態閾值被突破（ocumClusterDynamicEventWarning）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+|===
+
+
+== 影響領域：安全
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+AutoSupport HTTPS 傳輸已停用（ocumClusterASUPHttpsConfiguredDisabled）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+日誌轉送未加密（ocumClusterAuditLogUnencrypted）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+預設本機管理員使用者已啟用（ocumClusterDefaultAdminEnabled）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+FIPS 模式已停用（ocumClusterFipsDisabled）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+登入橫幅已停用（ocumClusterLoginBannerDisabled）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+登入橫幅已更改（ocumClusterLoginBannerChanged）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+日誌轉送目的地已變更（ocumLogForwardDestinationsChanged）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+NTP 伺服器名稱已變更（ocumNtpServerNamesChanged）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+NTP 伺服器數量低（securityConfigNTPServerCountLowRisk）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+叢集對等通訊未加密（ocumClusterPeerEncryptionDisabled）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+SSH 正在使用不安全的密碼（ocumClusterSSHInsecure）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+已啟用 Telnet 協定（ocumClusterTelnetEnabled）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+某些ONTAP使用者帳號的密碼使用安全性較低的 MD5 雜湊函數（ocumClusterMD5PasswordHashUsed）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+叢集使用自簽名憑證（ocumClusterSelfSignedCertificate）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+叢集遠端 Shell 已啟用（ocumClusterRshDisabled）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+叢集憑證即將過期（ocumEvtClusterCertificateAboutToExpire）
+ a| 
+風險
+ a| 
+簇
+ a| 
+警告
+
+
+
+ a| 
+叢集憑證已過期（ocumEvtClusterCertificateExpired）
+ a| 
+風險
+ a| 
+簇
+ a| 
+錯誤
+
+|===

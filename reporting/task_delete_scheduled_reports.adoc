@@ -1,0 +1,43 @@
+---
+permalink: reporting/task_delete_scheduled_reports.html 
+sidebar: sidebar 
+keywords: delete, reports 
+summary: 安排報告後，您可以從「報告安排」頁面中刪除它們。 
+---
+= 刪除計劃報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+安排報告後，您可以從「報告安排」頁面中刪除它們。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存管理*」>「*報告計畫*」。
++
+image::../media/scheduled_reports_2.gif[顯示預定報告的 UI 螢幕截圖。]
+
++
+[NOTE]
+====
+如果您擁有適當的權限，您可以刪除系統中的任何報告及其時間表。
+
+====
+. 點擊更多圖標image:../media/more_icon.gif[""]您想要刪除的時間表。
+. 按一下“*刪除*”。
+. 確認你的決定。
++
+預定的報告將從清單中刪除，並且將不再按照設定的時間表產生和分發。
+
++
+[NOTE]
+====
+如果您從庫存頁面刪除自訂視圖，則使用該視圖的任何自訂 Excel 檔案或計畫報告也將被刪除。
+
+====
+

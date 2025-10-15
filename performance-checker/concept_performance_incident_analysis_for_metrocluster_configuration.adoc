@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_performance_incident_analysis_for_metrocluster_configuration.html 
+sidebar: sidebar 
+keywords: performance, event, analysis, metrocluster, configuration 
+summary: 您可以使用 Unified Manager 分析MetroCluster配置的效能事件。您可以識別事件中涉及的工作負載並查看解決該事件的建議操作。 
+---
+= MetroCluster配置的效能事件分析
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Unified Manager 分析MetroCluster配置的效能事件。您可以識別事件中涉及的工作負載並查看解決該事件的建議操作。
+
+MetroCluster效能事件可能是由於過度利用叢集之間的交換器間鏈路 (ISL) 的_bully_ 工作負載，或由於鏈路健康問題造成的。  Unified Manager 獨立監控MetroCluster配置中的每個集群，而不考慮夥伴集群上的效能事件。
+
+MetroCluster配置中兩個叢集的效能事件也會顯示在 Unified Manager 儀表板頁面上。您也可以查看 Unified Manager 的「運作狀況」頁面來檢查每個叢集的運作狀況並查看它們的關係。

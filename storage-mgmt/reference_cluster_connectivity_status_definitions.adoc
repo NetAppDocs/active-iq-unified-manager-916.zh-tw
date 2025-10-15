@@ -1,0 +1,51 @@
+---
+permalink: storage-mgmt/reference_cluster_connectivity_status_definitions.html 
+sidebar: sidebar 
+keywords: cluster, connectivity, status, definitions 
+summary: MetroCluster配置中叢集之間的連線可以是下列狀態之一：最佳、受影響或關閉。了解連線狀態使您能夠有效地管理MetroCluster配置。 
+---
+= 透過 FC 配置的MetroCluster的叢集連線狀態定義
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+透過 FC 配置的MetroCluster中的叢集之間的連接可以是以下狀態之一：最佳、受影響或關閉。了解連線狀態使您能夠有效地管理MetroCluster配置。
+
+|===
+| 連線狀態 | 描述 | 顯示的圖示 
+
+
+ a| 
+最佳的
+ a| 
+MetroCluster配置中的叢集之間的連線正常。
+ a| 
+image:../media/metrocluster_connectivity_optimal.gif["城域集群連接最佳圖標"]
+
+
+
+ a| 
+受影響
+ a| 
+一個或多個錯誤損害了故障轉移可用性的狀態；但是， MetroCluster配置中的兩個叢集仍然處於啟動狀態。例如，當 ISL 連結斷開時、當叢集間 IP 連結斷開時或當夥伴叢集無法存取時。
+ a| 
+image:../media/metrocluster_connectivity_impacted.gif["城域集群連接受影響圖標"]
+
+
+
+ a| 
+向下
+ a| 
+MetroCluster配置中的叢集之間的連線已斷開，因為其中一個或兩個叢集已關閉，或叢集處於故障轉移模式。例如，當合作夥伴叢集因災難而關閉或為了測試目的而計劃切換時。
+ a| 
+切換時出現錯誤：
+
+image::../media/metrocluster_connectivity_down.gif[城域集群連線中斷圖標]
+
+切換成功：
+
+image::../media/metrocluster_connectivity_failover.gif[城域集群連接故障轉移圖標]
+
+|===

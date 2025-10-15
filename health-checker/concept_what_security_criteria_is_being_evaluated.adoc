@@ -1,0 +1,31 @@
+---
+permalink: health-checker/concept_what_security_criteria_is_being_evaluated.html 
+sidebar: sidebar 
+keywords: security criteria, evaluated 
+summary: '一般來說，您的ONTAP叢集、儲存虛擬機器 (SVM) 和磁碟區的安全標準將根據NetApp ONTAP 9 安全強化指南中定義的建議進行評估。' 
+---
+= 正在評估哪些安全標準
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+一般來說，您的ONTAP叢集、儲存虛擬機器 (SVM) 和磁碟區的安全標準將根據《NetApp ONTAP 9 安全強化指南》中定義的建議進行評估。
+
+一些安全檢查包括：
+
+* 叢集是否使用安全性身份驗證方法，例如 SAML
+* 對等集群的通訊是否加密
+* 儲存虛擬機器是否啟用了稽核日誌
+* 您的磁碟區是否啟用了軟體或硬體加密
+
+
+請參閱合規類別和 https://www.netapp.com/pdf.html?item=/media/10674-tr4569pdf.pdf["NetApp ONTAP 9 安全強化指南"^]了解詳細資訊。
+
+[NOTE]
+====
+Active IQ平台報告的升級事件也被視為安全事件。這些事件標識了需要您升級ONTAP軟體、節點韌體或作業系統軟體（以取得安全公告）才能解決的問題。這些事件不會顯示在安全面板中，但可從事件管理庫存頁面取得。
+
+====
+有關詳細信息，請參閱 link:../health-checker/concept_manage_cluster_security_objectives.html["管理叢集安全目標"]。

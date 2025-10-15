@@ -1,0 +1,55 @@
+---
+permalink: api-automation/concept_manage_active_directory.html 
+sidebar: sidebar 
+keywords: manage, active, directory, mapping 
+summary: 您可以使用此處列出的 API 來管理 SVM 上的 Active Directory 映射，這些映射是在 SVM 上配置 CIFS 共用所需的。需要設定 Active Directory 映射才能將 SVM 與ONTAP對應。 
+---
+= 使用 API 管理 Active Directory 映射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用此處列出的 API 來管理 SVM 上的 Active Directory 映射，這些映射是在 SVM 上配置 CIFS 共用所需的。需要設定 Active Directory 映射才能將 SVM 與ONTAP對應。
+
+
+
+== 查看 Active Directory 映射
+
+您可以使用下列方法查看 SVM 的 Active Directory 對應的設定詳細資訊。若要查看 SVM 上的 Active Directory 映射，您需要輸入 SVM 金鑰。要查詢特定映射的詳細信息，您必須輸入映射鍵。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+得到
+ a| 
+`/storage-provider/active-directories-mappings`
+
+`/storage-provider/active-directories-mappings/\{key}`
+
+|===
+
+
+== 新增 Active Directory 映射
+
+您可以使用下列方法在 SVM 上建立 Active Directory 對應。您必須輸入映射詳細資訊作為輸入參數。
+
+[cols="3*"]
+|===
+| 類別 | HTTP 動詞 | 小路 
+
+
+ a| 
+儲存提供者
+ a| 
+郵政
+ a| 
+`/storage-provider/active-directories-mappings`
+
+|===

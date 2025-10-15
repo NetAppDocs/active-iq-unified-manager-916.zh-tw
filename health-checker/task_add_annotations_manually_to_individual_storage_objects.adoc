@@ -1,0 +1,55 @@
+---
+permalink: health-checker/task_add_annotations_manually_to_individual_storage_objects.html 
+sidebar: sidebar 
+keywords: add, annotations, manually, individual, storage objects 
+summary: 您可以手動註解選定的磁碟區、叢集和 SVM，而無需使用註解規則。您可以註釋單一儲存對像或多個儲存對象，並為註釋指定所需的名稱-值對組合。 
+---
+= 手動為個別儲存物件新增註釋
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以手動註解選定的磁碟區、叢集和 SVM，而無需使用註解規則。您可以註釋單一儲存對像或多個儲存對象，並為註釋指定所需的名稱-值對組合。
+
+.開始之前
+您必須具有應用程式管理員或儲存管理員角色。
+
+.步驟
+. 導航至要註釋的儲存物件：
++
+[cols="2*"]
+|===
+| 若要新增註釋... | 這樣做... 
+
+
+ a| 
+叢集
+ a| 
+.. 按一下「*儲存*」>「*叢集*」。
+.. 選擇一個或多個集群。
+
+
+
+
+ a| 
+卷
+ a| 
+.. 按一下「*儲存*」>「*卷*」。
+.. 選擇一個或多個磁碟區。
+
+
+
+
+ a| 
+支援向量機
+ a| 
+.. 按一下“儲存”>“SVM”。
+.. 選擇一個或多個 SVM。
+
+
+|===
+. 點擊“*註釋*”並選擇一個名稱-值對。
+. 按一下“*應用*”。
+

@@ -1,0 +1,16 @@
+---
+permalink: reporting/concept_customize_aggregate_capacity_reports.html 
+sidebar: sidebar 
+keywords: customize, aggregate, capacity, reports 
+summary: 這些範例自訂報表用於協助您識別和應對與聚合儲存容量相關的潛在問題。 
+---
+= 自訂聚合容量報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+這些範例自訂報表用於協助您識別和應對與聚合儲存容量相關的潛在問題。
+
+本節中的報告只是一個範例，旨在幫助您了解如何建立有關聚合容量的報告，以協助您監控儲存系統資源。

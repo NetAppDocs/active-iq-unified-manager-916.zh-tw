@@ -1,0 +1,18 @@
+---
+permalink: performance-checker/concept_metrocluster_configuration_health_check.html 
+sidebar: sidebar 
+keywords: metrocluster, configuration, health, check 
+summary: 您可以使用 Unified Manager 來查看MetroCluster配置中叢集的運作狀況。健康狀況和事件可協助您確定是否存在可能影響工作負載效能的硬體或軟體問題。 
+---
+= MetroCluster配置健康檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用 Unified Manager 透過 IP 或 FC 查看MetroCluster配置中叢集的運作狀況。健康狀況和事件可協助您確定是否存在可能影響工作負載效能的硬體或軟體問題。
+
+如果您將 Unified Manager 設定為傳送電子郵件警報，則可以檢查電子郵件中是否存在可能導致效能事件的本機或遠端叢集的任何健康問題。在 Unified Manager GUI 中，您可以選擇 *事件管理* 來查看目前事件列表，然後使用篩選器僅顯示MetroCluster設定事件。
+
+有關詳細信息，請參閱link:../health-checker/task_check_health_of_clusters_in_metrocluster_configuration.html["檢查MetroCluster配置中叢集的運作狀況"]

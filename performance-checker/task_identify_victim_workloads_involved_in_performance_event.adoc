@@ -1,0 +1,27 @@
+---
+permalink: performance-checker/task_identify_victim_workloads_involved_in_performance_event.html 
+sidebar: sidebar 
+keywords: identify, victim workloads, dynamic, performance, event 
+summary: 在 Unified Manager 中，您可以決定哪些磁碟區工作負載會因儲存元件爭用而導致回應時間（延遲）偏差最大。識別這些工作負載有助於您了解為什麼訪問它們的客戶端應用程式的運行速度比平常慢。 
+---
+= 識別動態效能事件中涉及的受害工作負載
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在 Unified Manager 中，您可以決定哪些磁碟區工作負載會因儲存元件爭用而導致回應時間（延遲）偏差最大。識別這些工作負載有助於您了解為什麼訪問它們的客戶端應用程式的運行速度比平常慢。
+
+.開始之前
+* 您必須具有操作員、應用程式管理員或儲存管理員角色。
+* 必須有新的、公認的或過時的動態性能事件。
+
+
+事件詳細資料頁面顯示使用者定義和系統定義的工作負載列表，按元件活動或使用情況的最大偏差或受事件影響最大的程度排序。這些值是根據 Unified Manager 在偵測和上次分析事件時識別的峰值。
+
+.步驟
+. 顯示*活動詳情*頁面以查看活動的資訊。
+. 在工作負載延遲和工作負載活動圖表中，選擇*受害者工作負載*。
+. 將遊標停留在圖表上，可以查看影響組件的頂級使用者定義工作負載以及受害工作負載的名稱。
+

@@ -1,0 +1,30 @@
+---
+permalink: health-checker/task_unconfigure_netapp_snapshot_backup.html 
+sidebar: sidebar 
+keywords: netapp, modify, snapshot copy, copies, windows, unconfigure, backup type 
+summary: 如果您想要變更Active IQ Unified Manager系統的備份類型，則可以使用維護控制台選項。取消配置NetApp快照備份選項可讓您回退到基於 MySQL 的備份。 
+---
+= 修改備份類型
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您想要變更Active IQ Unified Manager系統的備份類型，則可以使用維護控制台選項。  *取消配置NetApp快照備份* 選項可讓您還原至基於 MySQL 的備份。
+
+.開始之前
+您必須擁有授權登入 Unified Manager 伺服器維護控制台的使用者 ID 和密碼。
+
+.步驟
+. 存取維護控制台。
+. 從*主選單*中選擇 4 進行備份和還原。
+. 從*備份和還原選單*中選擇 2。
+. 選擇 4 表示「取消配置NetApp快照備份」。
++
+顯示執行的操作：停止服務、斷開符號連結、將資料從儲存移動到目錄，然後重新啟動服務。
+
++
+修改備份方式後，備份機制由Snapshot copy改為預設MySQL備份。此變更出現在常規設定的資料庫備份部分。
+
+

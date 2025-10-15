@@ -1,0 +1,14 @@
+---
+permalink: reporting/concept_customize_nfs_share_reports.html 
+sidebar: sidebar 
+keywords: customize, nfs, share, reports 
+summary: 您可以自訂 NFS 共用報表來分析有關儲存系統上磁碟區的 NFS 匯出策略和規則的資訊。例如，您可以自訂報告以顯示具有無法存取的安裝路徑的磁碟區和具有預設匯出策略的磁碟區。 
+---
+= 自訂 NFS 共享報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以自訂 NFS 共用報表來分析有關儲存系統上磁碟區的 NFS 匯出策略和規則的資訊。例如，您可以自訂報告以顯示具有無法存取的安裝路徑的磁碟區和具有預設匯出策略的磁碟區。

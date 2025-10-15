@@ -1,0 +1,55 @@
+---
+permalink: events/reference_storage_shelf_events.html 
+sidebar: sidebar 
+keywords: storage, shelf, events, impact area, availability 
+summary: 儲存架事件會告訴您儲存架是否有異常，以便您監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= 倉儲貨架活動
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+儲存架事件會告訴您儲存架是否有異常，以便您監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+異常電壓範圍(ocumEvtShelfVoltageAbnormal)
+ a| 
+風險
+ a| 
+置物架
+ a| 
+警告
+
+
+
+ a| 
+異常電流範圍(ocumEvtShelfCurrentAbnormal)
+ a| 
+風險
+ a| 
+置物架
+ a| 
+警告
+
+
+
+ a| 
+溫度異常（ocumEvtShelfTemperatureAbnormal）
+ a| 
+風險
+ a| 
+置物架
+ a| 
+警告
+
+|===

@@ -1,0 +1,111 @@
+---
+permalink: api-automation/reference_authentication_errors.html 
+sidebar: sidebar 
+keywords: http, status, code, active iq, unified manager 
+summary: 在執行 API 或解決問題時，您應該注意Active IQ Unified Manager API 使用的各種 HTTP 狀態碼和錯誤碼。 
+---
+= Active IQ Unified Manager中使用的 HTTP 狀態碼
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+在執行 API 或解決問題時，您應該注意Active IQ Unified Manager API 使用的各種 HTTP 狀態碼和錯誤碼。
+
+下表列出了與認證相關的錯誤代碼：
+
+[cols="3*"]
+|===
+| HTTP 狀態碼 | 狀態代碼標題 | 描述 
+
+
+ a| 
+200
+ a| 
+好的
+ a| 
+同步 API 呼叫成功執行後傳回。
+
+
+
+ a| 
+201
+ a| 
+創建
+ a| 
+透過同步呼叫建立新資源，例如 Active Directory 的配置。
+
+
+
+ a| 
+202
+ a| 
+公認
+ a| 
+成功執行設定功能（例如建立 LUN 和檔案共用）的非同步呼叫後返回。
+
+
+
+ a| 
+400
+ a| 
+無效請求
+ a| 
+表示輸入驗證失敗。使用者必須更正輸入，例如請求正文中的有效金鑰。
+
+
+
+ a| 
+401
+ a| 
+未經授權的請求
+ a| 
+您無權查看資源/未經授權。
+
+
+
+ a| 
+403
+ a| 
+禁止請求
+ a| 
+禁止存取您嘗試存取的資源。
+
+
+
+ a| 
+404
+ a| 
+未找到資源
+ a| 
+未找到您嘗試存取的資源。
+
+
+
+ a| 
+405
+ a| 
+方法不允許
+ a| 
+方法不允許。
+
+
+
+ a| 
+429
+ a| 
+請求過多
+ a| 
+當用戶在特定時間內發送過多請求時返回。
+
+
+
+ a| 
+500
+ a| 
+內部伺服器錯誤
+ a| 
+內部伺服器錯誤。無法從伺服器取得回應。此內部伺服器錯誤可能是永久性的，也可能不是。例如，如果你運行 `GET`或者 `GET ALL`操作並收到此錯誤，建議您重複此操作至少五次。如果是永久性錯誤，則傳回的狀態代碼繼續為 500。如果操作成功，則回傳的狀態碼為200。
+
+|===

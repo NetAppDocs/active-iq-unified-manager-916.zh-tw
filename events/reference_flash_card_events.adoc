@@ -1,0 +1,33 @@
+---
+permalink: events/reference_flash_card_events.html 
+sidebar: sidebar 
+keywords: flash, card, events, impact area, availability 
+summary: 閃存卡事件為您提供有關資料中心節點上安裝的閃存卡的狀態信息，以便您監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。 
+---
+= 抽認卡活動
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+閃存卡事件為您提供有關資料中心節點上安裝的閃存卡的狀態信息，以便您監控潛在問題。事件按影響區域分組，包括事件和陷阱名稱、影響等級、來源類型和嚴重性。
+
+
+
+== 影響領域：可用性
+
+|===
+| 事件名稱（陷阱名稱） | 影響等級 | 來源類型 | 嚴重程度 
+
+
+ a| 
+離線抽認卡（ocumEvtFlashCardOffline）
+ a| 
+事件
+ a| 
+節點
+ a| 
+批判的
+
+|===

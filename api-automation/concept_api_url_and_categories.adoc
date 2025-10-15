@@ -1,0 +1,72 @@
+---
+permalink: api-automation/concept_api_url_and_categories.html 
+sidebar: sidebar 
+keywords: active iq, unified manager, api, access, categories 
+summary: Active IQ Unified Manager API 可讓您管理和配置環境中的儲存物件。您也可以存取 Unified Manager Web UI 來執行其中一些功能。 
+---
+= Active IQ Unified Manager API 存取權和類別
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+:pp: &#43;&#43;
+
+
+[role="lead"]
+Active IQ Unified Manager API 可讓您管理和配置環境中的儲存物件。您也可以存取 Unified Manager Web UI 來執行其中一些功能。
+
+
+
+== 建立 URL 以直接存取 REST API
+
+您可以透過程式語言（例如 Python、C#、C{pp}、JavaScript 等）直接存取 REST API。輸入主機名稱或 IP 位址以及用於存取 REST API 的 URL，格式如下
+
++https://<主機名稱>/api+
+
+[NOTE]
+====
+預設連接埠為 443。您可以根據環境的需求配置連接埠。
+
+====
+
+
+== 存取線上 API 文件頁面
+
+您可以存取隨產品打包的_API 文件_參考內容頁面，展示 API 文檔，也可以手動啟動 API 呼叫（例如在介面上，Swagger）。您可以透過點擊「功能表列」>「說明按鈕」>「API 文件」來存取此文檔
+
+或者，輸入主機名稱或 IP 位址以及 URL 以存取 REST API 頁面，格式如下
+
++https://<主機名稱>/docs/api/+
+
+
+
+== 類別
+
+API 呼叫根據區域或類別按功能進行組織。若要找到特定的 API，請按一下適用的 API 類別。
+
+Unified Manager 提供的 REST API 可協助您執行管理、監控和設定功能。  API 分為以下類別。
+
+* *資料中心*
++
+此類別包含幫助您使用工具（例如工作流程自動化和 Ansible）進行資料中心儲存管理和分析的 API。此類別下的 REST API 提供有關資料中心中的叢集、節點、聚合、磁碟區、LUN、檔案共用、命名空間和其他元素的資訊。
+
+* *管理伺服器*
++
+*management-server* 類別下的 API 包含 `jobs, system,`和 `events`蜜蜂。作業是計畫非同步執行的與管理 Unified Manager 上的儲存物件或工作負載相關的操作。這 `events`API 傳回資料中心中的事件，並且 `system`API 傳回 Unified Manager 實例詳細資料。
+
+* *儲存提供者*
++
+此類別包含管理和設定檔共用、LUN、效能服務等級和儲存效率策略所需的所有設定 API。  API 還可讓您設定存取端點、Active Directory，以及在儲存工作負載上指派效能服務等級和儲存效率原則。
+
+* *行政*
++
+此類別包含用於執行管理任務的 API，例如維護備份設定、查看 Unified Manager 資料來源的信任庫憑證以及將ONTAP叢集作為 Unified Manager 的資料來源進行管理。
+
+* *網關*
++
+Unified Manager 可讓您透過網關類別下的 API 呼叫ONTAP REST API 並管理資料中心中的儲存物件。
+
+* *安全*
++
+此類別包含用於管理 Unified Manager 使用者的 API。
+
+

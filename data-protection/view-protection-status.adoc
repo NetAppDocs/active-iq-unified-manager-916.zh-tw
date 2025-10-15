@@ -1,0 +1,97 @@
+---
+permalink: data-protection/view-protection-status.html 
+sidebar: sidebar 
+keywords: volume relationship, protection status, dashboard protection card, protection widget, lag, relationship health, healthy relationship, lag threshold, relationship event, source cluster, snapmirror, snapshot 
+summary: 資料保護頁面提供了資料中心內所有受保護磁碟區的資料保護詳細資料的整體視圖。 
+---
+= 查看卷宗保護狀態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+資料保護頁面提供了單一叢集中所有受保護磁碟區或資料中心中所有叢集的資料保護詳細資訊的整體視圖。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儀表板*」。
+. 根據您是否要查看所有受監控集群或單一集群的資料保護狀態，選擇「所有集群」或從下拉式選單中選擇單一集群。
+. 按一下資料保護面板頂部的右箭頭。顯示“*資料保護*”頁面。
+
+
+根據您在資料中心中選擇的是單一集群還是所有集群，此頁面顯示受 Snapshot 副本或SnapMirror策略保護的捲的資料保護狀態，同時顯示未受保護卷的數量。
+
+從*單一叢集*清單中選擇一個叢集將顯示該叢集中受保護磁碟區的 Snapshot 保護和SnapMirror關係狀態。
+
+點擊此頁面上的事件將帶您進入事件詳細資訊頁面。您可以點擊「查看全部」連結以查看事件管理庫存頁面中的所有活動保護事件。您可以將滑鼠懸停在螢幕上以查看相應的計數和圖例。您可以點選：
+
+* 未受保護的捲和受 Snapshot 副本保護的捲的條形圖，可前往「卷」頁面並查看詳細資訊。
+* 所有關係的長條圖都轉到「關係」頁面，其中詳細資訊由來源叢集過濾。
+
+
+
+
+== 查看受 Snapshot 副本保護的捲的保護狀態
+
+*Snapshot 副本概述*：受 Snapshot 副本保護的捲的概述，例如：
+
+* 受 Snapshot 副本保護和未受 Snapshot 副本保護的捲總數。
+* 正在使用或超出 Snapshot 副本的預留空間的磁碟區總數。
+
+
+*快照副本分析*詳細說明了以下資訊：
+
+* Snapshot 副本的單一事件，包括過去 24 小時內發生的事件。
+* 受 Snapshot 副本保護和未受 Snapshot 副本保護的捲的詳細圖表。
+* 磁碟區正在使用、未使用以及超出預留的 Snapshot 副本容量。
+* 卷的分解是根據其 Snapshot 副本的數量進行的。
+
+
+
+
+=== Snapshot 副本注意事項
+
+* 為了計算受 Snapshot 副本保護的磁碟區數，需要同時考慮來源磁碟區和目標磁碟區。
+* 傳回的 Snapshot 副本數僅適用於處於線上狀態且可用的磁碟區。
+* Snapshot 副本數量的圖表範圍是動態的。它是根據所選集群中存在的快照數量生成的。
+* 為了將磁碟區視為受保護的，應啟用該磁碟區的 Snapshot 副本計劃。
+* Snapshot 副本的預留空間值對於查看已利用的磁碟空間量或計算刪除一個或多個 Snapshot 副本時可以回收的空間非常重要。
+
+
+
+
+== 查看SnapMirror關係的保護狀態
+
+* SnapMirror概述*：受SnapMirror策略保護的捲的概述，例如：
+
+* 受相應SnapMirror策略保護的磁碟區數，例如磁碟區SnapMirror關係、儲存 VM 災難復原 (SVM-DR) 及其組合。
+* 根據滯後狀態，經歷恢復點目標 (RPO) 滯後的SnapMirror關係總數。
+
+
+* SnapMirror分析* 詳細說明了以下資訊：
+
+* 針對SnapMirror關係引發的單一事件，包括過去 24 小時內引發的事件
+* 每種SnapMirror策略保護的捲數。
+* SnapMirror關係型別保護的關係數，例如非同步鏡像、非同步保險庫、非同步 MirrorVault、StricxtSync、 SnapMirror活動同步一致性群組和同步。
+* 健康和不健康關係的數量。
+* 分解成交量關係計數。您可以按 RPO 延遲時間和狀態切換圖表。
+* 不受管理的關係的滯後閾值。您可以點選設定圖示（image:../media/Settings.PNG["滯後閾值設定的圖標"] ) 配置滯後閾值設定。有關詳細信息，請參閱 link:../health-checker/task_configure_lag_threshold_settings_for_unmanaged_protection.html["配置非託管保護關係的滯後閾值設置"]。
+
+
+
+
+=== SnapMirror關係注意事項
+
+* 為了計算SnapMirror關係的數量，將計算已啟用讀取和寫入的來源磁碟區。不考慮目標捲和根卷。
+* 對於SnapMirror關係，將顯示來源叢集的事件。
+* SnapMirror關係計數包括來源和目標位於相同或不同叢集上的磁碟區的數量。
+* 資料複製中 RPO 滯後的滯後持續時間是基於SnapMirror關係。狀態分類為 `ok`， `warning` ， 或者 `error`，基於關係閾值的設定。您可以查看狀態以確定參數是否按預期工作，或者是否需要解決任何問題。
+* 如果磁碟區具有多個SnapMirror關係，則每種關係類型都會被計算為 RPO 延遲。
+* 如果來源和目標之間的資料複製存在問題（例如，當關係中斷時），則卷關係被視為不健康。
+
+
+
+
+== 查看受MetroCluster配置保護的集群
+
+*資料保護*頁面上的* MetroCluster保護*面板顯示您的網站上透過 FC 或 IP 設定受MetroCluster保護或未受保護的叢集數量。點擊此面板上的條形圖將轉到「叢集」頁面，其中將根據受保護或不受保護的叢集來過濾叢集詳細資訊。有關監控MetroCluster配置的信息，請參閱link:../storage-mgmt/task_monitor_metrocluster_configurations.html["監控MetroCluster配置"]。

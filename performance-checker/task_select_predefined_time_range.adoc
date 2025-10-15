@@ -1,0 +1,20 @@
+---
+permalink: performance-checker/task_select_predefined_time_range.html 
+sidebar: sidebar 
+keywords: select, predefined, time, range 
+summary: 選擇預先定義的時間範圍是您在查看叢集物件效能資料時自訂和集中資料輸出的快速有效方法。選擇預先定義的時間範圍時，最多可獲得 13 個月的數據。 
+---
+= 選擇預定義的時間範圍
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+選擇預先定義的時間範圍是您在查看叢集物件效能資料時自訂和集中資料輸出的快速有效方法。選擇預先定義的時間範圍時，最多可獲得 13 個月的數據。
+
+.步驟
+. 在「效能資源管理器」頁面的右上角，按一下「時間範圍」。
+. 從「時間範圍選擇」面板的右側，選擇一個預先定義的時間範圍。
+. 按一下“應用範圍”。
+

@@ -1,0 +1,36 @@
+---
+permalink: health-checker/task_view_cluster_list_and_details.html 
+sidebar: sidebar 
+keywords: view, cluster list, details 
+summary: 您可以使用「健康狀況：所有群集」視圖來查看群集清單。容量：所有叢集視圖可讓您查看有關所有叢集的儲存容量和利用率的總計資訊。 
+---
+= 查看集群清單及詳情
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以使用「健康狀況：所有群集」視圖來查看群集清單。容量：所有叢集視圖可讓您查看有關所有叢集的儲存容量和利用率的總計資訊。
+
+.開始之前
+您必須具有操作員、應用程式管理員或儲存管理員角色。
+
+您還可以使用叢集/運行狀況詳細資訊頁面查看各個叢集的詳細信息，例如叢集運行狀況、容量、配置、LIF、節點和該叢集中的磁碟。
+
+健康狀況：所有叢集視圖、容量：所有叢集視圖和叢集/健康狀況詳細資訊頁面中的詳細資訊可協助您規劃儲存。例如，在配置新的聚合之前，您可以從「運行狀況：所有集群」視圖中選擇一個特定的集群，並獲取容量詳細資訊以確定該集群是否具有所需的空間。
+
+.步驟
+. 在左側導覽窗格中，按一下「*儲存*」>「*叢集*」。
+. 在「檢視」功能表中，選擇「*運行狀況：所有群集*」視圖以查看運行狀況信息，或選擇「*容量：所有群集*」視圖以查看有關所有群集的存儲容量和利用率的詳細信息。
+. 按一下叢集名稱可在「叢集/健康」詳細資料頁面中查看該叢集的完整詳細資訊。
+
+
+*相關資訊*
+
+* link:../health-checker/reference_health_cluster_details_page.html["集群/健康詳情頁面"]
+* link:../performance-checker/performance-view-all.html#performance-all-clusters-view["效能：所有叢集視圖"]
+* link:../storage-mgmt/task_monitor_metrocluster_configurations.html["監控MetroCluster配置"]
+* link:../health-checker/task_view_detailed_security_status_for_clusters_and_svms.html["查看叢集和儲存虛擬機器的安全狀態"]
+* link:../health-checker/concept_what_security_criteria_is_being_evaluated.html["正在評估哪些安全標準"]
+

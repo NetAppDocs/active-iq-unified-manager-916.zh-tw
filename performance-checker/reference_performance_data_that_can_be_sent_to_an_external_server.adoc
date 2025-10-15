@@ -1,0 +1,80 @@
+---
+permalink: performance-checker/reference_performance_data_that_can_be_sent_to_an_external_server.html 
+sidebar: sidebar 
+keywords: performance, data, external, server 
+summary: Unified Manager 從其監控的所有叢集收集各種效能資料。您可以將特定的資料組傳送到外部伺服器。 
+---
+= 可以傳送到外部伺服器的效能數據
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager 從其監控的所有叢集收集各種效能資料。您可以將特定的資料組傳送到外部伺服器。
+
+根據您想要繪製的效能數據，您可以選擇傳送以下一組統計資料：
+
+|===
+| 統計資料組 | 包含的數據 | 細節 
+
+
+ a| 
+效能監視器
+ a| 
+以下物件的高階效能統計資訊：
+
+* LUN
+* 卷
+
+ a| 
+此群組提供所有受監控叢集中所有 LUN 和磁碟區的總 IOPS 或延遲。
+
+該組提供的統計數據最少。
+
+
+
+ a| 
+資源利用率
+ a| 
+以下物件的資源利用率統計：
+
+* 節點
+* 聚合
+
+ a| 
+此群組提供節點的利用率統計資訊並聚合所有受監控叢集中的實體資源。
+
+它還提供效能監視器群組中收集的統計資料。
+
+
+
+ a| 
+深入研究
+ a| 
+所有追蹤物件的低階讀/寫和每個協定的統計資料：
+
+* 節點
+* 聚合
+* LUN
+* 卷
+* 磁碟
+* LIF
+* 連接埠/NIC
+
+ a| 
+此群組為所有受監控叢集中的所有七種追蹤物件類型提供讀取/寫入和每個協定的細分。
+
+它還提供效能監視器組和資源利用率組中收集的統計資料。
+
+該組提供了最多的統計數據。
+
+|===
+[NOTE]
+====
+如果儲存系統上的叢集或叢集物件的名稱發生更改，則新舊物件都會包含外部伺服器上的效能資料（稱為「metric_path」）。這兩個對象並不相關，而是同一個對象。例如，如果將磁碟區的名稱從“volume1_acct”變更為“acct_vol1”，您將看到舊磁碟區的舊效能資料和新磁碟區的新效能資料。
+
+====
+有關可傳送至外部資料提供者的所有效能計數器的列表，請參閱知識庫文章 30096。
+
+https://kb.netapp.com/?title=Advice_and_Troubleshooting%2FData_Infrastructure_Management%2FActive_IQ_Unified_Manager%2FWhat_are_the_ActiveIQ_Unified_Manager_performance_counters_that_can_be_exported_to_an_External_Data_Provider%253F["可匯出至外部資料提供者的 Unified Manager 效能計數器"]

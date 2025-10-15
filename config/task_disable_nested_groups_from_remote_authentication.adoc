@@ -1,0 +1,27 @@
+---
+permalink: config/task_disable_nested_groups_from_remote_authentication.html 
+sidebar: sidebar 
+keywords: disable, nested groups, remote, authentication 
+summary: 如果您啟用了遠端驗證，則可以停用巢狀群組驗證，以便只有個人使用者（而不是群組成員）可以遠端向 Unified Manager 進行驗證。當您想要提高 Active Directory 驗證回應時間時，可以停用巢狀群組。 
+---
+= 禁用嵌套群組的遠端身份驗證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果您啟用了遠端驗證，則可以停用巢狀群組驗證，以便只有個人使用者（而不是群組成員）可以遠端向 Unified Manager 進行驗證。當您想要提高 Active Directory 驗證回應時間時，可以停用巢狀群組。
+
+.開始之前
+* 您必須具有應用程式管理員角色。
+* 停用嵌套群組僅適用於使用 Active Directory 時。
+
+
+停用 Unified Manager 中對嵌套群組的支援可能會減少身份驗證時間。如果嵌套群組支援已停用，且如果將遠端群組新增至 Unified Manager，則個別使用者必須是遠端群組的成員才能向 Unified Manager 進行驗證。
+
+.步驟
+. 在左側導覽窗格中，按一下「*常規*」>「*遠端驗證*」。
+. 選取「*停用巢狀組查找*」複選框。
+. 點選“儲存”。
+

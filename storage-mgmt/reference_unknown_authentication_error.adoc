@@ -1,0 +1,30 @@
+---
+permalink: storage-mgmt/reference_unknown_authentication_error.html 
+sidebar: sidebar 
+keywords: unknown, authentication, error 
+summary: 故障排除：未知身份驗證錯誤 
+---
+= 未知的身份驗證錯誤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+當您執行與驗證相關的操作（例如新增、編輯、刪除或測試遠端使用者或群組）時，可能會顯示下列錯誤訊息： `Unknown authentication error.`
+
+*原因*
+
+如果您為以下選項設定了不正確的值，則可能會出現此問題：
+
+* Active Directory 驗證服務的管理員名稱
+* 綁定 OpenLDAP 驗證服務的可分辨名稱
+
+
+*糾正措施*
+
+. 在左側導覽窗格中，按一下「*常規*」>「*遠端驗證*」。
+. 根據您選擇的身份驗證服務，輸入管理員名稱或綁定可分辨名稱的相應資訊。
+. 按一下「測試身份驗證」以使用您指定的詳細資料測試身份驗證。
+. 點選“儲存”。
+

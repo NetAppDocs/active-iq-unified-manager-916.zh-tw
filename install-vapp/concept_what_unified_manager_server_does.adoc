@@ -1,0 +1,16 @@
+---
+permalink: install-vapp/concept_what_unified_manager_server_does.html 
+sidebar: sidebar 
+keywords: unified manager, server 
+summary: 'Unified Manager 伺服器基礎架構由資料收集單元、資料庫和應用程式伺服器組成。它提供發現、監控、基於角色的存取控制 (RBAC)、稽核和日誌記錄等基礎設施服務。' 
+---
+= Unified Manager 伺服器的功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager 伺服器基礎架構由資料收集單元、資料庫和應用程式伺服器組成。它提供發現、監控、基於角色的存取控制 (RBAC)、稽核和日誌記錄等基礎設施服務。
+
+Unified Manager 收集叢集信息，將資料儲存在資料庫中，並分析資料以查看是否存在任何叢集問題。

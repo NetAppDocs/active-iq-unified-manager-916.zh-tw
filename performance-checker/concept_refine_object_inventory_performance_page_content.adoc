@@ -1,0 +1,16 @@
+---
+permalink: performance-checker/concept_refine_object_inventory_performance_page_content.html 
+sidebar: sidebar 
+keywords: refining, performance, inventory, page, contents 
+summary: 效能物件的清單頁麵包含可協助您最佳化物件清單資料內容的工具，讓您能夠快速輕鬆地找到特定資料。 
+---
+= 優化績效清單頁面內容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+效能物件的清單頁麵包含可協助您最佳化物件清單資料內容的工具，讓您能夠快速輕鬆地找到特定資料。
+
+效能物件庫存頁面中包含的資訊可能非常廣泛，通常跨越多個頁面。這種綜合數據非常適合監控、追蹤和提高效能；但是，定位特定數據需要工具來使您能夠快速找到您正在尋找的數據。因此，效能物件庫存頁麵包含搜尋、排序和篩選功能。此外，搜尋和過濾可以協同工作以進一步縮小搜尋結果。

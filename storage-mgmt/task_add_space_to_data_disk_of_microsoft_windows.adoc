@@ -1,0 +1,55 @@
+---
+permalink: storage-mgmt/task_add_space_to_data_disk_of_microsoft_windows.html 
+sidebar: sidebar 
+keywords: add space, logica, drive, microsoft windows server 
+summary: 如果需要增加 Unified Manager 資料庫的磁碟空間量，您可以為安裝 Unified Manager 的邏輯磁碟機新增容量。 
+---
+= 為 Microsoft Windows 伺服器的邏輯磁碟機新增空間
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+如果需要增加 Unified Manager 資料庫的磁碟空間量，您可以為安裝 Unified Manager 的邏輯磁碟機新增容量。
+
+.開始之前
+您必須具有 Windows 管理員權限。
+
+我們建議您在新增磁碟空間之前備份 Unified Manager 資料庫。
+
+.步驟
+. 以管理員身分登入要新增磁碟空間的 Windows 伺服器。
+. 按照與您想要使用的方法相對應的步驟來增加更多空間：
++
+|===
+| 選項 | 描述 
+
+
+ a| 
+在實體伺服器上，為安裝 Unified Manager 伺服器的邏輯磁碟機新增容量。
+ a| 
+請依照 Microsoft 主題中的步驟操作：
+
+https://technet.microsoft.com/en-us/library/cc771473(v=ws.11).aspx["擴充基本捲"]
+
+
+
+ a| 
+在實體伺服器上，新增硬碟。
+ a| 
+請依照 Microsoft 主題中的步驟操作：
+
+https://msdn.microsoft.com/en-us/library/dd163551.aspx["新增硬碟驅動器"]
+
+
+
+ a| 
+在虛擬機器上，增加磁碟分割的大小。
+ a| 
+請按照 VMware 主題中的步驟操作：
+
+https://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1004071["增加磁碟分割區的大小"]
+
+|===
+

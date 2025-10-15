@@ -1,0 +1,59 @@
+---
+permalink: health-checker/concept_manage_backup_and_restore_operations.html 
+sidebar: sidebar 
+keywords: backup, types, manage, restore, operations 
+summary: 您可以建立Active IQ Unified Manager的備份，並在系統發生故障或資料遺失時使用復原功能將備份還原至相同（本機）系統或新的（遠端）系統。 
+---
+= 管理備份和復原作業
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立Active IQ Unified Manager的備份，並在系統發生故障或資料遺失時使用復原功能將備份還原至相同（本機）系統或新的（遠端）系統。
+
+根據安裝 Unified Manager 的作業系統以及所管理的叢集和節點的數量，有三種備份和還原方法：
+
+[cols="3*"]
+|===
+| 作業系統 | 部署規模 | 推薦的備份方法 
+
+
+ a| 
+VMware vSphere
+ a| 
+任何
+ a| 
+Unified Manager 虛擬設備的 VMware 快照
+
+
+
+.2+| 紅帽企業 Linux  a| 
+小的
+ a| 
+Unified Manager MySQL 資料庫轉儲
+
+
+
+ a| 
+大的
+ a| 
+NetApp Unified Manager 資料庫快照
+
+
+
+.2+| 微軟 Windows  a| 
+小的
+ a| 
+Unified Manager MySQL 資料庫轉儲
+
+
+
+ a| 
+大的
+ a| 
+採用 iSCSI 協定的 Unified Manager 資料庫的NetApp快照
+
+|===
+這些不同的方法將在以下章節中描述。

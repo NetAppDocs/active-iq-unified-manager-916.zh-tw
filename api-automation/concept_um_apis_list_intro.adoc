@@ -1,0 +1,32 @@
+---
+permalink: api-automation/concept_um_apis_list_intro.html 
+sidebar: sidebar 
+keywords: unified, manager, rest, api 
+summary: 本節根據類別列出了Active IQ Unified Manager的 REST API。 
+---
+= Unified Manager REST API
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+本節根據類別列出了Active IQ Unified Manager的 REST API。
+
+您可以從 Unified Manager 實例查看線上文件頁面，其中包含每個 REST API 呼叫的詳細資訊。本文檔不重複線上文件的細節。本文檔中列出或描述的每個 API 呼叫僅包含您在文件頁面上找到該呼叫所需的資訊。找到特定的 API 呼叫後，您可以查看該呼叫的完整詳細信息，包括輸入參數、輸出格式、HTTP 狀態代碼和請求處理類型。
+
+工作流程中的每個 API 呼叫都包含以下信息，以幫助在文件頁面上找到該呼叫：
+
+* 類別
++
+API 呼叫在文件頁面上按功能相關區域或類別進行組織。若要找到特定的 API 呼叫，請向下捲動到頁面底部，然後按一下適用的 API 類別。
+
+* HTTP 動詞（呼叫）
++
+HTTP 動詞標識對資源執行的動作。每個 API 呼叫都透過單一 HTTP 動詞執行。
+
+* 小路
++
+路徑決定了操作在執行呼叫時所使用的特定資源。路徑字串會附加到核心 URL 中，以形成標識資源的完整 URL。
+
+

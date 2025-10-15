@@ -1,0 +1,35 @@
+---
+permalink: performance-checker/concept_how_unified_manager_uses_workload_response_time.html 
+sidebar: sidebar 
+keywords: unified manager, workload, latency, identify, performance, issues 
+summary: 工作負載延遲（回應時間）是叢集上的磁碟區響應來自客戶端應用程式的 I/O 請求所需的時間。  Unified Manager 使用延遲來偵測效能事件並向您發出警報。 
+---
+= Unified Manager 如何使用工作負載延遲來識別效能問題
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+工作負載延遲（回應時間）是叢集上的磁碟區響應來自客戶端應用程式的 I/O 請求所需的時間。  Unified Manager 使用延遲來偵測效能事件並向您發出警報。
+
+高延遲意味著應用程式對叢集上的磁碟區的請求所花費的時間比平時要長。高延遲的原因可能是叢集本身，因為一個或多個叢集元件存在爭用。高延遲也可能由叢集外部的問題引起，例如網路瓶頸、託管應用程式的用戶端問題或應用程式本身的問題。
+
+[NOTE]
+====
+Unified Manager 僅監控叢集上的工作負載活動。它不監控應用程式、客戶端或應用程式與叢集之間的路徑。
+
+====
+叢集上的操作（例如進行備份或執行重複資料刪除）會增加對其他工作負載共享的叢集元件的需求，也會導致高延遲。如果實際延遲超過預期範圍（延遲預測）的動態效能閾值，Unified Manager 會分析該事件以確定它是否是您可能需要解決的效能事件。延遲以每次操作的毫秒數 (ms/op) 來衡量。
+
+在「工作負載分析」頁面的「總延遲」圖表上，您可以查看延遲統計資料的分析，以了解各個進程（例如讀取和寫入請求）的活動與整體延遲統計資料的比較。透過比較，您可以確定哪些操作具有最高的活動，或者特定操作是否具有影響磁碟區延遲的異常活動。在分析效能事件時，您可以使用延遲統計資料來確定事件是否由叢集上的問題引起。您也可以識別事件中涉及的特定工作負載活動或叢集元件。
+
+image::../media/opm_expected_range_and_rt_jpg.png[Unified Manager 中的正常回應時間]
+
+此範例顯示了延遲圖表。實際反應時間（延遲）活動為藍線，延遲預測（預期範圍）為綠色。
+
+[NOTE]
+====
+如果 Unified Manager 無法收集數據，藍線中可能會出現間隙。發生這種情況可能是因為叢集或磁碟區無法存取、Unified Manager 在此期間關閉或收集超過 5 分鐘的收集時間。
+
+====

@@ -1,0 +1,49 @@
+---
+permalink: events/task_upload_new_active_iq_rules_file.html 
+sidebar: sidebar 
+keywords: upload, new, active iq AIQ rules, rules file, CA secure rules, config advisor rules 
+summary: Unified Manager 會自動檢查新的Active IQ規則文件，並在有更新的規則時下載新文件。但是，在沒有外部網路存取的網站中，您需要手動上傳規則檔案。 
+---
+= 上傳新的Active IQ規則文件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+Unified Manager 會自動檢查新的Active IQ事件（規則）文件，並在有更新的規則時下載新文件。但是，在沒有外部網路存取的網站中，您需要手動上傳規則檔案。
+
+
+NOTE: Active IQ規則也稱為Config Advisor (CA) 安全規則。
+
+當您在沒有網路連線的網站中安裝或升級 Unified Manager 到特定版本時，隨附的Active IQ規則將自動可供上傳。但是，建議您大約每月從 NetApp 的支援網站下載一次新規則文件，以確保產生更新的事件並且您的儲存系統繼續以最佳狀態運作。
+
+.開始之前
+* 必須啟用Active IQ入口網站事件報告。此功能預設為啟用。有關信息，請參閱link:../config/concept_active_iq_platform_events.html["啟用Active IQ入口網站事件"]。
+* 您必須從NetApp支援網站下載規則檔。
++
+規則文件位於： https://mysupport.netapp.com/api/content-service/staticcontents/content/public/tools/unifiedmanager/ca/secure_rules.zip[]
+
+
+
+.步驟
+. 在具有網路存取權限的電腦上，導覽至NetApp支援網站並下載目前規則 `.zip`文件。
++
+捆綁的規則包包括規則儲存庫、資料來源和NetApp KB 文章。
+
++
+
+NOTE: 在 Windows 系統上，在沒有網路連線的網站中， NetApp KB 文章預設不會與安裝程式捆綁在一起。您可以從支援網站下載_secure_rules.zip_檔案並上傳它以查看所有規則的知識庫文章。
+
+. 將規則檔案傳輸到可以帶入安全區域的某些媒體，然後將其複製到安全區域中的系統上。
+. 在左側導覽窗格中，按一下「*儲存管理*」>「*事件設定*」。
+. 在*事件設定*頁面中，點選*上傳規則*按鈕。
+. 在「上傳規則」對話方塊中，導覽至並選擇規則 `.zip`下載的檔案並點擊*上傳*。
++
+此過程可能需要幾分鐘。
+
+
+
+規則檔案在 Unified Manager 伺服器上解壓縮。當您管理的叢集在午夜後產生AutoSupport檔案時，Unified Manager 會根據規則檔案檢查叢集並根據需要產生新的風險和事件。
+
+有關詳細信息，請參閱此知識庫 (KB) 文章： https://kb.netapp.com/Advice_and_Troubleshooting/Data_Infrastructure_Management/Active_IQ_Unified_Manager/How_to_update_AIQCASecure_rules_manually_in_Active_IQ_Unified_Manager["如何在Active IQ Unified Manager中手動更新 AIQCASecure 規則"] 。

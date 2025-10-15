@@ -1,0 +1,28 @@
+---
+permalink: health-checker/concept_how_group_actions_work_on_storage_objects.html 
+sidebar: sidebar 
+keywords: group actions, work, storage, objects 
+summary: 群組操作是對群組內所有儲存物件執行的操作。例如，您可以設定磁碟區閾值組操作來同時變更群組中所有磁碟區的磁碟區閾值。 
+---
+= 群組操作如何作用於儲存對象
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+群組操作是對群組內所有儲存物件執行的操作。例如，您可以設定磁碟區閾值組操作來同時變更群組中所有磁碟區的磁碟區閾值。
+
+群組支援獨特的群組行動類型。一個組只能具有一種卷健康閾值組操作類型。但是，您可以為同一組配置不同類型的群組操作（如果可用）。組操作的等級決定了該操作應用於儲存物件的順序。儲存物件的詳細資訊頁面提供有關對儲存物件套用哪些群組操作的資訊。
+
+
+
+== 獨特的群體行動範例
+
+考慮屬於組 G1 和 G2 的捲 A，並且為這些組配置了以下卷健康閾值組操作：
+
+* `Change_capacity_threshold`等級為 1 的群組操作，用於配置磁碟區的容量
+* `Change_snapshot_copies`等級為 2 的群組操作，用於設定磁碟區的 Snapshot 副本
+
+
+這 `Change_capacity_threshold`集體行動總是優先於 `Change_snapshot_copies`群組操作並應用於磁碟區 A。當 Unified Manager 完成一個監控週期後，將根據 `Change_capacity_threshold`集體行動。您不能為 G1 或 G2 組配置其他容量閾值類型的群組操作。

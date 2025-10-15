@@ -1,0 +1,31 @@
+---
+permalink: data-protection/task_break_snapmirror_relationship.html 
+sidebar: sidebar 
+keywords: break, snapmirror, relationship, volume, relationship page 
+summary: 您可以中斷保護關係以停止SnapMirror關係中來源磁碟區和目標磁碟區之間的資料傳輸。當您想要遷移資料、進行災難復原或進行應用程式測試時，您可能會中斷關係。目標卷更改為讀/寫卷。您無法中斷SnapVault關係。 
+---
+= 從卷關係頁面斷開SnapMirror關係
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以中斷保護關係以停止SnapMirror關係中來源磁碟區和目標磁碟區之間的資料傳輸。當您想要遷移資料、進行災難復原或進行應用程式測試時，您可能會中斷關係。目標卷更改為讀/寫卷。您無法中斷SnapVault關係。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+* 您必須已經設定了工作流程自動化。
+
+
+.步驟
+. 從「*卷關係*」頁面中，選擇一個或多個具有要停止資料傳輸的保護關係的捲，然後在工具列上按一下「*中斷*」。
++
+將顯示「中斷關係」對話框。
+
+. 點擊“繼續”即可斷開關係。
+. 在「*卷關係*」頁面中，在「關係狀態*」欄位中驗證關係是否已中斷。
++
+關係狀態列預設是隱藏的，因此您可能需要在顯示/隱藏列清單中選擇它image:../media/icon_columnshowhide_sm_onc.gif[""]。
+
+

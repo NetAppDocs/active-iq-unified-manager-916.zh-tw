@@ -1,0 +1,52 @@
+---
+permalink: health-checker/task_configure_netapp_snapshot_backup_from_maintenance_console.html 
+sidebar: sidebar 
+keywords: configure, backup, snapshot copy, copies maintenance console 
+summary: 若要使用 Snapshot 副本進行Active IQ Unified Manager備份，您應該從維護控制台執行一些設定步驟。 
+---
+= 從維護控制台設定 Snapshot 副本備份
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+若要使用 Snapshot 副本進行Active IQ Unified Manager備份，您應該從維護控制台執行一些設定步驟。
+
+.開始之前
+您應該了解系統的以下詳細資訊：
+
+* 叢集 IP 位址
+* 儲存 VM 名稱
+* 卷名
+* LUN 名稱
+* 掛載路徑
+* 儲存系統憑證
+
+
+.步驟
+. 存取 Unified Manager 的維護控制台。
+. 輸入 4 選擇 *備份還原*。
+. 輸入 2 選擇 *使用NetApp Snapshot 備份和還原*。
++
+[NOTE]
+====
+如果要變更備份配置，請輸入 3 選擇 *更新NetApp Snapshot Backup Configuration*。您只能更新密碼。
+
+====
+. 從選單輸入 1 選擇 *配置NetApp快照備份*。
+. 輸入 1 以提供所需資訊。
+. 提供維護控制台的使用者名稱和密碼，然後確認 LUN 已安裝在主機上。
++
+然後，該程序會驗證您提供的資料目錄、LUN 路徑、儲存 VM、磁碟區、空間可用性、磁碟機等是否正確。在背景進行的操作包括：
+
++
+** 服務已停止
+** 資料庫目錄已移至已安裝的存儲
+** 資料庫目錄被刪除，符號連結被建立
+** 服務重新啟動在Active IQ Unified Manager介面中完成配置後，備份類型會修改為NetApp Snapshot，並在使用者介面中反映為資料庫備份（基於快照）。
+
+
+
+
+在開始備份作業之前，您必須檢查快照配置是否有任何變化，因為這可能會導致快照無效。假設您在 G 碟中配置了備份並拍攝了快照。您稍後將備份重新配置到 E 盤，並且資料將按照新配置儲存到 E 盤。如果您嘗試還原在 G 磁碟機中拍攝的快照，則會失敗並出現錯誤「G 磁碟機不存在」。

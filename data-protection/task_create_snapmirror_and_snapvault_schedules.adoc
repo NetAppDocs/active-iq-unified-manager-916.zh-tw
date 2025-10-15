@@ -1,0 +1,44 @@
+---
+permalink: data-protection/task_create_snapmirror_and_snapvault_schedules.html 
+sidebar: sidebar 
+keywords: create, snapmirror, snapvault, schedules 
+summary: 您可以建立基本或進階SnapMirror和SnapVault計劃，以在來源磁碟區或主磁碟區上啟用自動資料保護傳輸，以便傳輸更頻繁或更少地進行，具體取決於磁碟區上資料變更的頻率。 
+---
+= 創建SnapMirror和SnapVault計劃
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+您可以建立基本或進階SnapMirror和SnapVault計劃，以在來源磁碟區或主磁碟區上啟用自動資料保護傳輸，以便傳輸更頻繁或更少地進行，具體取決於磁碟區上資料變更的頻率。
+
+.開始之前
+* 您必須具有應用程式管理員或儲存管理員角色。
+* 您必須已經完成了配置保護對話方塊中的目標資訊區域。
+* 您必須設定工作流程自動化才能執行此任務。
+
+
+.步驟
+. 在「配置保護」對話方塊的「SnapMirror」標籤或「SnapVault」標籤中，按一下「關係設定」區域中的「建立計畫」連結。
++
+彈出“建立計劃”對話框。
+
+. 在「*計畫名稱*」欄位中，輸入您想要賦予計畫的名稱。
+. 選擇下列選項之一：
++
+** *基本的*
++
+如果您想建立基本間隔式時間表，請選擇。
+
+** *先進的*
++
+如果您想要建立 cron 風格的計劃，請選擇。
+
+
+
+. 按一下“*建立*”。
++
+新的計劃將顯示在SnapMirror計劃或SnapVault計劃下拉清單中。
+
+
