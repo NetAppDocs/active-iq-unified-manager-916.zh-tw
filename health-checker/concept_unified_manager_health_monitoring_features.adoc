@@ -43,9 +43,6 @@ Unified Manager 包含以下功能：
 * 報告建立和管理儲存物件訊息，例如實體和邏輯容量、利用率、空間節省、效能和相關事件
 * 與OnCommand Workflow Automation整合以執行工作流程
 +
-儲存自動化商店包含經NetApp認證的自動化儲存工作流程包，這些工作流程包專為與OnCommand Workflow Automation(WFA) 配合使用而開發。您可以下載這些套件，然後將其匯入 WFA 來執行它們。自動化工作流程可在此處取得：
-
-+
-https://automationstore.netapp.com["儲存自動化商店"]
+https://mysupport.netapp.com/site/products/all/details/ocwfa/downloads-tab["WFA 下載"^]
 
 
